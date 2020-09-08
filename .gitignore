@@ -1,3 +1,8 @@
+# calvin customs
+*.dtrace
+*.decls
+*.inv.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
