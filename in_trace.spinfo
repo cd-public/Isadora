@@ -1,0 +1,10 @@
+
+
+PPT_NAME ..tick
+"0"!=orig(state_t)
+"0"!=orig(key_t)
+"0"==orig(state_t) && "0"==orig(key_t)
+
+
+
+
