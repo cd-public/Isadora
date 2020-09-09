@@ -1,0 +1,440 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading splitter info files (read 1 spinfo file, 3 splitters)
+Reading declaration files ...tick: 3 of 3 splitters successful
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+No return from procedure observed 1 time.  Unmatched entries are ignored!
+Unterminated calls:
+  ..tick() : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
+===========================================================================
+..tick():::ENTER
+key_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+state_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+out_t != key
+out_t != state
+out_t != delay
+out != key
+out != key_t
+out != state
+out != state_t
+out != delay
+key != key_t
+key < state
+key != state_t
+key != delay
+key_t != state
+state != state_t
+state != delay
+===========================================================================
+..tick():::EXIT
+(out_t <= orig(out_t))  ==>  (key_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" })
+(out_t <= orig(out_t))  ==>  (orig(key_t) one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" })
+(out_t > orig(out_t))  ==>  (delay == "41")
+(out_t > orig(out_t))  ==>  (delay > orig(delay))
+(out_t > orig(out_t))  ==>  (delay > orig(key))
+(out_t > orig(out_t))  ==>  (delay > orig(key_t))
+(out_t > orig(out_t))  ==>  (delay > orig(out))
+(out_t > orig(out_t))  ==>  (delay > orig(out_t))
+(out_t > orig(out_t))  ==>  (delay > orig(state))
+(out_t > orig(out_t))  ==>  (delay > orig(state_t))
+(out_t > orig(out_t))  ==>  (key < delay)
+(out_t > orig(out_t))  ==>  (key < key_t)
+(out_t > orig(out_t))  ==>  (key < orig(delay))
+(out_t > orig(out_t))  ==>  (key < orig(key_t))
+(out_t > orig(out_t))  ==>  (key == orig(key))
+(out_t > orig(out_t))  ==>  (key > orig(out_t))
+(out_t > orig(out_t))  ==>  (key_t < delay)
+(out_t > orig(out_t))  ==>  (key_t < orig(delay))
+(out_t > orig(out_t))  ==>  (key_t == "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
+(out_t > orig(out_t))  ==>  (key_t > orig(key))
+(out_t > orig(out_t))  ==>  (key_t > orig(out))
+(out_t > orig(out_t))  ==>  (key_t > orig(out_t))
+(out_t > orig(out_t))  ==>  (key_t > orig(state))
+(out_t > orig(out_t))  ==>  (key_t > state)
+(out_t > orig(out_t))  ==>  (key_t >= orig(state_t))
+(out_t > orig(out_t))  ==>  (key_t >= state_t)
+(out_t > orig(out_t))  ==>  (orig(delay) == "40")
+(out_t > orig(out_t))  ==>  (orig(key) < orig(delay))
+(out_t > orig(out_t))  ==>  (orig(key) < orig(key_t))
+(out_t > orig(out_t))  ==>  (orig(key_t) < orig(delay))
+(out_t > orig(out_t))  ==>  (orig(key_t) == "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
+(out_t > orig(out_t))  ==>  (orig(key_t) > orig(state))
+(out_t > orig(out_t))  ==>  (orig(key_t) >= orig(state_t))
+(out_t > orig(out_t))  ==>  (orig(out) < orig(delay))
+(out_t > orig(out_t))  ==>  (orig(out) < orig(key_t))
+(out_t > orig(out_t))  ==>  (orig(out_t) < orig(delay))
+(out_t > orig(out_t))  ==>  (orig(out_t) < orig(key))
+(out_t > orig(out_t))  ==>  (orig(out_t) < orig(key_t))
+(out_t > orig(out_t))  ==>  (orig(out_t) < orig(out))
+(out_t > orig(out_t))  ==>  (orig(out_t) < orig(state))
+(out_t > orig(out_t))  ==>  (orig(out_t) <= orig(state_t))
+(out_t > orig(out_t))  ==>  (orig(out_t) one of { "0", "1000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001" })
+(out_t > orig(out_t))  ==>  (orig(state) < orig(delay))
+(out_t > orig(out_t))  ==>  (orig(state_t) < orig(delay))
+(out_t > orig(out_t))  ==>  (out != orig(out))
+(out_t > orig(out_t))  ==>  (out != orig(out_t))
+(out_t > orig(out_t))  ==>  (out < delay)
+(out_t > orig(out_t))  ==>  (out < key_t)
+(out_t > orig(out_t))  ==>  (out < orig(delay))
+(out_t > orig(out_t))  ==>  (out < orig(key_t))
+(out_t > orig(out_t))  ==>  (out_t < delay)
+(out_t > orig(out_t))  ==>  (out_t < orig(delay))
+(out_t > orig(out_t))  ==>  (out_t == "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
+(out_t > orig(out_t))  ==>  (out_t == key_t)
+(out_t > orig(out_t))  ==>  (out_t == orig(key_t))
+(out_t > orig(out_t))  ==>  (out_t > key)
+(out_t > orig(out_t))  ==>  (out_t > orig(key))
+(out_t > orig(out_t))  ==>  (out_t > orig(out))
+(out_t > orig(out_t))  ==>  (out_t > orig(state))
+(out_t > orig(out_t))  ==>  (out_t > out)
+(out_t > orig(out_t))  ==>  (out_t > state)
+(out_t > orig(out_t))  ==>  (out_t >= orig(state_t))
+(out_t > orig(out_t))  ==>  (out_t >= state_t)
+(out_t > orig(out_t))  ==>  (state < delay)
+(out_t > orig(out_t))  ==>  (state < orig(delay))
+(out_t > orig(out_t))  ==>  (state < orig(key_t))
+(out_t > orig(out_t))  ==>  (state == orig(state))
+(out_t > orig(out_t))  ==>  (state > orig(out_t))
+(out_t > orig(out_t))  ==>  (state_t < delay)
+(out_t > orig(out_t))  ==>  (state_t < orig(delay))
+(out_t > orig(out_t))  ==>  (state_t <= orig(key_t))
+(out_t > orig(out_t))  ==>  (state_t == orig(state_t))
+(out_t > orig(out_t))  ==>  (state_t >= orig(out_t))
+key_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+state_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+out_t != key
+out_t != state
+out_t != delay
+out_t != orig(key)
+out_t != orig(state)
+out_t != orig(delay)
+out != key
+out != key_t
+out != state
+out != state_t
+out != delay
+out != orig(key)
+out != orig(key_t)
+out != orig(state)
+out != orig(state_t)
+out != orig(delay)
+key != key_t
+key < state
+key != state_t
+key != delay
+key != orig(out_t)
+key != orig(out)
+key >= orig(key)
+key != orig(key_t)
+key < orig(state)
+key != orig(state_t)
+key != orig(delay)
+key_t != state
+key_t != delay
+key_t != orig(out)
+key_t != orig(key)
+key_t != orig(state)
+state != state_t
+state != delay
+state != orig(out_t)
+state != orig(out)
+state > orig(key)
+state != orig(key_t)
+state >= orig(state)
+state != orig(state_t)
+state != orig(delay)
+state_t != delay
+state_t != orig(out)
+state_t != orig(key)
+state_t != orig(state)
+delay != orig(out_t)
+delay != orig(out)
+delay != orig(key)
+delay != orig(key_t)
+delay != orig(state)
+delay != orig(state_t)
+delay != orig(delay)
+===========================================================================
+..tick():::EXIT;condition=""0"!=orig(state_t) && out_t!=orig(out_t)"
+key == orig(key)
+key_t == orig(key_t)
+state == orig(state)
+state_t == orig(state_t)
+out_t one of { "1000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+state_t == "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+delay == "41"
+orig(out_t) one of { "1000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+orig(delay) == "40"
+out_t != out
+out_t >= key_t
+out_t <= state_t
+out_t < delay
+out_t != orig(out_t)
+out_t != orig(out)
+out_t < orig(delay)
+out < state_t
+out < delay
+out != orig(out_t)
+out != orig(out)
+out < orig(delay)
+key < state_t
+key < delay
+key < orig(delay)
+key_t <= state_t
+key_t < delay
+key_t != orig(out_t)
+key_t < orig(delay)
+state < state_t
+state < delay
+state < orig(delay)
+state_t < delay
+state_t >= orig(out_t)
+state_t > orig(out)
+state_t < orig(delay)
+delay > orig(out_t)
+delay > orig(out)
+delay > orig(delay)
+orig(out_t) != orig(out)
+orig(out_t) < orig(delay)
+orig(out) < orig(delay)
+===========================================================================
+..tick():::EXIT;condition="not("0"!=orig(state_t) && out_t!=orig(out_t))"
+===========================================================================
+..tick():::EXIT;condition=""0"!=orig(key_t) && out_t!=orig(out_t)"
+out_t == key_t
+out_t == orig(key_t)
+key == orig(key)
+state == orig(state)
+state_t == orig(state_t)
+out_t == "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+state_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+delay == "41"
+orig(out_t) one of { "0", "1000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001" }
+orig(delay) == "40"
+out_t > out
+out_t > key
+out_t > state
+out_t >= state_t
+out_t < delay
+out_t > orig(out_t)
+out_t > orig(out)
+out_t < orig(delay)
+out != key
+out != state
+out != state_t
+out < delay
+out != orig(out_t)
+out != orig(out)
+out < orig(delay)
+key < state
+key != state_t
+key < delay
+key > orig(out_t)
+key != orig(out)
+key < orig(delay)
+state != state_t
+state < delay
+state > orig(out_t)
+state != orig(out)
+state < orig(delay)
+state_t < delay
+state_t >= orig(out_t)
+state_t != orig(out)
+state_t < orig(delay)
+delay > orig(out_t)
+delay > orig(out)
+delay > orig(delay)
+orig(out_t) < orig(out)
+orig(out_t) < orig(delay)
+orig(out) < orig(delay)
+===========================================================================
+..tick():::EXIT;condition="not("0"!=orig(key_t) && out_t!=orig(out_t))"
+key_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+state_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+orig(key_t) one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+orig(state_t) one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+out_t != key
+out_t != state
+out_t != delay
+out_t <= orig(out_t)
+out_t != orig(key)
+out_t != orig(state)
+out_t != orig(delay)
+out != key
+out != key_t
+out != state
+out != state_t
+out != delay
+out != orig(key)
+out != orig(key_t)
+out != orig(state)
+out != orig(state_t)
+out != orig(delay)
+key != key_t
+key < state
+key != state_t
+key != delay
+key != orig(out_t)
+key != orig(out)
+key >= orig(key)
+key != orig(key_t)
+key < orig(state)
+key != orig(state_t)
+key != orig(delay)
+key_t != state
+key_t != delay
+key_t != orig(out)
+key_t != orig(key)
+key_t != orig(state)
+state != state_t
+state != delay
+state != orig(out_t)
+state != orig(out)
+state > orig(key)
+state != orig(key_t)
+state >= orig(state)
+state != orig(state_t)
+state != orig(delay)
+state_t != delay
+state_t != orig(out)
+state_t != orig(key)
+state_t != orig(state)
+delay != orig(out_t)
+delay != orig(out)
+delay != orig(key)
+delay != orig(key_t)
+delay != orig(state)
+delay != orig(state_t)
+delay != orig(delay)
+orig(out_t) != orig(key)
+orig(out_t) != orig(state)
+orig(out_t) != orig(delay)
+orig(out) != orig(key)
+orig(out) != orig(key_t)
+orig(out) != orig(state)
+orig(out) != orig(state_t)
+orig(out) != orig(delay)
+orig(key) != orig(key_t)
+orig(key) < orig(state)
+orig(key) != orig(state_t)
+orig(key) != orig(delay)
+orig(key_t) != orig(state)
+orig(state) != orig(state_t)
+orig(state) != orig(delay)
+===========================================================================
+..tick():::EXIT;condition=""0"==orig(state_t) && "0"==orig(key_t) && out_t!=orig(out_t)"
+out_t == key_t
+out_t == state_t
+out_t == orig(key_t)
+out_t == orig(state_t)
+key == orig(key)
+state == orig(state)
+out_t == "0"
+delay == "41"
+orig(out_t) one of { "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111", "x" }
+orig(delay) == "40"
+out_t < out
+out_t < key
+out_t < state
+out_t < delay
+out_t < orig(out_t)
+out_t < orig(out)
+out_t < orig(delay)
+out != key
+out != state
+out < delay
+out < orig(out_t)
+out != orig(out)
+out < orig(delay)
+key < state
+key < delay
+key < orig(out_t)
+key != orig(out)
+key < orig(delay)
+state < delay
+state < orig(out_t)
+state != orig(out)
+state < orig(delay)
+delay != orig(out_t)
+delay != orig(out)
+delay > orig(delay)
+orig(out_t) >= orig(out)
+orig(out_t) != orig(delay)
+orig(out) != orig(delay)
+===========================================================================
+..tick():::EXIT;condition="not("0"==orig(state_t) && "0"==orig(key_t) && out_t!=orig(out_t))"
+key_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+state_t one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+orig(key_t) one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+orig(state_t) one of { "0", "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111" }
+out_t != key
+out_t != state
+out_t != delay
+out_t != orig(key)
+out_t != orig(state)
+out_t != orig(delay)
+out != key
+out != key_t
+out != state
+out != state_t
+out != delay
+out != orig(key)
+out != orig(key_t)
+out != orig(state)
+out != orig(state_t)
+out != orig(delay)
+key != key_t
+key < state
+key != state_t
+key != delay
+key != orig(out_t)
+key != orig(out)
+key >= orig(key)
+key != orig(key_t)
+key < orig(state)
+key != orig(state_t)
+key != orig(delay)
+key_t != state
+key_t != delay
+key_t != orig(out)
+key_t != orig(key)
+key_t != orig(state)
+state != state_t
+state != delay
+state != orig(out_t)
+state != orig(out)
+state > orig(key)
+state != orig(key_t)
+state >= orig(state)
+state != orig(state_t)
+state != orig(delay)
+state_t != delay
+state_t != orig(out)
+state_t != orig(key)
+state_t != orig(state)
+delay != orig(out_t)
+delay != orig(out)
+delay != orig(key)
+delay != orig(key_t)
+delay != orig(state)
+delay != orig(state_t)
+delay != orig(delay)
+orig(out_t) != orig(key)
+orig(out_t) != orig(state)
+orig(out_t) != orig(delay)
+orig(out) != orig(key)
+orig(out) != orig(key_t)
+orig(out) != orig(state)
+orig(out) != orig(state_t)
+orig(out) != orig(delay)
+orig(key) != orig(key_t)
+orig(key) < orig(state)
+orig(key) != orig(state_t)
+orig(key) != orig(delay)
+orig(key_t) != orig(state)
+orig(state) != orig(state_t)
+orig(state) != orig(delay)
+Exiting Daikon.

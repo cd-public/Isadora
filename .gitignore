@@ -2,6 +2,7 @@
 *.dtrace
 *.decls
 *.inv.gz
+*.swp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
