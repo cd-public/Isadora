@@ -57,13 +57,15 @@ def read(name):
 	regs = len(header)
 	while "#" not in line[0]: 
 		splits = line.split()
+		if len(splits) == 1:
+			splits = [splits[0][0], splits[0][1:]]
 		i = -1
 		for index in range(regs):
 			if (len(splits) > 1):
 				if key[index][1] in splits[1]:
 					i = index
 		if i > -1:
-			key[i] = key[i] + [splits[0][1:]]
+			key[i] = key[i] + [splits[0].replace('b','')]
 		line = to_read.readline()
 	to_write = open(name + ".dtrace","w")
 	to_write.write(prefix)
@@ -81,13 +83,15 @@ def read(name):
 			change = False
 		else:
 			splits = line.split()
+			if len(splits) == 1:
+				splits = [splits[0][0], splits[0][1:]] 
 			i = -1
 			for index in range(regs):
 				if (len(splits) > 1):
 					if key[index][1] in splits[1]:
 						i = index
 			if i > -1:
-				key[i][3] = splits[0][1:]
+				key[i][3] = splits[0].replace('b','')
 				change = True
 		line = to_read.readline()
 		
