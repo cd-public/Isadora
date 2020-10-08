@@ -1,9 +1,10 @@
 
 
 PPT_NAME ..tick
-"0"!=orig(state_t) && out_t!=orig(out_t)
-"0"!=orig(key_t) && out_t!=orig(out_t)
-"0"==orig(state_t) && "0"==orig(key_t) && out_t!=orig(out_t)
+"0"==orig(s_axi_wvalid)
+"1"==orig(s_axi_wvalid)
+"0"==s_axi_wvalid && "1"==orig(s_axi_wvalid)
+"1"==s_axi_wvalid && "0"==orig(s_axi_wvalid)
 
 
 
