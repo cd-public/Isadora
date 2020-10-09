@@ -95,4 +95,4 @@ def read(name):
 				change = True
 		line = to_read.readline()
 		
-read("test_only")
+read("aes_tb")
