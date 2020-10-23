@@ -18,7 +18,7 @@ def make_decls(name,header):
 	for point in ["ppt ..tick():::ENTER\n  ppt-type enter\n","\nppt ..tick():::EXIT0\n  ppt-type subexit\n"]:
 		to_write.write(point)
 		for reg in key: 
-			to_write.write("  variable " + reg[2].split("[")[0] + suffix)
+			to_write.write("  variable " + reg[2].replace("[","").replace("]","") + suffix)
 		# add delay length
 		to_write.write("  variable " + "delay" + suffix)
 	# add delay slot to key
@@ -32,14 +32,16 @@ def make_spinfo(name,header):
 	to_write.write(prefix)
 	key = [line.split()[4] for line in header]
 	key_t = list(filter(lambda x: "_t" in x, key))
-	key_t = [reg.split("[")[0] for reg in key_t]
+	key_t = [reg for reg in key_t]
+	for reg in key_t:
+		1 == 1 
+		#to_write.write("\"1\"==orig(" + reg + ")\n")
+		#to_write.write("\"1\"==" + reg + "\n")
 	for reg in key_t: 
-		to_write.write("\"1\"==orig(" + reg + ")\n")
-	for reg in key_t: 
-		to_write.write("\"1\"==orig(" + reg + ")")
-		for reg2 in key_t:
-			if reg2 != reg:
-				to_write.write(" && \"0\"==orig(" + reg + ")")
+		to_write.write("\"1\"==ARESETN && \"1\"==orig(" + reg.replace("[","").replace("]","") + ")")
+		#for reg2 in key_t:
+		#	if reg2 != reg:
+		#		to_write.write(" && \"0\"==orig(" + reg2 + ")")
 		to_write.write("\n")
 
 def dump(key,file,nonce):
@@ -50,7 +52,7 @@ def dump(key,file,nonce):
 	for point in points:
 		file.write(point)
 		for reg in key:
-			file.write(reg[2].split("[")[0] + "\n\"" + reg[3] + "\"\n1\n")
+			file.write(reg[2].replace("[","").replace("]","") + "\n\"" + reg[3] + "\"\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
@@ -80,10 +82,13 @@ def read(name):
 		i = -1
 		for index in range(regs):
 			if (len(splits) > 1):
-				if key[index][1] in splits[1]:
+				if key[index][1] in splits[1] and splits[1] in key[index][1]:
 					i = index
 		if i > -1:
 			key[i] = key[i] + [splits[0].replace('b','')]
+		if i == -1:
+			print(key[i])
+			print(line)
 		line = to_read.readline()
 	to_write = open(name + ".dtrace","w")
 	to_write.write(prefix)
@@ -106,12 +111,13 @@ def read(name):
 			i = -1
 			for index in range(regs):
 				if (len(splits) > 1):
-					if key[index][1] in splits[1]:
+					if key[index][1] in splits[1] and splits[1] in key[index][1]:
 						i = index
 			if i > -1:
 				key[i][3] = splits[0].replace('b','')
 				change = True
-		line = to_read.readline()
+		line = to_read.readline().replace("[","").replace("]","")
+	
 
 def post(name):
 	in_prefix = True
@@ -162,6 +168,15 @@ def post(name):
 					point_info[0] += [set(regs)]
 			if "one of" in line:
 				point_info[2] += [line.strip().replace("orig","#-1 ").replace("(","").replace(")","") ]
+	# last conditional
+	if in_point: 
+		for s in point_info[0]:
+			l = list(s)
+			l.sort()
+			text = str(l).replace("zzorig","#-1 ").replace("[","").replace("]","").replace("\'","")
+			for_out.write("==: " + text + "\n")
+		for line in point_info[2]:
+			for_out.write(line + "\n")
 
 def do_all(name):
 	read(name)
@@ -173,4 +188,4 @@ def do_all(name):
 	post(name + ".out")
 
 		
-do_all("aes_tb")
+do_all("aac_tnt")

@@ -1,9 +1,0 @@
-
-
-PPT_NAME ..tick
-"1"==orig(out_t)
-"1"==orig(key_t)
-"1"==orig(state_t)
-"1"==orig(out_t) && "0"==orig(out_t) && "0"==orig(out_t)
-"1"==orig(key_t) && "0"==orig(key_t) && "0"==orig(key_t)
-"1"==orig(state_t) && "0"==orig(state_t) && "0"==orig(state_t)
