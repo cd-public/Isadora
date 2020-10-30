@@ -112,41 +112,64 @@ def read(name):
 	
 
 def post(name):
+	# need to remove globals
 	in_prefix = True
 	in_point = False
+	in_global = False
+	title = ""
+	titled = False
 	point_info = []
+	global_struct = []
+	one_ofs = []
 	for_out = open("post_" + name, "w")
 	for line in open(name, "r"):
 		if "===" in line:
 			in_prefix = False
 			if in_point: 
 				# print here
+				titled = False
 				for s in point_info[0]:
-					l = list(s)
-					l.sort()
-					text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
-					for_out.write("==: " + text + "\n")
+					if set(s) not in global_struct:
+						if not titled:
+							for_out.write(title)
+							titled = True
+						l = list(s)
+						l.sort()
+						text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
+						text = text.replace("shadow_M_AXI_","") # just for the AAC
+						for_out.write("==: " + text + "\n")
 				for line in point_info[2]:
-					for_out.write(line + "\n")
+					if line not in one_ofs:
+						if not titled:
+							for_out.write(title)
+							titled = True
+						for_out.write(line + "\n")
+				if in_global:
+					global_struct = [set(s) for s in point_info[0]]
+					one_ofs = point_info[2]
+					in_global = False
 			in_point = False
 		elif in_prefix:
 			1 == 1
 		elif "..tick():::EXIT;" in line:
-			for_out.write(line.strip().replace("\"","").replace("..tick():::EXIT;condition=","\nGiven \"") + "\":\n\n")
+			title = line.strip().replace("\"","").replace("..tick():::EXIT;condition=","\nGiven \"") + "\":\n\n"
 			in_point = True
+			in_global = False
 			point_info = [[],[],[]]
 		elif "..tick():::EXIT" in line:
-			#for_out.write("global condition\n")
-			# not implemented
-			in_point = False
-			# point_info = [[],[],[],[],[]]
+			title = "Global conditions:\n\n"
+			in_point = True
+			point_info = [[],[],[]]
+			in_global = True
 		elif in_point: # property case
 			# we can have (1) equalities (2) inequalities (3) one of's (4) implication (5) bi-implication
 			# implication and bi-implication only occur in global case - not implemented
 			# inequalities are one of (1) > (2) < (3) <= (4) >= (5) !=
 			# inequalities likely aren't interesting - not implemented
 			line = line.strip().replace("\"","")
-			if "==" in line:
+			if " <==> " in line:
+				1 == 1
+			elif " == " in line:
 				regs = line.split(" == ")
 				regs = [reg.strip().replace("orig","zzorig").replace("(","").replace(")","") for reg in regs]
 				added = False
@@ -158,7 +181,7 @@ def post(name):
 								added = True
 				if not added:
 					point_info[0] += [set(regs)]
-			if "one of" in line:
+			elif "one of" in line:
 				point_info[2] += [line.strip().replace("(","").replace(")","") ]
 	# last conditional
 	if in_point: 
