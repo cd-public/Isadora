@@ -185,13 +185,24 @@ def post(name):
 				point_info[2] += [line.strip().replace("(","").replace(")","") ]
 	# last conditional
 	if in_point: 
+		titled = False
 		for s in point_info[0]:
-			l = list(s)
-			l.sort()
-			text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
-			for_out.write("==: " + text + "\n")
+			if set(s) not in global_struct:
+				if not titled:
+					for_out.write(title)
+					titled = True
+				l = list(s)
+				l.sort()
+				text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
+				text = text.replace("shadow_M_AXI_","") # just for the AAC
+				for_out.write("==: " + text + "\n")
 		for line in point_info[2]:
-			for_out.write(line + "\n")
+			if line not in one_ofs:
+				if not titled:
+					for_out.write(title)
+					titled = True
+				for_out.write(line + "\n")
+
 
 def do_all(name):
 	read(name)
