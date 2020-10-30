@@ -33,16 +33,8 @@ def make_spinfo(name,header):
 	key = [line.split()[4] for line in header]
 	key_t = list(filter(lambda x: "_t" in x, key))
 	key_t = [reg for reg in key_t]
-	for reg in key_t:
-		1 == 1 
-		#to_write.write("\"1\"==orig(" + reg + ")\n")
-		#to_write.write("\"1\"==" + reg + "\n")
 	for reg in key_t: 
-		to_write.write("\"1\"==ARESETN && \"1\"==orig(" + reg.replace("[","").replace("]","") + ")")
-		#for reg2 in key_t:
-		#	if reg2 != reg:
-		#		to_write.write(" && \"0\"==orig(" + reg2 + ")")
-		to_write.write("\n")
+		to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
 
 def dump(key,file,nonce):
 	if nonce > 0:
@@ -132,7 +124,7 @@ def post(name):
 				for s in point_info[0]:
 					l = list(s)
 					l.sort()
-					text = str(l).replace("zzorig","#-1 ").replace("[","").replace("]","").replace("\'","")
+					text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
 					for_out.write("==: " + text + "\n")
 				for line in point_info[2]:
 					for_out.write(line + "\n")
@@ -167,13 +159,13 @@ def post(name):
 				if not added:
 					point_info[0] += [set(regs)]
 			if "one of" in line:
-				point_info[2] += [line.strip().replace("orig","#-1 ").replace("(","").replace(")","") ]
+				point_info[2] += [line.strip().replace("(","").replace(")","") ]
 	# last conditional
 	if in_point: 
 		for s in point_info[0]:
 			l = list(s)
 			l.sort()
-			text = str(l).replace("zzorig","#-1 ").replace("[","").replace("]","").replace("\'","")
+			text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
 			for_out.write("==: " + text + "\n")
 		for line in point_info[2]:
 			for_out.write(line + "\n")
