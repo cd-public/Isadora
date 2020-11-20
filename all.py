@@ -18,7 +18,7 @@ def make_decls(name,header):
 	for point in ["ppt ..tick():::ENTER\n  ppt-type enter\n","\nppt ..tick():::EXIT0\n  ppt-type subexit\n"]:
 		to_write.write(point)
 		for reg in key: 
-			to_write.write("  variable " + reg[2].split("[")[0] + suffix)
+			to_write.write("  variable " + reg[2].replace("[","").replace("]","") + suffix)
 		# add delay length
 		to_write.write("  variable " + "delay" + suffix)
 	# add delay slot to key
@@ -32,15 +32,9 @@ def make_spinfo(name,header):
 	to_write.write(prefix)
 	key = [line.split()[4] for line in header]
 	key_t = list(filter(lambda x: "_t" in x, key))
-	key_t = [reg.split("[")[0] for reg in key_t]
+	key_t = [reg for reg in key_t]
 	for reg in key_t: 
-		to_write.write("\"1\"==orig(" + reg + ")\n")
-	for reg in key_t: 
-		to_write.write("\"1\"==orig(" + reg + ")")
-		for reg2 in key_t:
-			if reg2 != reg:
-				to_write.write(" && \"0\"==orig(" + reg + ")")
-		to_write.write("\n")
+		to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
 
 def dump(key,file,nonce):
 	if nonce > 0:
@@ -50,7 +44,7 @@ def dump(key,file,nonce):
 	for point in points:
 		file.write(point)
 		for reg in key:
-			file.write(reg[2].split("[")[0] + "\n\"" + reg[3] + "\"\n1\n")
+			file.write(reg[2].replace("[","").replace("]","") + "\n\"" + reg[3] + "\"\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
@@ -80,10 +74,13 @@ def read(name):
 		i = -1
 		for index in range(regs):
 			if (len(splits) > 1):
-				if key[index][1] in splits[1]:
+				if key[index][1] in splits[1] and splits[1] in key[index][1]:
 					i = index
 		if i > -1:
 			key[i] = key[i] + [splits[0].replace('b','')]
+		if i == -1:
+			print(key[i])
+			print(line)
 		line = to_read.readline()
 	to_write = open(name + ".dtrace","w")
 	to_write.write(prefix)
@@ -106,49 +103,73 @@ def read(name):
 			i = -1
 			for index in range(regs):
 				if (len(splits) > 1):
-					if key[index][1] in splits[1]:
+					if key[index][1] in splits[1] and splits[1] in key[index][1]:
 						i = index
 			if i > -1:
 				key[i][3] = splits[0].replace('b','')
 				change = True
-		line = to_read.readline()
+		line = to_read.readline().replace("[","").replace("]","")
+	
 
 def post(name):
+	# need to remove globals
 	in_prefix = True
 	in_point = False
+	in_global = False
+	title = ""
+	titled = False
 	point_info = []
+	global_struct = []
+	one_ofs = []
 	for_out = open("post_" + name, "w")
 	for line in open(name, "r"):
 		if "===" in line:
 			in_prefix = False
 			if in_point: 
 				# print here
+				titled = False
 				for s in point_info[0]:
-					l = list(s)
-					l.sort()
-					text = str(l).replace("zzorig","#-1 ").replace("[","").replace("]","").replace("\'","")
-					for_out.write("==: " + text + "\n")
+					if set(s) not in global_struct:
+						if not titled:
+							for_out.write(title)
+							titled = True
+						l = list(s)
+						l.sort()
+						text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
+						text = text.replace("shadow_M_AXI_","") # just for the AAC
+						for_out.write("==: " + text + "\n")
 				for line in point_info[2]:
-					for_out.write(line + "\n")
+					if line not in one_ofs:
+						if not titled:
+							for_out.write(title)
+							titled = True
+						for_out.write(line + "\n")
+				if in_global:
+					global_struct = [set(s) for s in point_info[0]]
+					one_ofs = point_info[2]
+					in_global = False
 			in_point = False
 		elif in_prefix:
 			1 == 1
 		elif "..tick():::EXIT;" in line:
-			for_out.write(line.strip().replace("\"","").replace("..tick():::EXIT;condition=","\nGiven \"") + "\":\n\n")
+			title = line.strip().replace("\"","").replace("..tick():::EXIT;condition=","\nGiven \"") + "\":\n\n"
 			in_point = True
+			in_global = False
 			point_info = [[],[],[]]
 		elif "..tick():::EXIT" in line:
-			#for_out.write("global condition\n")
-			# not implemented
-			in_point = False
-			# point_info = [[],[],[],[],[]]
+			title = "Global conditions:\n\n"
+			in_point = True
+			point_info = [[],[],[]]
+			in_global = True
 		elif in_point: # property case
 			# we can have (1) equalities (2) inequalities (3) one of's (4) implication (5) bi-implication
 			# implication and bi-implication only occur in global case - not implemented
 			# inequalities are one of (1) > (2) < (3) <= (4) >= (5) !=
 			# inequalities likely aren't interesting - not implemented
 			line = line.strip().replace("\"","")
-			if "==" in line:
+			if " <==> " in line:
+				1 == 1
+			elif " == " in line:
 				regs = line.split(" == ")
 				regs = [reg.strip().replace("orig","zzorig").replace("(","").replace(")","") for reg in regs]
 				added = False
@@ -160,8 +181,28 @@ def post(name):
 								added = True
 				if not added:
 					point_info[0] += [set(regs)]
-			if "one of" in line:
-				point_info[2] += [line.strip().replace("orig","#-1 ").replace("(","").replace(")","") ]
+			elif "one of" in line:
+				point_info[2] += [line.strip().replace("(","").replace(")","") ]
+	# last conditional
+	if in_point: 
+		titled = False
+		for s in point_info[0]:
+			if set(s) not in global_struct:
+				if not titled:
+					for_out.write(title)
+					titled = True
+				l = list(s)
+				l.sort()
+				text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
+				text = text.replace("shadow_M_AXI_","") # just for the AAC
+				for_out.write("==: " + text + "\n")
+		for line in point_info[2]:
+			if line not in one_ofs:
+				if not titled:
+					for_out.write(title)
+					titled = True
+				for_out.write(line + "\n")
+
 
 def do_all(name):
 	read(name)
@@ -173,4 +214,4 @@ def do_all(name):
 	post(name + ".out")
 
 		
-do_all("aes_tb")
+do_all("aac_tnt")

@@ -1,0 +1,79 @@
+input-language C/C++
+decl-version 2.0
+var-comparability implicit
+
+ppt ..tick():::ENTER
+  ppt-type enter
+  variable out_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable out
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable key
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable key_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable state
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable state_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable delay
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+
+ppt ..tick():::EXIT0
+  ppt-type subexit
+  variable out_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable out
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable key
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable key_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable state
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable state_t
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
+  variable delay
+	var-kind variable
+	rep-type string
+	dec-type char*
+	comparability 1 
