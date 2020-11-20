@@ -14,13 +14,23 @@ def make_decls(name,header):
 	to_write = open(name + ".decls","w")
 	to_write.write(prefix)
 	# make key
-	key = [line.split()[2:5] for line in header]
+	key = [line.split()[2:] for line in header]
+	last = ""
 	for point in ["ppt ..tick():::ENTER\n  ppt-type enter\n","\nppt ..tick():::EXIT0\n  ppt-type subexit\n"]:
 		to_write.write(point)
-		for reg in key: 
-			to_write.write("  variable " + reg[2].replace("[","").replace("]","") + suffix)
+		for reg in key:	
+			# only write a single var for each register, regardless of bit length, to decls
+			if reg[2] != last:
+				to_write.write("  variable " + reg[2] + suffix)
+				last = reg[2]
 		# add delay length
 		to_write.write("  variable " + "delay" + suffix)
+	for reg in key:
+		# continue to store bits separately internally
+		if len(reg) > 4:
+			reg[2] = reg[2] + " " + reg[3]	
+		while len(reg) > 3:
+			reg.remove(reg[3])
 	# add delay slot to key
 	out_key = key
 	out_key = out_key + [[0, "", "delay", "0"]]
@@ -33,8 +43,12 @@ def make_spinfo(name,header):
 	key = [line.split()[4] for line in header]
 	key_t = list(filter(lambda x: "_t" in x, key))
 	key_t = [reg for reg in key_t]
+	last = ""
 	for reg in key_t: 
-		to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
+		if reg != last:
+			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
+			to_write.write("\"1\"==" + reg.replace("[","").replace("]","") + "\n")
+			last = reg
 
 def dump(key,file,nonce):
 	if nonce > 0:
@@ -43,8 +57,21 @@ def dump(key,file,nonce):
 		points = ["..tick():::ENTER\nthis_invocation_nonce\n" + str(nonce + 1) + "\n"]
 	for point in points:
 		file.write(point)
+		# handle the differing bits
+		last = ""
+		first = True
 		for reg in key:
-			file.write(reg[2].replace("[","").replace("]","") + "\n\"" + reg[3] + "\"\n1\n")
+			splits = reg[2].split()
+			if splits[0] != last:
+				if not first:
+					file.write("\"\n1\n")
+				else:
+					first = False
+				file.write(splits[0].replace("]","") + "\n\"" + reg[3])
+				last = splits[0]
+			elif splits[0] == last:
+				 file.write(reg[3])
+		file.write("\"\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
@@ -167,7 +194,7 @@ def post(name):
 			# inequalities are one of (1) > (2) < (3) <= (4) >= (5) !=
 			# inequalities likely aren't interesting - not implemented
 			line = line.strip().replace("\"","")
-			if " <==> " in line:
+			if " <==> " in line or " ==> " in line:
 				1 == 1
 			elif " == " in line:
 				regs = line.split(" == ")
@@ -214,4 +241,4 @@ def do_all(name):
 	post(name + ".out")
 
 		
-do_all("aac_tnt")
+do_all("r_aac_sp_01")
