@@ -10,7 +10,7 @@ nonce = 1
 
 def make_decls(name,header):
 	prefix = "input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n"
-	suffix = "\n	var-kind variable\n	rep-type string\n	dec-type char*\n	comparability 1 \n"
+	suffix = "\n	var-kind variable\n	rep-type int\n	dec-type int\n	comparability 1 \n"
 	to_write = open(name + ".decls","w")
 	to_write.write(prefix)
 	# make key
@@ -47,7 +47,7 @@ def make_spinfo(name,header):
 	for reg in key_t: 
 		if reg != last:
 			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
-			to_write.write("\"1\"==" + reg.replace("[","").replace("]","") + "\n")
+			to_write.write("0!=" + reg.replace("[","").replace("]","") + "\n")
 			last = reg
 
 def dump(key,file,nonce):
@@ -59,19 +59,24 @@ def dump(key,file,nonce):
 		file.write(point)
 		# handle the differing bits
 		last = ""
+		val = ""
 		first = True
 		for reg in key:
 			splits = reg[2].split()
 			if splits[0] != last:
 				if not first:
-					file.write("\"\n1\n")
+					file.write(str(int(val,2)))
+					file.write("\n1\n")
+					val = ""
 				else:
 					first = False
-				file.write(splits[0].replace("]","") + "\n\"" + reg[3])
+				file.write(splits[0].replace("]","") + "\n")
+				val = val + reg[3]
 				last = splits[0]
 			elif splits[0] == last:
-				 file.write(reg[3])
-		file.write("\"\n1\n")
+				val = val + reg[3]
+		file.write(str(int(val,2)))
+		file.write("\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
@@ -228,7 +233,7 @@ def post(name):
 				if not titled:
 					for_out.write(title)
 					titled = True
-				for_out.write(line + "\n")
+				for_out.write(line.replace("shadow_M_AXI_","") + "\n")
 
 
 def do_all(name):
