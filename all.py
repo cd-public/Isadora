@@ -65,6 +65,8 @@ def dump(key,file,nonce):
 			splits = reg[2].split()
 			if splits[0] != last:
 				if not first:
+					if "x" in val: # hack for uninitialized values - bit values are always positive
+						val = "-1"
 					file.write(str(int(val,2)))
 					file.write("\n1\n")
 					val = ""
@@ -246,4 +248,4 @@ def do_all(name):
 	post(name + ".out")
 
 		
-do_all("r_aac_sp_01")
+do_all("r_iACW")
