@@ -1,0 +1,12 @@
+Global conditions:
+
+==: reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config
+==: 0, AWADDR, origAWADDR
+==: 4294967295L, AWADDR_wire, AWADDR_wire_ctr, AWADDR_wire_or, AWADDR_wire_tnt, origAWADDR_wire, origAWADDR_wire_ctr, origAWADDR_wire_or, origAWADDR_wire_tnt
+==: 1, delay
+ARESETN one of { 0, 1 }
+reg22_w_config one of { -1, 0, 2952790016L }
+reg23_w_config one of { -1, 0 }
+reg25_w_config one of { -1, 0, 4026580992L }
+M_AXI_AWADDR_wire one of { -1, 0, 1 }
+shadow_M_AXI_AWADDR_INT one of { 2621440, 4294967295L }
