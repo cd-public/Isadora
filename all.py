@@ -41,14 +41,15 @@ def make_spinfo(name,header):
 	to_write = open(name + ".spinfo","w")
 	to_write.write(prefix)
 	key = [line.split()[4] for line in header]
-	key_t = list(filter(lambda x: "_t" in x, key))
+	key_t = list(filter(lambda x: "shadow" not in x and "reg" not in x, key)) # capture original regs
 	key_t = [reg for reg in key_t]
 	last = ""
 	for reg in key_t: 
 		if reg != last:
 			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
-			to_write.write("0!=" + reg.replace("[","").replace("]","") + "\n")
+			to_write.write("0==" + reg.replace("[","").replace("]","") + "\n")
 			last = reg
+	to_write.write("shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire"); # custom add
 
 def dump(key,file,nonce):
 	if nonce > 0:
