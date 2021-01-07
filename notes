@@ -1,0 +1,45 @@
+SP10_AWADDR_M_AXI_AWADDR: assert iflow(
+    M_AXI_AWADDR_wire 
+    =/=>
+    M_AXI_AWADDR_INT
+		unless (
+			((M_AXI_AWADDR_wire[31:16] >= reg22_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg22_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg23_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg23_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg24_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg24_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg25_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg25_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg26_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg26_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg27_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg27_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg28_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg28_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg29_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg29_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg30_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg30_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg31_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg31_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg32_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg32_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg33_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg33_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg34_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg34_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg35_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg35_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg36_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg36_w_config[15:0])) ||
+			((M_AXI_AWADDR_wire[31:16] >= reg37_w_config[31:16]) && (M_AXI_AWADDR_wire[31:16] >= reg37_w_config[15:0]))
+		)
+);
+
+we get (need to play with post processor)
+
+	shadow_MAA_wire != shadow_MAA_INT -> reg<22-37>==0 and MAA_wire in {0,1}
+
+and then
+
+	reg<22-37>==0 and MAA_wire in {0,1} -> MAA_wire >= reg<22-37>
+
+that is
+
+	iflow implies condition
+
+HIGH LEVEL
+
+We can get something that looks like ranges, but these ranges were a bit easy.
+
+TASK 1:  How to address human in the loop - e.g. naive run -> evaluate output properties to get splits -> 2nd run -> find precise pre-condition -> 3rd run to get property, or in this case stronger property that captures weaker property
+
+TASK 2:  Get better VCDs - I should be able to do this now.
+
+TASK 3:  Take a look at the post processor, refiner, etc. All of this is manual ATM. Maybe redundant with TASK 1
