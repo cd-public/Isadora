@@ -22,7 +22,9 @@ HIGH LEVEL
 
 We can get something that looks like ranges, but these ranges were a bit easy.
 
-TASK 1:  How to address human in the loop - e.g. naive run -> evaluate output properties to get splits -> 2nd run -> find precise pre-condition -> 3rd run to get property, or in this case stronger property that captures weaker property
+TASK 1:  How to address human in the loop - e.g. naive run -> evaluate output properties to get splits -> 2nd run -> get property
+
+*** Currently finding a stronger property that captures the weaker target property (trace dependent.
 
 TASK 2:  Get better VCDs - I should be able to do this now.
 
