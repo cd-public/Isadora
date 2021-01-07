@@ -1,6 +1,6 @@
 Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
-Reading splitter info files (read 1 spinfo file, 5 splitters)
-Reading declaration files ...tick: 5 of 5 splitters successful
+Reading splitter info files (read 1 spinfo file, 6 splitters)
+Reading declaration files ...tick: 6 of 6 splitters successful
 (read 1 decls file)
 Processing trace data; reading 1 dtrace file:
 
@@ -1394,6 +1394,166 @@ orig(shadow_M_AXI_AWADDR_INT) > orig(shadow_M_AXI_AWADDR_wire_old)
 1.2877037565E10 * orig(M_AXI_AWADDR_wire) - 8.589933307E9 * orig(shadow_M_AXI_AWADDR_INT) + 8.58469171E9 * orig(shadow_M_AXI_AWADDR_wire_old) + 2.251799476830208E16 == 0
 ===========================================================================
 ..tick():::EXIT;condition="M_AXI_AWADDR_wire >= reg23_w_config"
+reg23_w_config == reg24_w_config
+reg23_w_config == reg26_w_config
+reg23_w_config == reg27_w_config
+reg23_w_config == reg28_w_config
+reg23_w_config == reg29_w_config
+reg23_w_config == reg30_w_config
+reg23_w_config == reg31_w_config
+reg23_w_config == reg32_w_config
+reg23_w_config == reg33_w_config
+reg23_w_config == reg34_w_config
+reg23_w_config == reg35_w_config
+reg23_w_config == reg36_w_config
+shadow_M_AXI_AWADDR == orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_AWADDR_wire == shadow_M_AXI_AWADDR_wire_tnt
+shadow_M_AXI_AWADDR_wire == shadow_M_AXI_AWADDR_wire_ctr
+shadow_M_AXI_AWADDR_wire == shadow_M_AXI_AWADDR_wire_or
+shadow_M_AXI_AWADDR_wire == orig(shadow_M_AXI_AWADDR_wire)
+shadow_M_AXI_AWADDR_wire == orig(shadow_M_AXI_AWADDR_wire_tnt)
+shadow_M_AXI_AWADDR_wire == orig(shadow_M_AXI_AWADDR_wire_ctr)
+shadow_M_AXI_AWADDR_wire == orig(shadow_M_AXI_AWADDR_wire_or)
+orig(reg23_w_config) == orig(reg24_w_config)
+orig(reg23_w_config) == orig(reg26_w_config)
+orig(reg23_w_config) == orig(reg27_w_config)
+orig(reg23_w_config) == orig(reg28_w_config)
+orig(reg23_w_config) == orig(reg29_w_config)
+orig(reg23_w_config) == orig(reg30_w_config)
+orig(reg23_w_config) == orig(reg31_w_config)
+orig(reg23_w_config) == orig(reg32_w_config)
+orig(reg23_w_config) == orig(reg33_w_config)
+orig(reg23_w_config) == orig(reg34_w_config)
+orig(reg23_w_config) == orig(reg35_w_config)
+orig(reg23_w_config) == orig(reg36_w_config)
+ARESETN one of { 0, 1 }
+reg22_w_config one of { -1, 0, 2952790016L }
+reg23_w_config one of { -1, 0 }
+reg25_w_config one of { -1, 0, 4026580992L }
+M_AXI_AWADDR_wire one of { -1, 0, 1 }
+shadow_M_AXI_AWADDR == 0
+shadow_M_AXI_AWADDR_INT one of { 2621440, 4294967295L }
+shadow_M_AXI_AWADDR_wire == 4294967295L
+shadow_M_AXI_AWADDR_wire_old >= 0
+delay == 1
+orig(ARESETN) one of { 0, 1 }
+orig(reg22_w_config) one of { -1, 0, 2952790016L }
+orig(reg23_w_config) one of { -1, 0 }
+orig(reg25_w_config) one of { -1, 0, 4026580992L }
+orig(M_AXI_AWADDR_wire) one of { -1, 0, 1 }
+orig(shadow_M_AXI_AWADDR_INT) one of { 2621440, 4294967295L }
+orig(shadow_M_AXI_AWADDR_wire_old) >= 0
+orig(delay) one of { 0, 1 }
+ARESETN >= reg23_w_config
+ARESETN >= shadow_M_AXI_AWADDR
+ARESETN < shadow_M_AXI_AWADDR_INT
+ARESETN < shadow_M_AXI_AWADDR_wire
+ARESETN <= delay
+ARESETN >= orig(reg23_w_config)
+ARESETN < orig(shadow_M_AXI_AWADDR_INT)
+reg22_w_config >= reg23_w_config
+reg22_w_config != shadow_M_AXI_AWADDR_INT
+reg22_w_config < shadow_M_AXI_AWADDR_wire
+reg22_w_config != delay
+reg22_w_config >= orig(reg23_w_config)
+reg22_w_config != orig(shadow_M_AXI_AWADDR_INT)
+reg22_w_config != orig(delay)
+reg23_w_config <= reg25_w_config
+reg23_w_config <= M_AXI_AWADDR_wire
+reg23_w_config <= M_AXI_AWADDR_INT
+reg23_w_config <= shadow_M_AXI_AWADDR
+reg23_w_config < shadow_M_AXI_AWADDR_INT
+reg23_w_config < shadow_M_AXI_AWADDR_wire
+reg23_w_config <= shadow_M_AXI_AWADDR_wire_old
+reg23_w_config < delay
+reg23_w_config <= orig(ARESETN)
+reg23_w_config >= orig(reg23_w_config)
+reg23_w_config < orig(shadow_M_AXI_AWADDR_INT)
+reg23_w_config <= orig(shadow_M_AXI_AWADDR_wire_old)
+reg23_w_config < orig(delay)
+reg25_w_config >= M_AXI_AWADDR_INT
+reg25_w_config != shadow_M_AXI_AWADDR_INT
+reg25_w_config < shadow_M_AXI_AWADDR_wire
+reg25_w_config != delay
+reg25_w_config >= orig(reg23_w_config)
+reg25_w_config != orig(shadow_M_AXI_AWADDR_INT)
+reg25_w_config != orig(delay)
+M_AXI_AWADDR_wire < shadow_M_AXI_AWADDR_INT
+M_AXI_AWADDR_wire < shadow_M_AXI_AWADDR_wire
+M_AXI_AWADDR_wire <= delay
+M_AXI_AWADDR_wire <= orig(ARESETN)
+M_AXI_AWADDR_wire >= orig(reg23_w_config)
+M_AXI_AWADDR_wire < orig(shadow_M_AXI_AWADDR_INT)
+M_AXI_AWADDR_wire <= orig(delay)
+M_AXI_AWADDR_INT < shadow_M_AXI_AWADDR_INT
+M_AXI_AWADDR_INT < shadow_M_AXI_AWADDR_wire
+M_AXI_AWADDR_INT != delay
+M_AXI_AWADDR_INT >= orig(reg23_w_config)
+M_AXI_AWADDR_INT != orig(shadow_M_AXI_AWADDR_INT)
+M_AXI_AWADDR_INT != orig(delay)
+shadow_M_AXI_AWADDR < shadow_M_AXI_AWADDR_INT
+shadow_M_AXI_AWADDR <= shadow_M_AXI_AWADDR_wire_old
+shadow_M_AXI_AWADDR <= orig(ARESETN)
+shadow_M_AXI_AWADDR >= orig(reg23_w_config)
+shadow_M_AXI_AWADDR < orig(shadow_M_AXI_AWADDR_INT)
+shadow_M_AXI_AWADDR <= orig(shadow_M_AXI_AWADDR_wire_old)
+shadow_M_AXI_AWADDR <= orig(delay)
+shadow_M_AXI_AWADDR_INT <= shadow_M_AXI_AWADDR_wire
+shadow_M_AXI_AWADDR_INT != shadow_M_AXI_AWADDR_wire_old
+shadow_M_AXI_AWADDR_INT > delay
+shadow_M_AXI_AWADDR_INT > orig(ARESETN)
+shadow_M_AXI_AWADDR_INT != orig(reg22_w_config)
+shadow_M_AXI_AWADDR_INT > orig(reg23_w_config)
+shadow_M_AXI_AWADDR_INT != orig(reg25_w_config)
+shadow_M_AXI_AWADDR_INT > orig(M_AXI_AWADDR_wire)
+shadow_M_AXI_AWADDR_INT != orig(M_AXI_AWADDR_INT)
+shadow_M_AXI_AWADDR_INT != orig(shadow_M_AXI_AWADDR_wire_old)
+shadow_M_AXI_AWADDR_INT > orig(delay)
+shadow_M_AXI_AWADDR_wire > shadow_M_AXI_AWADDR_wire_old
+shadow_M_AXI_AWADDR_wire > orig(ARESETN)
+shadow_M_AXI_AWADDR_wire > orig(reg22_w_config)
+shadow_M_AXI_AWADDR_wire > orig(reg23_w_config)
+shadow_M_AXI_AWADDR_wire > orig(reg25_w_config)
+shadow_M_AXI_AWADDR_wire > orig(M_AXI_AWADDR_wire)
+shadow_M_AXI_AWADDR_wire > orig(M_AXI_AWADDR_INT)
+shadow_M_AXI_AWADDR_wire >= orig(shadow_M_AXI_AWADDR_INT)
+shadow_M_AXI_AWADDR_wire > orig(shadow_M_AXI_AWADDR_wire_old)
+shadow_M_AXI_AWADDR_wire > orig(delay)
+shadow_M_AXI_AWADDR_wire_old != delay
+shadow_M_AXI_AWADDR_wire_old >= orig(reg23_w_config)
+shadow_M_AXI_AWADDR_wire_old != orig(shadow_M_AXI_AWADDR_INT)
+shadow_M_AXI_AWADDR_wire_old != orig(delay)
+delay >= orig(ARESETN)
+delay != orig(reg22_w_config)
+delay > orig(reg23_w_config)
+delay != orig(reg25_w_config)
+delay >= orig(M_AXI_AWADDR_wire)
+delay != orig(M_AXI_AWADDR_INT)
+delay < orig(shadow_M_AXI_AWADDR_INT)
+delay != orig(shadow_M_AXI_AWADDR_wire_old)
+delay >= orig(delay)
+orig(ARESETN) >= orig(reg23_w_config)
+orig(ARESETN) < orig(shadow_M_AXI_AWADDR_INT)
+orig(reg22_w_config) >= orig(reg23_w_config)
+orig(reg22_w_config) != orig(shadow_M_AXI_AWADDR_INT)
+orig(reg22_w_config) != orig(delay)
+orig(reg23_w_config) <= orig(reg25_w_config)
+orig(reg23_w_config) <= orig(M_AXI_AWADDR_wire)
+orig(reg23_w_config) <= orig(M_AXI_AWADDR_INT)
+orig(reg23_w_config) < orig(shadow_M_AXI_AWADDR_INT)
+orig(reg23_w_config) <= orig(shadow_M_AXI_AWADDR_wire_old)
+orig(reg23_w_config) < orig(delay)
+orig(reg25_w_config) >= orig(M_AXI_AWADDR_INT)
+orig(reg25_w_config) != orig(shadow_M_AXI_AWADDR_INT)
+orig(reg25_w_config) != orig(delay)
+orig(M_AXI_AWADDR_wire) < orig(shadow_M_AXI_AWADDR_INT)
+orig(M_AXI_AWADDR_wire) <= orig(delay)
+orig(M_AXI_AWADDR_INT) < orig(shadow_M_AXI_AWADDR_INT)
+orig(M_AXI_AWADDR_INT) != orig(delay)
+orig(shadow_M_AXI_AWADDR_INT) != orig(shadow_M_AXI_AWADDR_wire_old)
+orig(shadow_M_AXI_AWADDR_INT) > orig(delay)
+===========================================================================
+..tick():::EXIT;condition="not(M_AXI_AWADDR_wire < reg23_w_config)"
 reg23_w_config == reg24_w_config
 reg23_w_config == reg26_w_config
 reg23_w_config == reg27_w_config

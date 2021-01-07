@@ -51,6 +51,7 @@ def make_spinfo(name,header):
 			last = reg
 	to_write.write("shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire\n"); # custom add
 	to_write.write("M_AXI_AWADDR_wire >= reg23_w_config\n"); # custom add
+	to_write.write("M_AXI_AWADDR_wire < reg23_w_config\n"); # custom add
 
 def dump(key,file,nonce):
 	if nonce > 0:
