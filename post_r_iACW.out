@@ -107,7 +107,7 @@ origreg25_w_config one of { -1, 0, 4026580992L }
 origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 2621440, 4294967295L }
 
-Given "shadow_M_AXI_AWADDR_wire >= reg23_w_config":
+Given "M_AXI_AWADDR_wire >= reg23_w_config":
 
 ==: origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 origARESETN one of { 0, 1 }

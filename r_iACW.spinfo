@@ -5,4 +5,4 @@ PPT_NAME ..tick
 0==M_AXI_AWADDR_wire
 0==M_AXI_AWADDR_INT
 shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire
-shadow_M_AXI_AWADDR_wire >= reg23_w_config
+M_AXI_AWADDR_wire >= reg23_w_config
