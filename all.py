@@ -49,8 +49,8 @@ def make_spinfo(name,header):
 			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
 			to_write.write("0==" + reg.replace("[","").replace("]","") + "\n")
 			last = reg
-	to_write.write("shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire"); # custom add
-	to_write.write("shadow_M_AXI_AWADDR_wire >= reg23_w_config"); # custom add
+	to_write.write("shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire\n"); # custom add
+	to_write.write("shadow_M_AXI_AWADDR_wire >= reg23_w_config\n"); # custom add
 
 def dump(key,file,nonce):
 	if nonce > 0:
