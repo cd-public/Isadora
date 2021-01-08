@@ -41,7 +41,7 @@ def make_spinfo(name,header):
 	to_write = open(name + ".spinfo","w")
 	to_write.write(prefix)
 	key = [line.split()[4] for line in header]
-	key_t = list(filter(lambda x: "shadow" not in x and "reg" not in x, key)) # capture original regs
+	key_t = list(filter(lambda x: "reg" not in x, key)) # capture original regs
 	key_t = [reg for reg in key_t]
 	last = ""
 	for reg in key_t: 
@@ -49,9 +49,6 @@ def make_spinfo(name,header):
 			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
 			to_write.write("0==" + reg.replace("[","").replace("]","") + "\n")
 			last = reg
-	to_write.write("shadow_M_AXI_AWADDR_INT == shadow_M_AXI_AWADDR_wire\n"); # custom add
-	to_write.write("M_AXI_AWADDR_wire >= reg23_w_config\n"); # custom add
-	to_write.write("M_AXI_AWADDR_wire < reg23_w_config\n"); # custom add
 
 def dump(key,file,nonce):
 	if nonce > 0:
@@ -75,7 +72,7 @@ def dump(key,file,nonce):
 					val = ""
 				else:
 					first = False
-				file.write(splits[0].replace("]","") + "\n")
+				file.write(splits[0] + "\n") #.replace("]","") + "\n")
 				val = val + reg[3]
 				last = splits[0]
 			elif splits[0] == last:
@@ -145,7 +142,7 @@ def read(name):
 			if i > -1:
 				key[i][3] = splits[0].replace('b','')
 				change = True
-		line = to_read.readline().replace("[","").replace("]","")
+		line = to_read.readline() #.replace("[","").replace("]","")
 	
 
 def post(name):
@@ -173,7 +170,7 @@ def post(name):
 						l = list(s)
 						l.sort()
 						text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
-						text = text.replace("shadow_M_AXI_","") # just for the AAC
+						#text = text.replace("shadow_M_AXI_","") # just for the AAC
 						for_out.write("==: " + text + "\n")
 				for line in point_info[2]:
 					if line not in one_ofs:
@@ -231,14 +228,14 @@ def post(name):
 				l = list(s)
 				l.sort()
 				text = str(l).replace("zzorig","orig").replace("[","").replace("]","").replace("\'","")
-				text = text.replace("shadow_M_AXI_","") # just for the AAC
+				#text = text.replace("shadow_M_AXI_","") # just for the AAC
 				for_out.write("==: " + text + "\n")
 		for line in point_info[2]:
 			if line not in one_ofs:
 				if not titled:
 					for_out.write(title)
 					titled = True
-				for_out.write(line.replace("shadow_M_AXI_","") + "\n")
+				for_out.write(line + "\n")#.replace("shadow_M_AXI_","") + "\n")
 
 
 def do_all(name):
