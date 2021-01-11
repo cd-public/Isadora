@@ -8,14 +8,12 @@ ARESETN one of { 0, 1 }
 reg22_w_config one of { -1, 0, 2952790016L }
 reg23_w_config one of { -1, 0 }
 reg25_w_config one of { -1, 0, 4026580992L }
-M_AXI_AWADDR_wire one of { -1, 0, 1 }
 shadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 
 Given "0==ARESETN":
 
-==: 0, ARESETN, M_AXI_AWADDR_INT, reg22_w_config, reg23_w_config, reg24_w_config, reg25_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, shadow_M_AXI_AWADDR, shadow_M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR_wire_old, origshadow_M_AXI_AWADDR
+==: 0, ARESETN, M_AXI_AWADDR_INT, reg22_w_config, reg23_w_config, reg24_w_config, reg25_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, shadow_M_AXI_AWADDR, shadow_M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR_wire_old, origM_AXI_AWADDR_INT % origM_AXI_AWADDR_wire, origreg23_w_config % origM_AXI_AWADDR_wire, origshadow_M_AXI_AWADDR
 ==: delay, origdelay
-M_AXI_AWADDR_wire one of { 0, 1 }
 
 Given "not(0==ARESETN)":
 
@@ -24,27 +22,24 @@ Given "not(0==ARESETN)":
 
 Given "0==M_AXI_AWADDR_wire":
 
-==: 0, M_AXI_AWADDR_wire, reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
+==: 0, M_AXI_AWADDR_INT, M_AXI_AWADDR_wire, reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, shadow_M_AXI_AWADDR, shadow_M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR_wire_old, origshadow_M_AXI_AWADDR
 ==: 1, delay, origdelay
-==: origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
+==: origM_AXI_AWADDR_INT, origreg23_w_config, origreg24_w_config, origreg25_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
+==: origshadow_M_AXI_AWADDR_INT, origshadow_M_AXI_AWADDR_wire_old
 reg22_w_config one of { 0, 2952790016L }
 reg25_w_config one of { 0, 4026580992L }
 origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
-origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 
 Given "not(0==M_AXI_AWADDR_wire)":
 
 ==: reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
-==: 0, M_AXI_AWADDR_INT % M_AXI_AWADDR_wire, reg22_w_config % M_AXI_AWADDR_wire, reg22_w_config % origreg22_w_config, reg25_w_config % M_AXI_AWADDR_wire, reg25_w_config % origreg25_w_config, shadow_M_AXI_AWADDR, shadow_M_AXI_AWADDR_wire_old % M_AXI_AWADDR_wire, origM_AXI_AWADDR_INT % M_AXI_AWADDR_wire, origM_AXI_AWADDR_wire % M_AXI_AWADDR_wire, origshadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR_wire_old % M_AXI_AWADDR_wire
+==: 0, reg22_w_config % origreg22_w_config, reg23_w_config % M_AXI_AWADDR_wire, reg25_w_config % origreg25_w_config, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
 ==: 1, delay, origARESETN
-M_AXI_AWADDR_wire one of { -1, 1 }
 origreg22_w_config one of { -1, 2952790016L }
 origreg25_w_config one of { -1, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -55,12 +50,10 @@ Given "0==M_AXI_AWADDR_INT":
 ==: origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 reg22_w_config one of { 0, 2952790016L }
 reg25_w_config one of { 0, 4026580992L }
-M_AXI_AWADDR_wire one of { 0, 1 }
 origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 
 Given "not(0==M_AXI_AWADDR_INT)":
@@ -69,8 +62,8 @@ Given "not(0==M_AXI_AWADDR_INT)":
 ==: reg22_w_config, origreg22_w_config
 ==: reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 ==: reg25_w_config, origreg25_w_config
-==: M_AXI_AWADDR_wire, origM_AXI_AWADDR_wire
-==: 0, reg23_w_config % M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
+==: M_AXI_AWADDR_INT, origM_AXI_AWADDR_wire
+==: 0, reg23_w_config % M_AXI_AWADDR_INT, reg23_w_config % M_AXI_AWADDR_wire, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
 ==: 4294967295L, shadow_M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR_wire, shadow_M_AXI_AWADDR_wire_ctr, shadow_M_AXI_AWADDR_wire_or, shadow_M_AXI_AWADDR_wire_tnt, origshadow_M_AXI_AWADDR_wire, origshadow_M_AXI_AWADDR_wire_ctr, origshadow_M_AXI_AWADDR_wire_or, origshadow_M_AXI_AWADDR_wire_tnt
 reg22_w_config one of { -1, 2952790016L }
 reg25_w_config one of { -1, 4026580992L }
@@ -84,7 +77,6 @@ origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -95,12 +87,10 @@ Given "0==shadow_M_AXI_AWADDR_INT":
 ==: origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 reg22_w_config one of { 0, 2952790016L }
 reg25_w_config one of { 0, 4026580992L }
-M_AXI_AWADDR_wire one of { 0, 1 }
 origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 
 Given "not(0==shadow_M_AXI_AWADDR_INT)":
@@ -109,7 +99,7 @@ Given "not(0==shadow_M_AXI_AWADDR_INT)":
 ==: reg22_w_config, origreg22_w_config
 ==: reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 ==: reg25_w_config, origreg25_w_config
-==: M_AXI_AWADDR_wire, origM_AXI_AWADDR_wire
+==: 0, M_AXI_AWADDR_INT % origM_AXI_AWADDR_wire, reg23_w_config % M_AXI_AWADDR_wire, reg23_w_config % origM_AXI_AWADDR_wire, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
 ==: 4294967295L, shadow_M_AXI_AWADDR_INT, shadow_M_AXI_AWADDR_wire, shadow_M_AXI_AWADDR_wire_ctr, shadow_M_AXI_AWADDR_wire_or, shadow_M_AXI_AWADDR_wire_tnt, origshadow_M_AXI_AWADDR_wire, origshadow_M_AXI_AWADDR_wire_ctr, origshadow_M_AXI_AWADDR_wire_or, origshadow_M_AXI_AWADDR_wire_tnt
 reg22_w_config one of { -1, 2952790016L }
 reg25_w_config one of { -1, 4026580992L }
@@ -123,7 +113,6 @@ origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -134,7 +123,6 @@ origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -145,13 +133,11 @@ Given "0==shadow_M_AXI_AWADDR_wire_old":
 ==: origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 reg22_w_config one of { 0, 2952790016L }
 reg25_w_config one of { 0, 4026580992L }
-M_AXI_AWADDR_wire one of { 0, 1 }
 M_AXI_AWADDR_INT one of { 0, 3710927468L, 3710927504L }
 origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 
 Given "not(0==shadow_M_AXI_AWADDR_wire_old)":
@@ -160,9 +146,9 @@ Given "not(0==shadow_M_AXI_AWADDR_wire_old)":
 ==: reg22_w_config, origreg22_w_config
 ==: reg23_w_config, reg24_w_config, reg26_w_config, reg27_w_config, reg28_w_config, reg29_w_config, reg30_w_config, reg31_w_config, reg32_w_config, reg33_w_config, reg34_w_config, reg35_w_config, reg36_w_config, origreg23_w_config, origreg24_w_config, origreg26_w_config, origreg27_w_config, origreg28_w_config, origreg29_w_config, origreg30_w_config, origreg31_w_config, origreg32_w_config, origreg33_w_config, origreg34_w_config, origreg35_w_config, origreg36_w_config
 ==: reg25_w_config, origreg25_w_config
+==: 0, reg23_w_config % M_AXI_AWADDR_wire, shadow_M_AXI_AWADDR, origshadow_M_AXI_AWADDR
 reg22_w_config one of { -1, 2952790016L }
 reg25_w_config one of { -1, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -173,7 +159,6 @@ origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
 
@@ -184,6 +169,5 @@ origARESETN one of { 0, 1 }
 origreg22_w_config one of { -1, 0, 2952790016L }
 origreg23_w_config one of { -1, 0 }
 origreg25_w_config one of { -1, 0, 4026580992L }
-origM_AXI_AWADDR_wire one of { -1, 0, 1 }
 origshadow_M_AXI_AWADDR_INT one of { 0, 4294967295L }
 origdelay one of { 0, 1 }
