@@ -109,26 +109,6 @@ ppt ..tick():::ENTER
 	rep-type int
 	dec-type int
 	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_tnt
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_old
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_ctr
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_or
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
   variable delay
 	var-kind variable
 	rep-type int
@@ -238,26 +218,6 @@ ppt ..tick():::EXIT0
 	dec-type int
 	comparability 1 
   variable shadow_M_AXI_AWADDR_wire
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_tnt
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_old
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_ctr
-	var-kind variable
-	rep-type int
-	dec-type int
-	comparability 1 
-  variable shadow_M_AXI_AWADDR_wire_or
 	var-kind variable
 	rep-type int
 	dec-type int
