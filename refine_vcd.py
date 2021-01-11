@@ -17,6 +17,12 @@ def refine(name):
 	cache = ""
 	cache_live = False
 	
+## step -1: populated needed_regs	
+
+	needed_regs = needed_regs + ["M_AXI_AWADDR_wire"] + ["M_AXI_AWADDR_INT"]
+	for i in range(22,37):
+		needed_regs = needed_regs + ["reg" + str(i) + "_w_config"]
+	
 	for line in vcd_in:
 
 ## step 0: copy header
@@ -31,15 +37,15 @@ def refine(name):
 ## step 1: copy original design state
 
 		if step1:
-			if needed_regs == []:
+			if "module myHWtask" in line:
 				step1 = False
 				step2 = True
 			else:
 				for needed_reg in needed_regs:
-					if " " + needed_reg + " $end" in line:
+					if " " + needed_reg + " " in line:
 						vcd_out.write(line)
 						refined_vars = refined_vars + [line.split()[3]]
-						needed_regs.remove(needed_reg)
+						
 						
 ## step 2: modules
 		
@@ -54,7 +60,7 @@ def refine(name):
 				step3 = True
 				vcd_out.write("$enddefinitions $end\n$dumpvars\n#0\n")
 			elif "$scope module " in line:
-				if "shadow_dut" in line:
+				if "shadow_dut" in line and "_AXI_" in curr_module:
 					tag = curr_module.split("_AXI_")[1]
 				else:
 					tag = ""
@@ -84,6 +90,6 @@ def refine(name):
 						vcd_out.write(cache)
 						cache_live = False
 					vcd_out.write(line)
-				
-refine("aac_sp_01")
+
+refine("iACW")
 #refine("aac_samp")
