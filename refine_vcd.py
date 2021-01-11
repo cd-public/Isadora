@@ -65,7 +65,7 @@ def refine(name):
 				else:
 					tag = ""
 				curr_module = line.split()[2]
-			elif tag != "" and "shadow_M_AXI_" + tag in line:
+			elif tag != "" and "shadow_M_AXI_" + tag in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line:
 				vcd_out.write(line)
 				refined_vars = refined_vars + [line.split()[3]]
 
