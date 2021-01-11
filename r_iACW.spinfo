@@ -1,13 +1,9 @@
 
 
 PPT_NAME ..tick
-0==ARESETN
-0==M_AXI_AWADDR_wire
-0==M_AXI_AWADDR_INT
-0==shadow_M_AXI_AWADDR
-0==shadow_M_AXI_AWADDR_INT
-0==shadow_M_AXI_AWADDR_wire
-0==shadow_M_AXI_AWADDR_wire_tnt
-0==shadow_M_AXI_AWADDR_wire_old
-0==shadow_M_AXI_AWADDR_wire_ctr
-0==shadow_M_AXI_AWADDR_wire_or
+0==orig(ARESETN)
+0==orig(M_AXI_AWADDR_wire)
+0==orig(M_AXI_AWADDR_INT)
+0==orig(shadow_M_AXI_AWADDR)
+0==orig(shadow_M_AXI_AWADDR_INT)
+0==orig(shadow_M_AXI_AWADDR_wire)

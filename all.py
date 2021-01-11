@@ -41,13 +41,13 @@ def make_spinfo(name,header):
 	to_write = open(name + ".spinfo","w")
 	to_write.write(prefix)
 	key = [line.split()[4] for line in header]
-	key_t = list(filter(lambda x: "reg" not in x, key)) # capture original regs
+	key_t = list(filter(lambda x: "reg" not in x and "_tnt" not in x and "_old" not in x and "_ctr" not in x and "_or" not in x, key)) # capture original regs and relevant shadow
 	key_t = [reg for reg in key_t]
 	last = ""
 	for reg in key_t: 
 		if reg != last:
 			#to_write.write("\"1\"==orig(" + reg.replace("[","").replace("]","") + ")\n")
-			to_write.write("0==" + reg.replace("[","").replace("]","") + "\n")
+			to_write.write("0==orig(" + reg.replace("[","").replace("]","") + ")\n")
 			last = reg
 
 def dump(key,file,nonce):
