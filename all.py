@@ -16,24 +16,25 @@ def make_decls(name,header):
 	# make key
 	key = [line.split()[2:] for line in header]
 	last = ""
+	cnt = 0
 	for point in ["ppt ..tick():::ENTER\n  ppt-type enter\n","\nppt ..tick():::EXIT0\n  ppt-type subexit\n"]:
 		to_write.write(point)
 		for reg in key:	
 			# only write a single var for each register, regardless of bit length, to decls
 			if reg[2] != last:
+				if "31" in reg[3]:
+					to_write.write("  variable " + reg[2] + "3116" + suffix)
+					to_write.write("  variable " + reg[2] + "150" + suffix)
 				to_write.write("  variable " + reg[2] + suffix)
 				last = reg[2]
-		# add delay length
-		to_write.write("  variable " + "delay" + suffix)
+				cnt = 1
 	for reg in key:
 		# continue to store bits separately internally
 		if len(reg) > 4:
 			reg[2] = reg[2] + " " + reg[3]	
 		while len(reg) > 3:
 			reg.remove(reg[3])
-	# add delay slot to key
 	out_key = key
-	out_key = out_key + [[0, "", "delay", "0"]]
 	return out_key
 
 def make_spinfo(name,header):
@@ -60,6 +61,7 @@ def dump(key,file,nonce):
 		# handle the differing bits
 		last = ""
 		val = ""
+		cnt = 0
 		first = True
 		for reg in key:
 			splits = reg[2].split()
@@ -69,14 +71,20 @@ def dump(key,file,nonce):
 						val = "-1"
 					file.write(str(int(val,2)))
 					file.write("\n1\n")
-					val = ""
+					# derived 32 bit reg subfields
+					#if cnt == 32 or "31:0" in reg[3]:
+					file.write(splits[0] + "3116\n" + str(int(val,2) >> 16) + "\n1\n")
+					file.write(splits[0] + "150\n" + str(int(val, 2) & 0xffff) + "\n1\n")
+					val = ""		
 				else:
 					first = False
 				file.write(splits[0] + "\n") #.replace("]","") + "\n")
 				val = val + reg[3]
 				last = splits[0]
+				cnt = 1
 			elif splits[0] == last:
 				val = val + reg[3]
+				cnt = cnt + 1
 		file.write(str(int(val,2)))
 		file.write("\n1\n")
 		file.write("\n")
