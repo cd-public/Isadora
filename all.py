@@ -61,32 +61,24 @@ def dump(key,file,nonce):
 		# handle the differing bits
 		last = ""
 		val = ""
-		cnt = 0
 		first = True
 		for reg in key:
 			splits = reg[2].split()
 			if splits[0] != last:
-				if not first:
-					if "x" in val: # hack for uninitialized values - bit values are always positive
-						val = "-1"
-					file.write(str(int(val,2)))
-					file.write("\n1\n")
-					# derived 32 bit reg subfields
-					#if cnt == 32 or "31:0" in reg[3]:
-					file.write(splits[0] + "3116\n" + str(int(val,2) >> 16) + "\n1\n")
-					file.write(splits[0] + "150\n" + str(int(val, 2) & 0xffff) + "\n1\n")
-					val = ""		
-				else:
-					first = False
-				file.write(splits[0] + "\n") #.replace("]","") + "\n")
 				val = val + reg[3]
 				last = splits[0]
-				cnt = 1
+				if "[" in reg[2]:
+					if "x" in val: # hack for uninitialized values - bit values are always positive
+						val = "-1"
+						file.write(splits[0] + "3116\n-1\n1\n")
+						file.write(splits[0] + "150\n-1\n1\n")
+					else:				
+						file.write(splits[0] + "3116\n" + str(int(val, 2) >> 16) + "\n1\n")
+						file.write(splits[0] + "150\n" + str(int(val, 2) & 0xffff) + "\n1\n")
+				file.write(splits[0] + "\n"+ str(int(val,2)) + "\n1\n")
+				val = ""
 			elif splits[0] == last:
 				val = val + reg[3]
-				cnt = cnt + 1
-		file.write(str(int(val,2)))
-		file.write("\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
