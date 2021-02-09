@@ -50,9 +50,8 @@ def dump(key,file,nonce):
 			if splits[0] != last:
 				val = val + reg[3]
 				last = splits[0]
-				if "[" in reg[2]:
-					if "x" in val: # hack for uninitialized values - bit values are always positive
-						val = "-1"
+				if "x" in val: # hack for uninitialized values - bit values are always positive
+					val = "-1"
 				file.write(splits[0] + "\n"+ str(int(val,2)) + "\n1\n")
 				val = ""
 			elif splits[0] == last:
@@ -95,17 +94,9 @@ def read(name):
 	to_write = open(name + ".dtrace","w")
 	to_write.write(prefix)
 	nonce = 0
-	last = 0
-	curr = 0
-	change = False
 	while len(line) > 0: 
 		if "#" in line[0]:		
-			curr = nonce
-			key[len(key)-1][3] = str(curr - last)
-			if change:
-				last = curr
 			nonce = dump(key,to_write,nonce)
-			change = False
 		else:
 			splits = line.split()
 			if len(splits) == 1:
@@ -117,21 +108,48 @@ def read(name):
 						i = index
 			if i > -1:
 				key[i][3] = splits[0].replace('b','')
-				change = True
 		line = to_read.readline() #.replace("[","").replace("]","")
+	return key
 
-def make_spinfo(name):
+def get_shadows(name):
 	to_read = open(name+ "_1.out","r")	
 	to_write = open(name + "_1_s.out","w")
+	struct = [] # hold sets of regs of the same value
 	for line in to_read:
-		if "shadow_" in line and " == " in line and "orig" not in line:
-			to_write.write(line)
-	#prefix = "\n\nPPT_NAME ..tick\n"
-	#to_write = open(name + ".spinfo","w")
-	#to_write.write("\n\nPPT_NAME ..tick\n")
+		if "EXIT" in line:
+			to_ret = [] # returned struct of relevant regs
+			for ele in struct:
+				l = list(ele)
+				l.sort()
+				valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
+				if len(valid) > 1 and valid[0].replace("-","").isdigit():
+					to_write.write(str(valid) + "\n")
+					to_ret += [valid]
+			return to_ret
+		if " == " in line and "%" not in line: # get equalities
+			splits = line.split()
+			must_add = True			
+			for ele in struct:
+				if splits[0] in ele:
+					ele.add(splits[2])
+					must_add = False
+			if must_add:
+				struct += [set([splits[0],splits[2]])]
 
-	#		to_write.write("0==orig(" + reg.replace("[","").replace("]","") + ")\n")
-	#		last = reg
+def make_spinfo(name, key):
+	shadows_struct = get_shadows(name)
+	ban_list = [item for sublist in shadows_struct for item in sublist[1:]]
+	to_write = open(name + ".spinfo","w")
+	to_write.write("\n\nPPT_NAME ..tick\n")
+	# for each register in key that contains shadow that is not on the ban list:
+	last = ""
+	for reg in key:
+		splits = reg[2].split()
+		if splits[0] != last:
+			last = splits[0]
+			if "shadow_" in last and last not in ban_list:
+				to_write.write("0==orig(" + last + ")\n")				
+				#to_write.write("0==" + last + "\n")	
 
 def clean_up(name):
 	# clean up
@@ -143,12 +161,14 @@ def clean_up(name):
 
 
 def do_all(name):
-	read(name)
+	key = read(name)
 	# For this to work must first do 
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
 	# export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
-	system("java daikon.Daikon " + name + ".decls " + name + ".dtrace >" + name + "_1.out")
-	make_spinfo(name)
-	clean_up(name)
-do_all("r_iACW_old")
+	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace >" + name + "_1.out")
+	#make_spinfo(name, key)
+	system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
+	#clean_up(name)
+
+do_all("r_iACW")
