@@ -12,16 +12,16 @@ def refine(name):
 	step3 = False
 	curr_module = ""
 	tag = ""
-	needed_regs = ["ARESETN"]		 	# tracks elements of original design state to preserve in refinement
+	#needed_regs = ["ARESETN","ACLK"]	# tracks elements of original design state to preserve in refinement
 	refined_vars = []					# tracks VCD internal names of preserved state
 	cache = ""
 	cache_live = False
 	
 ## step -1: populated needed_regs	
 
-	needed_regs = needed_regs + ["M_AXI_AWADDR_wire"] + ["M_AXI_AWADDR_INT"]
-	for i in range(22,37):
-		needed_regs = needed_regs + ["reg" + str(i) + "_w_config"]
+	#needed_regs = needed_regs + ["M_AXI_AWADDR_wire"] + ["M_AXI_AWADDR_INT"]
+	#for i in range(22,37):
+	#	needed_regs = needed_regs + ["reg" + str(i) + "_w_config"]
 	
 	for line in vcd_in:
 
@@ -41,8 +41,9 @@ def refine(name):
 				step1 = False
 				step2 = True
 			else:
-				for needed_reg in needed_regs:
-					if " " + needed_reg + " " in line:
+				#for needed_reg in needed_regs:
+					#if " " + needed_reg + " " in line:
+				if "_AXI_" in line and "wire" in line:
 						vcd_out.write(line)
 						refined_vars = refined_vars + [line.split()[3]]
 						
@@ -65,7 +66,8 @@ def refine(name):
 				else:
 					tag = ""
 				curr_module = line.split()[2]
-			elif tag != "" and "shadow_M_AXI_" + tag in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line:
+			#elif tag != "" and "shadow_M_AXI_" + tag in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line:
+			elif tag != "" and "shadow_" in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line and "shadow_n" not in line and "shadow_open" not in line:
 				vcd_out.write(line)
 				refined_vars = refined_vars + [line.split()[3]]
 
