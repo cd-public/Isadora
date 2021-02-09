@@ -161,14 +161,14 @@ def clean_up(name):
 
 
 def do_all(name):
-	key = read(name)
+	#key = read(name)
 	# For this to work must first do 
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
 	# export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
 	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace >" + name + "_1.out")
 	#make_spinfo(name, key)
-	system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
+	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
 	#clean_up(name)
 
 do_all("r_iACW")
