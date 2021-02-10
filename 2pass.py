@@ -10,7 +10,7 @@ nonce = 1
 
 def make_decls(name,header):
 	prefix = "input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n"
-	suffix = "\n	var-kind variable\n	rep-type int\n	dec-type int\n	comparability 1 \n"
+	suffix = "\n	var-kind variable\n	rep-type int\n	dec-type int\n	comparability "
 	to_write = open(name + ".decls","w")
 	to_write.write(prefix)
 	# make key
@@ -22,7 +22,11 @@ def make_decls(name,header):
 		for reg in key:	
 			# only write a single var for each register, regardless of bit length, to decls
 			if reg[2] != last:
-				to_write.write("  variable " + reg[2] + suffix)
+				if "shadow" in reg[2]:
+					suf = suffix + "2 \n"
+				else:
+					suf = suffix + "1 \n"
+				to_write.write("  variable " + reg[2] + suf)
 				last = reg[2]
 				cnt = 1
 	for reg in key:
@@ -123,7 +127,7 @@ def get_shadows(name):
 				l.sort()
 				valid = l
 				#valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
-				if len(valid) > 1 and valid[0].replace("-","").isdigit():
+				if len(valid) > 1:# and valid[0].replace("-","").isdigit():
 					to_write.write(str(valid) + "\n")
 					to_ret += [valid]
 			return to_ret
@@ -138,8 +142,6 @@ def get_shadows(name):
 				struct += [set([splits[0],splits[2]])]
 
 def make_spinfo(name, key):
-	shadows_struct = get_shadows(name)
-	ban_list = [item for sublist in shadows_struct for item in sublist[1:]]
 	to_write = open(name + ".spinfo","w")
 	to_write.write("\n\nPPT_NAME ..tick\n")
 	# for each register in key that contains shadow that is not on the ban list:
@@ -148,8 +150,8 @@ def make_spinfo(name, key):
 		splits = reg[2].split()
 		if splits[0] != last:
 			last = splits[0]
-			if "shadow_" in last and last not in ban_list:
-				to_write.write("0==orig(" + last + ")\n")				
+			if "shadow_" in last:
+				to_write.write("0==orig(" + last + ") && 0!=" + last + "\n")				
 				#to_write.write("0==" + last + "\n")	
 
 def clean_up(name):
@@ -162,15 +164,15 @@ def clean_up(name):
 
 
 def do_all(name):
-	#key = read(name)
+	key = read(name)
 	# For this to work must first do 
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
 	# export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
 	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace >" + name + "_1.out")
-	#make_spinfo(name, key)
+	make_spinfo(name, key)
 	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
 	#clean_up(name)
-	get_shadows(name)
+	#get_shadows(name)
 
-do_all("r_iACW")
+do_all("rb_iACW")
