@@ -121,7 +121,8 @@ def get_shadows(name):
 			for ele in struct:
 				l = list(ele)
 				l.sort()
-				valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
+				valid = l
+				#valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
 				if len(valid) > 1 and valid[0].replace("-","").isdigit():
 					to_write.write(str(valid) + "\n")
 					to_ret += [valid]
@@ -170,5 +171,6 @@ def do_all(name):
 	#make_spinfo(name, key)
 	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
 	#clean_up(name)
+	get_shadows(name)
 
 do_all("r_iACW")
