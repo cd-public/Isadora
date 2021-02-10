@@ -1,0 +1,11 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading splitter info files (read 1 spinfo file, 1 splitter)
+Reading declaration files ...tick: 1 of 1 splitters successful
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+No return from procedure observed 1 time.  Unmatched entries are ignored!
+Unterminated calls:
+  ..tick() : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
