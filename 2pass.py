@@ -8,10 +8,10 @@ prefix = "input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n
 
 nonce = 1
 
-def make_decls(name,header):
+def make_decls(name,header,suffix):
+	to_write = open(name + suffix + ".decls","w")
 	prefix = "input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n"
 	suffix = "\n	var-kind variable\n	rep-type int\n	dec-type int\n	comparability "
-	to_write = open(name + ".decls","w")
 	to_write.write(prefix)
 	# make key
 	key = [line.split()[2:] for line in header]
@@ -64,7 +64,7 @@ def dump(key,file,nonce):
 	return nonce + 1
 			
 
-def read(name):
+def read(name, banlist,suffix):
 	to_read = open(name + ".vcd","r")
 	# get header
 	header = []
@@ -75,8 +75,10 @@ def read(name):
 		if "dumpvars" in line:
 			in_header = False
 		if "$var" in line and "clk" not in line:
-			header = header + [line]
-	key = make_decls(name,header)
+			splits = line.split()
+			if splits[4] not in banlist:
+				header = header + [line]
+	key = make_decls(name,header,suffix)
 	# now we load the key for the first dump
 	line = to_read.readline() # skip first timestamp
 	line = to_read.readline() # load first post timestamp line
@@ -95,7 +97,7 @@ def read(name):
 		if i == -1:
 			1 == 1
 		line = to_read.readline()
-	to_write = open(name + ".dtrace","w")
+	to_write = open(name + suffix + ".dtrace","w")
 	to_write.write(prefix)
 	nonce = 0
 	while len(line) > 0: 
@@ -115,21 +117,36 @@ def read(name):
 		line = to_read.readline() #.replace("[","").replace("]","")
 	return key
 
-def get_shadows(name):
+def get_bans(name):
 	to_read = open(name+ "_1.out","r")	
-	to_write = open(name + "_1_s.out","w")
+	to_write = open(name + "_ts.out","w")
 	struct = [] # hold sets of regs of the same value
 	for line in to_read:
 		if "EXIT" in line:
 			to_ret = [] # returned struct of relevant regs
+			ts = []
+			nts = []
 			for ele in struct:
 				l = list(ele)
 				l.sort()
 				valid = l
-				#valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
-				if len(valid) > 1:# and valid[0].replace("-","").isdigit():
-					to_write.write(str(valid) + "\n")
-					to_ret += [valid]
+				valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
+				if len(l) > 1:
+					valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
+					valid = [reg.replace("shadow_","") for reg in valid] 
+					if len(valid) > 1 and valid[0].replace("-","").isdigit():
+						if (valid[0] != "0"):
+							ts += valid[1:]
+						else:
+							nts += valid[1:]
+					to_ret += l[1:]
+			# ban all elements equal to constant
+			# ban all elements but first not equal to constant
+			# output taints and not taints to file
+			ts.sort()
+			nts.sort()
+			to_write.write("TAINTED   REGS: " + str(ts) + "\n")
+			to_write.write("UNTAINTED REGS: " + str(nts) + "\n")
 			return to_ret
 		if " == " in line and "%" not in line: # get equalities
 			splits = line.split()
@@ -141,22 +158,34 @@ def get_shadows(name):
 			if must_add:
 				struct += [set([splits[0],splits[2]])]
 
-def make_spinfo(name, key):
-	to_write = open(name + ".spinfo","w")
-	to_write.write("\n\nPPT_NAME ..tick\n")
-	# for each register in key that contains shadow that is not on the ban list:
+def get_shadows(name, key):
 	last = ""
+	to_ret = []
 	for reg in key:
 		splits = reg[2].split()
 		if splits[0] != last:
 			last = splits[0]
 			if "shadow_" in last:
-				to_write.write("0==orig(" + last + ") && 0!=" + last + "\n")				
-				#to_write.write("0==" + last + "\n")	
+				to_ret += [last]
+	return to_ret
+
+def make_spinfo(name, key):
+	shadows = get_shadows(name,key)
+	to_write = open(name + ".spinfo","w")
+	to_write.write("\n\nPPT_NAME ..tick\n")
+	# for each register in key that contains shadow that is not on the ban list:
+	for reg in shadows:
+		to_write.write("0==orig(" + reg + ") && 0!=" + reg + "\n")
+	return shadows
+
+def make_a_spinfo(reg):
+	to_write = open(reg + ".spinfo","w")
+	to_write.write("\n\nPPT_NAME ..tick\n")
+	to_write.write("0==orig(" + reg + ") && 0!=" + reg + "\n")
 
 def clean_up(name):
 	# clean up
-	system("rm " + name + "_1.out") # first pass temp file full
+	system("rm " + name + "_1.out") # first pass temp file
 	system("rm *.dtrace")
 	system("rm *.decls")
 	system("rm *.spinfo")
@@ -164,15 +193,30 @@ def clean_up(name):
 
 
 def do_all(name):
-	key = read(name)
-	# For this to work must first do 
+
+	# naive decls, dtrace
+	#key = read(name, [], "_1")
+
+	# For command to work to work must first do 
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
 	# export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
-	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace >" + name + "_1.out")
-	make_spinfo(name, key)
-	#system("java daikon.Daikon " + name + ".decls " + name + ".dtrace " + name + ".spinfo >" + name + ".out")
+
+	# this is the first pass, into _1
+	#system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + "_1.out")
+
+	# develop the ban list - vcd terms that are uninteresting
+	ban_list = get_bans(name)
+	
+	# reduced decls, dtrace, and a candidate spinfo (unuseable, but can be editted)
+	key = read(name, ban_list, "_2")
+	shadows = make_spinfo(name, key)
+
+	# test on single split
+	#make_a_spinfo(shadows[0])
+	
+	system("java daikon.Daikon " + name + "_2.decls " + name + "_2.dtrace " + shadows[0] + ".spinfo >" + name + "_" + shadows[0] + ".out")
 	#clean_up(name)
 	#get_shadows(name)
 
-do_all("rb_iACW")
+do_all("r_iACW")
