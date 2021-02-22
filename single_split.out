@@ -1,3 +1,18 @@
+MANUAL NOTE:
+
+Run completed in 4:48
+1 of 37 total splitters
+
+Run used a 2pass technology - one pass found all uninteresting shadow* to remove, second pass generated this
+Additional optimization needed: adding comparability classes, separating shadow* and non shadow* state
+This optimization gave a 3x speed-up pre-split, made split feasible
+
+This is a proof of concept - whatever else, each split can be run incrementally in total time ~= 3 hours
+
+The current script is not end to end - it requires a pass back through the refine_vcd stage, which requires large files
+These files do not fit into git repos and therefore there is a manual step between the 1st and 2nd passes at this time.
+It is likely the vcd's can be re-refined or refinement applied to the internal "key" but this is unimplemented.
+
 ..tick():::EXIT;condition="0==orig(shadow_M_AXI_AWADDR_INT) && 0!=shadow_M_AXI_AWADDR_INT"
 S_AXI_CTRL_AWPROT == S_AXI_CTRL_AWVALID
 S_AXI_CTRL_AWPROT == S_AXI_CTRL_AWREADY
