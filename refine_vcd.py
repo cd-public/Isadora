@@ -16,6 +16,8 @@ def refine(name):
 	refined_vars = []					# tracks VCD internal names of preserved state
 	cache = ""
 	cache_live = False
+	# values equal to a constant in first pass - created using the get_shadows function in 2pass.py and manually editing r_iACW_1_s.out into a single list
+	ban_list = []
 	
 ## step -1: populated needed_regs	
 
@@ -43,7 +45,7 @@ def refine(name):
 			else:
 				#for needed_reg in needed_regs:
 					#if " " + needed_reg + " " in line:
-				if "_AXI_" in line and "wire" in line:
+				if "_AXI_" in line and "wire" in line and line.split()[4] not in ban_list:
 						vcd_out.write(line)
 						refined_vars = refined_vars + [line.split()[3]]
 						
@@ -61,13 +63,13 @@ def refine(name):
 				step3 = True
 				vcd_out.write("$enddefinitions $end\n$dumpvars\n#0\n")
 			elif "$scope module " in line:
-				if "shadow_dut" in line and "_AXI_" in curr_module:
-					tag = curr_module.split("_AXI_")[1]
+				if "shadow_dut" in line:# and "_AXI_" in curr_module:
+					tag = curr_module #curr_module.split("_AXI_")[1]
 				else:
 					tag = ""
 				curr_module = line.split()[2]
 			#elif tag != "" and "shadow_M_AXI_" + tag in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line:
-			elif tag != "" and "shadow_" in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line and "shadow_n" not in line and "shadow_open" not in line:
+			elif tag != "" and "shadow_" in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line and "shadow_n" not in line and "shadow_open" not in line and line.split()[4] not in ban_list:
 				vcd_out.write(line)
 				refined_vars = refined_vars + [line.split()[3]]
 
@@ -93,5 +95,5 @@ def refine(name):
 						cache_live = False
 					vcd_out.write(line)
 
-refine("iACW")
+refine("iCTreply37")
 #refine("aac_samp")
