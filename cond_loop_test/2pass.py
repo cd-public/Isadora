@@ -221,4 +221,4 @@ def do_all(name):
 	# remove temp files
 	clean_up(name)
 
-do_all("r_CLT_TR1_M_AXI_AWVALID_wire")
+do_all("r_CLT_TR2_M_AXI_WLAST_wire")
