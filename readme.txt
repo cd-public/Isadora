@@ -6,11 +6,11 @@ The always and never tainted registers are in *_ts.out
 
 The conditionally tainted registers are present in *.spinfo. They are listed in daikon readable format, but for line
 
-0==orig(shadow_AW_ADDR_VALID) && 0!=shadow_AW_ADDR_VALID
+     0==orig(shadow_AW_ADDR_VALID) && 0!=shadow_AW_ADDR_VALID
 
 the conditionally tainted register is 
 
-AW_ADDR_VALID.
+     AW_ADDR_VALID.
 
 - Github Notes -
 
