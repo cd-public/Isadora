@@ -14,6 +14,8 @@ Test directory, research plan:
 
 5) [Local -> Daikon] Configure and run 2pass.py, with cleanup configured. 
 
+    This directories 2pass has the 2nd pass commenting out, cleanup commented in, and spinfo cleanup commented out. The input also varies.
+
 6) [Daikon -> Fabricant] Consult 2pass.py generation and repeat loop beginning at step 2 with n = n+1
 
 Process Notes:
