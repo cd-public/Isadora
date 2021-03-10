@@ -9,6 +9,7 @@ Test directory, research plan:
 3) [On Fabricant] Using Tortuga, set test_reg_1 as a taint source using a dummy property.
 
     Edit iACW_sps.as in local folder found by following do_fabricant in main directory.
+    Verify novel vcd generation using greg assert iACW.vcd
 
 4) [Fabricant -> Local] Convert Tortuga output .vcd to a 2pass.py input .vcd using refine_vcd.py
 
