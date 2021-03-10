@@ -4,7 +4,11 @@ Test directory, research plan:
 
 2) Select one conditionally tainted register, test_reg_n.
 
+    Look at *.spinfo, select a file. Selection criteria, M_AXI_*_wire, break ties alphabetically
+
 3) [On Fabricant] Using Tortuga, set test_reg_1 as a taint source using a dummy property.
+
+    Edit iACW_sps.as in local folder found by following do_fabricant in main directory.
 
 4) [Fabricant -> Local] Convert Tortuga output .vcd to a 2pass.py input .vcd using refine_vcd.py
 
