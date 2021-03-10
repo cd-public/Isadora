@@ -40,4 +40,5 @@ refine_vcd.py : Utility script to convert Tortuga output VCDs to smaller files t
 
 readme.txt : this file
 
+do_fabricant.txt : cached batch file for trace generation on fabricant
 
