@@ -25,3 +25,13 @@ Only run 2pass up until second miner pass to identifying conditional taints with
 Name VCD's using trn for test_reg_n, maintain this terminology through the loop.
 
 Rename the internal 2pass spinfos to retain the list of conditional taints at each stage - consider encoding here with *_ts.out.
+
+Performance Notes:
+
+Tortuga stage takes about 160 seconds
+
+Daikon stage takes about 10 seconds.
+
+All other stages about a second or less.
+
+Transmitting VCD's from UCSD to my local Daikon environment has some non-zero time cost.
