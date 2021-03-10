@@ -46,20 +46,23 @@ def dump(key,file,nonce):
 	for point in points:
 		file.write(point)
 		# handle the differing bits
-		last = ""
+		last = key[0][2].split()[0]
 		val = ""
 		first = True
 		for reg in key:
 			splits = reg[2].split()
 			if splits[0] != last:
-				val = val + reg[3]
-				last = splits[0]
 				if "x" in val: # hack for uninitialized values - bit values are always positive
 					val = "-1"
-				file.write(splits[0] + "\n"+ str(int(val,2)) + "\n1\n")
-				val = ""
+				file.write(last + "\n"+ str(int(val,2)) + "\n1\n")
+				last = splits[0]
+				val = reg[3]
 			elif splits[0] == last:
 				val = val + reg[3]
+		# close out given then offset of one in the loop
+		if "x" in val: # hack for uninitialized values - bit values are always positive
+			val = "-1"
+		file.write(last + "\n"+ str(int(val,2)) + "\n1\n")
 		file.write("\n")
 	return nonce + 1
 			
@@ -195,7 +198,7 @@ def clean_up(name):
 def do_all(name):
 
 	# naive decls, dtrace
-	#key = read(name, [], "_1")
+	key = read(name, [], "_1")
 
 	# For command to work to work must first do 
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
@@ -203,7 +206,7 @@ def do_all(name):
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
 
 	# this is the first pass, into _1
-	#system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + "_1.out")
+	system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + "_1.out")
 
 	# develop the ban list - vcd terms that are uninteresting
 	ban_list = get_bans(name)
@@ -212,11 +215,10 @@ def do_all(name):
 	key = read(name, ban_list, "_2")
 	shadows = make_spinfo(name, key)
 
-	# test on single split
-	#make_a_spinfo(shadows[0])
-	
+	# run the second pass
 	system("java daikon.Daikon " + name + "_2.decls " + name + "_2.dtrace " + shadows[0] + ".spinfo >" + name + "_" + shadows[0] + ".out")
+
+	# remove temp files
 	#clean_up(name)
-	#get_shadows(name)
 
 do_all("r_iACW")
