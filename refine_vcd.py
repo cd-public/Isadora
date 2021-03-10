@@ -95,5 +95,5 @@ def refine(name):
 						cache_live = False
 					vcd_out.write(line)
 
-refine("iCTreply37")
+refine("CLT_TR1_M_AXI_AWVALID_wire")
 #refine("aac_samp")
