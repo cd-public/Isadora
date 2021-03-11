@@ -2,6 +2,8 @@ Test directory, research plan:
 
 1) Consult 2pass.py generation in main directory, set n = 1.
 
+    This is included in cond_loop_test as r_CLT_TR0_M_AXI_AWADDR_wire*
+
 2) Select one conditionally tainted register, test_reg_n.
 
     Look at *.spinfo, select a file. Selection criteria, M_AXI_*_wire, break ties alphabetically
@@ -9,8 +11,11 @@ Test directory, research plan:
 3) [On Fabricant] Using Tortuga, set test_reg_1 as a taint source using a dummy property.
 
     Edit iACW_sps.as in local folder found by following do_fabricant in main directory.
+    Verify novel vcd generation using greg assert iACW.vcd
 
 4) [Fabricant -> Local] Convert Tortuga output .vcd to a 2pass.py input .vcd using refine_vcd.py
+
+    Current best practice is on an intermediate work directory on fabricant between Isadora and iterative_build.
 
 5) [Local] Configure and run 2pass.py, with cleanup configured. 
 
