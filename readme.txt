@@ -18,7 +18,9 @@ Directories:
 
 . : Main research working directory
 
-CT : C(alvin)T(est) - experimental directory for working on custom sourced traces 
+cond_loop_test : see cond_loop_test/readme
+
+tortuga_utils : utility scripts, notes, and functions to interface with the Tortuga tool
 
 Files:
 
