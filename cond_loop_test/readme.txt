@@ -23,6 +23,8 @@ Test directory, research plan:
 
 6) [Local -> Fabricant] Consult 2pass.py generation and repeat loop beginning at step 2 with n = n+1
 
+7) Use get_conds.py to parse the .spinfo files to append a third line of conditionally tainted registers to the *_ts.out file.
+
 Process Notes:
 
 Only run 2pass up until second miner pass to identifying conditional taints without incurring the second pass mining cost.
