@@ -10,23 +10,15 @@ def refine(name):
 	step1 = False
 	step2 = False
 	step3 = False
-	curr_module = ""
-	tag = ""
-	#needed_regs = ["ARESETN","ACLK"]	# tracks elements of original design state to preserve in refinement
-	refined_vars = []					# tracks VCD internal names of preserved state
-	cache = ""
+	orig_design_regs = set()			# tracks verilog names of origianl design
+	refined_vars = []					# tracks VCD internal names of original design
+	cache = ""							# tracks timing info
 	cache_live = False
-	# values equal to a constant in first pass - created using the get_shadows function in 2pass.py and manually editing r_iACW_1_s.out into a single list
-	ban_list = []
-	
-## step -1: populated needed_regs	
-
-	#needed_regs = needed_regs + ["M_AXI_AWADDR_wire"] + ["M_AXI_AWADDR_INT"]
-	#for i in range(22,37):
-	#	needed_regs = needed_regs + ["reg" + str(i) + "_w_config"]
+	tag = ""							# internal line read variable for vcd encoding
+	active = False						# tracks if copying is active
 	
 	for line in vcd_in:
-
+	
 ## step 0: copy header
 
 		if step0:
@@ -38,40 +30,44 @@ def refine(name):
 
 ## step 1: copy original design state
 
+		## assume all state in "u0" module
+
 		if step1:
+			
 			if "module myHWtask" in line:
 				step1 = False
 				step2 = True
-			else:
-				#for needed_reg in needed_regs:
-					#if " " + needed_reg + " " in line:
-				if "_AXI_" in line and "wire" in line and line.split()[4] not in ban_list:
-						vcd_out.write(line)
-						refined_vars = refined_vars + [line.split()[3]]
+				active = False
+			elif "module u0" in line:
+				active = True
+			elif active and "var" in line:
+				vcd_out.write(line)
+				orig_design_regs.add(line.split()[4])
+				refined_vars = refined_vars + [line.split()[3]]
+				
 						
 						
 ## step 2: modules
 		
-		## target is modules named test.u0.sec_inst_assertion_SP01_<SEND/RECEIVE>_M_AXI_<REG>.shadow_dut.shadow_M_AXI_<REG>*
-
+		## assume a single relevant shadow_dut
+		
 		if step2:
-			
-			## track the current module
+						
+			orig_design_regs = list(orig_design_regs)
+			orig_design_regs.sort()
 			
 			if "dumpvars" in line:
 				step2 = False
 				step3 = True
 				vcd_out.write("$enddefinitions $end\n$dumpvars\n#0\n")
-			elif "$scope module " in line:
-				if "shadow_dut" in line:# and "_AXI_" in curr_module:
-					tag = curr_module #curr_module.split("_AXI_")[1]
-				else:
-					tag = ""
-				curr_module = line.split()[2]
-			#elif tag != "" and "shadow_M_AXI_" + tag in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line:
-			elif tag != "" and "shadow_" in line and "_or" not in line and "_old" not in line and "_ctr" not in line and "_tnt" not in line and "shadow_n" not in line and "shadow_open" not in line and line.split()[4] not in ban_list:
-				vcd_out.write(line)
-				refined_vars = refined_vars + [line.split()[3]]
+				active = False
+			elif "module shadow_dut" in line:
+				active = True
+			elif active:
+				for reg in orig_design_regs:
+					if "shadow_" + reg + " " in line:
+						vcd_out.write(line)
+						refined_vars = refined_vars + [line.split()[3]]
 
 # step 3:
 		
@@ -95,5 +91,4 @@ def refine(name):
 						cache_live = False
 					vcd_out.write(line)
 
-refine("CLT_TR1_M_AXI_AWVALID_wire")
-#refine("aac_samp")
+refine("iACW")
