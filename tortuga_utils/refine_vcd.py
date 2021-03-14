@@ -61,8 +61,11 @@ def refine(name):
 				step3 = True
 				vcd_out.write("$enddefinitions $end\n$dumpvars\n#0\n")
 				active = False
-			elif "module shadow_dut" in line:
-				active = True
+			elif "module" in line:
+				if "module shadow_dut" in line:
+					active = True
+				else:
+					active = False
 			elif active:
 				for reg in orig_design_regs:
 					if "shadow_" + reg + " " in line:

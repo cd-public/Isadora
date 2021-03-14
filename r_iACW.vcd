@@ -3314,19 +3314,6 @@ $var wire 1 7H! shadow_AW_EN_RST $end
 $var wire 1 8H! shadow_AR_EN_RST $end
 $var wire 1 9H! shadow_AW_ADDR_VALID_FLAG $end
 $var wire 1 :H! shadow_AR_ADDR_VALID_FLAG $end
-$var wire 1 +P shadow_AW_ILL_TRANS_FIL_PTR [3] $end
-$var wire 1 ,P shadow_AW_ILL_TRANS_FIL_PTR [2] $end
-$var wire 1 -P shadow_AW_ILL_TRANS_FIL_PTR [1] $end
-$var wire 1 .P shadow_AW_ILL_TRANS_FIL_PTR [0] $end
-$var wire 1 'P shadow_AW_ILL_DATA_TRANS_SRV_PTR [3] $end
-$var wire 1 (P shadow_AW_ILL_DATA_TRANS_SRV_PTR [2] $end
-$var wire 1 )P shadow_AW_ILL_DATA_TRANS_SRV_PTR [1] $end
-$var wire 1 *P shadow_AW_ILL_DATA_TRANS_SRV_PTR [0] $end
-$var wire 1 #P shadow_AW_ILL_TRANS_SRV_PTR [3] $end
-$var wire 1 $P shadow_AW_ILL_TRANS_SRV_PTR [2] $end
-$var wire 1 %P shadow_AW_ILL_TRANS_SRV_PTR [1] $end
-$var wire 1 &P shadow_AW_ILL_TRANS_SRV_PTR [0] $end
-$var wire 1 LG! shadow_ACLK $end
 $enddefinitions $end
 $dumpvars
 #0
