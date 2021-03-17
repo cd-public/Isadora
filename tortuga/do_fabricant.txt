@@ -5,3 +5,4 @@ cd iterative_build
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
+ls
