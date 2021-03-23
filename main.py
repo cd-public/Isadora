@@ -203,8 +203,10 @@ def read(name, ban_list, tar_reg):
 			# how many high and low dts there have been
 			# the edge dt
 		file_cnt = 1
-		edge_file = [0, open(name + suffix + "_edge.dtrace","w")]
-		edge_file[1].write(prefix)
+		rise_file = [0, open(name + suffix + "_rise.dtrace","w")]
+		rise_file[1].write(prefix)
+		fall_file = [0, open(name + suffix + "_fall.dtrace","w")]
+		fall_file[1].write(prefix)
 		hi_curr = reg_tainted(tar_reg, key)
 		to_write = nxt_file(name, suffix, hi_curr, 0)
 		
@@ -221,7 +223,10 @@ def read(name, ban_list, tar_reg):
 					if hi_curr == hi_last:
 						curr_write = to_write
 					else:
-						curr_write = edge_file
+						if hi_curr:
+							curr_write = rise_file
+						else:
+							curr_write = fall_file
 						to_write = nxt_file(name, suffix, hi_curr, file_cnt)
 						file_cnt = file_cnt + 1
 				else:
@@ -382,7 +387,8 @@ if __name__ == "__main__":
 	# begin multipass
 	read(name, ban_list, tar_reg)
 	local = name + "_" + tar_reg
-	system("java daikon.Daikon " + local + ".decls " + local + "_edge.dtrace >" + local + "_edge.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
 	# clean temp files
