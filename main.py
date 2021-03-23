@@ -132,10 +132,11 @@ def reg_tainted(tar_reg, key):
 			ret = True
 	return ret
 	
-# count tainted registers
-def tainted_cnt(key):
+# calculate derived values
+def derived(key, line):
 	# staggered traversal
 	last = key[0][2].split()[0]
+	curr_bool = False
 	cnt = 0
 	# walk through regs, see if unique named shadow regs are nonzero
 	for reg in key:
@@ -148,14 +149,17 @@ def tainted_cnt(key):
 				curr_bool = False
 				if "1" in reg[3]:
 					curr_bool = True
-		elif curr == last and "1" in reg[3]:
-			curr_bool = True
+			elif curr == last and "1" in reg[3]:
+				curr_bool = True
 	if curr_bool == True:
 		cnt = cnt + 1
 	# count is in len - 3, delta is in len - 2
 	l = len(key)
-	key[l-2][3] = cnt - key[l-3][3]
-	key[l-3][3] = cnt
+	# deal with types
+	prev = int(key[l-3][3],2)
+	key[l-1][3] = bin(int(line[1:-5])) 
+	key[l-2][3] = bin(cnt - prev)
+	key[l-3][3] = bin(cnt)
 	return cnt
 	
 def nxt_file(name, suffix, hi_curr, file_cnt):
@@ -198,19 +202,18 @@ def read(name, ban_list, tar_reg):
 			# where shadow_tar_reg is
 			# how many high and low dts there have been
 			# the edge dt
-		file_cnt = 0
+		file_cnt = 1
 		edge_file = [0, open(name + suffix + "_edge.dtrace","w")]
 		edge_file[1].write(prefix)
 		hi_curr = reg_tainted(tar_reg, key)
-		to_write = nxt_file(name, suffix, hi_curr, file_cnt)
+		to_write = nxt_file(name, suffix, hi_curr, 0)
 		
 	while len(line) > 0: 
 		if "#" in line[0]:
 			# do the derived stuff
 			if tick:
 				if tar_reg != "":
-					tainted_cnt(key)
-					key[len(key) - 1] = line[1:-3] # this breaks on zero but skip 0 with init
+					derived(key, line)
 					hi_last = hi_curr
 					hi_curr = reg_tainted(tar_reg, key)
 					# if hi_curr == hi_last, write to to_write
@@ -220,6 +223,7 @@ def read(name, ban_list, tar_reg):
 					else:
 						curr_write = edge_file
 						to_write = nxt_file(name, suffix, hi_curr, file_cnt)
+						file_cnt = file_cnt + 1
 				else:
 					curr_write = to_write
 				# use last_str to do enter, get new str, use it to do exit
@@ -294,7 +298,7 @@ def file_to_bans(name):
 	return ban_list
 	
 # 2->multi, TODO none
-def get_shadows(name, key):
+def get_shadows(name, key, ban_list):
 	last = ""
 	to_ret = []
 	for reg in key:
@@ -302,7 +306,13 @@ def get_shadows(name, key):
 		if splits[0] != last:
 			last = splits[0]
 			if "shadow_" in last:
-				to_ret += [last]
+				unbanned = True
+				for ban in ban_list:
+					if ban in last:
+						unbanned = False
+				if unbanned:
+					to_ret += [last]
+	cts = []
 	for reg in to_ret:
 		cts = cts + [reg]
 	cts = [reg.replace("shadow_","") for reg in cts] 
@@ -350,7 +360,7 @@ if __name__ == "__main__":
 		ban_list = get_bans(name)
 		ban_list = no_secondaries(ban_list, key) # ban S_AXI_* from Andy, "S_AXI Signals..."
 		ban_list = ban_list + ["ACLK"]
-		shadows = get_shadows(name, key) # we do this for the side effect on *_ts
+		shadows = get_shadows(name, key, ban_list) # we do this for the side effect on *_ts
 		bans_to_file(name, ban_list)
 		
 		# clean temp files
@@ -365,13 +375,15 @@ if __name__ == "__main__":
 		tar_reg = sys.argv[2]
 	else:
 		# arbitrary if unspecified
-		to_read = open(name + ".ts.txt","w")
-		to_read.readline() # skip UNTAINTED
-		tar_reg = to_read.readline().replace("CONDTAINT REGS: [","").split()[0].replace(",","") # read CONDTAINT 1st element
+		to_read = open(name + ".ts.txt","r")
+		to_read.readline()
+		tar_reg = to_read.readline().replace("CONDTAINT REGS: [","").split()[0].replace(",","").replace("'","") # read CONDTAINT 1st element
 		
 	# begin multipass
 	read(name, ban_list, tar_reg)
 	local = name + "_" + tar_reg
-	system("java daikon.Daikon " + local + ".decls " + local + "_edge.dtrace >" + name + "_edge.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + name + "_lo.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + name + "_hi.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_edge.dtrace >" + local + "_edge.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
+	# clean temp files
+	system("rm *.inv.gz")
