@@ -94,7 +94,11 @@ def vcd_to_decls(name, to_read, suffix, ban_list):
 	# read in vars
 	while "$enddefinitions" not in line:
 		splits = line.split()
+		if len(splits) == 7: # multibit ban case
+			splits[4] = splits[4] + " " + splits[5]
 		if splits[4] not in ban_list and "$var" in line:
+			if "S_AXI" in line:
+				print(line)
 			header = header + [line]
 		line = to_read.readline()
 	# read one more line to skip enddef and dumpvar
@@ -327,10 +331,10 @@ def get_shadows(name, key, ban_list):
 
 def clean_up(name):
 	# clean up
-	system("rm *.dtrace")
-	system("rm *.decls")
-	system("rm *.spinfo")
-	system("rm *.inv.gz")
+	system("rm *.dtrace >/dev/null")
+	system("rm *.decls >/dev/null")
+	system("rm *.spinfo >/dev/null")
+	system("rm *.inv.gz >/dev/null")
 
 # analyzes a vcd cross register:
 	# For command to work to work must first do 
@@ -390,6 +394,6 @@ if __name__ == "__main__":
 	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")	
 	# clean temp files
-	system("rm *.inv.gz")
+	clean_up(name)
