@@ -340,6 +340,12 @@ def clean_up(name):
 	# export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
 	# export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
 	# export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
+# output
+	# _full 	== globals post ban
+	# _<reg>_	== props related to that reg
+	# _lo/_hi	== when reg taint is low or high
+	# _rise/_fall	== when reg taint changes, low to high or high to low
+	# _base		== when reg taint doesn't change
 if __name__ == "__main__":
 	# read arguments
 	
@@ -395,6 +401,7 @@ if __name__ == "__main__":
 	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")	
+	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
 	# clean temp files
-	clean_up(name)
+	#clean_up(name)
