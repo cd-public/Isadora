@@ -52,6 +52,8 @@ def make_decls(name,header,suffix):
 
 # little helper to handle string formating
 def last_val_to_str(last, val):
+	if last == "": # uninitialized case, return nothing
+		return ""
 	if "x" in val:
 		val_str = "-1"
 	else:
@@ -62,11 +64,11 @@ def last_val_to_str(last, val):
 # this does not include the program point prefix
 def to_dt(key):
 	ret_str = ""
-	last = key[0][2].split()[0]
-	val = key[0][3]
+	last = ""
+	val = 'x'
 	for reg in key:
-		curr = reg[2].split()[0]
-		if curr != last:
+		curr = reg[2].split()[0]	
+		if curr != last:		
 			# new reg, so write last reg to file
 			ret_str = ret_str + last_val_to_str(last, val)
 			# save new reg and its value
@@ -97,8 +99,6 @@ def vcd_to_decls(name, to_read, suffix, ban_list):
 		if len(splits) == 7: # multibit ban case
 			splits[4] = splits[4] + " " + splits[5]
 		if splits[4] not in ban_list and "$var" in line:
-			if "S_AXI" in line:
-				print(line)
 			header = header + [line]
 		line = to_read.readline()
 	# read one more line to skip enddef and dumpvar
@@ -389,7 +389,7 @@ if __name__ == "__main__":
 		tar_reg = to_read.readline().replace("CONDTAINT REGS: [","").split()[0].replace(",","").replace("'","") # read CONDTAINT 1st element
 		
 	# begin multipass
-	read(name, ban_list, tar_reg)
+	key = read(name, ban_list, tar_reg)
 	local = name + "_" + tar_reg
 	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
 	system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")

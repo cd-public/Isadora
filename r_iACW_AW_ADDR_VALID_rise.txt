@@ -4,8 +4,21 @@ Processing trace data; reading 1 dtrace file:
 
 ===========================================================================
 ..tick():::ENTER
-ARESETN == M_AXI_AWCACHE_wire
-ARESETN == M_AXI_ARCACHE_wire
+ARESETN == w_start_wire
+ARESETN == M_AXI_BREADY
+ARESETN == M_AXI_RREADY
+ARESETN == aw_en
+ARESETN == M_AXI_AWBURST_wire
+ARESETN == M_AXI_AWREADY_wire
+ARESETN == M_AXI_ARBURST_wire
+ARESETN == M_AXI_RREADY_wire
+ARESETN == AW_CH_EN
+ARESETN == AW_ADDR_VALID
+ARESETN == AW_ADDR_VALID_FLAG
+ARESETN == r_displ_wire
+ARESETN == w_displ_wire
+ARESETN == r_phase_wire
+ARESETN == w_phase_wire
 r_start_wire == reset_wire
 r_start_wire == w_done_wire
 r_start_wire == M_AXI_AWID
@@ -128,20 +141,6 @@ r_start_wire == AR_EN_RST
 r_start_wire == r_misb_clk_cycle_wire
 r_start_wire == w_misb_clk_cycle_wire
 r_start_wire == reg0_config
-w_start_wire == M_AXI_BREADY
-w_start_wire == M_AXI_RREADY
-w_start_wire == aw_en
-w_start_wire == M_AXI_AWBURST_wire
-w_start_wire == M_AXI_AWREADY_wire
-w_start_wire == M_AXI_ARBURST_wire
-w_start_wire == M_AXI_RREADY_wire
-w_start_wire == AW_CH_EN
-w_start_wire == AW_ADDR_VALID
-w_start_wire == AW_ADDR_VALID_FLAG
-w_start_wire == r_displ_wire
-w_start_wire == w_displ_wire
-w_start_wire == r_phase_wire
-w_start_wire == w_phase_wire
 r_num_trans_wire == w_num_trans_wire
 r_num_trans_wire == byte_index
 r_burst_len_wire == w_burst_len_wire
@@ -161,6 +160,7 @@ M_AXI_ARCACHE == M_AXI_RDATA_wire
 M_AXI_ARCACHE == M_AXI_ARCACHE_INT
 reg00_config == reg_data_out
 M_AXI_AWSIZE_wire == M_AXI_ARSIZE_wire
+M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
 M_AXI_ARVALID_wire == AR_CH_DIS
 AR_ILL_TRANS_FIL_PTR == AR_ILL_TRANS_SRV_PTR
 r_max_outs_wire == w_max_outs_wire
@@ -320,9 +320,8 @@ shadow_o_data == shadow_AW_CH_EN
 shadow_o_data == shadow_AW_CH_DIS
 shadow_o_data == shadow_AW_ADDR_VALID_FLAG
 DERIVED_taint_reg_count == DERIVED_taint_reg_delta
-ARESETN == 3
+ARESETN == 1
 r_start_wire == 0
-w_start_wire == 1
 r_base_addr_wire one of { 608376433, 1995491762, 2154147847L }
 w_base_addr_wire one of { 1032973850, 1439568302, 2366902304L }
 r_num_trans_wire == 4
@@ -341,6 +340,7 @@ reg10_r_config == 2684383232L
 reg22_w_config == 2952790016L
 reg25_w_config == 4026580992L
 M_AXI_AWSIZE_wire == 2
+M_AXI_AWCACHE_wire == 3
 M_AXI_WSTRB_wire == 15
 M_AXI_ARADDR_wire one of { 608376541, 1995491798, 2154147883L }
 M_AXI_ARVALID_wire one of { 0, 1 }
@@ -354,11 +354,36 @@ DERIVED_taint_reg_count == 0
 DERIVED_vcd_timestamp one of { 247, 376, 540 }
 ===========================================================================
 ..tick():::EXIT
-ARESETN == M_AXI_AWCACHE_wire
-ARESETN == M_AXI_ARCACHE_wire
+ARESETN == w_start_wire
+ARESETN == M_AXI_BREADY
+ARESETN == M_AXI_RREADY
+ARESETN == aw_en
+ARESETN == M_AXI_AWBURST_wire
+ARESETN == M_AXI_AWVALID_wire
+ARESETN == M_AXI_AWREADY_wire
+ARESETN == M_AXI_ARBURST_wire
+ARESETN == M_AXI_RREADY_wire
+ARESETN == AW_CH_EN
+ARESETN == r_displ_wire
+ARESETN == w_displ_wire
+ARESETN == r_phase_wire
+ARESETN == w_phase_wire
 ARESETN == orig(ARESETN)
-ARESETN == orig(M_AXI_AWCACHE_wire)
-ARESETN == orig(M_AXI_ARCACHE_wire)
+ARESETN == orig(w_start_wire)
+ARESETN == orig(M_AXI_BREADY)
+ARESETN == orig(M_AXI_RREADY)
+ARESETN == orig(aw_en)
+ARESETN == orig(M_AXI_AWBURST_wire)
+ARESETN == orig(M_AXI_AWREADY_wire)
+ARESETN == orig(M_AXI_ARBURST_wire)
+ARESETN == orig(M_AXI_RREADY_wire)
+ARESETN == orig(AW_CH_EN)
+ARESETN == orig(AW_ADDR_VALID)
+ARESETN == orig(AW_ADDR_VALID_FLAG)
+ARESETN == orig(r_displ_wire)
+ARESETN == orig(w_displ_wire)
+ARESETN == orig(r_phase_wire)
+ARESETN == orig(w_phase_wire)
 r_start_wire == reset_wire
 r_start_wire == w_done_wire
 r_start_wire == M_AXI_AWID
@@ -602,34 +627,6 @@ r_start_wire == orig(AR_EN_RST)
 r_start_wire == orig(r_misb_clk_cycle_wire)
 r_start_wire == orig(w_misb_clk_cycle_wire)
 r_start_wire == orig(reg0_config)
-w_start_wire == M_AXI_BREADY
-w_start_wire == M_AXI_RREADY
-w_start_wire == aw_en
-w_start_wire == M_AXI_AWBURST_wire
-w_start_wire == M_AXI_AWVALID_wire
-w_start_wire == M_AXI_AWREADY_wire
-w_start_wire == M_AXI_ARBURST_wire
-w_start_wire == M_AXI_RREADY_wire
-w_start_wire == AW_CH_EN
-w_start_wire == r_displ_wire
-w_start_wire == w_displ_wire
-w_start_wire == r_phase_wire
-w_start_wire == w_phase_wire
-w_start_wire == orig(w_start_wire)
-w_start_wire == orig(M_AXI_BREADY)
-w_start_wire == orig(M_AXI_RREADY)
-w_start_wire == orig(aw_en)
-w_start_wire == orig(M_AXI_AWBURST_wire)
-w_start_wire == orig(M_AXI_AWREADY_wire)
-w_start_wire == orig(M_AXI_ARBURST_wire)
-w_start_wire == orig(M_AXI_RREADY_wire)
-w_start_wire == orig(AW_CH_EN)
-w_start_wire == orig(AW_ADDR_VALID)
-w_start_wire == orig(AW_ADDR_VALID_FLAG)
-w_start_wire == orig(r_displ_wire)
-w_start_wire == orig(w_displ_wire)
-w_start_wire == orig(r_phase_wire)
-w_start_wire == orig(w_phase_wire)
 r_base_addr_wire == orig(r_base_addr_wire)
 w_base_addr_wire == M_AXI_AWADDR_wire
 w_base_addr_wire == orig(w_base_addr_wire)
@@ -687,6 +684,9 @@ reg25_w_config == orig(reg25_w_config)
 M_AXI_AWSIZE_wire == M_AXI_ARSIZE_wire
 M_AXI_AWSIZE_wire == orig(M_AXI_AWSIZE_wire)
 M_AXI_AWSIZE_wire == orig(M_AXI_ARSIZE_wire)
+M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
+M_AXI_AWCACHE_wire == orig(M_AXI_AWCACHE_wire)
+M_AXI_AWCACHE_wire == orig(M_AXI_ARCACHE_wire)
 M_AXI_WSTRB_wire == orig(M_AXI_WSTRB_wire)
 M_AXI_ARADDR_wire == orig(M_AXI_ARADDR_wire)
 M_AXI_ARVALID_wire == AR_CH_DIS
@@ -1009,9 +1009,8 @@ shadow_o_data == orig(shadow_AW_CH_DIS)
 shadow_o_data == orig(shadow_AW_ADDR_VALID_FLAG)
 shadow_M_AXI_AWVALID_wire == shadow_AW_ADDR_VALID_FLAG
 DERIVED_taint_reg_count == DERIVED_taint_reg_delta
-ARESETN == 3
+ARESETN == 1
 r_start_wire == 0
-w_start_wire == 1
 r_base_addr_wire one of { 608376433, 1995491762, 2154147847L }
 w_base_addr_wire one of { 1032973850, 1439568302, 2366902304L }
 r_num_trans_wire == 4
@@ -1030,6 +1029,7 @@ reg10_r_config == 2684383232L
 reg22_w_config == 2952790016L
 reg25_w_config == 4026580992L
 M_AXI_AWSIZE_wire == 2
+M_AXI_AWCACHE_wire == 3
 M_AXI_WSTRB_wire == 15
 M_AXI_ARADDR_wire one of { 608376541, 1995491798, 2154147883L }
 M_AXI_ARVALID_wire one of { 0, 1 }

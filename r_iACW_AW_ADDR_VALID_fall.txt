@@ -4,8 +4,13 @@ Processing trace data; reading 1 dtrace file:
 
 ===========================================================================
 ..tick():::ENTER
-ARESETN == M_AXI_AWCACHE_wire
-ARESETN == M_AXI_ARCACHE_wire
+ARESETN == M_AXI_BREADY
+ARESETN == M_AXI_AWBURST_wire
+ARESETN == M_AXI_ARBURST_wire
+ARESETN == r_displ_wire
+ARESETN == w_displ_wire
+ARESETN == r_phase_wire
+ARESETN == w_phase_wire
 r_start_wire == w_start_wire
 r_start_wire == reset_wire
 r_start_wire == r_done_wire
@@ -138,16 +143,11 @@ M_AXI_AWBURST == AR_CH_DIS
 M_AXI_AWBURST == AW_ADDR_VALID
 M_AXI_AWBURST == AW_ADDR_VALID_FLAG
 M_AXI_AWCACHE == M_AXI_AWCACHE_INT
-M_AXI_BREADY == M_AXI_AWBURST_wire
-M_AXI_BREADY == M_AXI_ARBURST_wire
-M_AXI_BREADY == r_displ_wire
-M_AXI_BREADY == w_displ_wire
-M_AXI_BREADY == r_phase_wire
-M_AXI_BREADY == w_phase_wire
 M_AXI_RREADY == aw_en
 M_AXI_RREADY == M_AXI_RREADY_wire
 axi_awaddr == byte_index
 M_AXI_AWSIZE_wire == M_AXI_ARSIZE_wire
+M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
 M_AXI_AWVALID_wire == M_AXI_ARREADY_wire
 M_AXI_AWVALID_wire == AR_CH_EN
 M_AXI_AWVALID_wire == AW_CH_DIS
@@ -295,7 +295,7 @@ shadow_M_AXI_AWVALID_wire == shadow_AW_CH_DIS
 shadow_M_AXI_AWVALID_wire == shadow_AW_ADDR_VALID_FLAG
 shadow_M_AXI_WLAST_wire == shadow_M_AXI_BVALID_wire
 shadow_M_AXI_WLAST_wire == shadow_B_STATE
-ARESETN == 3
+ARESETN == 1
 r_start_wire == 0
 r_base_addr_wire one of { 0, 1995491762, 2154147847L }
 w_base_addr_wire one of { 0, 1032973850, 2366902304L }
@@ -308,7 +308,6 @@ M_AXI_AWLEN one of { -1, 0, 8 }
 M_AXI_AWSIZE one of { -1, 0, 2 }
 M_AXI_AWBURST one of { -1, 0, 1 }
 M_AXI_AWCACHE one of { -1, 0, 3 }
-M_AXI_BREADY == 1
 M_AXI_RREADY one of { -1, 1 }
 o_data one of { -1, 4294901760L }
 axi_awaddr one of { -1, 4 }
@@ -324,6 +323,7 @@ reg25_w_config one of { -1, 4026580992L }
 reg_data_out one of { 0, 4294967295L }
 M_AXI_AWADDR_wire one of { -1, 1032973886, 2366902412L }
 M_AXI_AWSIZE_wire == 2
+M_AXI_AWCACHE_wire == 3
 M_AXI_AWVALID_wire one of { -1, 0, 1 }
 M_AXI_WSTRB_wire == 15
 M_AXI_ARADDR_wire one of { -1, 1995491798, 2154147883L }
@@ -560,6 +560,7 @@ reset_wire == r_displ_wire
 reset_wire == w_displ_wire
 reset_wire == r_phase_wire
 reset_wire == w_phase_wire
+reset_wire == orig(ARESETN)
 reset_wire == orig(M_AXI_BREADY)
 reset_wire == orig(M_AXI_AWBURST_wire)
 reset_wire == orig(M_AXI_ARBURST_wire)
@@ -586,7 +587,6 @@ M_AXI_AWSIZE_wire == M_AXI_ARSIZE_wire
 M_AXI_AWSIZE_wire == orig(M_AXI_AWSIZE_wire)
 M_AXI_AWSIZE_wire == orig(M_AXI_ARSIZE_wire)
 M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
-M_AXI_AWCACHE_wire == orig(ARESETN)
 M_AXI_AWCACHE_wire == orig(M_AXI_AWCACHE_wire)
 M_AXI_AWCACHE_wire == orig(M_AXI_ARCACHE_wire)
 M_AXI_WSTRB_wire == orig(M_AXI_WSTRB_wire)
