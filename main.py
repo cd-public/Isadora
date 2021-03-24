@@ -96,8 +96,6 @@ def vcd_to_decls(name, to_read, suffix, ban_list):
 	# read in vars
 	while "$enddefinitions" not in line:
 		splits = line.split()
-		if len(splits) == 7: # multibit ban case
-			splits[4] = splits[4] + " " + splits[5]
 		if splits[4] not in ban_list and "$var" in line:
 			header = header + [line]
 		line = to_read.readline()
@@ -288,11 +286,12 @@ def get_bans(name):
 				struct += [set([splits[0],splits[2]])]
 				
 def no_secondaries(ban_list, key):
+	s = set()
 	for reg in key:
 		if "S_AXI_" in reg[2]:
-			ban_list = ban_list + [reg[2]]
-	return ban_list
-	
+			s.add(reg[2].split()[0]) 
+	return ban_list + list(s)
+
 def bans_to_file(name, ban_list):
 	to_write = open(name + ".bans.txt","w")
 	for reg in ban_list:
