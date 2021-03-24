@@ -373,6 +373,8 @@ if __name__ == "__main__":
 		
 		# clean temp files
 		system("rm *_1*")
+		key = read(name, ban_list, "")
+		system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + "_full.txt")
 		
 	else:
 		
