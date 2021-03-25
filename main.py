@@ -174,14 +174,15 @@ def nxt_file(name, suffix, hi_curr, file_cnt):
 	return [0, file]
 				
 # turns a vcd file into a decls and either a dtrace or a few dtraces cut on tar_reg
+# TODO configure for naive, mass taint, and tar_reg modes
 def read(name, ban_list, tar_reg):
 	# set up some variables
 	suffix = "_" + tar_reg
 	prefix = "input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n\n"
 	points = ["..tick():::ENTER\nthis_invocation_nonce\n", "..tick():::EXIT0\nthis_invocation_nonce\n"]
 	if tar_reg == "":
-		# this introduces a namespace collision risk
 		suffix = "_1"
+		# this introduces a namespace collision risk
 		to_write = [0, open(name + suffix + ".dtrace","w")]
 		to_write[1].write(prefix)
 	to_read = open(name + ".vcd","r")
@@ -205,6 +206,7 @@ def read(name, ban_list, tar_reg):
 			# how many high and low dts there have been
 			# the edge dt
 		file_cnt = 1
+		mt_file = open(name + ".mt.txt","w")
 		rise_file = [0, open(name + suffix + "_rise.dtrace","w")]
 		rise_file[1].write(prefix)
 		fall_file = [0, open(name + suffix + "_fall.dtrace","w")]
@@ -216,8 +218,12 @@ def read(name, ban_list, tar_reg):
 		if "#" in line[0]:
 			# do the derived stuff
 			if tick:
+				curr_write = to_write # default case
 				if tar_reg != "":
 					derived(key, line)
+					delta = key[len(key)-2][3]
+					if "1" in delta and "-" not in delta: # string match greater than zero
+						mt_file.write("TIME:\t" + str(int(key[len(key)-1][3],2)) + "\tTAINT DELTA:\t" + str(int(delta,2)) + "\n")
 					hi_last = hi_curr
 					hi_curr = reg_tainted(tar_reg, key)
 					# if hi_curr == hi_last, write to to_write
@@ -231,8 +237,6 @@ def read(name, ban_list, tar_reg):
 							curr_write = fall_file
 						to_write = nxt_file(name, suffix, hi_curr, file_cnt)
 						file_cnt = file_cnt + 1
-				else:
-					curr_write = to_write
 				# use last_str to do enter, get new str, use it to do exit
 				curr_write[1].write(points[0] + str(curr_write[0]) + "\n" + last_str)
 				last_str = to_dt(key)
@@ -380,13 +384,14 @@ if __name__ == "__main__":
 		# clean temp files
 		system("rm *_1*")
 		key = read(name, ban_list, "")
-		system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + "_full.txt")
+		system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + ".full.txt")
 		
 	else:
 		
 		ban_list = file_to_bans(name)
 	
 	# get reg name
+		# probably need a better way to track this mode idk, maybe flags or something
 	if (n > 2):
 		tar_reg = sys.argv[2]
 	else:
@@ -398,10 +403,11 @@ if __name__ == "__main__":
 	# begin multipass
 	key = read(name, ban_list, tar_reg)
 	local = name + "_" + tar_reg
-	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
-	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
+	#system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
+	#system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
+	#system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
+	#system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
+	#system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
+
 	# clean temp files
-	#clean_up(name)
+	clean_up(name)
