@@ -44,7 +44,7 @@ def make_decls(name,header,suffix):
 		key[i] = key[i] + ["x"]
 	for reg in derived:
 		# Have to think about typing on derived reg[3]
-		key = key + [["", "", reg, "0"]]
+		key = key + [["", "", reg, "0b0"]]
 	# key a list of 4 tuples
 	# one tuple per register or derived value
 	# the tuple is size, vcd_name, plaintext name, starting value
@@ -216,14 +216,16 @@ def read(name, ban_list, tar_reg):
 		
 	while len(line) > 0: 
 		if "#" in line[0]:
-			# do the derived stuff
-			if tick:
+			if "0000" in line: # on a major clock tick
 				curr_write = to_write # default case
 				if tar_reg != "":
 					derived(key, line)
-					delta = key[len(key)-2][3]
+					l = len(key)
+					delta = key[l-2][3]
 					if "1" in delta and "-" not in delta: # string match greater than zero
-						mt_file.write("TIME:\t" + str(int(key[len(key)-1][3],2)) + "\tTAINT DELTA:\t" + str(int(delta,2)) + "\n")
+						mt_file.write("TIME:\t" + str(int(key[l-1][3],2)))
+						mt_file.write("\tTAINT DELTA:\t" + str(int(delta,2)))
+						mt_file.write("\tTAINT COUNT:\t" + str(int(key[l-3][3],2)) + "\n")
 					hi_last = hi_curr
 					hi_curr = reg_tainted(tar_reg, key)
 					# if hi_curr == hi_last, write to to_write
@@ -242,7 +244,6 @@ def read(name, ban_list, tar_reg):
 				last_str = to_dt(key)
 				curr_write[1].write(points[1] + str(curr_write[0]) + "\n" + last_str)
 				curr_write[0] = curr_write[0] + 1
-			tick = not tick
 		else:
 			read_vcd_line(line, key)
 		line = to_read.readline()
@@ -402,12 +403,15 @@ if __name__ == "__main__":
 		
 	# begin multipass
 	key = read(name, ban_list, tar_reg)
+	# treat initialization separately or not at all
+	# alternatively could split based on clocks with "x"s in them but this is quick and clean
+	system("rm *00.dtrace")
 	local = name + "_" + tar_reg
-	#system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
-	#system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
-	#system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
-	#system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
-	#system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
+	# equivalent to reset system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
+	system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
 
 	# clean temp files
 	clean_up(name)
