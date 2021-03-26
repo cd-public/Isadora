@@ -1,0 +1,1027 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+..tick():::ENTER
+ARESETN one of { 0, 1 }
+r_start_wire one of { 0, 1 }
+reset_wire one of { 0, 1 }
+r_base_addr_wire one of { 0, 3053805654L }
+w_base_addr_wire one of { 0, 3710927468L }
+r_done_wire one of { 0, 1 }
+M_AXI_BID one of { 0, 1 }
+o_data one of { -1, 4294901760L }
+o_data != 0
+reg00_config one of { -1, 0, 4294967295L }
+reg10_r_config one of { -1, 0, 2684383232L }
+reg22_w_config one of { -1, 0, 2952790016L }
+reg25_w_config one of { -1, 0, 4026580992L }
+reg_data_out one of { 0, 4294967295L }
+byte_index one of { -1, 4 }
+byte_index != 0
+aw_en one of { -1, 0, 1 }
+M_AXI_ARLEN_wire one of { 0, 8 }
+M_AXI_RLAST_wire one of { -1, 0, 1 }
+W_B_TO_SERVE one of { -1, 0, 1 }
+AR_CH_EN one of { -1, 1 }
+AR_CH_EN != 0
+AW_ADDR_VALID one of { -1, 0, 1 }
+AR_ADDR_VALID one of { -1, 0 }
+AR_HIGH_ADDR one of { -1, 4, 36 }
+AR_HIGH_ADDR != 0
+internal_data one of { -1, 65535 }
+internal_data != 0
+shadow_M_AXI_AWADDR one of { 0, 4294967295L }
+shadow_AW_ADDR_VALID one of { 0, 65535 }
+shadow_AW_ILL_DATA_TRANS_SRV_PTR one of { 0, 15 }
+shadow_AW_ILL_TRANS_FIL_PTR one of { 0, 15 }
+shadow_M_AXI_BRESP_wire one of { 0, 3 }
+shadow_M_AXI_WDATA_wire one of { 0, 4294967295L }
+shadow_reg_data_out one of { 0, 4294967295L }
+shadow_reg05_w_anomaly one of { 0, 4292870399L }
+shadow_M_AXI_AWPROT one of { 0, 7 }
+shadow_M_AXI_AWCACHE one of { 0, 15 }
+shadow_M_AXI_AWBURST one of { 0, 3 }
+shadow_M_AXI_AWLEN one of { 0, 255 }
+shadow_M_AXI_WVALID one of { 0, 1 }
+shadow_B_STATE one of { 0, 1 }
+shadow_W_B_TO_SERVE one of { 0, 1 }
+shadow_W_CH_EN one of { 0, 1 }
+shadow_AW_CH_EN one of { 0, 1 }
+shadow_AW_CH_DIS one of { 0, 1 }
+shadow_AW_ADDR_VALID_FLAG one of { 0, 1 }
+ARESETN >= r_start_wire
+ARESETN != reset_wire
+ARESETN >= r_done_wire
+ARESETN >= M_AXI_BID
+ARESETN != o_data
+ARESETN != byte_index
+ARESETN <= M_AXI_ARLEN_wire
+ARESETN >= M_AXI_RLAST_wire
+ARESETN >= W_B_TO_SERVE
+ARESETN >= AW_ADDR_VALID
+ARESETN >= AR_ADDR_VALID
+ARESETN != AR_HIGH_ADDR
+ARESETN != internal_data
+r_start_wire <= r_base_addr_wire
+r_start_wire <= w_base_addr_wire
+r_start_wire <= r_done_wire
+r_start_wire <= M_AXI_BID
+r_start_wire != o_data
+r_start_wire <= reg_data_out
+r_start_wire != byte_index
+r_start_wire <= M_AXI_ARLEN_wire
+r_start_wire >= AW_ADDR_VALID
+r_start_wire >= AR_ADDR_VALID
+r_start_wire != AR_HIGH_ADDR
+r_start_wire != internal_data
+reset_wire != o_data
+reset_wire != byte_index
+reset_wire != M_AXI_ARLEN_wire
+reset_wire >= AR_ADDR_VALID
+reset_wire != AR_HIGH_ADDR
+reset_wire != internal_data
+r_base_addr_wire <= w_base_addr_wire
+r_base_addr_wire >= r_done_wire
+r_base_addr_wire >= M_AXI_BID
+r_base_addr_wire != o_data
+r_base_addr_wire >= reg10_r_config
+r_base_addr_wire >= reg22_w_config
+r_base_addr_wire > byte_index
+r_base_addr_wire != aw_en
+r_base_addr_wire >= M_AXI_RLAST_wire
+r_base_addr_wire >= AR_ILL_TRANS_SRV_PTR
+r_base_addr_wire >= W_B_TO_SERVE
+r_base_addr_wire != AR_CH_EN
+r_base_addr_wire >= AW_ADDR_VALID
+r_base_addr_wire >= AR_ADDR_VALID
+r_base_addr_wire != AR_HIGH_ADDR
+r_base_addr_wire != internal_data
+w_base_addr_wire >= r_done_wire
+w_base_addr_wire >= M_AXI_BID
+w_base_addr_wire != o_data
+w_base_addr_wire >= reg10_r_config
+w_base_addr_wire >= reg22_w_config
+w_base_addr_wire > byte_index
+w_base_addr_wire != aw_en
+w_base_addr_wire >= M_AXI_RLAST_wire
+w_base_addr_wire >= AR_ILL_TRANS_SRV_PTR
+w_base_addr_wire >= W_B_TO_SERVE
+w_base_addr_wire != AR_CH_EN
+w_base_addr_wire >= AW_ADDR_VALID
+w_base_addr_wire >= AR_ADDR_VALID
+w_base_addr_wire != AR_HIGH_ADDR
+w_base_addr_wire != internal_data
+r_done_wire <= M_AXI_BID
+r_done_wire != o_data
+r_done_wire != byte_index
+r_done_wire <= M_AXI_ARLEN_wire
+r_done_wire >= AW_ADDR_VALID
+r_done_wire >= AR_ADDR_VALID
+r_done_wire != AR_HIGH_ADDR
+r_done_wire != internal_data
+M_AXI_BID != o_data
+M_AXI_BID != byte_index
+M_AXI_BID <= M_AXI_ARLEN_wire
+M_AXI_BID >= M_AXI_RLAST_wire
+M_AXI_BID >= W_B_TO_SERVE
+M_AXI_BID >= AW_ADDR_VALID
+M_AXI_BID >= AR_ADDR_VALID
+M_AXI_BID != AR_HIGH_ADDR
+M_AXI_BID != internal_data
+o_data >= reg10_r_config
+o_data >= reg22_w_config
+o_data >= reg25_w_config
+o_data != reg_data_out
+o_data >= byte_index
+o_data >= aw_en
+o_data != M_AXI_ARLEN_wire
+o_data >= M_AXI_RLAST_wire
+o_data >= AR_ILL_TRANS_SRV_PTR
+o_data >= W_B_TO_SERVE
+o_data >= AR_CH_EN
+o_data >= AW_ADDR_VALID
+o_data >= AR_ADDR_VALID
+o_data >= AR_HIGH_ADDR
+o_data >= internal_data
+reg00_config <= reg_data_out
+reg00_config % AR_CH_EN == 0
+reg00_config >= AW_ADDR_VALID
+reg00_config >= AR_ADDR_VALID
+reg00_config % internal_data == 0
+reg10_r_config % byte_index == 0
+reg10_r_config % AR_CH_EN == 0
+reg10_r_config >= AW_ADDR_VALID
+reg10_r_config >= AR_ADDR_VALID
+reg22_w_config % byte_index == 0
+reg22_w_config % AR_CH_EN == 0
+reg22_w_config >= AW_ADDR_VALID
+reg22_w_config >= AR_ADDR_VALID
+reg25_w_config % byte_index == 0
+reg25_w_config % AR_CH_EN == 0
+reg25_w_config >= AW_ADDR_VALID
+reg25_w_config >= AR_ADDR_VALID
+reg25_w_config % AR_HIGH_ADDR == 0
+reg_data_out != byte_index
+reg_data_out != AR_CH_EN
+reg_data_out >= AW_ADDR_VALID
+reg_data_out >= AR_ADDR_VALID
+reg_data_out != AR_HIGH_ADDR
+reg_data_out != internal_data
+byte_index < M_AXI_ARLEN_wire
+AR_HIGH_ADDR % byte_index == 0
+byte_index <= AR_HIGH_ADDR
+byte_index <= internal_data
+aw_en != M_AXI_ARLEN_wire
+aw_en % AR_CH_EN == 0
+aw_en <= AR_CH_EN
+aw_en >= AR_ADDR_VALID
+aw_en <= AR_HIGH_ADDR
+aw_en <= internal_data
+M_AXI_ARLEN_wire >= M_AXI_RLAST_wire
+M_AXI_ARLEN_wire >= W_B_TO_SERVE
+M_AXI_ARLEN_wire != AR_CH_EN
+M_AXI_ARLEN_wire >= AW_ADDR_VALID
+M_AXI_ARLEN_wire >= AR_ADDR_VALID
+M_AXI_ARLEN_wire != AR_HIGH_ADDR
+M_AXI_ARLEN_wire != internal_data
+M_AXI_RLAST_wire >= W_B_TO_SERVE
+M_AXI_RLAST_wire % AR_CH_EN == 0
+M_AXI_RLAST_wire <= AR_CH_EN
+M_AXI_RLAST_wire >= AW_ADDR_VALID
+M_AXI_RLAST_wire >= AR_ADDR_VALID
+M_AXI_RLAST_wire <= AR_HIGH_ADDR
+M_AXI_RLAST_wire <= internal_data
+AR_ILL_TRANS_SRV_PTR >= W_B_TO_SERVE
+AR_ILL_TRANS_SRV_PTR % AR_CH_EN == 0
+AR_ILL_TRANS_SRV_PTR >= AR_ADDR_VALID
+AR_ILL_TRANS_SRV_PTR <= AR_HIGH_ADDR
+AR_ILL_TRANS_SRV_PTR <= internal_data
+W_B_TO_SERVE % AR_CH_EN == 0
+W_B_TO_SERVE <= AR_CH_EN
+W_B_TO_SERVE >= AR_ADDR_VALID
+W_B_TO_SERVE <= AR_HIGH_ADDR
+W_B_TO_SERVE <= internal_data
+AR_CH_EN >= AW_ADDR_VALID
+AW_ADDR_VALID % AR_CH_EN == 0
+AR_CH_EN >= AR_ADDR_VALID
+AR_CH_EN <= AR_HIGH_ADDR
+AR_HIGH_ADDR % AR_CH_EN == 0
+AR_CH_EN <= internal_data
+AW_ADDR_VALID >= AR_ADDR_VALID
+AW_ADDR_VALID <= AR_HIGH_ADDR
+AW_ADDR_VALID <= internal_data
+AR_ADDR_VALID % AR_HIGH_ADDR == 0
+AR_ADDR_VALID <= AR_HIGH_ADDR
+AR_ADDR_VALID <= internal_data
+AR_HIGH_ADDR <= internal_data
+shadow_M_AXI_AWADDR >= shadow_M_AXI_BRESP_wire
+shadow_M_AXI_AWADDR >= shadow_M_AXI_WDATA_wire
+shadow_M_AXI_AWADDR >= shadow_reg_data_out
+shadow_M_AXI_AWADDR >= shadow_reg05_w_anomaly
+shadow_M_AXI_AWADDR >= shadow_M_AXI_AWLEN
+shadow_M_AXI_AWADDR >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWADDR >= shadow_B_STATE
+shadow_M_AXI_AWADDR >= shadow_AW_CH_EN
+shadow_M_AXI_AWADDR >= shadow_AW_CH_DIS
+shadow_AW_ADDR_VALID >= shadow_M_AXI_BRESP_wire
+shadow_AW_ADDR_VALID >= shadow_M_AXI_AWLEN
+shadow_AW_ADDR_VALID >= shadow_M_AXI_WVALID
+shadow_AW_ADDR_VALID >= shadow_B_STATE
+shadow_AW_ADDR_VALID >= shadow_AW_CH_EN
+shadow_AW_ADDR_VALID >= shadow_AW_CH_DIS
+shadow_AW_ADDR_VALID >= shadow_AW_ADDR_VALID_FLAG
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= shadow_AW_ILL_TRANS_FIL_PTR
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= shadow_M_AXI_BRESP_wire
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= shadow_M_AXI_AWCACHE
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= shadow_B_STATE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_M_AXI_BRESP_wire
+shadow_AW_ILL_TRANS_FIL_PTR <= shadow_M_AXI_AWCACHE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_M_AXI_WVALID
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_B_STATE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_W_B_TO_SERVE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_AW_CH_DIS
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_WDATA_wire
+shadow_M_AXI_BRESP_wire <= shadow_reg_data_out
+shadow_M_AXI_BRESP_wire <= shadow_reg05_w_anomaly
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWPROT
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWCACHE
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWBURST
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWLEN
+shadow_M_AXI_BRESP_wire >= shadow_B_STATE
+shadow_M_AXI_WDATA_wire <= shadow_reg_data_out
+shadow_M_AXI_WDATA_wire >= shadow_B_STATE
+shadow_reg_data_out >= shadow_M_AXI_WVALID
+shadow_reg_data_out >= shadow_B_STATE
+shadow_reg_data_out >= shadow_AW_CH_DIS
+shadow_reg05_w_anomaly >= shadow_M_AXI_AWLEN
+shadow_reg05_w_anomaly >= shadow_M_AXI_WVALID
+shadow_reg05_w_anomaly >= shadow_B_STATE
+shadow_reg05_w_anomaly >= shadow_AW_CH_EN
+shadow_reg05_w_anomaly >= shadow_AW_CH_DIS
+shadow_M_AXI_AWPROT <= shadow_M_AXI_AWCACHE
+shadow_M_AXI_AWPROT >= shadow_M_AXI_AWBURST
+shadow_M_AXI_AWPROT >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWPROT >= shadow_B_STATE
+shadow_M_AXI_AWPROT >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWPROT >= shadow_W_CH_EN
+shadow_M_AXI_AWPROT >= shadow_AW_CH_EN
+shadow_M_AXI_AWPROT >= shadow_AW_CH_DIS
+shadow_M_AXI_AWCACHE >= shadow_M_AXI_AWBURST
+shadow_M_AXI_AWCACHE >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWCACHE >= shadow_B_STATE
+shadow_M_AXI_AWCACHE >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWCACHE >= shadow_W_CH_EN
+shadow_M_AXI_AWCACHE >= shadow_AW_CH_EN
+shadow_M_AXI_AWCACHE >= shadow_AW_CH_DIS
+shadow_M_AXI_AWBURST >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWBURST >= shadow_B_STATE
+shadow_M_AXI_AWBURST >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWBURST >= shadow_W_CH_EN
+shadow_M_AXI_AWBURST >= shadow_AW_CH_EN
+shadow_M_AXI_AWBURST >= shadow_AW_CH_DIS
+shadow_M_AXI_AWLEN >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWLEN >= shadow_B_STATE
+shadow_M_AXI_AWLEN >= shadow_AW_CH_EN
+shadow_M_AXI_AWLEN >= shadow_AW_CH_DIS
+shadow_M_AXI_WVALID >= shadow_B_STATE
+shadow_M_AXI_WVALID <= shadow_W_B_TO_SERVE
+shadow_M_AXI_WVALID <= shadow_W_CH_EN
+shadow_M_AXI_WVALID <= shadow_AW_CH_EN
+shadow_M_AXI_WVALID <= shadow_AW_CH_DIS
+shadow_M_AXI_WVALID <= shadow_AW_ADDR_VALID_FLAG
+shadow_B_STATE <= shadow_W_B_TO_SERVE
+shadow_B_STATE <= shadow_W_CH_EN
+shadow_B_STATE <= shadow_AW_CH_EN
+shadow_B_STATE <= shadow_AW_CH_DIS
+shadow_B_STATE <= shadow_AW_ADDR_VALID_FLAG
+shadow_W_B_TO_SERVE <= shadow_W_CH_EN
+shadow_W_B_TO_SERVE >= shadow_AW_CH_DIS
+shadow_W_CH_EN >= shadow_AW_CH_EN
+shadow_W_CH_EN >= shadow_AW_CH_DIS
+shadow_AW_CH_EN >= shadow_AW_CH_DIS
+shadow_AW_CH_EN <= shadow_AW_ADDR_VALID_FLAG
+shadow_AW_CH_DIS <= shadow_AW_ADDR_VALID_FLAG
+===========================================================================
+..tick():::EXIT
+shadow_M_AXI_AWADDR == shadow_reg_data_out
+shadow_W_CH_EN == orig(shadow_AW_CH_EN)
+ARESETN one of { 0, 1 }
+r_start_wire one of { 0, 1 }
+reset_wire one of { 0, 1 }
+r_base_addr_wire one of { 0, 3053805654L }
+w_base_addr_wire one of { 0, 3710927468L }
+r_done_wire one of { 0, 1 }
+M_AXI_BID one of { 0, 1 }
+o_data one of { -1, 4294901760L }
+o_data != 0
+reg00_config one of { -1, 0, 4294967295L }
+reg10_r_config one of { -1, 0, 2684383232L }
+reg22_w_config one of { -1, 0, 2952790016L }
+reg25_w_config one of { -1, 0, 4026580992L }
+reg_data_out one of { 0, 4294967295L }
+byte_index one of { -1, 4 }
+byte_index != 0
+aw_en one of { -1, 0, 1 }
+M_AXI_ARLEN_wire one of { 0, 8 }
+M_AXI_RLAST_wire one of { -1, 0, 1 }
+W_B_TO_SERVE one of { -1, 0, 1 }
+AR_CH_EN one of { -1, 1 }
+AR_CH_EN != 0
+AW_ADDR_VALID one of { -1, 0, 1 }
+AR_ADDR_VALID one of { -1, 0 }
+AR_HIGH_ADDR one of { -1, 4, 36 }
+AR_HIGH_ADDR != 0
+internal_data one of { -1, 65535 }
+internal_data != 0
+shadow_M_AXI_AWADDR one of { 0, 4294967295L }
+shadow_AW_ADDR_VALID one of { 0, 65535 }
+shadow_AW_ILL_DATA_TRANS_SRV_PTR one of { 0, 15 }
+shadow_AW_ILL_TRANS_FIL_PTR one of { 0, 15 }
+shadow_M_AXI_BRESP_wire one of { 0, 3 }
+shadow_M_AXI_WDATA_wire one of { 0, 4294967295L }
+shadow_reg05_w_anomaly one of { 0, 4292870399L }
+shadow_M_AXI_AWPROT one of { 0, 7 }
+shadow_M_AXI_AWCACHE one of { 0, 15 }
+shadow_M_AXI_AWBURST one of { 0, 3 }
+shadow_M_AXI_AWLEN one of { 0, 255 }
+shadow_M_AXI_WVALID one of { 0, 1 }
+shadow_B_STATE one of { 0, 1 }
+shadow_W_B_TO_SERVE one of { 0, 1 }
+shadow_W_CH_EN one of { 0, 1 }
+shadow_AW_CH_EN one of { 0, 1 }
+shadow_AW_CH_DIS one of { 0, 1 }
+shadow_AW_ADDR_VALID_FLAG one of { 0, 1 }
+ARESETN >= r_start_wire
+ARESETN != reset_wire
+ARESETN >= r_done_wire
+ARESETN >= M_AXI_BID
+ARESETN != o_data
+ARESETN != byte_index
+ARESETN <= M_AXI_ARLEN_wire
+ARESETN >= M_AXI_RLAST_wire
+ARESETN >= W_B_TO_SERVE
+ARESETN >= AW_ADDR_VALID
+ARESETN >= AR_ADDR_VALID
+ARESETN != AR_HIGH_ADDR
+ARESETN != internal_data
+ARESETN >= orig(r_start_wire)
+ARESETN >= orig(r_done_wire)
+ARESETN >= orig(M_AXI_BID)
+ARESETN != orig(o_data)
+ARESETN != orig(byte_index)
+ARESETN >= orig(M_AXI_RLAST_wire)
+ARESETN >= orig(W_B_TO_SERVE)
+ARESETN >= orig(AW_ADDR_VALID)
+ARESETN >= orig(AR_ADDR_VALID)
+ARESETN != orig(AR_HIGH_ADDR)
+ARESETN != orig(internal_data)
+r_start_wire <= r_base_addr_wire
+r_start_wire <= w_base_addr_wire
+r_start_wire <= r_done_wire
+r_start_wire <= M_AXI_BID
+r_start_wire != o_data
+r_start_wire <= reg_data_out
+r_start_wire != byte_index
+r_start_wire <= M_AXI_ARLEN_wire
+r_start_wire >= AW_ADDR_VALID
+r_start_wire >= AR_ADDR_VALID
+r_start_wire != AR_HIGH_ADDR
+r_start_wire != internal_data
+r_start_wire <= orig(ARESETN)
+r_start_wire >= orig(r_start_wire)
+r_start_wire <= orig(r_base_addr_wire)
+r_start_wire <= orig(w_base_addr_wire)
+r_start_wire <= orig(r_done_wire)
+r_start_wire <= orig(M_AXI_BID)
+r_start_wire != orig(o_data)
+r_start_wire != orig(byte_index)
+r_start_wire <= orig(M_AXI_ARLEN_wire)
+r_start_wire >= orig(AW_ADDR_VALID)
+r_start_wire >= orig(AR_ADDR_VALID)
+r_start_wire != orig(AR_HIGH_ADDR)
+r_start_wire != orig(internal_data)
+reset_wire != o_data
+reset_wire != byte_index
+reset_wire != M_AXI_ARLEN_wire
+reset_wire >= AR_ADDR_VALID
+reset_wire != AR_HIGH_ADDR
+reset_wire != internal_data
+reset_wire != orig(o_data)
+reset_wire != orig(byte_index)
+reset_wire >= orig(AR_ADDR_VALID)
+reset_wire != orig(AR_HIGH_ADDR)
+reset_wire != orig(internal_data)
+r_base_addr_wire <= w_base_addr_wire
+r_base_addr_wire >= r_done_wire
+r_base_addr_wire >= M_AXI_BID
+r_base_addr_wire != o_data
+r_base_addr_wire >= reg10_r_config
+r_base_addr_wire >= reg22_w_config
+r_base_addr_wire > byte_index
+r_base_addr_wire != aw_en
+r_base_addr_wire >= M_AXI_RLAST_wire
+r_base_addr_wire >= AR_ILL_TRANS_SRV_PTR
+r_base_addr_wire >= W_B_TO_SERVE
+r_base_addr_wire != AR_CH_EN
+r_base_addr_wire >= AW_ADDR_VALID
+r_base_addr_wire >= AR_ADDR_VALID
+r_base_addr_wire != AR_HIGH_ADDR
+r_base_addr_wire != internal_data
+r_base_addr_wire >= orig(r_start_wire)
+r_base_addr_wire >= orig(r_base_addr_wire)
+r_base_addr_wire >= orig(r_done_wire)
+r_base_addr_wire >= orig(M_AXI_BID)
+r_base_addr_wire != orig(o_data)
+r_base_addr_wire >= orig(reg10_r_config)
+r_base_addr_wire >= orig(reg22_w_config)
+r_base_addr_wire > orig(byte_index)
+r_base_addr_wire != orig(aw_en)
+r_base_addr_wire >= orig(M_AXI_RLAST_wire)
+r_base_addr_wire >= orig(AR_ILL_TRANS_SRV_PTR)
+r_base_addr_wire >= orig(W_B_TO_SERVE)
+r_base_addr_wire != orig(AR_CH_EN)
+r_base_addr_wire >= orig(AW_ADDR_VALID)
+r_base_addr_wire >= orig(AR_ADDR_VALID)
+r_base_addr_wire != orig(AR_HIGH_ADDR)
+r_base_addr_wire != orig(internal_data)
+w_base_addr_wire >= r_done_wire
+w_base_addr_wire >= M_AXI_BID
+w_base_addr_wire != o_data
+w_base_addr_wire >= reg10_r_config
+w_base_addr_wire >= reg22_w_config
+w_base_addr_wire > byte_index
+w_base_addr_wire != aw_en
+w_base_addr_wire >= M_AXI_RLAST_wire
+w_base_addr_wire >= AR_ILL_TRANS_SRV_PTR
+w_base_addr_wire >= W_B_TO_SERVE
+w_base_addr_wire != AR_CH_EN
+w_base_addr_wire >= AW_ADDR_VALID
+w_base_addr_wire >= AR_ADDR_VALID
+w_base_addr_wire != AR_HIGH_ADDR
+w_base_addr_wire != internal_data
+w_base_addr_wire >= orig(r_start_wire)
+w_base_addr_wire >= orig(r_base_addr_wire)
+w_base_addr_wire >= orig(w_base_addr_wire)
+w_base_addr_wire >= orig(r_done_wire)
+w_base_addr_wire >= orig(M_AXI_BID)
+w_base_addr_wire != orig(o_data)
+w_base_addr_wire >= orig(reg10_r_config)
+w_base_addr_wire >= orig(reg22_w_config)
+w_base_addr_wire > orig(byte_index)
+w_base_addr_wire != orig(aw_en)
+w_base_addr_wire >= orig(M_AXI_RLAST_wire)
+w_base_addr_wire >= orig(AR_ILL_TRANS_SRV_PTR)
+w_base_addr_wire >= orig(W_B_TO_SERVE)
+w_base_addr_wire != orig(AR_CH_EN)
+w_base_addr_wire >= orig(AW_ADDR_VALID)
+w_base_addr_wire >= orig(AR_ADDR_VALID)
+w_base_addr_wire != orig(AR_HIGH_ADDR)
+w_base_addr_wire != orig(internal_data)
+r_done_wire <= M_AXI_BID
+r_done_wire != o_data
+r_done_wire != byte_index
+r_done_wire <= M_AXI_ARLEN_wire
+r_done_wire >= AW_ADDR_VALID
+r_done_wire >= AR_ADDR_VALID
+r_done_wire != AR_HIGH_ADDR
+r_done_wire != internal_data
+r_done_wire <= orig(ARESETN)
+r_done_wire >= orig(r_start_wire)
+r_done_wire <= orig(r_base_addr_wire)
+r_done_wire <= orig(w_base_addr_wire)
+r_done_wire >= orig(r_done_wire)
+r_done_wire <= orig(M_AXI_BID)
+r_done_wire != orig(o_data)
+r_done_wire != orig(byte_index)
+r_done_wire <= orig(M_AXI_ARLEN_wire)
+r_done_wire >= orig(AW_ADDR_VALID)
+r_done_wire >= orig(AR_ADDR_VALID)
+r_done_wire != orig(AR_HIGH_ADDR)
+r_done_wire != orig(internal_data)
+M_AXI_BID != o_data
+M_AXI_BID != byte_index
+M_AXI_BID <= M_AXI_ARLEN_wire
+M_AXI_BID >= M_AXI_RLAST_wire
+M_AXI_BID >= W_B_TO_SERVE
+M_AXI_BID >= AW_ADDR_VALID
+M_AXI_BID >= AR_ADDR_VALID
+M_AXI_BID != AR_HIGH_ADDR
+M_AXI_BID != internal_data
+M_AXI_BID <= orig(ARESETN)
+M_AXI_BID >= orig(r_start_wire)
+M_AXI_BID <= orig(r_base_addr_wire)
+M_AXI_BID <= orig(w_base_addr_wire)
+M_AXI_BID >= orig(r_done_wire)
+M_AXI_BID >= orig(M_AXI_BID)
+M_AXI_BID != orig(o_data)
+M_AXI_BID != orig(byte_index)
+M_AXI_BID <= orig(M_AXI_ARLEN_wire)
+M_AXI_BID >= orig(M_AXI_RLAST_wire)
+M_AXI_BID >= orig(W_B_TO_SERVE)
+M_AXI_BID >= orig(AW_ADDR_VALID)
+M_AXI_BID >= orig(AR_ADDR_VALID)
+M_AXI_BID != orig(AR_HIGH_ADDR)
+M_AXI_BID != orig(internal_data)
+o_data >= reg10_r_config
+o_data >= reg22_w_config
+o_data >= reg25_w_config
+o_data != reg_data_out
+o_data >= byte_index
+o_data >= aw_en
+o_data != M_AXI_ARLEN_wire
+o_data >= M_AXI_RLAST_wire
+o_data >= AR_ILL_TRANS_SRV_PTR
+o_data >= W_B_TO_SERVE
+o_data >= AR_CH_EN
+o_data >= AW_ADDR_VALID
+o_data >= AR_ADDR_VALID
+o_data >= AR_HIGH_ADDR
+o_data >= internal_data
+o_data != orig(ARESETN)
+o_data != orig(r_start_wire)
+o_data != orig(reset_wire)
+o_data != orig(r_base_addr_wire)
+o_data != orig(w_base_addr_wire)
+o_data != orig(r_done_wire)
+o_data != orig(M_AXI_BID)
+o_data >= orig(o_data)
+o_data >= orig(reg10_r_config)
+o_data >= orig(reg22_w_config)
+o_data >= orig(reg25_w_config)
+o_data != orig(reg_data_out)
+o_data >= orig(byte_index)
+o_data >= orig(aw_en)
+o_data != orig(M_AXI_ARLEN_wire)
+o_data >= orig(M_AXI_RLAST_wire)
+o_data >= orig(AR_ILL_TRANS_SRV_PTR)
+o_data >= orig(W_B_TO_SERVE)
+o_data >= orig(AR_CH_EN)
+o_data >= orig(AW_ADDR_VALID)
+o_data >= orig(AR_ADDR_VALID)
+o_data >= orig(AR_HIGH_ADDR)
+o_data >= orig(internal_data)
+reg00_config <= reg_data_out
+reg00_config % AR_CH_EN == 0
+reg00_config >= AW_ADDR_VALID
+reg00_config >= AR_ADDR_VALID
+reg00_config % internal_data == 0
+reg00_config >= orig(reg00_config)
+reg00_config % orig(AR_CH_EN) == 0
+reg00_config >= orig(AW_ADDR_VALID)
+reg00_config >= orig(AR_ADDR_VALID)
+reg00_config % orig(internal_data) == 0
+reg10_r_config % byte_index == 0
+reg10_r_config % AR_CH_EN == 0
+reg10_r_config >= AW_ADDR_VALID
+reg10_r_config >= AR_ADDR_VALID
+reg10_r_config <= orig(r_base_addr_wire)
+reg10_r_config <= orig(w_base_addr_wire)
+reg10_r_config >= orig(reg10_r_config)
+reg10_r_config % orig(byte_index) == 0
+reg10_r_config % orig(AR_CH_EN) == 0
+reg10_r_config >= orig(AW_ADDR_VALID)
+reg10_r_config >= orig(AR_ADDR_VALID)
+reg22_w_config % byte_index == 0
+reg22_w_config % AR_CH_EN == 0
+reg22_w_config >= AW_ADDR_VALID
+reg22_w_config >= AR_ADDR_VALID
+reg22_w_config <= orig(r_base_addr_wire)
+reg22_w_config <= orig(w_base_addr_wire)
+reg22_w_config >= orig(reg22_w_config)
+reg22_w_config % orig(byte_index) == 0
+reg22_w_config % orig(AR_CH_EN) == 0
+reg22_w_config >= orig(AW_ADDR_VALID)
+reg22_w_config >= orig(AR_ADDR_VALID)
+reg25_w_config % byte_index == 0
+reg25_w_config % AR_CH_EN == 0
+reg25_w_config >= AW_ADDR_VALID
+reg25_w_config >= AR_ADDR_VALID
+reg25_w_config % AR_HIGH_ADDR == 0
+reg25_w_config >= orig(reg25_w_config)
+reg25_w_config % orig(byte_index) == 0
+reg25_w_config % orig(AR_CH_EN) == 0
+reg25_w_config >= orig(AW_ADDR_VALID)
+reg25_w_config >= orig(AR_ADDR_VALID)
+reg25_w_config % orig(AR_HIGH_ADDR) == 0
+reg_data_out != byte_index
+reg_data_out != AR_CH_EN
+reg_data_out >= AW_ADDR_VALID
+reg_data_out >= AR_ADDR_VALID
+reg_data_out != AR_HIGH_ADDR
+reg_data_out != internal_data
+reg_data_out >= orig(r_start_wire)
+reg_data_out != orig(o_data)
+reg_data_out >= orig(reg00_config)
+reg_data_out >= orig(reg_data_out)
+reg_data_out != orig(byte_index)
+reg_data_out != orig(AR_CH_EN)
+reg_data_out >= orig(AW_ADDR_VALID)
+reg_data_out >= orig(AR_ADDR_VALID)
+reg_data_out != orig(AR_HIGH_ADDR)
+reg_data_out != orig(internal_data)
+byte_index < M_AXI_ARLEN_wire
+AR_HIGH_ADDR % byte_index == 0
+byte_index <= AR_HIGH_ADDR
+byte_index <= internal_data
+byte_index != orig(ARESETN)
+byte_index != orig(r_start_wire)
+byte_index != orig(reset_wire)
+byte_index < orig(r_base_addr_wire)
+byte_index < orig(w_base_addr_wire)
+byte_index != orig(r_done_wire)
+byte_index != orig(M_AXI_BID)
+byte_index <= orig(o_data)
+orig(reg10_r_config) % byte_index == 0
+orig(reg22_w_config) % byte_index == 0
+orig(reg25_w_config) % byte_index == 0
+byte_index != orig(reg_data_out)
+byte_index >= orig(byte_index)
+byte_index < orig(M_AXI_ARLEN_wire)
+byte_index <= orig(AR_HIGH_ADDR)
+orig(AR_HIGH_ADDR) % byte_index == 0
+byte_index <= orig(internal_data)
+aw_en != M_AXI_ARLEN_wire
+aw_en % AR_CH_EN == 0
+aw_en <= AR_CH_EN
+aw_en >= AR_ADDR_VALID
+aw_en <= AR_HIGH_ADDR
+aw_en <= internal_data
+aw_en != orig(r_base_addr_wire)
+aw_en != orig(w_base_addr_wire)
+aw_en != orig(M_AXI_ARLEN_wire)
+aw_en % orig(AR_CH_EN) == 0
+aw_en >= orig(AW_ADDR_VALID)
+aw_en >= orig(AR_ADDR_VALID)
+M_AXI_ARLEN_wire >= M_AXI_RLAST_wire
+M_AXI_ARLEN_wire >= W_B_TO_SERVE
+M_AXI_ARLEN_wire != AR_CH_EN
+M_AXI_ARLEN_wire >= AW_ADDR_VALID
+M_AXI_ARLEN_wire >= AR_ADDR_VALID
+M_AXI_ARLEN_wire != AR_HIGH_ADDR
+M_AXI_ARLEN_wire != internal_data
+M_AXI_ARLEN_wire >= orig(r_start_wire)
+M_AXI_ARLEN_wire >= orig(r_done_wire)
+M_AXI_ARLEN_wire >= orig(M_AXI_BID)
+M_AXI_ARLEN_wire != orig(o_data)
+M_AXI_ARLEN_wire > orig(byte_index)
+M_AXI_ARLEN_wire != orig(aw_en)
+M_AXI_ARLEN_wire >= orig(M_AXI_RLAST_wire)
+M_AXI_ARLEN_wire >= orig(W_B_TO_SERVE)
+M_AXI_ARLEN_wire != orig(AR_CH_EN)
+M_AXI_ARLEN_wire >= orig(AW_ADDR_VALID)
+M_AXI_ARLEN_wire >= orig(AR_ADDR_VALID)
+M_AXI_ARLEN_wire != orig(AR_HIGH_ADDR)
+M_AXI_ARLEN_wire != orig(internal_data)
+M_AXI_RLAST_wire >= W_B_TO_SERVE
+M_AXI_RLAST_wire % AR_CH_EN == 0
+M_AXI_RLAST_wire <= AR_CH_EN
+M_AXI_RLAST_wire >= AW_ADDR_VALID
+M_AXI_RLAST_wire >= AR_ADDR_VALID
+M_AXI_RLAST_wire <= AR_HIGH_ADDR
+M_AXI_RLAST_wire <= internal_data
+M_AXI_RLAST_wire <= orig(ARESETN)
+M_AXI_RLAST_wire <= orig(r_base_addr_wire)
+M_AXI_RLAST_wire <= orig(w_base_addr_wire)
+M_AXI_RLAST_wire <= orig(M_AXI_ARLEN_wire)
+M_AXI_RLAST_wire >= orig(M_AXI_RLAST_wire)
+M_AXI_RLAST_wire >= orig(W_B_TO_SERVE)
+M_AXI_RLAST_wire % orig(AR_CH_EN) == 0
+M_AXI_RLAST_wire >= orig(AW_ADDR_VALID)
+M_AXI_RLAST_wire >= orig(AR_ADDR_VALID)
+AR_ILL_TRANS_SRV_PTR >= W_B_TO_SERVE
+AR_ILL_TRANS_SRV_PTR % AR_CH_EN == 0
+AR_ILL_TRANS_SRV_PTR >= AR_ADDR_VALID
+AR_ILL_TRANS_SRV_PTR <= AR_HIGH_ADDR
+AR_ILL_TRANS_SRV_PTR <= internal_data
+AR_ILL_TRANS_SRV_PTR <= orig(r_base_addr_wire)
+AR_ILL_TRANS_SRV_PTR <= orig(w_base_addr_wire)
+AR_ILL_TRANS_SRV_PTR % orig(AR_CH_EN) == 0
+AR_ILL_TRANS_SRV_PTR >= orig(AR_ADDR_VALID)
+W_B_TO_SERVE % AR_CH_EN == 0
+W_B_TO_SERVE <= AR_CH_EN
+W_B_TO_SERVE >= AR_ADDR_VALID
+W_B_TO_SERVE <= AR_HIGH_ADDR
+W_B_TO_SERVE <= internal_data
+W_B_TO_SERVE <= orig(ARESETN)
+W_B_TO_SERVE <= orig(r_base_addr_wire)
+W_B_TO_SERVE <= orig(w_base_addr_wire)
+W_B_TO_SERVE <= orig(M_AXI_BID)
+W_B_TO_SERVE <= orig(M_AXI_ARLEN_wire)
+W_B_TO_SERVE % orig(AR_CH_EN) == 0
+W_B_TO_SERVE >= orig(AR_ADDR_VALID)
+AR_CH_EN >= AW_ADDR_VALID
+AW_ADDR_VALID % AR_CH_EN == 0
+AR_CH_EN >= AR_ADDR_VALID
+AR_CH_EN <= AR_HIGH_ADDR
+AR_HIGH_ADDR % AR_CH_EN == 0
+AR_CH_EN <= internal_data
+AR_CH_EN != orig(r_base_addr_wire)
+AR_CH_EN != orig(w_base_addr_wire)
+orig(reg00_config) % AR_CH_EN == 0
+orig(reg10_r_config) % AR_CH_EN == 0
+orig(reg22_w_config) % AR_CH_EN == 0
+orig(reg25_w_config) % AR_CH_EN == 0
+AR_CH_EN != orig(reg_data_out)
+AR_CH_EN >= orig(aw_en)
+orig(aw_en) % AR_CH_EN == 0
+AR_CH_EN != orig(M_AXI_ARLEN_wire)
+AR_CH_EN >= orig(M_AXI_RLAST_wire)
+orig(M_AXI_RLAST_wire) % AR_CH_EN == 0
+orig(AR_ILL_TRANS_SRV_PTR) % AR_CH_EN == 0
+AR_CH_EN >= orig(W_B_TO_SERVE)
+orig(W_B_TO_SERVE) % AR_CH_EN == 0
+AR_CH_EN >= orig(AR_CH_EN)
+AR_CH_EN >= orig(AW_ADDR_VALID)
+orig(AW_ADDR_VALID) % AR_CH_EN == 0
+AR_CH_EN >= orig(AR_ADDR_VALID)
+orig(AR_HIGH_ADDR) % AR_CH_EN == 0
+AW_ADDR_VALID >= AR_ADDR_VALID
+AW_ADDR_VALID <= AR_HIGH_ADDR
+AW_ADDR_VALID <= internal_data
+AW_ADDR_VALID <= orig(ARESETN)
+AW_ADDR_VALID <= orig(r_base_addr_wire)
+AW_ADDR_VALID <= orig(w_base_addr_wire)
+AW_ADDR_VALID <= orig(r_done_wire)
+AW_ADDR_VALID <= orig(M_AXI_BID)
+AW_ADDR_VALID <= orig(M_AXI_ARLEN_wire)
+AW_ADDR_VALID % orig(AR_CH_EN) == 0
+AW_ADDR_VALID >= orig(AW_ADDR_VALID)
+AW_ADDR_VALID >= orig(AR_ADDR_VALID)
+AR_ADDR_VALID % AR_HIGH_ADDR == 0
+AR_ADDR_VALID <= AR_HIGH_ADDR
+AR_ADDR_VALID <= internal_data
+AR_ADDR_VALID <= orig(ARESETN)
+AR_ADDR_VALID <= orig(r_start_wire)
+AR_ADDR_VALID <= orig(reset_wire)
+AR_ADDR_VALID <= orig(r_base_addr_wire)
+AR_ADDR_VALID <= orig(w_base_addr_wire)
+AR_ADDR_VALID <= orig(r_done_wire)
+AR_ADDR_VALID <= orig(M_AXI_BID)
+AR_ADDR_VALID <= orig(reg_data_out)
+AR_ADDR_VALID <= orig(M_AXI_ARLEN_wire)
+AR_ADDR_VALID >= orig(AR_ADDR_VALID)
+AR_ADDR_VALID % orig(AR_HIGH_ADDR) == 0
+AR_HIGH_ADDR <= internal_data
+AR_HIGH_ADDR != orig(ARESETN)
+AR_HIGH_ADDR != orig(r_start_wire)
+AR_HIGH_ADDR != orig(reset_wire)
+AR_HIGH_ADDR != orig(r_base_addr_wire)
+AR_HIGH_ADDR != orig(w_base_addr_wire)
+AR_HIGH_ADDR != orig(r_done_wire)
+AR_HIGH_ADDR != orig(M_AXI_BID)
+AR_HIGH_ADDR != orig(reg_data_out)
+AR_HIGH_ADDR % orig(byte_index) == 0
+AR_HIGH_ADDR >= orig(byte_index)
+AR_HIGH_ADDR >= orig(aw_en)
+AR_HIGH_ADDR != orig(M_AXI_ARLEN_wire)
+AR_HIGH_ADDR >= orig(M_AXI_RLAST_wire)
+AR_HIGH_ADDR >= orig(AR_ILL_TRANS_SRV_PTR)
+AR_HIGH_ADDR >= orig(W_B_TO_SERVE)
+AR_HIGH_ADDR % orig(AR_CH_EN) == 0
+AR_HIGH_ADDR >= orig(AR_CH_EN)
+AR_HIGH_ADDR >= orig(AW_ADDR_VALID)
+AR_HIGH_ADDR >= orig(AR_ADDR_VALID)
+AR_HIGH_ADDR % orig(AR_HIGH_ADDR) == 0
+AR_HIGH_ADDR >= orig(AR_HIGH_ADDR)
+internal_data != orig(ARESETN)
+internal_data != orig(r_start_wire)
+internal_data != orig(reset_wire)
+internal_data != orig(r_base_addr_wire)
+internal_data != orig(w_base_addr_wire)
+internal_data != orig(r_done_wire)
+internal_data != orig(M_AXI_BID)
+internal_data != orig(reg_data_out)
+internal_data >= orig(byte_index)
+internal_data >= orig(aw_en)
+internal_data != orig(M_AXI_ARLEN_wire)
+internal_data >= orig(M_AXI_RLAST_wire)
+internal_data >= orig(AR_ILL_TRANS_SRV_PTR)
+internal_data >= orig(W_B_TO_SERVE)
+internal_data >= orig(AR_CH_EN)
+internal_data >= orig(AW_ADDR_VALID)
+internal_data >= orig(AR_ADDR_VALID)
+internal_data >= orig(AR_HIGH_ADDR)
+internal_data >= orig(internal_data)
+shadow_M_AXI_AWADDR >= shadow_M_AXI_BRESP_wire
+shadow_M_AXI_AWADDR >= shadow_M_AXI_WDATA_wire
+shadow_M_AXI_AWADDR >= shadow_reg05_w_anomaly
+shadow_M_AXI_AWADDR >= shadow_M_AXI_AWLEN
+shadow_M_AXI_AWADDR >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWADDR >= shadow_B_STATE
+shadow_M_AXI_AWADDR >= shadow_AW_CH_EN
+shadow_M_AXI_AWADDR >= shadow_AW_CH_DIS
+shadow_M_AXI_AWADDR <= orig(shadow_M_AXI_AWADDR)
+shadow_AW_ADDR_VALID >= shadow_M_AXI_BRESP_wire
+shadow_AW_ADDR_VALID >= shadow_M_AXI_AWLEN
+shadow_AW_ADDR_VALID >= shadow_M_AXI_WVALID
+shadow_AW_ADDR_VALID >= shadow_B_STATE
+shadow_AW_ADDR_VALID >= shadow_AW_CH_EN
+shadow_AW_ADDR_VALID >= shadow_AW_CH_DIS
+shadow_AW_ADDR_VALID >= shadow_AW_ADDR_VALID_FLAG
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= shadow_AW_ILL_TRANS_FIL_PTR
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= shadow_M_AXI_BRESP_wire
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= shadow_M_AXI_AWCACHE
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= shadow_B_STATE
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_M_AXI_AWADDR)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_AW_ADDR_VALID)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_AW_ILL_TRANS_FIL_PTR)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= orig(shadow_M_AXI_BRESP_wire)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_reg_data_out)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_reg05_w_anomaly)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_M_AXI_AWCACHE)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR <= orig(shadow_M_AXI_AWLEN)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= orig(shadow_M_AXI_WVALID)
+shadow_AW_ILL_DATA_TRANS_SRV_PTR >= orig(shadow_B_STATE)
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_M_AXI_BRESP_wire
+shadow_AW_ILL_TRANS_FIL_PTR <= shadow_M_AXI_AWCACHE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_M_AXI_WVALID
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_B_STATE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_W_B_TO_SERVE
+shadow_AW_ILL_TRANS_FIL_PTR >= shadow_AW_CH_DIS
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_M_AXI_AWADDR)
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_AW_ADDR_VALID)
+shadow_AW_ILL_TRANS_FIL_PTR >= orig(shadow_M_AXI_BRESP_wire)
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_reg_data_out)
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_reg05_w_anomaly)
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_M_AXI_AWCACHE)
+shadow_AW_ILL_TRANS_FIL_PTR <= orig(shadow_M_AXI_AWLEN)
+shadow_AW_ILL_TRANS_FIL_PTR >= orig(shadow_M_AXI_WVALID)
+shadow_AW_ILL_TRANS_FIL_PTR >= orig(shadow_B_STATE)
+shadow_AW_ILL_TRANS_FIL_PTR >= orig(shadow_AW_CH_DIS)
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_WDATA_wire
+shadow_M_AXI_BRESP_wire <= shadow_reg05_w_anomaly
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWPROT
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWCACHE
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWBURST
+shadow_M_AXI_BRESP_wire <= shadow_M_AXI_AWLEN
+shadow_M_AXI_BRESP_wire >= shadow_B_STATE
+shadow_M_AXI_BRESP_wire <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_BRESP_wire <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_BRESP_wire <= orig(shadow_AW_ILL_TRANS_FIL_PTR)
+shadow_M_AXI_BRESP_wire <= orig(shadow_reg_data_out)
+shadow_M_AXI_BRESP_wire <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_BRESP_wire <= orig(shadow_M_AXI_AWPROT)
+shadow_M_AXI_BRESP_wire <= orig(shadow_M_AXI_AWCACHE)
+shadow_M_AXI_BRESP_wire <= orig(shadow_M_AXI_AWBURST)
+shadow_M_AXI_BRESP_wire <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_WDATA_wire >= shadow_B_STATE
+shadow_M_AXI_WDATA_wire <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_WDATA_wire <= orig(shadow_reg_data_out)
+shadow_reg05_w_anomaly >= shadow_M_AXI_AWLEN
+shadow_reg05_w_anomaly >= shadow_M_AXI_WVALID
+shadow_reg05_w_anomaly >= shadow_B_STATE
+shadow_reg05_w_anomaly >= shadow_AW_CH_EN
+shadow_reg05_w_anomaly >= shadow_AW_CH_DIS
+shadow_reg05_w_anomaly <= orig(shadow_M_AXI_AWADDR)
+shadow_reg05_w_anomaly <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_AWPROT <= shadow_M_AXI_AWCACHE
+shadow_M_AXI_AWPROT >= shadow_M_AXI_AWBURST
+shadow_M_AXI_AWPROT >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWPROT >= shadow_B_STATE
+shadow_M_AXI_AWPROT >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWPROT >= shadow_W_CH_EN
+shadow_M_AXI_AWPROT >= shadow_AW_CH_EN
+shadow_M_AXI_AWPROT >= shadow_AW_CH_DIS
+shadow_M_AXI_AWPROT <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_AWPROT <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_AWPROT >= orig(shadow_M_AXI_BRESP_wire)
+shadow_M_AXI_AWPROT <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_AWPROT <= orig(shadow_M_AXI_AWPROT)
+shadow_M_AXI_AWPROT <= orig(shadow_M_AXI_AWCACHE)
+shadow_M_AXI_AWPROT <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_AWPROT >= orig(shadow_M_AXI_WVALID)
+shadow_M_AXI_AWPROT >= orig(shadow_B_STATE)
+shadow_M_AXI_AWPROT >= orig(shadow_AW_CH_DIS)
+shadow_M_AXI_AWCACHE >= shadow_M_AXI_AWBURST
+shadow_M_AXI_AWCACHE >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWCACHE >= shadow_B_STATE
+shadow_M_AXI_AWCACHE >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWCACHE >= shadow_W_CH_EN
+shadow_M_AXI_AWCACHE >= shadow_AW_CH_EN
+shadow_M_AXI_AWCACHE >= shadow_AW_CH_DIS
+shadow_M_AXI_AWCACHE <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_AWCACHE <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_AWCACHE >= orig(shadow_M_AXI_BRESP_wire)
+shadow_M_AXI_AWCACHE <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_AWCACHE <= orig(shadow_M_AXI_AWCACHE)
+shadow_M_AXI_AWCACHE <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_AWCACHE >= orig(shadow_M_AXI_WVALID)
+shadow_M_AXI_AWCACHE >= orig(shadow_B_STATE)
+shadow_M_AXI_AWCACHE >= orig(shadow_AW_CH_DIS)
+shadow_M_AXI_AWBURST >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWBURST >= shadow_B_STATE
+shadow_M_AXI_AWBURST >= shadow_W_B_TO_SERVE
+shadow_M_AXI_AWBURST >= shadow_W_CH_EN
+shadow_M_AXI_AWBURST >= shadow_AW_CH_EN
+shadow_M_AXI_AWBURST >= shadow_AW_CH_DIS
+shadow_M_AXI_AWBURST <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_AWBURST <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_AWBURST >= orig(shadow_M_AXI_BRESP_wire)
+shadow_M_AXI_AWBURST <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_AWBURST <= orig(shadow_M_AXI_AWPROT)
+shadow_M_AXI_AWBURST <= orig(shadow_M_AXI_AWCACHE)
+shadow_M_AXI_AWBURST <= orig(shadow_M_AXI_AWBURST)
+shadow_M_AXI_AWBURST <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_AWBURST >= orig(shadow_M_AXI_WVALID)
+shadow_M_AXI_AWBURST >= orig(shadow_B_STATE)
+shadow_M_AXI_AWBURST >= orig(shadow_AW_CH_DIS)
+shadow_M_AXI_AWLEN >= shadow_M_AXI_WVALID
+shadow_M_AXI_AWLEN >= shadow_B_STATE
+shadow_M_AXI_AWLEN >= shadow_AW_CH_EN
+shadow_M_AXI_AWLEN >= shadow_AW_CH_DIS
+shadow_M_AXI_AWLEN <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_AWLEN <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_AWLEN <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_AWLEN <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_WVALID >= shadow_B_STATE
+shadow_M_AXI_WVALID <= shadow_W_B_TO_SERVE
+shadow_M_AXI_WVALID <= shadow_W_CH_EN
+shadow_M_AXI_WVALID <= shadow_AW_CH_EN
+shadow_M_AXI_WVALID <= shadow_AW_CH_DIS
+shadow_M_AXI_WVALID <= shadow_AW_ADDR_VALID_FLAG
+shadow_M_AXI_WVALID <= orig(shadow_M_AXI_AWADDR)
+shadow_M_AXI_WVALID <= orig(shadow_AW_ADDR_VALID)
+shadow_M_AXI_WVALID <= orig(shadow_AW_ILL_TRANS_FIL_PTR)
+shadow_M_AXI_WVALID <= orig(shadow_reg_data_out)
+shadow_M_AXI_WVALID <= orig(shadow_reg05_w_anomaly)
+shadow_M_AXI_WVALID <= orig(shadow_M_AXI_AWPROT)
+shadow_M_AXI_WVALID <= orig(shadow_M_AXI_AWCACHE)
+shadow_M_AXI_WVALID <= orig(shadow_M_AXI_AWBURST)
+shadow_M_AXI_WVALID <= orig(shadow_M_AXI_AWLEN)
+shadow_M_AXI_WVALID <= orig(shadow_W_B_TO_SERVE)
+shadow_M_AXI_WVALID <= orig(shadow_W_CH_EN)
+shadow_M_AXI_WVALID <= orig(shadow_AW_CH_DIS)
+shadow_M_AXI_WVALID <= orig(shadow_AW_ADDR_VALID_FLAG)
+shadow_B_STATE <= shadow_W_B_TO_SERVE
+shadow_B_STATE <= shadow_W_CH_EN
+shadow_B_STATE <= shadow_AW_CH_EN
+shadow_B_STATE <= shadow_AW_CH_DIS
+shadow_B_STATE <= shadow_AW_ADDR_VALID_FLAG
+shadow_B_STATE <= orig(shadow_M_AXI_AWADDR)
+shadow_B_STATE <= orig(shadow_AW_ADDR_VALID)
+shadow_B_STATE <= orig(shadow_AW_ILL_TRANS_FIL_PTR)
+shadow_B_STATE <= orig(shadow_reg_data_out)
+shadow_B_STATE <= orig(shadow_reg05_w_anomaly)
+shadow_B_STATE <= orig(shadow_M_AXI_AWPROT)
+shadow_B_STATE <= orig(shadow_M_AXI_AWCACHE)
+shadow_B_STATE <= orig(shadow_M_AXI_AWBURST)
+shadow_B_STATE <= orig(shadow_M_AXI_AWLEN)
+shadow_B_STATE <= orig(shadow_M_AXI_WVALID)
+shadow_B_STATE <= orig(shadow_W_B_TO_SERVE)
+shadow_B_STATE <= orig(shadow_W_CH_EN)
+shadow_B_STATE <= orig(shadow_AW_CH_DIS)
+shadow_B_STATE <= orig(shadow_AW_ADDR_VALID_FLAG)
+shadow_W_B_TO_SERVE <= shadow_W_CH_EN
+shadow_W_B_TO_SERVE >= shadow_AW_CH_DIS
+shadow_W_B_TO_SERVE <= orig(shadow_M_AXI_AWADDR)
+shadow_W_B_TO_SERVE <= orig(shadow_AW_ADDR_VALID)
+shadow_W_B_TO_SERVE <= orig(shadow_reg_data_out)
+shadow_W_B_TO_SERVE <= orig(shadow_reg05_w_anomaly)
+shadow_W_B_TO_SERVE <= orig(shadow_M_AXI_AWPROT)
+shadow_W_B_TO_SERVE <= orig(shadow_M_AXI_AWCACHE)
+shadow_W_B_TO_SERVE <= orig(shadow_M_AXI_AWBURST)
+shadow_W_B_TO_SERVE <= orig(shadow_M_AXI_AWLEN)
+shadow_W_B_TO_SERVE >= orig(shadow_M_AXI_WVALID)
+shadow_W_B_TO_SERVE >= orig(shadow_B_STATE)
+shadow_W_B_TO_SERVE <= orig(shadow_W_CH_EN)
+shadow_W_B_TO_SERVE >= orig(shadow_AW_CH_DIS)
+shadow_W_B_TO_SERVE <= orig(shadow_AW_ADDR_VALID_FLAG)
+shadow_W_CH_EN >= shadow_AW_CH_EN
+shadow_W_CH_EN >= shadow_AW_CH_DIS
+shadow_W_CH_EN <= orig(shadow_M_AXI_AWADDR)
+shadow_W_CH_EN <= orig(shadow_AW_ADDR_VALID)
+shadow_W_CH_EN <= orig(shadow_reg05_w_anomaly)
+shadow_W_CH_EN <= orig(shadow_M_AXI_AWPROT)
+shadow_W_CH_EN <= orig(shadow_M_AXI_AWCACHE)
+shadow_W_CH_EN <= orig(shadow_M_AXI_AWBURST)
+shadow_W_CH_EN <= orig(shadow_M_AXI_AWLEN)
+shadow_W_CH_EN >= orig(shadow_M_AXI_WVALID)
+shadow_W_CH_EN >= orig(shadow_B_STATE)
+shadow_W_CH_EN <= orig(shadow_W_CH_EN)
+shadow_W_CH_EN >= orig(shadow_AW_CH_DIS)
+shadow_W_CH_EN <= orig(shadow_AW_ADDR_VALID_FLAG)
+shadow_AW_CH_EN >= shadow_AW_CH_DIS
+shadow_AW_CH_EN <= shadow_AW_ADDR_VALID_FLAG
+shadow_AW_CH_EN <= orig(shadow_M_AXI_AWADDR)
+shadow_AW_CH_EN <= orig(shadow_AW_ADDR_VALID)
+shadow_AW_CH_EN <= orig(shadow_reg05_w_anomaly)
+shadow_AW_CH_EN <= orig(shadow_M_AXI_AWPROT)
+shadow_AW_CH_EN <= orig(shadow_M_AXI_AWCACHE)
+shadow_AW_CH_EN <= orig(shadow_M_AXI_AWBURST)
+shadow_AW_CH_EN <= orig(shadow_M_AXI_AWLEN)
+shadow_AW_CH_EN <= orig(shadow_W_CH_EN)
+shadow_AW_CH_EN <= orig(shadow_AW_ADDR_VALID_FLAG)
+shadow_AW_CH_DIS <= shadow_AW_ADDR_VALID_FLAG
+shadow_AW_CH_DIS <= orig(shadow_M_AXI_AWADDR)
+shadow_AW_CH_DIS <= orig(shadow_AW_ADDR_VALID)
+shadow_AW_CH_DIS <= orig(shadow_reg_data_out)
+shadow_AW_CH_DIS <= orig(shadow_reg05_w_anomaly)
+shadow_AW_CH_DIS <= orig(shadow_M_AXI_AWPROT)
+shadow_AW_CH_DIS <= orig(shadow_M_AXI_AWCACHE)
+shadow_AW_CH_DIS <= orig(shadow_M_AXI_AWBURST)
+shadow_AW_CH_DIS <= orig(shadow_M_AXI_AWLEN)
+shadow_AW_CH_DIS <= orig(shadow_W_CH_EN)
+shadow_AW_CH_DIS <= orig(shadow_AW_ADDR_VALID_FLAG)
+Exiting Daikon.
