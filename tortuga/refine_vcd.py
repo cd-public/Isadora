@@ -34,7 +34,7 @@ def refine(name):
 
 		if step1:
 			
-			if "module myHWtask" in line:
+			if "module " in line and "module u0" not in line:
 				step1 = False
 				step2 = True
 				active = False
