@@ -22,6 +22,7 @@ def refine(name):
 ## step 0: copy header
 
 		if step0:
+   
 			if "scope" in line:
 				step0 = False
 				step1 = True
@@ -34,7 +35,7 @@ def refine(name):
 
 		if step1:
 			
-			if "module " in line and "module u0" not in line:
+			if "module " in line and "module u0" not in line and active:
 				step1 = False
 				step2 = True
 				active = False
