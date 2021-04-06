@@ -377,7 +377,7 @@ if __name__ == "__main__":
 
 		# develop the ban list - vcd terms that are uninteresting, and save it
 		ban_list = get_bans(name)
-		# ban_list = no_secondaries(ban_list, key) # ban S_AXI_* from Andy, "S_AXI Signals..."
+		#ban_list = no_secondaries(ban_list, key) # ban S_AXI_* from Andy, "S_AXI Signals..."
 		ban_list = ban_list + ["ACLK"]
 		shadows = get_shadows(name, key, ban_list) # we do this for the side effect on *_ts
 		bans_to_file(name, ban_list)
