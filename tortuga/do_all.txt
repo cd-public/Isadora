@@ -1,0 +1,945 @@
+newgrp hyperflogen
+cd /data/cd
+source setup_radixs
+touch start_time.txt
+cd iterative_build
+cp M_AXI_ARADDR.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARADDR.vcd
+cd iterative_build
+cp M_AXI_ARADDR_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARADDR_INT.vcd
+cd iterative_build
+cp M_AXI_ARADDR_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARADDR_wire.vcd
+cd iterative_build
+cp M_AXI_ARBURST.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARBURST.vcd
+cd iterative_build
+cp M_AXI_ARBURST_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARBURST_INT.vcd
+cd iterative_build
+cp M_AXI_ARBURST_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARBURST_wire.vcd
+cd iterative_build
+cp M_AXI_ARCACHE.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARCACHE.vcd
+cd iterative_build
+cp M_AXI_ARCACHE_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARCACHE_INT.vcd
+cd iterative_build
+cp M_AXI_ARCACHE_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARCACHE_wire.vcd
+cd iterative_build
+cp M_AXI_ARID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARID.vcd
+cd iterative_build
+cp M_AXI_ARID_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARID_INT.vcd
+cd iterative_build
+cp M_AXI_ARID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARID_wire.vcd
+cd iterative_build
+cp M_AXI_ARLEN.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLEN.vcd
+cd iterative_build
+cp M_AXI_ARLEN_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLEN_INT.vcd
+cd iterative_build
+cp M_AXI_ARLEN_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLEN_wire.vcd
+cd iterative_build
+cp M_AXI_ARLOCK.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLOCK.vcd
+cd iterative_build
+cp M_AXI_ARLOCK_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLOCK_INT.vcd
+cd iterative_build
+cp M_AXI_ARLOCK_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARLOCK_wire.vcd
+cd iterative_build
+cp M_AXI_ARPROT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARPROT.vcd
+cd iterative_build
+cp M_AXI_ARPROT_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARPROT_INT.vcd
+cd iterative_build
+cp M_AXI_ARPROT_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARPROT_wire.vcd
+cd iterative_build
+cp M_AXI_ARQOS.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARQOS.vcd
+cd iterative_build
+cp M_AXI_ARQOS_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARQOS_INT.vcd
+cd iterative_build
+cp M_AXI_ARQOS_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARQOS_wire.vcd
+cd iterative_build
+cp M_AXI_ARREADY.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARREADY.vcd
+cd iterative_build
+cp M_AXI_ARREADY_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARREADY_wire.vcd
+cd iterative_build
+cp M_AXI_ARSIZE.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARSIZE.vcd
+cd iterative_build
+cp M_AXI_ARSIZE_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARSIZE_INT.vcd
+cd iterative_build
+cp M_AXI_ARSIZE_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARSIZE_wire.vcd
+cd iterative_build
+cp M_AXI_ARUSER.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARUSER.vcd
+cd iterative_build
+cp M_AXI_ARUSER_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARUSER_INT.vcd
+cd iterative_build
+cp M_AXI_ARUSER_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARUSER_wire.vcd
+cd iterative_build
+cp M_AXI_ARVALID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARVALID.vcd
+cd iterative_build
+cp M_AXI_ARVALID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_ARVALID_wire.vcd
+cd iterative_build
+cp M_AXI_AWADDR.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWADDR.vcd
+cd iterative_build
+cp M_AXI_AWADDR_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWADDR_INT.vcd
+cd iterative_build
+cp M_AXI_AWADDR_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWADDR_wire.vcd
+cd iterative_build
+cp M_AXI_AWBURST.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWBURST.vcd
+cd iterative_build
+cp M_AXI_AWBURST_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWBURST_INT.vcd
+cd iterative_build
+cp M_AXI_AWBURST_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWBURST_wire.vcd
+cd iterative_build
+cp M_AXI_AWCACHE.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWCACHE.vcd
+cd iterative_build
+cp M_AXI_AWCACHE_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWCACHE_INT.vcd
+cd iterative_build
+cp M_AXI_AWCACHE_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWCACHE_wire.vcd
+cd iterative_build
+cp M_AXI_AWID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWID.vcd
+cd iterative_build
+cp M_AXI_AWID_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWID_INT.vcd
+cd iterative_build
+cp M_AXI_AWID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWID_wire.vcd
+cd iterative_build
+cp M_AXI_AWLEN.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLEN.vcd
+cd iterative_build
+cp M_AXI_AWLEN_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLEN_INT.vcd
+cd iterative_build
+cp M_AXI_AWLEN_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLEN_wire.vcd
+cd iterative_build
+cp M_AXI_AWLOCK.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLOCK.vcd
+cd iterative_build
+cp M_AXI_AWLOCK_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLOCK_INT.vcd
+cd iterative_build
+cp M_AXI_AWLOCK_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWLOCK_wire.vcd
+cd iterative_build
+cp M_AXI_AWPROT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWPROT.vcd
+cd iterative_build
+cp M_AXI_AWPROT_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWPROT_INT.vcd
+cd iterative_build
+cp M_AXI_AWPROT_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWPROT_wire.vcd
+cd iterative_build
+cp M_AXI_AWQOS.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWQOS.vcd
+cd iterative_build
+cp M_AXI_AWQOS_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWQOS_INT.vcd
+cd iterative_build
+cp M_AXI_AWQOS_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWQOS_wire.vcd
+cd iterative_build
+cp M_AXI_AWREADY.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWREADY.vcd
+cd iterative_build
+cp M_AXI_AWREADY_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWREADY_wire.vcd
+cd iterative_build
+cp M_AXI_AWSIZE.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWSIZE.vcd
+cd iterative_build
+cp M_AXI_AWSIZE_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWSIZE_INT.vcd
+cd iterative_build
+cp M_AXI_AWSIZE_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWSIZE_wire.vcd
+cd iterative_build
+cp M_AXI_AWUSER.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWUSER.vcd
+cd iterative_build
+cp M_AXI_AWUSER_INT.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWUSER_INT.vcd
+cd iterative_build
+cp M_AXI_AWUSER_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWUSER_wire.vcd
+cd iterative_build
+cp M_AXI_AWVALID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWVALID.vcd
+cd iterative_build
+cp M_AXI_AWVALID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_AWVALID_wire.vcd
+cd iterative_build
+cp M_AXI_BID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BID.vcd
+cd iterative_build
+cp M_AXI_BID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BID_wire.vcd
+cd iterative_build
+cp M_AXI_BREADY.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BREADY.vcd
+cd iterative_build
+cp M_AXI_BREADY_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BREADY_wire.vcd
+cd iterative_build
+cp M_AXI_BRESP.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BRESP.vcd
+cd iterative_build
+cp M_AXI_BRESP_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BRESP_wire.vcd
+cd iterative_build
+cp M_AXI_BUSER.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BUSER.vcd
+cd iterative_build
+cp M_AXI_BUSER_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BUSER_wire.vcd
+cd iterative_build
+cp M_AXI_BVALID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BVALID.vcd
+cd iterative_build
+cp M_AXI_BVALID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_BVALID_wire.vcd
+cd iterative_build
+cp M_AXI_RDATA.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RDATA.vcd
+cd iterative_build
+cp M_AXI_RDATA_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RDATA_wire.vcd
+cd iterative_build
+cp M_AXI_RID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RID.vcd
+cd iterative_build
+cp M_AXI_RID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RID_wire.vcd
+cd iterative_build
+cp M_AXI_RLAST.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RLAST.vcd
+cd iterative_build
+cp M_AXI_RLAST_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RLAST_wire.vcd
+cd iterative_build
+cp M_AXI_RREADY.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RREADY.vcd
+cd iterative_build
+cp M_AXI_RREADY_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RREADY_wire.vcd
+cd iterative_build
+cp M_AXI_RRESP.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RRESP.vcd
+cd iterative_build
+cp M_AXI_RRESP_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RRESP_wire.vcd
+cd iterative_build
+cp M_AXI_RUSER.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RUSER.vcd
+cd iterative_build
+cp M_AXI_RUSER_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RUSER_wire.vcd
+cd iterative_build
+cp M_AXI_RVALID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RVALID.vcd
+cd iterative_build
+cp M_AXI_RVALID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_RVALID_wire.vcd
+cd iterative_build
+cp M_AXI_WDATA.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WDATA.vcd
+cd iterative_build
+cp M_AXI_WDATA_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WDATA_wire.vcd
+cd iterative_build
+cp M_AXI_WLAST.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WLAST.vcd
+cd iterative_build
+cp M_AXI_WLAST_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WLAST_wire.vcd
+cd iterative_build
+cp M_AXI_WREADY.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WREADY.vcd
+cd iterative_build
+cp M_AXI_WREADY_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WREADY_wire.vcd
+cd iterative_build
+cp M_AXI_WSTRB.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WSTRB.vcd
+cd iterative_build
+cp M_AXI_WSTRB_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WSTRB_wire.vcd
+cd iterative_build
+cp M_AXI_WUSER.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WUSER.vcd
+cd iterative_build
+cp M_AXI_WUSER_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WUSER_wire.vcd
+cd iterative_build
+cp M_AXI_WVALID.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WVALID.vcd
+cd iterative_build
+cp M_AXI_WVALID_wire.as iACW_sps.as
+./clean.sh
+radixs_shell -s iACW_explore.script
+./run_questa_explore
+cd /data/cd
+cp iterative_build/iACW.vcd .
+python refine_vcd.py
+mv r_iACW.vcd M_AXI_WVALID_wire.vcd
+cd iterative_build
+cd data/cd
+rm *ACW.vcd
+touch end_time.txt
+ls -al
