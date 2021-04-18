@@ -66,11 +66,12 @@ def refine(name):
 				if "module shadow_dut" in line:
 					active = True
 				else:
+					module_name = line.split()[2]
 					active = False
 			elif active:
 				for reg in orig_design_regs:
 					if "shadow_" + reg + " " in line:
-						vcd_out.write(line)
+						vcd_out.write(line.replace("shadow","shadow_" + module_name)
 						refined_vars = refined_vars + [line.split()[3]]
 
 # step 3:
