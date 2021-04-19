@@ -1,0 +1,4 @@
+Trace generation:  4:38:xx
+Mining src->sink:  3:10:xx
+
+*Could run mining concurrently with trace generation
