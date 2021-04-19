@@ -1,0 +1,64 @@
+Trace generation:  4:38:xx
+Mining src->sink:  3:10:xx
+*Could run mining concurrently with trace generation
+
+
+Trace log:
+# [ACW_tb]      tb_HW_r_base_addr = b6056056
+# [ACW_tb]      tb_HW_w_base_addr = dd30426c
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb] Round           2 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 76f0c9b2
+# [ACW_tb]      tb_HW_w_base_addr = 8d141020
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb] Round           3 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 8065b007
+# [ACW_tb]      tb_HW_w_base_addr = 3d91ee1a
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb] Round           4 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 24431671
+# [ACW_tb]      tb_HW_w_base_addr = 55ce11ae
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+
+Notes on characterizing a design:
+
+Of the 65 registers that flow to another register:
+
+15 flow to a single additional register: M_AXI_<reg>_wire =?=> ['M_AXI_<reg>']
+
+40 flow to a set of registers related to either read or write channels, with the first flow to A<W/R>_ADDR_VALID.
+The conditions of all these flows appear identical when fixing <W/R> and differ only in shadow state when not fixing <W/R>
+
+8 flow to multiple registers not oriented around a channel, but tracking registers in the design ('reg03_r_anomaly', 'reg05_w_anomaly', 'reg_data_out' and maybe a wire.)
+
+The last two registers are A<W/R>_LEN, which, flow to a subset of the "first flow A<W/R>_ADDR_VALID" family of registers.
+
+No flows were detected on 136 registers. I checked a few of them by using different iflow properties in Tortuga but got the same results, so I think the never flow is pretty solid.
