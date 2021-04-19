@@ -2,3 +2,18 @@ Trace generation:  4:38:xx
 Mining src->sink:  3:10:xx
 
 *Could run mining concurrently with trace generation
+
+Notes on characterizing a design:
+
+Of the 65 registers that flow to another register:
+
+15 flow to a single additional register: M_AXI_<reg>_wire =?=> ['M_AXI_<reg>']
+
+40 flow to a set of registers related to either read or write channels, with the first flow to A<W/R>_ADDR_VALID.
+The conditions of all these flows appear identical when fixing <W/R> and differ only in shadow state when not fixing <W/R>
+
+8 flow to multiple registers not oriented around a channel, but tracking registers in the design ('reg03_r_anomaly', 'reg05_w_anomaly', 'reg_data_out' and maybe a wire.)
+
+The last two registers are A<W/R>_LEN, which, flow to a subset of the first flow to first flow to A<W/R>_ADDR_VALID family of registers.
+
+No flows were detected on 136 registers.
