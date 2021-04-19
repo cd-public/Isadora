@@ -14,6 +14,6 @@ The conditions of all these flows appear identical when fixing <W/R> and differ 
 
 8 flow to multiple registers not oriented around a channel, but tracking registers in the design ('reg03_r_anomaly', 'reg05_w_anomaly', 'reg_data_out' and maybe a wire.)
 
-The last two registers are A<W/R>_LEN, which, flow to a subset of the first flow to first flow to A<W/R>_ADDR_VALID family of registers.
+The last two registers are A<W/R>_LEN, which, flow to a subset of the "first flow A<W/R>_ADDR_VALID" family of registers.
 
 No flows were detected on 136 registers.
