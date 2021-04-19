@@ -16,4 +16,4 @@ The conditions of all these flows appear identical when fixing <W/R> and differ 
 
 The last two registers are A<W/R>_LEN, which, flow to a subset of the "first flow A<W/R>_ADDR_VALID" family of registers.
 
-No flows were detected on 136 registers.
+No flows were detected on 136 registers. I checked a few of them by using different iflow properties in Tortuga but got the same results, so I think the never flow is pretty solid.
