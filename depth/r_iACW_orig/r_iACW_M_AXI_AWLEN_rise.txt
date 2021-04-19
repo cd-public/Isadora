@@ -1,0 +1,378 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+..tick():::ENTER
+ARESETN == w_start_wire
+ARESETN == M_AXI_BREADY
+ARESETN == M_AXI_RREADY
+ARESETN == aw_en
+ARESETN == M_AXI_AWVALID_wire
+ARESETN == M_AXI_AWREADY_wire
+ARESETN == M_AXI_RREADY_wire
+ARESETN == AW_CH_EN
+r_start_wire == reset_wire
+r_start_wire == w_done_wire
+r_start_wire == M_AXI_AWADDR
+r_start_wire == M_AXI_AWLEN
+r_start_wire == M_AXI_AWSIZE
+r_start_wire == M_AXI_AWBURST
+r_start_wire == M_AXI_AWCACHE
+r_start_wire == M_AXI_AWVALID
+r_start_wire == M_AXI_WDATA
+r_start_wire == M_AXI_WSTRB
+r_start_wire == M_AXI_WLAST
+r_start_wire == M_AXI_WVALID
+r_start_wire == M_AXI_BVALID
+r_start_wire == M_AXI_ARID
+r_start_wire == M_AXI_ARVALID
+r_start_wire == M_AXI_RLAST
+r_start_wire == M_AXI_RVALID
+r_start_wire == i_config
+r_start_wire == reg01_config
+r_start_wire == reg02_r_anomaly
+r_start_wire == reg04_w_anomaly
+r_start_wire == reg05_w_anomaly
+r_start_wire == M_AXI_WDATA_wire
+r_start_wire == M_AXI_WLAST_wire
+r_start_wire == M_AXI_WVALID_wire
+r_start_wire == M_AXI_BRESP_wire
+r_start_wire == M_AXI_BVALID_wire
+r_start_wire == M_AXI_RRESP_wire
+r_start_wire == M_AXI_RLAST_wire
+r_start_wire == M_AXI_RVALID_wire
+r_start_wire == AW_ILL_TRANS_FIL_PTR
+r_start_wire == AW_ILL_DATA_TRANS_SRV_PTR
+r_start_wire == AW_ILL_TRANS_SRV_PTR
+r_start_wire == AW_STATE
+r_start_wire == AR_STATE
+r_start_wire == B_STATE
+r_start_wire == R_STATE
+r_start_wire == AW_ILLEGAL_REQ
+r_start_wire == AR_ILLEGAL_REQ
+r_start_wire == W_DATA_TO_SERVE
+r_start_wire == W_B_TO_SERVE
+r_start_wire == W_CH_EN
+r_start_wire == AW_CH_DIS
+r_start_wire == AW_EN_RST
+r_start_wire == AR_EN_RST
+r_start_wire == reg0_config
+w_base_addr_wire == M_AXI_AWADDR_wire
+r_done_wire == M_AXI_ARBURST
+r_done_wire == M_AXI_ARREADY_wire
+r_done_wire == AR_CH_EN
+r_done_wire == AR_ADDR_VALID_FLAG
+M_AXI_ARCACHE == M_AXI_RDATA
+reg00_config == reg_data_out
+M_AXI_ARVALID_wire == AR_CH_DIS
+AR_ILL_TRANS_FIL_PTR == AR_ILL_TRANS_SRV_PTR
+shadow_M_AXI_AWADDR == shadow_AW_ILL_TRANS_SRV_PTR
+shadow_M_AXI_AWADDR == shadow_AW_ILL_DATA_TRANS_SRV_PTR
+shadow_M_AXI_AWADDR == shadow_AW_ILL_TRANS_FIL_PTR
+shadow_M_AXI_AWADDR == shadow_M_AXI_BRESP_wire
+shadow_M_AXI_AWADDR == shadow_M_AXI_WDATA_wire
+shadow_M_AXI_AWADDR == shadow_reg_data_out
+shadow_M_AXI_AWADDR == shadow_reg05_w_anomaly
+shadow_M_AXI_AWADDR == shadow_M_AXI_WSTRB
+shadow_M_AXI_AWADDR == shadow_M_AXI_WDATA
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWID
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWQOS
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWPROT
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWCACHE
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWBURST
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWSIZE
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWLEN
+shadow_M_AXI_AWADDR == shadow_w_done_wire
+shadow_M_AXI_AWADDR == shadow_M_AXI_WLAST
+shadow_M_AXI_AWADDR == shadow_M_AXI_WVALID
+shadow_M_AXI_AWADDR == shadow_M_AXI_AWREADY_wire
+shadow_M_AXI_AWADDR == shadow_M_AXI_WLAST_wire
+shadow_M_AXI_AWADDR == shadow_M_AXI_WVALID_wire
+shadow_M_AXI_AWADDR == shadow_M_AXI_BVALID_wire
+shadow_M_AXI_AWADDR == shadow_AW_STATE
+shadow_M_AXI_AWADDR == shadow_B_STATE
+shadow_M_AXI_AWADDR == shadow_W_B_TO_SERVE
+shadow_M_AXI_AWADDR == shadow_W_CH_EN
+shadow_M_AXI_AWADDR == shadow_AW_CH_EN
+shadow_M_AXI_AWADDR == shadow_AW_CH_DIS
+ARESETN == 1
+r_start_wire == 0
+r_done_wire one of { 0, 1 }
+M_AXI_ARADDR one of { 0, 608376541, 3053805762L }
+M_AXI_ARLEN one of { 0, 8 }
+M_AXI_ARSIZE one of { 0, 2 }
+M_AXI_ARCACHE one of { 0, 3 }
+o_data == 4294901760L
+axi_awaddr one of { 0, 4 }
+reg00_config == 4294967295L
+reg03_r_anomaly one of { 0, 12582920 }
+reg06_r_config == 1073750016
+reg10_r_config == 2684383232L
+reg22_w_config == 2952790016L
+reg25_w_config == 4026580992L
+byte_index == 4
+M_AXI_ARLEN_wire == 8
+M_AXI_ARVALID_wire one of { 0, 1 }
+AR_ILL_TRANS_FIL_PTR one of { 1, 4 }
+AW_ADDR_VALID one of { 0, 1, 9 }
+AR_ADDR_VALID one of { 0, 1, 16 }
+AW_ADDR_VALID_FLAG one of { 0, 1 }
+internal_data == 65535
+shadow_M_AXI_AWADDR == 0
+shadow_AW_ADDR_VALID == 65535
+shadow_reg02_r_anomaly one of { 0, 4294967295L }
+shadow_M_AXI_AWVALID_wire one of { 0, 1 }
+shadow_AW_ADDR_VALID_FLAG == 1
+DERIVED_taint_reg_count one of { 2, 3, 4 }
+DERIVED_taint_reg_delta one of { 0, 1 }
+===========================================================================
+..tick():::EXIT
+ARESETN == w_start_wire
+ARESETN == M_AXI_BREADY
+ARESETN == M_AXI_RREADY
+ARESETN == aw_en
+ARESETN == M_AXI_RREADY_wire
+ARESETN == AW_ILL_TRANS_FIL_PTR
+ARESETN == AW_STATE
+ARESETN == W_DATA_TO_SERVE
+ARESETN == W_B_TO_SERVE
+ARESETN == orig(ARESETN)
+ARESETN == orig(w_start_wire)
+ARESETN == orig(M_AXI_BREADY)
+ARESETN == orig(M_AXI_RREADY)
+ARESETN == orig(aw_en)
+ARESETN == orig(M_AXI_AWVALID_wire)
+ARESETN == orig(M_AXI_AWREADY_wire)
+ARESETN == orig(M_AXI_RREADY_wire)
+ARESETN == orig(AW_CH_EN)
+r_start_wire == reset_wire
+r_start_wire == w_done_wire
+r_start_wire == M_AXI_WDATA
+r_start_wire == M_AXI_WLAST
+r_start_wire == M_AXI_WVALID
+r_start_wire == M_AXI_BVALID
+r_start_wire == M_AXI_ARID
+r_start_wire == M_AXI_ARVALID
+r_start_wire == M_AXI_RLAST
+r_start_wire == M_AXI_RVALID
+r_start_wire == i_config
+r_start_wire == reg01_config
+r_start_wire == reg02_r_anomaly
+r_start_wire == M_AXI_AWVALID_wire
+r_start_wire == M_AXI_AWREADY_wire
+r_start_wire == M_AXI_WDATA_wire
+r_start_wire == M_AXI_WLAST_wire
+r_start_wire == M_AXI_WVALID_wire
+r_start_wire == M_AXI_BRESP_wire
+r_start_wire == M_AXI_BVALID_wire
+r_start_wire == M_AXI_RRESP_wire
+r_start_wire == M_AXI_RLAST_wire
+r_start_wire == M_AXI_RVALID_wire
+r_start_wire == AW_ILL_DATA_TRANS_SRV_PTR
+r_start_wire == AW_ILL_TRANS_SRV_PTR
+r_start_wire == AR_STATE
+r_start_wire == B_STATE
+r_start_wire == R_STATE
+r_start_wire == AR_ILLEGAL_REQ
+r_start_wire == AW_CH_DIS
+r_start_wire == AW_EN_RST
+r_start_wire == AR_EN_RST
+r_start_wire == reg0_config
+r_start_wire == orig(r_start_wire)
+r_start_wire == orig(reset_wire)
+r_start_wire == orig(w_done_wire)
+r_start_wire == orig(M_AXI_AWADDR)
+r_start_wire == orig(M_AXI_AWLEN)
+r_start_wire == orig(M_AXI_AWSIZE)
+r_start_wire == orig(M_AXI_AWBURST)
+r_start_wire == orig(M_AXI_AWCACHE)
+r_start_wire == orig(M_AXI_AWVALID)
+r_start_wire == orig(M_AXI_WDATA)
+r_start_wire == orig(M_AXI_WSTRB)
+r_start_wire == orig(M_AXI_WLAST)
+r_start_wire == orig(M_AXI_WVALID)
+r_start_wire == orig(M_AXI_BVALID)
+r_start_wire == orig(M_AXI_ARID)
+r_start_wire == orig(M_AXI_ARVALID)
+r_start_wire == orig(M_AXI_RLAST)
+r_start_wire == orig(M_AXI_RVALID)
+r_start_wire == orig(i_config)
+r_start_wire == orig(reg01_config)
+r_start_wire == orig(reg02_r_anomaly)
+r_start_wire == orig(reg04_w_anomaly)
+r_start_wire == orig(reg05_w_anomaly)
+r_start_wire == orig(M_AXI_WDATA_wire)
+r_start_wire == orig(M_AXI_WLAST_wire)
+r_start_wire == orig(M_AXI_WVALID_wire)
+r_start_wire == orig(M_AXI_BRESP_wire)
+r_start_wire == orig(M_AXI_BVALID_wire)
+r_start_wire == orig(M_AXI_RRESP_wire)
+r_start_wire == orig(M_AXI_RLAST_wire)
+r_start_wire == orig(M_AXI_RVALID_wire)
+r_start_wire == orig(AW_ILL_TRANS_FIL_PTR)
+r_start_wire == orig(AW_ILL_DATA_TRANS_SRV_PTR)
+r_start_wire == orig(AW_ILL_TRANS_SRV_PTR)
+r_start_wire == orig(AW_STATE)
+r_start_wire == orig(AR_STATE)
+r_start_wire == orig(B_STATE)
+r_start_wire == orig(R_STATE)
+r_start_wire == orig(AW_ILLEGAL_REQ)
+r_start_wire == orig(AR_ILLEGAL_REQ)
+r_start_wire == orig(W_DATA_TO_SERVE)
+r_start_wire == orig(W_B_TO_SERVE)
+r_start_wire == orig(W_CH_EN)
+r_start_wire == orig(AW_CH_DIS)
+r_start_wire == orig(AW_EN_RST)
+r_start_wire == orig(AR_EN_RST)
+r_start_wire == orig(reg0_config)
+r_base_addr_wire == orig(r_base_addr_wire)
+w_base_addr_wire == M_AXI_AWADDR_wire
+w_base_addr_wire == orig(w_base_addr_wire)
+w_base_addr_wire == orig(M_AXI_AWADDR_wire)
+r_done_wire == M_AXI_ARBURST
+r_done_wire == M_AXI_ARREADY_wire
+r_done_wire == AR_CH_EN
+r_done_wire == AR_ADDR_VALID_FLAG
+r_done_wire == orig(r_done_wire)
+r_done_wire == orig(M_AXI_ARBURST)
+r_done_wire == orig(M_AXI_ARREADY_wire)
+r_done_wire == orig(AR_CH_EN)
+r_done_wire == orig(AR_ADDR_VALID_FLAG)
+M_AXI_AWBURST == M_AXI_AWVALID
+M_AXI_AWBURST == W_CH_EN
+M_AXI_AWBURST == AW_CH_EN
+M_AXI_AWBURST == AW_ADDR_VALID_FLAG
+M_AXI_AWBURST == orig(AW_ADDR_VALID_FLAG)
+M_AXI_ARADDR == orig(M_AXI_ARADDR)
+M_AXI_ARLEN == orig(M_AXI_ARLEN)
+M_AXI_ARSIZE == orig(M_AXI_ARSIZE)
+M_AXI_ARCACHE == M_AXI_RDATA
+M_AXI_ARCACHE == orig(M_AXI_ARCACHE)
+M_AXI_ARCACHE == orig(M_AXI_RDATA)
+o_data == orig(o_data)
+axi_awaddr == orig(axi_awaddr)
+reg00_config == reg_data_out
+reg00_config == orig(reg00_config)
+reg00_config == orig(reg_data_out)
+reg03_r_anomaly == orig(reg03_r_anomaly)
+reg06_r_config == orig(reg06_r_config)
+reg10_r_config == orig(reg10_r_config)
+reg22_w_config == orig(reg22_w_config)
+reg25_w_config == orig(reg25_w_config)
+byte_index == orig(byte_index)
+M_AXI_ARADDR_wire == orig(M_AXI_ARADDR_wire)
+M_AXI_ARLEN_wire == orig(M_AXI_ARLEN_wire)
+M_AXI_ARVALID_wire == AR_CH_DIS
+M_AXI_ARVALID_wire == orig(M_AXI_ARVALID_wire)
+M_AXI_ARVALID_wire == orig(AR_CH_DIS)
+AR_ILL_TRANS_FIL_PTR == AR_ILL_TRANS_SRV_PTR
+AR_ILL_TRANS_FIL_PTR == orig(AR_ILL_TRANS_FIL_PTR)
+AR_ILL_TRANS_FIL_PTR == orig(AR_ILL_TRANS_SRV_PTR)
+AW_ADDR_VALID == orig(AW_ADDR_VALID)
+AR_ADDR_VALID == orig(AR_ADDR_VALID)
+AW_HIGH_ADDR == orig(AW_HIGH_ADDR)
+AR_HIGH_ADDR == orig(AR_HIGH_ADDR)
+internal_data == orig(internal_data)
+shadow_AW_ADDR_VALID == orig(shadow_AW_ADDR_VALID)
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_AW_ILL_DATA_TRANS_SRV_PTR
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_BRESP_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WDATA_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_reg_data_out
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WDATA
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_AWID
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_AWQOS
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_AWPROT
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_w_done_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WLAST
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WVALID
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WLAST_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_WVALID_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_M_AXI_BVALID_wire
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_B_STATE
+shadow_AW_ILL_TRANS_SRV_PTR == shadow_AW_CH_DIS
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWADDR)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_ILL_TRANS_SRV_PTR)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_ILL_DATA_TRANS_SRV_PTR)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_ILL_TRANS_FIL_PTR)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_BRESP_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WDATA_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_reg_data_out)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_reg05_w_anomaly)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WSTRB)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WDATA)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWID)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWQOS)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWPROT)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWCACHE)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWBURST)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWSIZE)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWLEN)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_w_done_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WLAST)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WVALID)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_AWREADY_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WLAST_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_WVALID_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_M_AXI_BVALID_wire)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_STATE)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_B_STATE)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_W_B_TO_SERVE)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_W_CH_EN)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_CH_EN)
+shadow_AW_ILL_TRANS_SRV_PTR == orig(shadow_AW_CH_DIS)
+shadow_AW_ILL_TRANS_FIL_PTR == shadow_M_AXI_AWVALID_wire
+shadow_AW_ILL_TRANS_FIL_PTR == shadow_M_AXI_AWREADY_wire
+shadow_AW_ILL_TRANS_FIL_PTR == shadow_AW_STATE
+shadow_AW_ILL_TRANS_FIL_PTR == shadow_W_B_TO_SERVE
+shadow_AW_ILL_TRANS_FIL_PTR == orig(shadow_M_AXI_AWVALID_wire)
+shadow_reg02_r_anomaly == orig(shadow_reg02_r_anomaly)
+shadow_M_AXI_AWBURST == shadow_W_CH_EN
+shadow_M_AXI_AWBURST == shadow_AW_CH_EN
+shadow_M_AXI_AWBURST == shadow_AW_ADDR_VALID_FLAG
+shadow_M_AXI_AWBURST == orig(shadow_AW_ADDR_VALID_FLAG)
+ARESETN == 1
+r_start_wire == 0
+r_done_wire one of { 0, 1 }
+M_AXI_AWLEN one of { 0, 8 }
+M_AXI_AWSIZE one of { 0, 2 }
+M_AXI_AWBURST one of { 0, 1 }
+M_AXI_AWCACHE one of { 0, 3 }
+M_AXI_WSTRB one of { 0, 15 }
+M_AXI_ARADDR one of { 0, 608376541, 3053805762L }
+M_AXI_ARLEN one of { 0, 8 }
+M_AXI_ARSIZE one of { 0, 2 }
+M_AXI_ARCACHE one of { 0, 3 }
+o_data == 4294901760L
+axi_awaddr one of { 0, 4 }
+reg00_config == 4294967295L
+reg03_r_anomaly one of { 0, 12582920 }
+reg04_w_anomaly one of { 0, 1032973850 }
+reg05_w_anomaly one of { 0, 12582920 }
+reg06_r_config == 1073750016
+reg10_r_config == 2684383232L
+reg22_w_config == 2952790016L
+reg25_w_config == 4026580992L
+byte_index == 4
+M_AXI_ARLEN_wire == 8
+M_AXI_ARVALID_wire one of { 0, 1 }
+AR_ILL_TRANS_FIL_PTR one of { 1, 4 }
+AW_ILLEGAL_REQ one of { 0, 1 }
+AW_ADDR_VALID one of { 0, 1, 9 }
+AR_ADDR_VALID one of { 0, 1, 16 }
+internal_data == 65535
+shadow_M_AXI_AWADDR == 4294967295L
+shadow_AW_ADDR_VALID == 65535
+shadow_AW_ILL_TRANS_SRV_PTR == 0
+shadow_AW_ILL_TRANS_FIL_PTR one of { 0, 1 }
+shadow_reg05_w_anomaly == 12582920
+shadow_M_AXI_WSTRB == 15
+shadow_reg02_r_anomaly one of { 0, 4294967295L }
+shadow_M_AXI_AWCACHE == 3
+shadow_M_AXI_AWBURST == 1
+shadow_M_AXI_AWSIZE == 2
+shadow_M_AXI_AWLEN == 8
+DERIVED_taint_reg_count one of { 11, 16, 17 }
+DERIVED_taint_reg_delta one of { 9, 13 }
+DERIVED_vcd_timestamp - orig(DERIVED_vcd_timestamp) - 1 == 0
+Exiting Daikon.
