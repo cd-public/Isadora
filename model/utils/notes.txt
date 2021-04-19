@@ -1,7 +1,52 @@
 Trace generation:  4:38:xx
 Mining src->sink:  3:10:xx
-
 *Could run mining concurrently with trace generation
+
+
+Trace log:
+# [ACW_tb]      tb_HW_r_base_addr = b6056056
+# [ACW_tb]      tb_HW_w_base_addr = dd30426c
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb] Round           2 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 76f0c9b2
+# [ACW_tb]      tb_HW_w_base_addr = 8d141020
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb] Round           3 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 8065b007
+# [ACW_tb]      tb_HW_w_base_addr = 3d91ee1a
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal read trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb]      into illegal write trans
+# [ACW_tb] Round           4 of           4
+# [ACW_tb]      tb_HW_r_base_addr = 24431671
+# [ACW_tb]      tb_HW_w_base_addr = 55ce11ae
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal read trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
+# [ACW_tb]      into legal write trans
 
 Notes on characterizing a design:
 
