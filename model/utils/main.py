@@ -54,10 +54,15 @@ def make_decls(name,header,suffix):
 def last_val_to_str(last, val):
 	if last == "": # uninitialized case, return nothing
 		return ""
+		
 	if "x" in val:
 		val_str = "-1"
 	else:
-		val_str = str(int(val,2))
+		val_int = int(val,2)
+		if "shadow_" in last and val_int != 0: #only tracked tainted or untainted
+			val_str = "1"
+		else:
+			val_str = str(val_int)
 	return last + "\n" + val_str + "\n1\n"
 
 # accept a key, build a string for dt
@@ -262,8 +267,6 @@ def get_bans(name):
 			for ele in struct:
 				l = list(ele)
 				l.sort()
-				valid = l
-				valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
 				if len(l) > 1:
 					valid = list(filter(lambda x: "shadow_" in x or x.replace("-","").isdigit(), l))
 					valid = [reg.replace("shadow_","") for reg in valid] 
@@ -279,7 +282,9 @@ def get_bans(name):
 			ts.sort()
 			nts.sort()
 			to_write.write("UNTAINTED REGS: " + str(nts) + "\n")
-			return to_ret
+			# keep all shadow_ regs
+			no_shadow = list(filter(lambda x: "shadow_" not in x, to_ret))
+			return no_shadow
 		if " == " in line and "%" not in line: # get equalities
 			splits = line.split()
 			must_add = True			
@@ -290,13 +295,6 @@ def get_bans(name):
 			if must_add:
 				struct += [set([splits[0],splits[2]])]
 				
-def no_secondaries(ban_list, key):
-	s = set()
-	for reg in key:
-		if "S_AXI_" in reg[2]:
-			s.add(reg[2].split()[0]) 
-	return ban_list + list(s)
-
 def bans_to_file(name, ban_list):
 	to_write = open(name + ".bans.txt","w")
 	for reg in ban_list:
@@ -311,24 +309,24 @@ def file_to_bans(name):
 	return ban_list
 	
 # 2->multi, TODO none
-def get_shadows(name, key, ban_list):
+def get_shadows(name, key):
 	last = ""
 	to_ret = []
+	nts = open(name + ".ts.txt","r").readline().replace(",","").replace("\'","").replace("UNTAINTED REGS: [","").replace("]","").split()
+	# overload nts with name
+	nts += [name]
 	for reg in key:
 		splits = reg[2].split()
 		if splits[0] != last:
 			last = splits[0]
 			if "shadow_" in last:
-				unbanned = True
-				for ban in ban_list:
-					if ban in last:
-						unbanned = False
-				if unbanned:
+				in_nt = False
+				for nt in nts:
+					if "shadow_" + nt in last:
+						in_nt = True
+				if not in_nt:
 					to_ret += [last]
-	cts = []
-	for reg in to_ret:
-		cts = cts + [reg]
-	cts = [reg.replace("shadow_","") for reg in cts] 
+	cts = [reg.replace("shadow_","") for reg in to_ret] 
 	cts.sort()
 	open(name + ".ts.txt","a").write("CONDTAINT REGS: " + str(cts) + "\n")
 	return to_ret
@@ -368,15 +366,12 @@ def analyze(name):
 
 		# develop the ban list - vcd terms that are uninteresting, and save it
 		ban_list = get_bans(name)
-		#ban_list = no_secondaries(ban_list, key) # ban S_AXI_* from Andy, "S_AXI Signals..."
 		ban_list = ban_list + ["ACLK"]
-		shadows = get_shadows(name, key, ban_list) # we do this for the side effect on *_ts
+		shadows = get_shadows(name, key) # we do this for the side effect on *_ts
 		bans_to_file(name, ban_list)
 		
 		# clean temp files
 		system("rm *_1*")
-		key = read(name, ban_list, "")
-		system("java daikon.Daikon " + name + "_1.decls " + name + "_1.dtrace >" + name + ".full.txt")
 		
 	else:
 		
@@ -391,15 +386,8 @@ def analyze(name):
 		
 		# begin multipass
 		key = read(name, ban_list, tar_reg)
-		# treat initialization separately or not at all
-		# alternatively could split based on clocks with "x"s in them but this is quick and clean
-		#system("rm *00.dtrace")
 		local = name + "_" + tar_reg
-		system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
-	# equivalent to reset system("java daikon.Daikon " + local + ".decls " + local + "_fall.dtrace >" + local + "_fall.txt")
-		system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace >" + local + "_lo.txt")
-		system("java daikon.Daikon " + local + ".decls " + local + "_hi*.dtrace >" + local + "_hi.txt")
-		system("java daikon.Daikon " + local + ".decls " + local + "_lo*.dtrace " + local + "_hi*.dtrace >" + local + "_base.txt")
+		#system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
 
 	# clean temp files
 	clean_up(name)
