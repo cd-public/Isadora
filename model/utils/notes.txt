@@ -1,5 +1,6 @@
+1st set (M_AXI_<reg>'s):
 Trace generation:  4:38:xx
-Mining src->sink:  3:10:xx
+Mining src->sink:  0:83:xx
 *Could run mining concurrently with trace generation
 
 

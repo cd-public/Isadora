@@ -1,4 +1,8 @@
 # get only condtaints
+# first run 
+# head -n -0 *.txt > ../../utils/results.txt
+# in outs/ts
+
 
 def summarize(name):
 	old_line = ""
