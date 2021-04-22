@@ -1,8 +1,14 @@
-1st set (M_AXI_<reg>'s):
+1st set of 106 regs (M_AXI_<reg>'s):
 Trace generation:  4:38:xx
 Mining src->sink:  0:83:xx
-*Could run mining concurrently with trace generation
 
+2nd set of 125 regs (the not M_AXI):
+Trace generation:  4:55:xx
+Mining src->sink:  0:83:xx
+
+Mining ran concurrently with trace generation.
+
+1st set trace log:
 
 Trace log:
 # [ACW_tb]      tb_HW_r_base_addr = b6056056
@@ -51,14 +57,19 @@ Trace log:
 
 Notes on characterizing a design:
 
-43 No flows, 61 flows
+1st set:
+
+36 No flows, 61 flows
 
 Common cases are:
 
-1. (36) Flow within X, X_wire, X_INT
+1. (43) Flow within X, X_wire, X_INT
 2. (04) Above plus 'reg03_r_anomaly', 'reg05_w_anomaly', 'reg_data_out'
 3. (21) First flow to A<R/W>_ADDR_VALID
 
 3. has the flow condition similarities as previously described.
-
 1. and 2. usually have similar mass profiles with the iflow in initialization / after each reset.
+
+2nd set:
+
+
