@@ -59,7 +59,7 @@ Notes on characterizing a design:
 
 1st set:
 
-36 No flows, 61 flows
+36 No flows, 61 flows, 105 total
 
 Common cases are:
 
@@ -70,6 +70,12 @@ Common cases are:
 3. has the flow condition similarities as previously described.
 1. and 2. usually have similar mass profiles with the iflow in initialization / after each reset.
 
-2nd set:
+Both sets:
 
+55 No flows, 174 flows, 229 total
 
+1. (43) Flow within X, X_wire, X_INT
+2. (04) Above plus 'reg03_r_anomaly', 'reg05_w_anomaly', 'reg_data_out'
+3. (109) First flow to A<R/W>_ADDR_VALID
+
+Most others are somewhat novel, sometimes in groups of similar destinations up to size ~10. There's some grouping around "regs" and "S_AXIs"
