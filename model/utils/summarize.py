@@ -9,7 +9,7 @@ def summarize(name):
 	summ = open("summ.txt","w")
 	no_flow = []
 	for line in open(name + ".txt","r"):
-		if "==> M_AXI_" in line:
+		if "==> " in line:
 			old_line = line.strip().replace(".ts.txt <==", " =?=>").replace("==> ","")
 		elif "CONDTAINT REGS: [\'" in line:
 			summ.write(line.replace("CONDTAINT REGS:",old_line))
