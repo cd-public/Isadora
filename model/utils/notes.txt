@@ -80,4 +80,4 @@ Both sets:
 
 Most others are somewhat novel, sometimes in groups of similar destinations up to size ~10. There's some grouping around "regs" and "S_AXIs"
 
-There are 12840 total source=?=>sinks. 6298 (49%) are in 3., from 109 sources to 158 unique sinks. The most sinks from a single source is 131.
+There are 6420 total source=?=>sinks. 3149 (49%) are in 3., from 109 sources to 158 unique sinks. The most sinks from a single source is 131.
