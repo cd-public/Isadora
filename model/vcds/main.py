@@ -322,7 +322,7 @@ def get_shadows(name, key):
 			if "shadow_" in last:
 				in_nt = False
 				for nt in nts:
-					if "shadow_" + nt in last:
+					if "shadow_" + nt == last:
 						in_nt = True
 				if not in_nt:
 					to_ret += [last]
@@ -349,19 +349,10 @@ def clean_up(name):
 	# _lo/_hi	== when reg taint is low or high
 	# _rise/_fall	== when reg taint changes, low to high or high to low
 	# _base		== when reg taint doesn't change
-if __name__ == "__main__":
+def analyze(name):
 	# read arguments
 	
-	name = ""
 	tar_reg = ""
-	
-	# total arguments
-	n = len(sys.argv)
-	# get vcd name
-	if (n == 1):
-		exit()
-	else:
-		name = sys.argv[1]
 			
 	# if necessary, generate a ban_list from a naive pass
 	
@@ -386,23 +377,24 @@ if __name__ == "__main__":
 		
 		ban_list = file_to_bans(name)
 	
-	# get reg name
-		# probably need a better way to track this mode idk, maybe flags or something
-	if (n > 2):
-		tar_reg = sys.argv[2]
-	else:
-		# arbitrary if unspecified
-		to_read = open(name + ".ts.txt","r")
-		to_read.readline()
-		line = to_read.readline()
-		if "CONDTAINT REGS: []" in line:
-			clean_up(name)
-			exit()
-		tar_reg = line.replace("CONDTAINT REGS: [","").split()[0].replace(",","").replace("'","") # read CONDTAINT 1st element
+	# arbitrary flow dest if unspecified
+	to_read = open(name + ".ts.txt","r")
+	to_read.readline()
+	line = to_read.readline()
+	if "CONDTAINT REGS: []" not in line:
+		tar_reg = line.replace("CONDTAINT REGS: [","").split()[0].replace(",","").replace("'","").replace("]","") # read CONDTAINT 1st element
 		
-	# begin multipass
-	key = read(name, ban_list, tar_reg)
-	local = name + "_" + tar_reg
-	system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
+		# begin multipass
+		key = read(name, ban_list, tar_reg)
+		local = name + "_" + tar_reg
+		system("java daikon.Daikon " + local + ".decls " + local + "_rise.dtrace >" + local + "_rise.txt")
+
 	# clean temp files
 	clean_up(name)
+
+def analysis():
+	regs = ['M_AXI_BID', 'M_AXI_BRESP', 'M_AXI_BUSER','M_AXI_RDATA', 'M_AXI_RID', 'M_AXI_RRESP', 'M_AXI_RUSER']
+	for reg in regs:
+		analyze(reg)
+
+analysis()

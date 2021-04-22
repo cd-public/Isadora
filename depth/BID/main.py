@@ -322,7 +322,7 @@ def get_shadows(name, key):
 			if "shadow_" in last:
 				in_nt = False
 				for nt in nts:
-					if "shadow_" + nt in last:
+					if "shadow_" + nt == last:
 						in_nt = True
 				if not in_nt:
 					to_ret += [last]
