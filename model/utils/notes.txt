@@ -79,3 +79,5 @@ Both sets:
 3. (109) First flow to A<R/W>_ADDR_VALID
 
 Most others are somewhat novel, sometimes in groups of similar destinations up to size ~10. There's some grouping around "regs" and "S_AXIs"
+
+There are 12840 total source=?=>sinks. 6298 (49%) are in 3., from 109 sources to 158 unique sinks. The most sinks from a single source is 131.
