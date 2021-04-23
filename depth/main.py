@@ -132,6 +132,7 @@ def read_vcd_line(line, key):
 	return key
 	
 # see if a register is tainted
+# TODO: Adapt to multiple module???
 def reg_tainted(tar_reg, key):
 	ret = False
 	for reg in key:
