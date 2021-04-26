@@ -271,7 +271,6 @@ def get_bans(name):
 	struct = [] # hold sets of regs of the same value
 	for line in to_read:
 		if "EXIT" in line:
-			print(struct)
 			to_ret = [] # returned struct of relevant regs
 			ts = []
 			nts = []
@@ -294,7 +293,6 @@ def get_bans(name):
 			nts.sort()
 			to_write.write("UNTAINTED REGS: " + str(nts) + "\n")
 			# keep all shadow_ regs
-			print(to_ret)
 			no_shadow = list(filter(lambda x: "shadow_" not in x, to_ret))
 			return no_shadow
 		if " == " in line and "%" not in line: # get equalities
@@ -307,14 +305,14 @@ def get_bans(name):
 			if must_add:
 				struct += [set([splits[0],splits[2]])]
 				
-def bans_to_file(name, ban_list):
-	to_write = open(name + ".bans.txt","w")
+def bans_to_file(ban_list):
+	to_write = open("bans.txt","w")
 	for reg in ban_list:
 		to_write.write(reg + "\n")
 	return
 	
-def file_to_bans(name):
-	to_read = open(name + ".bans.txt","r")
+def file_to_bans():
+	to_read = open("bans.txt","r")
 	ban_list = []
 	for line in to_read:
 		ban_list = ban_list + [line.strip()]
@@ -377,7 +375,7 @@ if __name__ == "__main__":
 			
 	# if necessary, generate a ban_list from a naive pass
 	
-	if not path.exists(name + ".bans.txt"):
+	if not path.exists("bans.txt"):
 		
 		# naive decls, dtrace, if needed
 		key = read(name, [], "") # minimal read
@@ -389,14 +387,14 @@ if __name__ == "__main__":
 		ban_list = get_bans(name)
 		ban_list = ban_list + ["ACLK"]
 		shadows = get_shadows(name, key) # we do this for the side effect on *_ts
-		bans_to_file(name, ban_list)
+		bans_to_file(ban_list)
 		
 		# clean temp files
 		system("rm *_1*")
 		
 	else:
 		
-		ban_list = file_to_bans(name)
+		ban_list = file_to_bans()
 	
 	# get reg name
 		# probably need a better way to track this mode idk, maybe flags or something
