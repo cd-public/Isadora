@@ -70,7 +70,7 @@ def refine(name):
 					orig_design_regs = list(orig_design_regs)
 					orig_design_regs.sort()
 			elif "u0" in mod_path:
-				if "u0" in mod_path[-2] and "var" in line and "parameter" not in line:
+				if "u0" in mod_path[-2] and "var reg" in line:
 					# edit line to include module name
 					splits = line.split()
 					new_name = mod_path[-1] + "_" + splits[4]
