@@ -1,0 +1,2225 @@
+$date
+	Mon Apr 26 18:19:07 2021
+$end
+$version
+	QuestaSim Version 10.7d_1
+$end
+$timescale
+	1ps
+$end
+
+$var reg 1 I+ myHWtask_w_done $end
+$var reg 1 J+ myHWtask_r_done $end
+$var reg 8 \+ myHWtask_r_displ_int [7:0] $end
+$var reg 8 ]+ myHWtask_w_displ_int [7:0] $end
+$var reg 8 ^+ myHWtask_r_max_outs_int [7:0] $end
+$var reg 8 _+ myHWtask_w_max_outs_int [7:0] $end
+$var reg 16 `+ myHWtask_r_phase_int [15:0] $end
+$var reg 16 a+ myHWtask_w_phase_int [15:0] $end
+$var reg 32 b+ myHWtask_r_base_addr_int [31:0] $end
+$var reg 32 c+ myHWtask_w_base_addr_int [31:0] $end
+$var reg 16 d+ myHWtask_r_num_trans_int [15:0] $end
+$var reg 16 e+ myHWtask_w_num_trans_int [15:0] $end
+$var reg 8 f+ myHWtask_r_burst_len_int [7:0] $end
+$var reg 8 g+ myHWtask_w_burst_len_int [7:0] $end
+$var reg 1 h+ myHWtask_data_val_flag $end
+$var reg 1 i+ myHWtask_r_phase_start $end
+$var reg 1 j+ myHWtask_w_phase_start $end
+$var reg 16 k+ myHWtask_r_phase_counter [15:0] $end
+$var reg 16 l+ myHWtask_w_phase_counter [15:0] $end
+$var reg 1 m+ myHWtask_w_start_int $end
+$var reg 1 n+ myHWtask_r_start_int $end
+$var reg 16 o+ myHWtask_r_trans_counter [15:0] $end
+$var reg 16 p+ myHWtask_r_displ_cnt [15:0] $end
+$var reg 16 q+ myHWtask_r_pend_outs_trans [15:0] $end
+$var reg 1 r+ myHWtask_r_grant_trans_flag [0:0] $end
+$var reg 1 s+ myHWtask_r_addr_init $end
+$var reg 32 t+ myHWtask_m_axi_araddr_int [31:0] $end
+$var reg 1 u+ myHWtask_m_axi_arvalid_int $end
+$var reg 3 v+ myHWtask_r_state [2:0] $end
+$var reg 16 w+ myHWtask_w_trans_counter [15:0] $end
+$var reg 16 x+ myHWtask_w_displ_cnt [15:0] $end
+$var reg 1 y+ myHWtask_w_grant_trans_flag [0:0] $end
+$var reg 1 z+ myHWtask_w_addr_init $end
+$var reg 16 {+ myHWtask_w_pend_outs_trans [15:0] $end
+$var reg 32 |+ myHWtask_m_axi_awaddr_int [31:0] $end
+$var reg 1 }+ myHWtask_m_axi_awvalid_int $end
+$var reg 3 ~+ myHWtask_w_state [2:0] $end
+$var reg 16 !, myHWtask_r_done_counter [15:0] $end
+$var reg 16 ", myHWtask_r_misb_clk_cnt [15:0] $end
+$var reg 1 #, myHWtask_r_end_trans_flag [0:0] $end
+$var reg 16 $, myHWtask_w_data_done_cnt [15:0] $end
+$var reg 8 %, myHWtask_w_data_counter [7:0] $end
+$var reg 32 &, myHWtask_m_axi_wdata_int [31:0] $end
+$var reg 1 ', myHWtask_m_axi_wvalid_int $end
+$var reg 1 (, myHWtask_m_axi_wlast_int $end
+$var reg 16 ), myHWtask_w_done_counter [15:0] $end
+$var reg 1 *, myHWtask_w_end_trans_flag [0:0] $end
+$var wire 1 Yv! shadow_myHWtask_w_done $end
+$var wire 1 Zv! shadow_myHWtask_r_done $end
+$var wire 1 W," shadow_myHWtask_r_done_counter [15] $end
+$var wire 1 X," shadow_myHWtask_r_done_counter [14] $end
+$var wire 1 Y," shadow_myHWtask_r_done_counter [13] $end
+$var wire 1 Z," shadow_myHWtask_r_done_counter [12] $end
+$var wire 1 [," shadow_myHWtask_r_done_counter [11] $end
+$var wire 1 \," shadow_myHWtask_r_done_counter [10] $end
+$var wire 1 ]," shadow_myHWtask_r_done_counter [9] $end
+$var wire 1 ^," shadow_myHWtask_r_done_counter [8] $end
+$var wire 1 _," shadow_myHWtask_r_done_counter [7] $end
+$var wire 1 `," shadow_myHWtask_r_done_counter [6] $end
+$var wire 1 a," shadow_myHWtask_r_done_counter [5] $end
+$var wire 1 b," shadow_myHWtask_r_done_counter [4] $end
+$var wire 1 c," shadow_myHWtask_r_done_counter [3] $end
+$var wire 1 d," shadow_myHWtask_r_done_counter [2] $end
+$var wire 1 e," shadow_myHWtask_r_done_counter [1] $end
+$var wire 1 f," shadow_myHWtask_r_done_counter [0] $end
+$var wire 1 g," shadow_myHWtask_w_state [2] $end
+$var wire 1 h," shadow_myHWtask_w_state [1] $end
+$var wire 1 i," shadow_myHWtask_w_state [0] $end
+$var wire 1 j," shadow_myHWtask_m_axi_awaddr_int [31] $end
+$var wire 1 k," shadow_myHWtask_m_axi_awaddr_int [30] $end
+$var wire 1 l," shadow_myHWtask_m_axi_awaddr_int [29] $end
+$var wire 1 m," shadow_myHWtask_m_axi_awaddr_int [28] $end
+$var wire 1 n," shadow_myHWtask_m_axi_awaddr_int [27] $end
+$var wire 1 o," shadow_myHWtask_m_axi_awaddr_int [26] $end
+$var wire 1 p," shadow_myHWtask_m_axi_awaddr_int [25] $end
+$var wire 1 q," shadow_myHWtask_m_axi_awaddr_int [24] $end
+$var wire 1 r," shadow_myHWtask_m_axi_awaddr_int [23] $end
+$var wire 1 s," shadow_myHWtask_m_axi_awaddr_int [22] $end
+$var wire 1 t," shadow_myHWtask_m_axi_awaddr_int [21] $end
+$var wire 1 u," shadow_myHWtask_m_axi_awaddr_int [20] $end
+$var wire 1 v," shadow_myHWtask_m_axi_awaddr_int [19] $end
+$var wire 1 w," shadow_myHWtask_m_axi_awaddr_int [18] $end
+$var wire 1 x," shadow_myHWtask_m_axi_awaddr_int [17] $end
+$var wire 1 y," shadow_myHWtask_m_axi_awaddr_int [16] $end
+$var wire 1 z," shadow_myHWtask_m_axi_awaddr_int [15] $end
+$var wire 1 {," shadow_myHWtask_m_axi_awaddr_int [14] $end
+$var wire 1 |," shadow_myHWtask_m_axi_awaddr_int [13] $end
+$var wire 1 }," shadow_myHWtask_m_axi_awaddr_int [12] $end
+$var wire 1 ~," shadow_myHWtask_m_axi_awaddr_int [11] $end
+$var wire 1 !-" shadow_myHWtask_m_axi_awaddr_int [10] $end
+$var wire 1 "-" shadow_myHWtask_m_axi_awaddr_int [9] $end
+$var wire 1 #-" shadow_myHWtask_m_axi_awaddr_int [8] $end
+$var wire 1 $-" shadow_myHWtask_m_axi_awaddr_int [7] $end
+$var wire 1 %-" shadow_myHWtask_m_axi_awaddr_int [6] $end
+$var wire 1 &-" shadow_myHWtask_m_axi_awaddr_int [5] $end
+$var wire 1 '-" shadow_myHWtask_m_axi_awaddr_int [4] $end
+$var wire 1 (-" shadow_myHWtask_m_axi_awaddr_int [3] $end
+$var wire 1 )-" shadow_myHWtask_m_axi_awaddr_int [2] $end
+$var wire 1 *-" shadow_myHWtask_m_axi_awaddr_int [1] $end
+$var wire 1 +-" shadow_myHWtask_m_axi_awaddr_int [0] $end
+$var wire 1 ,-" shadow_myHWtask_w_pend_outs_trans [15] $end
+$var wire 1 --" shadow_myHWtask_w_pend_outs_trans [14] $end
+$var wire 1 .-" shadow_myHWtask_w_pend_outs_trans [13] $end
+$var wire 1 /-" shadow_myHWtask_w_pend_outs_trans [12] $end
+$var wire 1 0-" shadow_myHWtask_w_pend_outs_trans [11] $end
+$var wire 1 1-" shadow_myHWtask_w_pend_outs_trans [10] $end
+$var wire 1 2-" shadow_myHWtask_w_pend_outs_trans [9] $end
+$var wire 1 3-" shadow_myHWtask_w_pend_outs_trans [8] $end
+$var wire 1 4-" shadow_myHWtask_w_pend_outs_trans [7] $end
+$var wire 1 5-" shadow_myHWtask_w_pend_outs_trans [6] $end
+$var wire 1 6-" shadow_myHWtask_w_pend_outs_trans [5] $end
+$var wire 1 7-" shadow_myHWtask_w_pend_outs_trans [4] $end
+$var wire 1 8-" shadow_myHWtask_w_pend_outs_trans [3] $end
+$var wire 1 9-" shadow_myHWtask_w_pend_outs_trans [2] $end
+$var wire 1 :-" shadow_myHWtask_w_pend_outs_trans [1] $end
+$var wire 1 ;-" shadow_myHWtask_w_pend_outs_trans [0] $end
+$var wire 1 <-" shadow_myHWtask_w_grant_trans_flag [0] $end
+$var wire 1 =-" shadow_myHWtask_w_displ_cnt [15] $end
+$var wire 1 >-" shadow_myHWtask_w_displ_cnt [14] $end
+$var wire 1 ?-" shadow_myHWtask_w_displ_cnt [13] $end
+$var wire 1 @-" shadow_myHWtask_w_displ_cnt [12] $end
+$var wire 1 A-" shadow_myHWtask_w_displ_cnt [11] $end
+$var wire 1 B-" shadow_myHWtask_w_displ_cnt [10] $end
+$var wire 1 C-" shadow_myHWtask_w_displ_cnt [9] $end
+$var wire 1 D-" shadow_myHWtask_w_displ_cnt [8] $end
+$var wire 1 E-" shadow_myHWtask_w_displ_cnt [7] $end
+$var wire 1 F-" shadow_myHWtask_w_displ_cnt [6] $end
+$var wire 1 G-" shadow_myHWtask_w_displ_cnt [5] $end
+$var wire 1 H-" shadow_myHWtask_w_displ_cnt [4] $end
+$var wire 1 I-" shadow_myHWtask_w_displ_cnt [3] $end
+$var wire 1 J-" shadow_myHWtask_w_displ_cnt [2] $end
+$var wire 1 K-" shadow_myHWtask_w_displ_cnt [1] $end
+$var wire 1 L-" shadow_myHWtask_w_displ_cnt [0] $end
+$var wire 1 M-" shadow_myHWtask_w_trans_counter [15] $end
+$var wire 1 N-" shadow_myHWtask_w_trans_counter [14] $end
+$var wire 1 O-" shadow_myHWtask_w_trans_counter [13] $end
+$var wire 1 P-" shadow_myHWtask_w_trans_counter [12] $end
+$var wire 1 Q-" shadow_myHWtask_w_trans_counter [11] $end
+$var wire 1 R-" shadow_myHWtask_w_trans_counter [10] $end
+$var wire 1 S-" shadow_myHWtask_w_trans_counter [9] $end
+$var wire 1 T-" shadow_myHWtask_w_trans_counter [8] $end
+$var wire 1 U-" shadow_myHWtask_w_trans_counter [7] $end
+$var wire 1 V-" shadow_myHWtask_w_trans_counter [6] $end
+$var wire 1 W-" shadow_myHWtask_w_trans_counter [5] $end
+$var wire 1 X-" shadow_myHWtask_w_trans_counter [4] $end
+$var wire 1 Y-" shadow_myHWtask_w_trans_counter [3] $end
+$var wire 1 Z-" shadow_myHWtask_w_trans_counter [2] $end
+$var wire 1 [-" shadow_myHWtask_w_trans_counter [1] $end
+$var wire 1 \-" shadow_myHWtask_w_trans_counter [0] $end
+$var wire 1 ]-" shadow_myHWtask_r_state [2] $end
+$var wire 1 ^-" shadow_myHWtask_r_state [1] $end
+$var wire 1 _-" shadow_myHWtask_r_state [0] $end
+$var wire 1 `-" shadow_myHWtask_m_axi_araddr_int [31] $end
+$var wire 1 a-" shadow_myHWtask_m_axi_araddr_int [30] $end
+$var wire 1 b-" shadow_myHWtask_m_axi_araddr_int [29] $end
+$var wire 1 c-" shadow_myHWtask_m_axi_araddr_int [28] $end
+$var wire 1 d-" shadow_myHWtask_m_axi_araddr_int [27] $end
+$var wire 1 e-" shadow_myHWtask_m_axi_araddr_int [26] $end
+$var wire 1 f-" shadow_myHWtask_m_axi_araddr_int [25] $end
+$var wire 1 g-" shadow_myHWtask_m_axi_araddr_int [24] $end
+$var wire 1 h-" shadow_myHWtask_m_axi_araddr_int [23] $end
+$var wire 1 i-" shadow_myHWtask_m_axi_araddr_int [22] $end
+$var wire 1 j-" shadow_myHWtask_m_axi_araddr_int [21] $end
+$var wire 1 k-" shadow_myHWtask_m_axi_araddr_int [20] $end
+$var wire 1 l-" shadow_myHWtask_m_axi_araddr_int [19] $end
+$var wire 1 m-" shadow_myHWtask_m_axi_araddr_int [18] $end
+$var wire 1 n-" shadow_myHWtask_m_axi_araddr_int [17] $end
+$var wire 1 o-" shadow_myHWtask_m_axi_araddr_int [16] $end
+$var wire 1 p-" shadow_myHWtask_m_axi_araddr_int [15] $end
+$var wire 1 q-" shadow_myHWtask_m_axi_araddr_int [14] $end
+$var wire 1 r-" shadow_myHWtask_m_axi_araddr_int [13] $end
+$var wire 1 s-" shadow_myHWtask_m_axi_araddr_int [12] $end
+$var wire 1 t-" shadow_myHWtask_m_axi_araddr_int [11] $end
+$var wire 1 u-" shadow_myHWtask_m_axi_araddr_int [10] $end
+$var wire 1 v-" shadow_myHWtask_m_axi_araddr_int [9] $end
+$var wire 1 w-" shadow_myHWtask_m_axi_araddr_int [8] $end
+$var wire 1 x-" shadow_myHWtask_m_axi_araddr_int [7] $end
+$var wire 1 y-" shadow_myHWtask_m_axi_araddr_int [6] $end
+$var wire 1 z-" shadow_myHWtask_m_axi_araddr_int [5] $end
+$var wire 1 {-" shadow_myHWtask_m_axi_araddr_int [4] $end
+$var wire 1 |-" shadow_myHWtask_m_axi_araddr_int [3] $end
+$var wire 1 }-" shadow_myHWtask_m_axi_araddr_int [2] $end
+$var wire 1 ~-" shadow_myHWtask_m_axi_araddr_int [1] $end
+$var wire 1 !." shadow_myHWtask_m_axi_araddr_int [0] $end
+$var wire 1 "." shadow_myHWtask_r_grant_trans_flag [0] $end
+$var wire 1 #." shadow_myHWtask_r_pend_outs_trans [15] $end
+$var wire 1 $." shadow_myHWtask_r_pend_outs_trans [14] $end
+$var wire 1 %." shadow_myHWtask_r_pend_outs_trans [13] $end
+$var wire 1 &." shadow_myHWtask_r_pend_outs_trans [12] $end
+$var wire 1 '." shadow_myHWtask_r_pend_outs_trans [11] $end
+$var wire 1 (." shadow_myHWtask_r_pend_outs_trans [10] $end
+$var wire 1 )." shadow_myHWtask_r_pend_outs_trans [9] $end
+$var wire 1 *." shadow_myHWtask_r_pend_outs_trans [8] $end
+$var wire 1 +." shadow_myHWtask_r_pend_outs_trans [7] $end
+$var wire 1 ,." shadow_myHWtask_r_pend_outs_trans [6] $end
+$var wire 1 -." shadow_myHWtask_r_pend_outs_trans [5] $end
+$var wire 1 .." shadow_myHWtask_r_pend_outs_trans [4] $end
+$var wire 1 /." shadow_myHWtask_r_pend_outs_trans [3] $end
+$var wire 1 0." shadow_myHWtask_r_pend_outs_trans [2] $end
+$var wire 1 1." shadow_myHWtask_r_pend_outs_trans [1] $end
+$var wire 1 2." shadow_myHWtask_r_pend_outs_trans [0] $end
+$var wire 1 3." shadow_myHWtask_r_displ_cnt [15] $end
+$var wire 1 4." shadow_myHWtask_r_displ_cnt [14] $end
+$var wire 1 5." shadow_myHWtask_r_displ_cnt [13] $end
+$var wire 1 6." shadow_myHWtask_r_displ_cnt [12] $end
+$var wire 1 7." shadow_myHWtask_r_displ_cnt [11] $end
+$var wire 1 8." shadow_myHWtask_r_displ_cnt [10] $end
+$var wire 1 9." shadow_myHWtask_r_displ_cnt [9] $end
+$var wire 1 :." shadow_myHWtask_r_displ_cnt [8] $end
+$var wire 1 ;." shadow_myHWtask_r_displ_cnt [7] $end
+$var wire 1 <." shadow_myHWtask_r_displ_cnt [6] $end
+$var wire 1 =." shadow_myHWtask_r_displ_cnt [5] $end
+$var wire 1 >." shadow_myHWtask_r_displ_cnt [4] $end
+$var wire 1 ?." shadow_myHWtask_r_displ_cnt [3] $end
+$var wire 1 @." shadow_myHWtask_r_displ_cnt [2] $end
+$var wire 1 A." shadow_myHWtask_r_displ_cnt [1] $end
+$var wire 1 B." shadow_myHWtask_r_displ_cnt [0] $end
+$var wire 1 C." shadow_myHWtask_r_trans_counter [15] $end
+$var wire 1 D." shadow_myHWtask_r_trans_counter [14] $end
+$var wire 1 E." shadow_myHWtask_r_trans_counter [13] $end
+$var wire 1 F." shadow_myHWtask_r_trans_counter [12] $end
+$var wire 1 G." shadow_myHWtask_r_trans_counter [11] $end
+$var wire 1 H." shadow_myHWtask_r_trans_counter [10] $end
+$var wire 1 I." shadow_myHWtask_r_trans_counter [9] $end
+$var wire 1 J." shadow_myHWtask_r_trans_counter [8] $end
+$var wire 1 K." shadow_myHWtask_r_trans_counter [7] $end
+$var wire 1 L." shadow_myHWtask_r_trans_counter [6] $end
+$var wire 1 M." shadow_myHWtask_r_trans_counter [5] $end
+$var wire 1 N." shadow_myHWtask_r_trans_counter [4] $end
+$var wire 1 O." shadow_myHWtask_r_trans_counter [3] $end
+$var wire 1 P." shadow_myHWtask_r_trans_counter [2] $end
+$var wire 1 Q." shadow_myHWtask_r_trans_counter [1] $end
+$var wire 1 R." shadow_myHWtask_r_trans_counter [0] $end
+$var wire 1 44" shadow_myHWtask_w_phase_counter [15] $end
+$var wire 1 54" shadow_myHWtask_w_phase_counter [14] $end
+$var wire 1 64" shadow_myHWtask_w_phase_counter [13] $end
+$var wire 1 74" shadow_myHWtask_w_phase_counter [12] $end
+$var wire 1 84" shadow_myHWtask_w_phase_counter [11] $end
+$var wire 1 94" shadow_myHWtask_w_phase_counter [10] $end
+$var wire 1 :4" shadow_myHWtask_w_phase_counter [9] $end
+$var wire 1 ;4" shadow_myHWtask_w_phase_counter [8] $end
+$var wire 1 <4" shadow_myHWtask_w_phase_counter [7] $end
+$var wire 1 =4" shadow_myHWtask_w_phase_counter [6] $end
+$var wire 1 >4" shadow_myHWtask_w_phase_counter [5] $end
+$var wire 1 ?4" shadow_myHWtask_w_phase_counter [4] $end
+$var wire 1 @4" shadow_myHWtask_w_phase_counter [3] $end
+$var wire 1 A4" shadow_myHWtask_w_phase_counter [2] $end
+$var wire 1 B4" shadow_myHWtask_w_phase_counter [1] $end
+$var wire 1 C4" shadow_myHWtask_w_phase_counter [0] $end
+$var wire 1 D4" shadow_myHWtask_r_phase_counter [15] $end
+$var wire 1 E4" shadow_myHWtask_r_phase_counter [14] $end
+$var wire 1 F4" shadow_myHWtask_r_phase_counter [13] $end
+$var wire 1 G4" shadow_myHWtask_r_phase_counter [12] $end
+$var wire 1 H4" shadow_myHWtask_r_phase_counter [11] $end
+$var wire 1 I4" shadow_myHWtask_r_phase_counter [10] $end
+$var wire 1 J4" shadow_myHWtask_r_phase_counter [9] $end
+$var wire 1 K4" shadow_myHWtask_r_phase_counter [8] $end
+$var wire 1 L4" shadow_myHWtask_r_phase_counter [7] $end
+$var wire 1 M4" shadow_myHWtask_r_phase_counter [6] $end
+$var wire 1 N4" shadow_myHWtask_r_phase_counter [5] $end
+$var wire 1 O4" shadow_myHWtask_r_phase_counter [4] $end
+$var wire 1 P4" shadow_myHWtask_r_phase_counter [3] $end
+$var wire 1 Q4" shadow_myHWtask_r_phase_counter [2] $end
+$var wire 1 R4" shadow_myHWtask_r_phase_counter [1] $end
+$var wire 1 S4" shadow_myHWtask_r_phase_counter [0] $end
+$var wire 1 T4" shadow_myHWtask_w_burst_len_int [7] $end
+$var wire 1 U4" shadow_myHWtask_w_burst_len_int [6] $end
+$var wire 1 V4" shadow_myHWtask_w_burst_len_int [5] $end
+$var wire 1 W4" shadow_myHWtask_w_burst_len_int [4] $end
+$var wire 1 X4" shadow_myHWtask_w_burst_len_int [3] $end
+$var wire 1 Y4" shadow_myHWtask_w_burst_len_int [2] $end
+$var wire 1 Z4" shadow_myHWtask_w_burst_len_int [1] $end
+$var wire 1 [4" shadow_myHWtask_w_burst_len_int [0] $end
+$var wire 1 \4" shadow_myHWtask_r_burst_len_int [7] $end
+$var wire 1 ]4" shadow_myHWtask_r_burst_len_int [6] $end
+$var wire 1 ^4" shadow_myHWtask_r_burst_len_int [5] $end
+$var wire 1 _4" shadow_myHWtask_r_burst_len_int [4] $end
+$var wire 1 `4" shadow_myHWtask_r_burst_len_int [3] $end
+$var wire 1 a4" shadow_myHWtask_r_burst_len_int [2] $end
+$var wire 1 b4" shadow_myHWtask_r_burst_len_int [1] $end
+$var wire 1 c4" shadow_myHWtask_r_burst_len_int [0] $end
+$var wire 1 d4" shadow_myHWtask_w_num_trans_int [15] $end
+$var wire 1 e4" shadow_myHWtask_w_num_trans_int [14] $end
+$var wire 1 f4" shadow_myHWtask_w_num_trans_int [13] $end
+$var wire 1 g4" shadow_myHWtask_w_num_trans_int [12] $end
+$var wire 1 h4" shadow_myHWtask_w_num_trans_int [11] $end
+$var wire 1 i4" shadow_myHWtask_w_num_trans_int [10] $end
+$var wire 1 j4" shadow_myHWtask_w_num_trans_int [9] $end
+$var wire 1 k4" shadow_myHWtask_w_num_trans_int [8] $end
+$var wire 1 l4" shadow_myHWtask_w_num_trans_int [7] $end
+$var wire 1 m4" shadow_myHWtask_w_num_trans_int [6] $end
+$var wire 1 n4" shadow_myHWtask_w_num_trans_int [5] $end
+$var wire 1 o4" shadow_myHWtask_w_num_trans_int [4] $end
+$var wire 1 p4" shadow_myHWtask_w_num_trans_int [3] $end
+$var wire 1 q4" shadow_myHWtask_w_num_trans_int [2] $end
+$var wire 1 r4" shadow_myHWtask_w_num_trans_int [1] $end
+$var wire 1 s4" shadow_myHWtask_w_num_trans_int [0] $end
+$var wire 1 t4" shadow_myHWtask_r_num_trans_int [15] $end
+$var wire 1 u4" shadow_myHWtask_r_num_trans_int [14] $end
+$var wire 1 v4" shadow_myHWtask_r_num_trans_int [13] $end
+$var wire 1 w4" shadow_myHWtask_r_num_trans_int [12] $end
+$var wire 1 x4" shadow_myHWtask_r_num_trans_int [11] $end
+$var wire 1 y4" shadow_myHWtask_r_num_trans_int [10] $end
+$var wire 1 z4" shadow_myHWtask_r_num_trans_int [9] $end
+$var wire 1 {4" shadow_myHWtask_r_num_trans_int [8] $end
+$var wire 1 |4" shadow_myHWtask_r_num_trans_int [7] $end
+$var wire 1 }4" shadow_myHWtask_r_num_trans_int [6] $end
+$var wire 1 ~4" shadow_myHWtask_r_num_trans_int [5] $end
+$var wire 1 !5" shadow_myHWtask_r_num_trans_int [4] $end
+$var wire 1 "5" shadow_myHWtask_r_num_trans_int [3] $end
+$var wire 1 #5" shadow_myHWtask_r_num_trans_int [2] $end
+$var wire 1 $5" shadow_myHWtask_r_num_trans_int [1] $end
+$var wire 1 %5" shadow_myHWtask_r_num_trans_int [0] $end
+$var wire 1 &5" shadow_myHWtask_w_base_addr_int [31] $end
+$var wire 1 '5" shadow_myHWtask_w_base_addr_int [30] $end
+$var wire 1 (5" shadow_myHWtask_w_base_addr_int [29] $end
+$var wire 1 )5" shadow_myHWtask_w_base_addr_int [28] $end
+$var wire 1 *5" shadow_myHWtask_w_base_addr_int [27] $end
+$var wire 1 +5" shadow_myHWtask_w_base_addr_int [26] $end
+$var wire 1 ,5" shadow_myHWtask_w_base_addr_int [25] $end
+$var wire 1 -5" shadow_myHWtask_w_base_addr_int [24] $end
+$var wire 1 .5" shadow_myHWtask_w_base_addr_int [23] $end
+$var wire 1 /5" shadow_myHWtask_w_base_addr_int [22] $end
+$var wire 1 05" shadow_myHWtask_w_base_addr_int [21] $end
+$var wire 1 15" shadow_myHWtask_w_base_addr_int [20] $end
+$var wire 1 25" shadow_myHWtask_w_base_addr_int [19] $end
+$var wire 1 35" shadow_myHWtask_w_base_addr_int [18] $end
+$var wire 1 45" shadow_myHWtask_w_base_addr_int [17] $end
+$var wire 1 55" shadow_myHWtask_w_base_addr_int [16] $end
+$var wire 1 65" shadow_myHWtask_w_base_addr_int [15] $end
+$var wire 1 75" shadow_myHWtask_w_base_addr_int [14] $end
+$var wire 1 85" shadow_myHWtask_w_base_addr_int [13] $end
+$var wire 1 95" shadow_myHWtask_w_base_addr_int [12] $end
+$var wire 1 :5" shadow_myHWtask_w_base_addr_int [11] $end
+$var wire 1 ;5" shadow_myHWtask_w_base_addr_int [10] $end
+$var wire 1 <5" shadow_myHWtask_w_base_addr_int [9] $end
+$var wire 1 =5" shadow_myHWtask_w_base_addr_int [8] $end
+$var wire 1 >5" shadow_myHWtask_w_base_addr_int [7] $end
+$var wire 1 ?5" shadow_myHWtask_w_base_addr_int [6] $end
+$var wire 1 @5" shadow_myHWtask_w_base_addr_int [5] $end
+$var wire 1 A5" shadow_myHWtask_w_base_addr_int [4] $end
+$var wire 1 B5" shadow_myHWtask_w_base_addr_int [3] $end
+$var wire 1 C5" shadow_myHWtask_w_base_addr_int [2] $end
+$var wire 1 D5" shadow_myHWtask_w_base_addr_int [1] $end
+$var wire 1 E5" shadow_myHWtask_w_base_addr_int [0] $end
+$var wire 1 F5" shadow_myHWtask_r_base_addr_int [31] $end
+$var wire 1 G5" shadow_myHWtask_r_base_addr_int [30] $end
+$var wire 1 H5" shadow_myHWtask_r_base_addr_int [29] $end
+$var wire 1 I5" shadow_myHWtask_r_base_addr_int [28] $end
+$var wire 1 J5" shadow_myHWtask_r_base_addr_int [27] $end
+$var wire 1 K5" shadow_myHWtask_r_base_addr_int [26] $end
+$var wire 1 L5" shadow_myHWtask_r_base_addr_int [25] $end
+$var wire 1 M5" shadow_myHWtask_r_base_addr_int [24] $end
+$var wire 1 N5" shadow_myHWtask_r_base_addr_int [23] $end
+$var wire 1 O5" shadow_myHWtask_r_base_addr_int [22] $end
+$var wire 1 P5" shadow_myHWtask_r_base_addr_int [21] $end
+$var wire 1 Q5" shadow_myHWtask_r_base_addr_int [20] $end
+$var wire 1 R5" shadow_myHWtask_r_base_addr_int [19] $end
+$var wire 1 S5" shadow_myHWtask_r_base_addr_int [18] $end
+$var wire 1 T5" shadow_myHWtask_r_base_addr_int [17] $end
+$var wire 1 U5" shadow_myHWtask_r_base_addr_int [16] $end
+$var wire 1 V5" shadow_myHWtask_r_base_addr_int [15] $end
+$var wire 1 W5" shadow_myHWtask_r_base_addr_int [14] $end
+$var wire 1 X5" shadow_myHWtask_r_base_addr_int [13] $end
+$var wire 1 Y5" shadow_myHWtask_r_base_addr_int [12] $end
+$var wire 1 Z5" shadow_myHWtask_r_base_addr_int [11] $end
+$var wire 1 [5" shadow_myHWtask_r_base_addr_int [10] $end
+$var wire 1 \5" shadow_myHWtask_r_base_addr_int [9] $end
+$var wire 1 ]5" shadow_myHWtask_r_base_addr_int [8] $end
+$var wire 1 ^5" shadow_myHWtask_r_base_addr_int [7] $end
+$var wire 1 _5" shadow_myHWtask_r_base_addr_int [6] $end
+$var wire 1 `5" shadow_myHWtask_r_base_addr_int [5] $end
+$var wire 1 a5" shadow_myHWtask_r_base_addr_int [4] $end
+$var wire 1 b5" shadow_myHWtask_r_base_addr_int [3] $end
+$var wire 1 c5" shadow_myHWtask_r_base_addr_int [2] $end
+$var wire 1 d5" shadow_myHWtask_r_base_addr_int [1] $end
+$var wire 1 e5" shadow_myHWtask_r_base_addr_int [0] $end
+$var wire 1 f5" shadow_myHWtask_w_phase_int [15] $end
+$var wire 1 g5" shadow_myHWtask_w_phase_int [14] $end
+$var wire 1 h5" shadow_myHWtask_w_phase_int [13] $end
+$var wire 1 i5" shadow_myHWtask_w_phase_int [12] $end
+$var wire 1 j5" shadow_myHWtask_w_phase_int [11] $end
+$var wire 1 k5" shadow_myHWtask_w_phase_int [10] $end
+$var wire 1 l5" shadow_myHWtask_w_phase_int [9] $end
+$var wire 1 m5" shadow_myHWtask_w_phase_int [8] $end
+$var wire 1 n5" shadow_myHWtask_w_phase_int [7] $end
+$var wire 1 o5" shadow_myHWtask_w_phase_int [6] $end
+$var wire 1 p5" shadow_myHWtask_w_phase_int [5] $end
+$var wire 1 q5" shadow_myHWtask_w_phase_int [4] $end
+$var wire 1 r5" shadow_myHWtask_w_phase_int [3] $end
+$var wire 1 s5" shadow_myHWtask_w_phase_int [2] $end
+$var wire 1 t5" shadow_myHWtask_w_phase_int [1] $end
+$var wire 1 u5" shadow_myHWtask_w_phase_int [0] $end
+$var wire 1 v5" shadow_myHWtask_r_phase_int [15] $end
+$var wire 1 w5" shadow_myHWtask_r_phase_int [14] $end
+$var wire 1 x5" shadow_myHWtask_r_phase_int [13] $end
+$var wire 1 y5" shadow_myHWtask_r_phase_int [12] $end
+$var wire 1 z5" shadow_myHWtask_r_phase_int [11] $end
+$var wire 1 {5" shadow_myHWtask_r_phase_int [10] $end
+$var wire 1 |5" shadow_myHWtask_r_phase_int [9] $end
+$var wire 1 }5" shadow_myHWtask_r_phase_int [8] $end
+$var wire 1 ~5" shadow_myHWtask_r_phase_int [7] $end
+$var wire 1 !6" shadow_myHWtask_r_phase_int [6] $end
+$var wire 1 "6" shadow_myHWtask_r_phase_int [5] $end
+$var wire 1 #6" shadow_myHWtask_r_phase_int [4] $end
+$var wire 1 $6" shadow_myHWtask_r_phase_int [3] $end
+$var wire 1 %6" shadow_myHWtask_r_phase_int [2] $end
+$var wire 1 &6" shadow_myHWtask_r_phase_int [1] $end
+$var wire 1 '6" shadow_myHWtask_r_phase_int [0] $end
+$var wire 1 z7" shadow_myHWtask_w_max_outs_int [7] $end
+$var wire 1 {7" shadow_myHWtask_w_max_outs_int [6] $end
+$var wire 1 |7" shadow_myHWtask_w_max_outs_int [5] $end
+$var wire 1 }7" shadow_myHWtask_w_max_outs_int [4] $end
+$var wire 1 ~7" shadow_myHWtask_w_max_outs_int [3] $end
+$var wire 1 !8" shadow_myHWtask_w_max_outs_int [2] $end
+$var wire 1 "8" shadow_myHWtask_w_max_outs_int [1] $end
+$var wire 1 #8" shadow_myHWtask_w_max_outs_int [0] $end
+$var wire 1 $8" shadow_myHWtask_r_max_outs_int [7] $end
+$var wire 1 %8" shadow_myHWtask_r_max_outs_int [6] $end
+$var wire 1 &8" shadow_myHWtask_r_max_outs_int [5] $end
+$var wire 1 '8" shadow_myHWtask_r_max_outs_int [4] $end
+$var wire 1 (8" shadow_myHWtask_r_max_outs_int [3] $end
+$var wire 1 )8" shadow_myHWtask_r_max_outs_int [2] $end
+$var wire 1 *8" shadow_myHWtask_r_max_outs_int [1] $end
+$var wire 1 +8" shadow_myHWtask_r_max_outs_int [0] $end
+$var wire 1 ,8" shadow_myHWtask_w_displ_int [7] $end
+$var wire 1 -8" shadow_myHWtask_w_displ_int [6] $end
+$var wire 1 .8" shadow_myHWtask_w_displ_int [5] $end
+$var wire 1 /8" shadow_myHWtask_w_displ_int [4] $end
+$var wire 1 08" shadow_myHWtask_w_displ_int [3] $end
+$var wire 1 18" shadow_myHWtask_w_displ_int [2] $end
+$var wire 1 28" shadow_myHWtask_w_displ_int [1] $end
+$var wire 1 38" shadow_myHWtask_w_displ_int [0] $end
+$var wire 1 48" shadow_myHWtask_r_displ_int [7] $end
+$var wire 1 58" shadow_myHWtask_r_displ_int [6] $end
+$var wire 1 68" shadow_myHWtask_r_displ_int [5] $end
+$var wire 1 78" shadow_myHWtask_r_displ_int [4] $end
+$var wire 1 88" shadow_myHWtask_r_displ_int [3] $end
+$var wire 1 98" shadow_myHWtask_r_displ_int [2] $end
+$var wire 1 :8" shadow_myHWtask_r_displ_int [1] $end
+$var wire 1 ;8" shadow_myHWtask_r_displ_int [0] $end
+$var wire 1 8J" shadow_myHWtask_r_misb_clk_cnt [15] $end
+$var wire 1 9J" shadow_myHWtask_r_misb_clk_cnt [14] $end
+$var wire 1 :J" shadow_myHWtask_r_misb_clk_cnt [13] $end
+$var wire 1 ;J" shadow_myHWtask_r_misb_clk_cnt [12] $end
+$var wire 1 <J" shadow_myHWtask_r_misb_clk_cnt [11] $end
+$var wire 1 =J" shadow_myHWtask_r_misb_clk_cnt [10] $end
+$var wire 1 >J" shadow_myHWtask_r_misb_clk_cnt [9] $end
+$var wire 1 ?J" shadow_myHWtask_r_misb_clk_cnt [8] $end
+$var wire 1 @J" shadow_myHWtask_r_misb_clk_cnt [7] $end
+$var wire 1 AJ" shadow_myHWtask_r_misb_clk_cnt [6] $end
+$var wire 1 BJ" shadow_myHWtask_r_misb_clk_cnt [5] $end
+$var wire 1 CJ" shadow_myHWtask_r_misb_clk_cnt [4] $end
+$var wire 1 DJ" shadow_myHWtask_r_misb_clk_cnt [3] $end
+$var wire 1 EJ" shadow_myHWtask_r_misb_clk_cnt [2] $end
+$var wire 1 FJ" shadow_myHWtask_r_misb_clk_cnt [1] $end
+$var wire 1 GJ" shadow_myHWtask_r_misb_clk_cnt [0] $end
+$var wire 1 HJ" shadow_myHWtask_r_end_trans_flag [0] $end
+$var wire 1 IJ" shadow_myHWtask_w_data_done_cnt [15] $end
+$var wire 1 JJ" shadow_myHWtask_w_data_done_cnt [14] $end
+$var wire 1 KJ" shadow_myHWtask_w_data_done_cnt [13] $end
+$var wire 1 LJ" shadow_myHWtask_w_data_done_cnt [12] $end
+$var wire 1 MJ" shadow_myHWtask_w_data_done_cnt [11] $end
+$var wire 1 NJ" shadow_myHWtask_w_data_done_cnt [10] $end
+$var wire 1 OJ" shadow_myHWtask_w_data_done_cnt [9] $end
+$var wire 1 PJ" shadow_myHWtask_w_data_done_cnt [8] $end
+$var wire 1 QJ" shadow_myHWtask_w_data_done_cnt [7] $end
+$var wire 1 RJ" shadow_myHWtask_w_data_done_cnt [6] $end
+$var wire 1 SJ" shadow_myHWtask_w_data_done_cnt [5] $end
+$var wire 1 TJ" shadow_myHWtask_w_data_done_cnt [4] $end
+$var wire 1 UJ" shadow_myHWtask_w_data_done_cnt [3] $end
+$var wire 1 VJ" shadow_myHWtask_w_data_done_cnt [2] $end
+$var wire 1 WJ" shadow_myHWtask_w_data_done_cnt [1] $end
+$var wire 1 XJ" shadow_myHWtask_w_data_done_cnt [0] $end
+$var wire 1 YJ" shadow_myHWtask_w_data_counter [7] $end
+$var wire 1 ZJ" shadow_myHWtask_w_data_counter [6] $end
+$var wire 1 [J" shadow_myHWtask_w_data_counter [5] $end
+$var wire 1 \J" shadow_myHWtask_w_data_counter [4] $end
+$var wire 1 ]J" shadow_myHWtask_w_data_counter [3] $end
+$var wire 1 ^J" shadow_myHWtask_w_data_counter [2] $end
+$var wire 1 _J" shadow_myHWtask_w_data_counter [1] $end
+$var wire 1 `J" shadow_myHWtask_w_data_counter [0] $end
+$var wire 1 aJ" shadow_myHWtask_m_axi_wdata_int [31] $end
+$var wire 1 bJ" shadow_myHWtask_m_axi_wdata_int [30] $end
+$var wire 1 cJ" shadow_myHWtask_m_axi_wdata_int [29] $end
+$var wire 1 dJ" shadow_myHWtask_m_axi_wdata_int [28] $end
+$var wire 1 eJ" shadow_myHWtask_m_axi_wdata_int [27] $end
+$var wire 1 fJ" shadow_myHWtask_m_axi_wdata_int [26] $end
+$var wire 1 gJ" shadow_myHWtask_m_axi_wdata_int [25] $end
+$var wire 1 hJ" shadow_myHWtask_m_axi_wdata_int [24] $end
+$var wire 1 iJ" shadow_myHWtask_m_axi_wdata_int [23] $end
+$var wire 1 jJ" shadow_myHWtask_m_axi_wdata_int [22] $end
+$var wire 1 kJ" shadow_myHWtask_m_axi_wdata_int [21] $end
+$var wire 1 lJ" shadow_myHWtask_m_axi_wdata_int [20] $end
+$var wire 1 mJ" shadow_myHWtask_m_axi_wdata_int [19] $end
+$var wire 1 nJ" shadow_myHWtask_m_axi_wdata_int [18] $end
+$var wire 1 oJ" shadow_myHWtask_m_axi_wdata_int [17] $end
+$var wire 1 pJ" shadow_myHWtask_m_axi_wdata_int [16] $end
+$var wire 1 qJ" shadow_myHWtask_m_axi_wdata_int [15] $end
+$var wire 1 rJ" shadow_myHWtask_m_axi_wdata_int [14] $end
+$var wire 1 sJ" shadow_myHWtask_m_axi_wdata_int [13] $end
+$var wire 1 tJ" shadow_myHWtask_m_axi_wdata_int [12] $end
+$var wire 1 uJ" shadow_myHWtask_m_axi_wdata_int [11] $end
+$var wire 1 vJ" shadow_myHWtask_m_axi_wdata_int [10] $end
+$var wire 1 wJ" shadow_myHWtask_m_axi_wdata_int [9] $end
+$var wire 1 xJ" shadow_myHWtask_m_axi_wdata_int [8] $end
+$var wire 1 yJ" shadow_myHWtask_m_axi_wdata_int [7] $end
+$var wire 1 zJ" shadow_myHWtask_m_axi_wdata_int [6] $end
+$var wire 1 {J" shadow_myHWtask_m_axi_wdata_int [5] $end
+$var wire 1 |J" shadow_myHWtask_m_axi_wdata_int [4] $end
+$var wire 1 }J" shadow_myHWtask_m_axi_wdata_int [3] $end
+$var wire 1 ~J" shadow_myHWtask_m_axi_wdata_int [2] $end
+$var wire 1 !K" shadow_myHWtask_m_axi_wdata_int [1] $end
+$var wire 1 "K" shadow_myHWtask_m_axi_wdata_int [0] $end
+$var wire 1 #K" shadow_myHWtask_w_done_counter [15] $end
+$var wire 1 $K" shadow_myHWtask_w_done_counter [14] $end
+$var wire 1 %K" shadow_myHWtask_w_done_counter [13] $end
+$var wire 1 &K" shadow_myHWtask_w_done_counter [12] $end
+$var wire 1 'K" shadow_myHWtask_w_done_counter [11] $end
+$var wire 1 (K" shadow_myHWtask_w_done_counter [10] $end
+$var wire 1 )K" shadow_myHWtask_w_done_counter [9] $end
+$var wire 1 *K" shadow_myHWtask_w_done_counter [8] $end
+$var wire 1 +K" shadow_myHWtask_w_done_counter [7] $end
+$var wire 1 ,K" shadow_myHWtask_w_done_counter [6] $end
+$var wire 1 -K" shadow_myHWtask_w_done_counter [5] $end
+$var wire 1 .K" shadow_myHWtask_w_done_counter [4] $end
+$var wire 1 /K" shadow_myHWtask_w_done_counter [3] $end
+$var wire 1 0K" shadow_myHWtask_w_done_counter [2] $end
+$var wire 1 1K" shadow_myHWtask_w_done_counter [1] $end
+$var wire 1 2K" shadow_myHWtask_w_done_counter [0] $end
+$var wire 1 3K" shadow_myHWtask_w_end_trans_flag [0] $end
+$var wire 1 ^c" shadow_myHWtask_data_val_flag $end
+$var wire 1 _c" shadow_myHWtask_r_phase_start $end
+$var wire 1 `c" shadow_myHWtask_w_phase_start $end
+$var wire 1 ac" shadow_myHWtask_w_start_int $end
+$var wire 1 bc" shadow_myHWtask_r_start_int $end
+$var wire 1 cc" shadow_myHWtask_r_addr_init $end
+$var wire 1 dc" shadow_myHWtask_m_axi_arvalid_int $end
+$var wire 1 ec" shadow_myHWtask_w_addr_init $end
+$var wire 1 fc" shadow_myHWtask_m_axi_awvalid_int $end
+$var wire 1 gc" shadow_myHWtask_m_axi_wvalid_int $end
+$var wire 1 hc" shadow_myHWtask_m_axi_wlast_int $end
+$enddefinitions $end
+$dumpvars
+#0
+0I+
+0J+
+b1 \+
+b1 ]+
+b110 ^+
+b110 _+
+b1 `+
+b1 a+
+b0 b+
+b0 c+
+b100 d+
+b100 e+
+b1000 f+
+b1000 g+
+1h+
+xi+
+xj+
+bx k+
+bx l+
+xm+
+xn+
+bx o+
+bx p+
+bx q+
+b0 r+
+xs+
+bx t+
+xu+
+bx v+
+bx w+
+bx x+
+b0 y+
+xz+
+bx {+
+bx |+
+x}+
+bx ~+
+bx !,
+bx ",
+b0 #,
+bx $,
+bx %,
+bx &,
+0',
+x(,
+bx ),
+b0 *,
+0Yv!
+0Zv!
+0f,"
+0e,"
+0d,"
+0c,"
+0b,"
+0a,"
+0`,"
+0_,"
+0^,"
+0],"
+0\,"
+0[,"
+0Z,"
+0Y,"
+0X,"
+0W,"
+0i,"
+0h,"
+0g,"
+0+-"
+0*-"
+0)-"
+0(-"
+0'-"
+0&-"
+0%-"
+0$-"
+0#-"
+0"-"
+0!-"
+0~,"
+0},"
+0|,"
+0{,"
+0z,"
+0y,"
+0x,"
+0w,"
+0v,"
+0u,"
+0t,"
+0s,"
+0r,"
+0q,"
+0p,"
+0o,"
+0n,"
+0m,"
+0l,"
+0k,"
+0j,"
+0;-"
+0:-"
+09-"
+08-"
+07-"
+06-"
+05-"
+04-"
+03-"
+02-"
+01-"
+00-"
+0/-"
+0.-"
+0--"
+0,-"
+0<-"
+0L-"
+0K-"
+0J-"
+0I-"
+0H-"
+0G-"
+0F-"
+0E-"
+0D-"
+0C-"
+0B-"
+0A-"
+0@-"
+0?-"
+0>-"
+0=-"
+0\-"
+0[-"
+0Z-"
+0Y-"
+0X-"
+0W-"
+0V-"
+0U-"
+0T-"
+0S-"
+0R-"
+0Q-"
+0P-"
+0O-"
+0N-"
+0M-"
+0_-"
+0^-"
+0]-"
+0!."
+0~-"
+0}-"
+0|-"
+0{-"
+0z-"
+0y-"
+0x-"
+0w-"
+0v-"
+0u-"
+0t-"
+0s-"
+0r-"
+0q-"
+0p-"
+0o-"
+0n-"
+0m-"
+0l-"
+0k-"
+0j-"
+0i-"
+0h-"
+0g-"
+0f-"
+0e-"
+0d-"
+0c-"
+0b-"
+0a-"
+0`-"
+0"."
+02."
+01."
+00."
+0/."
+0.."
+0-."
+0,."
+0+."
+0*."
+0)."
+0(."
+0'."
+0&."
+0%."
+0$."
+0#."
+0B."
+0A."
+0@."
+0?."
+0>."
+0=."
+0<."
+0;."
+0:."
+09."
+08."
+07."
+06."
+05."
+04."
+03."
+0R."
+0Q."
+0P."
+0O."
+0N."
+0M."
+0L."
+0K."
+0J."
+0I."
+0H."
+0G."
+0F."
+0E."
+0D."
+0C."
+0C4"
+0B4"
+0A4"
+0@4"
+0?4"
+0>4"
+0=4"
+0<4"
+0;4"
+0:4"
+094"
+084"
+074"
+064"
+054"
+044"
+0S4"
+0R4"
+0Q4"
+0P4"
+0O4"
+0N4"
+0M4"
+0L4"
+0K4"
+0J4"
+0I4"
+0H4"
+0G4"
+0F4"
+0E4"
+0D4"
+0[4"
+0Z4"
+0Y4"
+0X4"
+0W4"
+0V4"
+0U4"
+0T4"
+0c4"
+0b4"
+0a4"
+0`4"
+0_4"
+0^4"
+0]4"
+0\4"
+0s4"
+0r4"
+0q4"
+0p4"
+0o4"
+0n4"
+0m4"
+0l4"
+0k4"
+0j4"
+0i4"
+0h4"
+0g4"
+0f4"
+0e4"
+0d4"
+0%5"
+0$5"
+0#5"
+0"5"
+0!5"
+0~4"
+0}4"
+0|4"
+0{4"
+0z4"
+0y4"
+0x4"
+0w4"
+0v4"
+0u4"
+0t4"
+0E5"
+0D5"
+0C5"
+0B5"
+0A5"
+0@5"
+0?5"
+0>5"
+0=5"
+0<5"
+0;5"
+0:5"
+095"
+085"
+075"
+065"
+055"
+045"
+035"
+025"
+015"
+005"
+0/5"
+0.5"
+0-5"
+0,5"
+0+5"
+0*5"
+0)5"
+0(5"
+0'5"
+0&5"
+0e5"
+0d5"
+0c5"
+0b5"
+0a5"
+0`5"
+0_5"
+0^5"
+0]5"
+0\5"
+0[5"
+0Z5"
+0Y5"
+0X5"
+0W5"
+0V5"
+0U5"
+0T5"
+0S5"
+0R5"
+0Q5"
+0P5"
+0O5"
+0N5"
+0M5"
+0L5"
+0K5"
+0J5"
+0I5"
+0H5"
+0G5"
+0F5"
+0u5"
+0t5"
+0s5"
+0r5"
+0q5"
+0p5"
+0o5"
+0n5"
+0m5"
+0l5"
+0k5"
+0j5"
+0i5"
+0h5"
+0g5"
+0f5"
+0'6"
+0&6"
+0%6"
+0$6"
+0#6"
+0"6"
+0!6"
+0~5"
+0}5"
+0|5"
+0{5"
+0z5"
+0y5"
+0x5"
+0w5"
+0v5"
+0#8"
+0"8"
+0!8"
+0~7"
+0}7"
+0|7"
+0{7"
+0z7"
+0+8"
+0*8"
+0)8"
+0(8"
+0'8"
+0&8"
+0%8"
+0$8"
+038"
+028"
+018"
+008"
+0/8"
+0.8"
+0-8"
+0,8"
+0;8"
+0:8"
+098"
+088"
+078"
+068"
+058"
+048"
+0GJ"
+0FJ"
+0EJ"
+0DJ"
+0CJ"
+0BJ"
+0AJ"
+0@J"
+0?J"
+0>J"
+0=J"
+0<J"
+0;J"
+0:J"
+09J"
+08J"
+0HJ"
+0XJ"
+0WJ"
+0VJ"
+0UJ"
+0TJ"
+0SJ"
+0RJ"
+0QJ"
+0PJ"
+0OJ"
+0NJ"
+0MJ"
+0LJ"
+0KJ"
+0JJ"
+0IJ"
+0`J"
+0_J"
+0^J"
+0]J"
+0\J"
+0[J"
+0ZJ"
+0YJ"
+0"K"
+0!K"
+0~J"
+0}J"
+0|J"
+0{J"
+0zJ"
+0yJ"
+0xJ"
+0wJ"
+0vJ"
+0uJ"
+0tJ"
+0sJ"
+0rJ"
+0qJ"
+0pJ"
+0oJ"
+0nJ"
+0mJ"
+0lJ"
+0kJ"
+0jJ"
+0iJ"
+0hJ"
+0gJ"
+0fJ"
+0eJ"
+0dJ"
+0cJ"
+0bJ"
+0aJ"
+02K"
+01K"
+00K"
+0/K"
+0.K"
+0-K"
+0,K"
+0+K"
+0*K"
+0)K"
+0(K"
+0'K"
+0&K"
+0%K"
+0$K"
+0#K"
+03K"
+0^c"
+0_c"
+0`c"
+0ac"
+0bc"
+0cc"
+0dc"
+0ec"
+0fc"
+0gc"
+0hc"
+#40000
+b0 \+
+b0 ]+
+b0 ^+
+b0 _+
+b0 `+
+b0 a+
+b0 d+
+b0 e+
+b0 f+
+b0 g+
+0h+
+0i+
+0j+
+b0 k+
+b0 l+
+0m+
+0n+
+b0 o+
+b0 p+
+b0 q+
+0s+
+b0 v+
+b0 t+
+0u+
+b0 w+
+b0 x+
+0z+
+b0 ~+
+b0 {+
+b0 |+
+0}+
+b0 !,
+b0 ",
+b0 $,
+b1 %,
+b0 &,
+0(,
+b0 ),
+#80000
+b1 \+
+b1 ]+
+b110 ^+
+b110 _+
+b1 `+
+b1 a+
+b100 d+
+b100 e+
+1h+
+b1000 f+
+b1000 g+
+#90000
+b10110110000001010110000001010110 b+
+b11011101001100000100001001101100 c+
+#330000
+1i+
+#340000
+b1 k+
+#350000
+1n+
+#360000
+b10110110000001010110000001010110 t+
+1s+
+1u+
+b1 v+
+b1 o+
+b1 r+
+#370000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#380000
+b0 p+
+b0 v+
+#390000
+b10110110000001010110000001111010 t+
+1u+
+b1 v+
+b10 o+
+b1 r+
+#400000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#410000
+b0 p+
+b0 v+
+#420000
+b10110110000001010110000010011110 t+
+1u+
+b1 v+
+b11 o+
+b1 r+
+#430000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#440000
+b0 p+
+b0 v+
+#450000
+b10110110000001010110000011000010 t+
+1u+
+b1 v+
+b100 o+
+b1 r+
+#460000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#470000
+b0 p+
+b0 v+
+#600000
+b1 !,
+b1 #,
+#610000
+b1111111111111111 q+
+b0 #,
+#780000
+b10 !,
+b1 #,
+#790000
+b1111111111111110 q+
+b0 #,
+#960000
+b11 !,
+b1 #,
+#970000
+b1111111111111101 q+
+b0 #,
+#1140000
+b100 !,
+b1 #,
+#1150000
+1j+
+b1111111111111100 q+
+1J+
+b0 #,
+#1160000
+b1 l+
+#1170000
+1m+
+#1180000
+b11011101001100000100001001101100 |+
+1z+
+1}+
+b1 ~+
+b1 y+
+#1190000
+b0 y+
+b1 {+
+b1 w+
+b1 x+
+b10 ~+
+0}+
+#1200000
+1',
+b0 x+
+b0 ~+
+#1210000
+b11011101001100000100001010010000 |+
+1}+
+b1 ~+
+b1 y+
+b10 %,
+b1 &,
+#1220000
+b11 %,
+b10 &,
+b0 y+
+b10 {+
+b10 w+
+b1 x+
+b10 ~+
+0}+
+#1230000
+b0 x+
+b0 ~+
+b100 %,
+b11 &,
+#1240000
+b101 %,
+b100 &,
+b11011101001100000100001010110100 |+
+1}+
+b1 ~+
+b1 y+
+#1250000
+b0 y+
+b11 {+
+b11 w+
+b1 x+
+b10 ~+
+0}+
+b110 %,
+b101 &,
+#1260000
+b111 %,
+b110 &,
+b0 x+
+b0 ~+
+#1270000
+b11011101001100000100001011011000 |+
+1}+
+b1 ~+
+b1 y+
+b1000 %,
+b111 &,
+#1280000
+1(,
+b0 %,
+b1 $,
+b1000 &,
+b0 y+
+b100 {+
+b100 w+
+b1 x+
+b10 ~+
+0}+
+#1290000
+b0 x+
+b0 ~+
+b1 %,
+0(,
+b0 &,
+#1300000
+b10 %,
+b1 &,
+#1310000
+b11 %,
+b10 &,
+#1320000
+b100 %,
+b11 &,
+#1330000
+b101 %,
+b100 &,
+#1340000
+b1 ),
+b1 *,
+b110 %,
+b101 &,
+#1350000
+b111 %,
+b110 &,
+b11 {+
+b0 *,
+#1360000
+b1000 %,
+b111 &,
+#1370000
+1(,
+b0 %,
+b10 $,
+b1000 &,
+#1380000
+b1 %,
+0(,
+b0 &,
+#1390000
+b10 %,
+b1 &,
+#1400000
+b11 %,
+b10 &,
+#1410000
+b100 %,
+b11 &,
+#1420000
+b101 %,
+b100 &,
+#1430000
+b10 ),
+b1 *,
+b110 %,
+b101 &,
+#1440000
+b111 %,
+b110 &,
+b10 {+
+b0 *,
+#1450000
+b1000 %,
+b111 &,
+#1460000
+1(,
+b0 %,
+b11 $,
+b1000 &,
+#1470000
+b1 %,
+0(,
+b0 &,
+#1480000
+b10 %,
+b1 &,
+#1490000
+b11 %,
+b10 &,
+#1500000
+b100 %,
+b11 &,
+#1510000
+b101 %,
+b100 &,
+#1520000
+b11 ),
+b1 *,
+b110 %,
+b101 &,
+#1530000
+b111 %,
+b110 &,
+b1 {+
+b0 *,
+#1540000
+b1000 %,
+b111 &,
+#1550000
+1(,
+b0 %,
+b100 $,
+b1000 &,
+#1560000
+0',
+b1 %,
+0(,
+b0 &,
+#1610000
+b100 ),
+b1 *,
+#1620000
+b0 {+
+1I+
+b0 *,
+#1650000
+b0 \+
+b0 ]+
+b0 ^+
+b0 _+
+b0 `+
+b0 a+
+b0 b+
+b0 c+
+b0 d+
+b0 e+
+b0 f+
+b0 g+
+0h+
+0i+
+0j+
+b0 k+
+b0 l+
+0m+
+0n+
+b0 o+
+b0 q+
+0s+
+b10110110000001010110000001010110 t+
+b0 w+
+0z+
+b11011101001100000100001001101100 |+
+b0 !,
+b0 $,
+b0 ),
+#1660000
+0J+
+0I+
+b0 |+
+b0 t+
+#1690000
+b1 \+
+b1 ]+
+b110 ^+
+b110 _+
+b1 `+
+b1 a+
+b10110110000001010110000001010110 b+
+b11011101001100000100001001101100 c+
+b100 d+
+b100 e+
+1h+
+b1000 f+
+b1000 g+
+#1700000
+b1110110111100001100100110110010 b+
+b10001101000101000001000000100000 c+
+#1940000
+1i+
+#1950000
+b1 k+
+#1960000
+1n+
+#1970000
+b1110110111100001100100110110010 t+
+1s+
+1u+
+b1 v+
+b1 o+
+b1 r+
+#1980000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#1990000
+b0 p+
+b0 v+
+#2000000
+b1 !,
+b1 #,
+b1110110111100001100100111010110 t+
+1u+
+b1 v+
+b10 o+
+b1 r+
+#2010000
+b0 r+
+b1111111111111111 q+
+b0 #,
+#2440000
+1j+
+#2450000
+b1 l+
+#2460000
+1m+
+#2470000
+b10001101000101000001000000100000 |+
+1z+
+1}+
+b1 ~+
+b1 y+
+#2480000
+b0 y+
+b1 {+
+b1 w+
+b1 x+
+b10 ~+
+0}+
+#2490000
+1',
+b0 x+
+b0 ~+
+#2500000
+b10001101000101000001000001000100 |+
+1}+
+b1 ~+
+b1 y+
+b10 %,
+b1 &,
+#2510000
+b11 %,
+b10 &,
+b0 y+
+b10 {+
+b10 w+
+b1 x+
+b10 ~+
+0}+
+#2520000
+b0 x+
+b0 ~+
+b100 %,
+b11 &,
+#2530000
+b101 %,
+b100 &,
+b10001101000101000001000001101000 |+
+1}+
+b1 ~+
+b1 y+
+#2540000
+b0 y+
+b11 {+
+b11 w+
+b1 x+
+b10 ~+
+0}+
+b110 %,
+b101 &,
+#2550000
+b111 %,
+b110 &,
+b0 x+
+b0 ~+
+#2560000
+b10001101000101000001000010001100 |+
+1}+
+b1 ~+
+b1 y+
+b1000 %,
+b111 &,
+#2570000
+1(,
+b0 %,
+b1 $,
+b1000 &,
+b0 y+
+b100 {+
+b100 w+
+b1 x+
+b10 ~+
+0}+
+#2580000
+b0 x+
+b0 ~+
+b1 %,
+0(,
+b0 &,
+#2590000
+b10 %,
+b1 &,
+#2600000
+b11 %,
+b10 &,
+#2610000
+b100 %,
+b11 &,
+#2620000
+b101 %,
+b100 &,
+#2630000
+b1 ),
+b1 *,
+b110 %,
+b101 &,
+#2640000
+b111 %,
+b110 &,
+b11 {+
+b0 *,
+#2650000
+b1000 %,
+b111 &,
+#2660000
+1(,
+b0 %,
+b10 $,
+b1000 &,
+#2670000
+b1 %,
+0(,
+b0 &,
+#2680000
+b10 %,
+b1 &,
+#2690000
+b11 %,
+b10 &,
+#2700000
+b100 %,
+b11 &,
+#2710000
+b101 %,
+b100 &,
+#2720000
+b10 ),
+b1 *,
+b110 %,
+b101 &,
+#2730000
+b111 %,
+b110 &,
+b10 {+
+b0 *,
+#2740000
+b1000 %,
+b111 &,
+#2750000
+1(,
+b0 %,
+b11 $,
+b1000 &,
+#2760000
+b1 %,
+0(,
+b0 &,
+#2770000
+b10 %,
+b1 &,
+#2780000
+b11 %,
+b10 &,
+#2790000
+b100 %,
+b11 &,
+#2800000
+b101 %,
+b100 &,
+#2810000
+b11 ),
+b1 *,
+b110 %,
+b101 &,
+#2820000
+b111 %,
+b110 &,
+b1 {+
+b0 *,
+#2830000
+b1000 %,
+b111 &,
+#2840000
+1(,
+b0 %,
+b100 $,
+b1000 &,
+#2850000
+0',
+b1 %,
+0(,
+b0 &,
+#2900000
+b100 ),
+b1 *,
+#2910000
+b0 {+
+1I+
+b0 *,
+#2940000
+b0 \+
+b0 ]+
+b0 ^+
+b0 _+
+b0 `+
+b0 a+
+b0 b+
+b0 c+
+b0 d+
+b0 e+
+b0 f+
+b0 g+
+0h+
+0i+
+0j+
+b0 k+
+b0 l+
+0m+
+0n+
+b0 o+
+b0 q+
+0s+
+b0 v+
+b1110110111100001100100110110010 t+
+0u+
+b0 w+
+0z+
+b10001101000101000001000000100000 |+
+b0 !,
+b0 $,
+b0 ),
+#2950000
+0I+
+b0 |+
+b0 t+
+#2980000
+b1 \+
+b1 ]+
+b110 ^+
+b110 _+
+b1 `+
+b1 a+
+b1110110111100001100100110110010 b+
+b10001101000101000001000000100000 c+
+b100 d+
+b100 e+
+1h+
+b1000 f+
+b1000 g+
+#2990000
+b10000000011001011011000000000111 b+
+b111101100100011110111000011010 c+
+#3230000
+1i+
+#3240000
+b1 k+
+#3250000
+1n+
+#3260000
+b10000000011001011011000000000111 t+
+1s+
+1u+
+b1 v+
+b1 o+
+b1 r+
+#3270000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#3280000
+b0 p+
+b0 v+
+#3290000
+b1 !,
+b1 #,
+b10000000011001011011000000101011 t+
+1u+
+b1 v+
+b10 o+
+b1 r+
+#3300000
+b0 r+
+b1111111111111111 q+
+b0 #,
+#3730000
+1j+
+#3740000
+b1 l+
+#3750000
+1m+
+#3760000
+b111101100100011110111000011010 |+
+1z+
+1}+
+b1 ~+
+b1 y+
+#3770000
+b0 y+
+b1 {+
+b1 w+
+b1 x+
+b10 ~+
+0}+
+#3780000
+1',
+b0 x+
+b0 ~+
+#3790000
+b111101100100011110111000111110 |+
+1}+
+b1 ~+
+b1 y+
+b10 %,
+b1 &,
+#3800000
+b11 %,
+b10 &,
+b0 y+
+b10 {+
+#3810000
+b100 %,
+b11 &,
+#3820000
+b101 %,
+b100 &,
+#3830000
+b110 %,
+b101 &,
+#3840000
+b111 %,
+b110 &,
+#3850000
+b1000 %,
+b111 &,
+#3860000
+1(,
+b0 %,
+b1 $,
+b1000 &,
+#3870000
+0',
+b1 %,
+0(,
+b0 &,
+#3880000
+b1 ),
+b1 *,
+#3890000
+b1 {+
+b0 *,
+#3940000
+b1 p+
+b10 v+
+0u+
+#3950000
+b0 p+
+b0 v+
+#3960000
+b10 !,
+b1 #,
+#3970000
+b1111111111111110 q+
+b0 #,
+#4260000
+b0 \+
+b0 ]+
+b0 ^+
+b0 _+
+b0 `+
+b0 a+
+b0 b+
+b0 c+
+b0 d+
+b0 e+
+b0 f+
+b0 g+
+0h+
+0i+
+0j+
+b0 k+
+b0 l+
+0m+
+0n+
+b0 o+
+b0 q+
+0s+
+b10000000011001011011000000000111 t+
+b0 w+
+0z+
+b0 ~+
+b0 {+
+b111101100100011110111000011010 |+
+0}+
+b0 !,
+b0 $,
+b0 ),
+#4270000
+b0 |+
+b0 t+
+#4300000
+b1 \+
+b1 ]+
+b110 ^+
+b110 _+
+b1 `+
+b1 a+
+b10000000011001011011000000000111 b+
+b111101100100011110111000011010 c+
+b100 d+
+b100 e+
+1h+
+b1000 f+
+b1000 g+
+#4310000
+b100100010000110001011001110001 b+
+b1010101110011100001000110101110 c+
+#4550000
+1i+
+#4560000
+b1 k+
+#4570000
+1n+
+#4580000
+b100100010000110001011001110001 t+
+1s+
+1u+
+b1 v+
+b1 o+
+b1 r+
+#4590000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#4600000
+b0 p+
+b0 v+
+#4610000
+b100100010000110001011010010101 t+
+1u+
+b1 v+
+b10 o+
+b1 r+
+#4620000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#4630000
+b0 p+
+b0 v+
+#4640000
+b100100010000110001011010111001 t+
+1u+
+b1 v+
+b11 o+
+b1 r+
+#4650000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#4660000
+b0 p+
+b0 v+
+#4670000
+b100100010000110001011011011101 t+
+1u+
+b1 v+
+b100 o+
+b1 r+
+#4680000
+b0 r+
+b1 p+
+b10 v+
+0u+
+#4690000
+b0 p+
+b0 v+
+#4820000
+b1 !,
+b1 #,
+#4830000
+b1111111111111111 q+
+b0 #,
+#5000000
+b10 !,
+b1 #,
+#5010000
+b1111111111111110 q+
+b0 #,
+#5180000
+b11 !,
+b1 #,
+#5190000
+b1111111111111101 q+
+b0 #,
+#5360000
+b100 !,
+b1 #,
+#5370000
+1j+
+b1111111111111100 q+
+1J+
+b0 #,
+#5380000
+b1 l+
+#5390000
+1m+
+#5400000
+b1010101110011100001000110101110 |+
+1z+
+1}+
+b1 ~+
+b1 y+
+#5410000
+b0 y+
+b1 {+
+b1 w+
+b1 x+
+b10 ~+
+0}+
+#5420000
+1',
+b0 x+
+b0 ~+
+#5430000
+b1010101110011100001000111010010 |+
+1}+
+b1 ~+
+b1 y+
+b10 %,
+b1 &,
+#5440000
+b11 %,
+b10 &,
+b0 y+
+b10 {+
+b10 w+
+b1 x+
+b10 ~+
+0}+
+#5450000
+b0 x+
+b0 ~+
+b100 %,
+b11 &,
+#5460000
+b101 %,
+b100 &,
+b1010101110011100001000111110110 |+
+1}+
+b1 ~+
+b1 y+
+#5470000
+b0 y+
+b11 {+
+b11 w+
+b1 x+
+b10 ~+
+0}+
+b110 %,
+b101 &,
+#5480000
+b111 %,
+b110 &,
+b0 x+
+b0 ~+
+#5490000
+b1010101110011100001001000011010 |+
+1}+
+b1 ~+
+b1 y+
+b1000 %,
+b111 &,
+#5500000
+1(,
+b0 %,
+b1 $,
+b1000 &,
+b0 y+
+b100 {+
+b100 w+
+b1 x+
+b10 ~+
+0}+
+#5510000
+b0 x+
+b0 ~+
+b1 %,
+0(,
+b0 &,
+#5520000
+b10 %,
+b1 &,
+#5530000
+b11 %,
+b10 &,
+#5540000
+b100 %,
+b11 &,
+#5550000
+b101 %,
+b100 &,
+#5560000
+b1 ),
+b1 *,
+b110 %,
+b101 &,
+#5570000
+b111 %,
+b110 &,
+b11 {+
+b0 *,
+#5580000
+b1000 %,
+b111 &,
+#5590000
+1(,
+b0 %,
+b10 $,
+b1000 &,
+#5600000
+b1 %,
+0(,
+b0 &,
+#5610000
+b10 %,
+b1 &,
+#5620000
+b11 %,
+b10 &,
+#5630000
+b100 %,
+b11 &,
+#5640000
+b101 %,
+b100 &,
+#5650000
+b10 ),
+b1 *,
+b110 %,
+b101 &,
+#5660000
+b111 %,
+b110 &,
+b10 {+
+b0 *,
+#5670000
+b1000 %,
+b111 &,
+#5680000
+1(,
+b0 %,
+b11 $,
+b1000 &,
+#5690000
+b1 %,
+0(,
+b0 &,
+#5700000
+b10 %,
+b1 &,
+#5710000
+b11 %,
+b10 &,
+#5720000
+b100 %,
+b11 &,
+#5730000
+b101 %,
+b100 &,
+#5740000
+b11 ),
+b1 *,
+b110 %,
+b101 &,
+#5750000
+b111 %,
+b110 &,
+b1 {+
+b0 *,
+#5760000
+b1000 %,
+b111 &,
+#5770000
+1(,
+b0 %,
+b100 $,
+b1000 &,
+#5780000
+0',
+b1 %,
+0(,
+b0 &,
+#5830000
+b100 ),
+b1 *,
+#5840000
+b0 {+
+1I+
+b0 *,
