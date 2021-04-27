@@ -325,7 +325,7 @@ def get_shadows(name, key):
 	to_ret = []
 	nts = open(name + ".ts.txt","r").readline().replace(",","").replace("\'","").replace("UNTAINTED REGS: [","").replace("]","").split()
 	# overload nts with name
-	nts += [name]
+	nts += [name.replace(".","_")]
 	for reg in key:
 		splits = reg[2].split()
 		if splits[0] != last:
@@ -407,7 +407,7 @@ def analysis():
 	regs = os.listdir(".")
 	for reg in regs:
 		if ".vcd" in reg:
-			#analyze(reg.replace(".vcd",""))
+			analyze(reg.replace(".vcd",""))
 			system("mv " + reg + " done")
 	system("mv *.txt ../outs")
 
