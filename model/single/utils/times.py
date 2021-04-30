@@ -134,6 +134,13 @@ def read(times):
 	files = os.listdir("../vcds")
 	regs = list(filter(lambda x: ".vcd" in x, files))
 	to_read = open(regs[0],"r")
+	# --- LEAVE VCD DIR --- #
+	os.chdir(os.getcwd().replace("vcds","utils"))
+	# make sure theres a dfiles directory in outs
+	system("mkdir ../outs")
+	system("mkdir ../outs/dfiles")
+	# --- ENTER DFILES DIR --- #
+	os.chdir(os.getcwd().replace("utils","outs/dfiles"))
 	# read in vcd header
 	[key,strings] = vcd_to_decls(to_read)
 	# load key with starting values
@@ -160,17 +167,10 @@ def read(times):
 		else:
 			read_vcd_line(line, key)
 		line = to_read.readline()
-	to_read.close()
-	# probably want to do daikon runs in a outs/edges anyways
-	# --- LEAVE VCD DIR --- #
-	os.chdir(os.getcwd().replace("vcds","utils"))
+	to_read.close()	
+	# --- LEAVE DFILES DIR --- #
+	os.chdir(os.getcwd().replace("outs/dfiles", "utils"))
 	return key
-
-def clean_up(name):
-	# clean up
-	system("rm *.dtrace >/dev/null")
-	system("rm *.decls >/dev/null")
-	system("rm *.inv.gz >/dev/null")
 
 # END OLD MAIN
 
@@ -327,7 +327,32 @@ def conds_to_times(conds):
 		for time in cond[0]:
 			times.add(time)
 	return times
-	
-# sketch
-read(conds_to_times(all_srcs()))
-#daikon all decls
+
+"""
+export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
+export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
+export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
+"""
+# run Daikon for all conditions
+def conds_to_dcall(conds):
+	# do this in outs/dfiles
+	# --- ENTER DFILES DIR --- #
+	os.chdir(os.getcwd().replace("utils","outs/dfiles"))
+	# make sure we have and outs/edges
+	system("mkdir ../edges")
+	for time in conds:
+		dcall = "java daikon.Daikon universal.decls "
+		dts = "".join([str(tick) + ".dtrace " for tick in time[0]])
+		out_loc = ">../edges/" + str(time[0])[1:-1].replace(", ","_")  + ".txt"
+		system(dcall + dts + out_loc)
+	# --- LEAVE DFILES DIR --- #
+	os.chdir(os.getcwd().replace("outs/dfiles", "utils"))
+	return
+
+# run this in /utils with vcds for each relevant source in /vcd
+def make_spec():
+	conds = all_srcs() # find iflow times, relations
+	read(conds_to_times(conds)) # create iflow traces
+	conds_to_dcall(conds) # mine iflow invariants
+
+make_spec()

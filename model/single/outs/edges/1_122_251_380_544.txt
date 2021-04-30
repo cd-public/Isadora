@@ -1,0 +1,903 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 5 dtrace files:
+
+===========================================================================
+..tick():::ENTER
+C_S_CTRL_AXI == C_M_AXI_ADDR_WIDTH
+C_S_CTRL_AXI == C_M_AXI_DATA_WIDTH
+C_S_CTRL_AXI_ADDR_WIDTH == r_burst_len_wire
+C_S_CTRL_AXI_ADDR_WIDTH == w_burst_len_wire
+C_S_CTRL_AXI_ADDR_WIDTH == M_AXI_AWLEN_wire
+C_S_CTRL_AXI_ADDR_WIDTH == M_AXI_ARLEN_wire
+LOG_MAX_OUTS_TRAN == r_num_trans_wire
+LOG_MAX_OUTS_TRAN == w_num_trans_wire
+MAX_OUTS_TRANS == C_M_AXI_BURST_LEN
+C_LOG_BUS_SIZE_BYTE == ADDR_LSB
+C_LOG_BUS_SIZE_BYTE == M_AXI_AWSIZE_wire
+C_LOG_BUS_SIZE_BYTE == M_AXI_ARSIZE_wire
+C_M_AXI_ID_WIDTH == C_M_AXI_ARUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_AWUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_WUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_RUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_BUSER_WIDTH
+C_M_AXI_ID_WIDTH == ARESETN
+C_M_AXI_ID_WIDTH == S_AXI_CTRL_BREADY
+C_M_AXI_ID_WIDTH == S_AXI_CTRL_RREADY
+C_M_AXI_ID_WIDTH == data_val_wire
+C_M_AXI_ID_WIDTH == M_AXI_AWREADY
+C_M_AXI_ID_WIDTH == M_AXI_WREADY
+C_M_AXI_ID_WIDTH == M_AXI_BREADY
+C_M_AXI_ID_WIDTH == M_AXI_ARREADY
+C_M_AXI_ID_WIDTH == M_AXI_AWBURST_wire
+C_M_AXI_ID_WIDTH == M_AXI_WREADY_wire
+C_M_AXI_ID_WIDTH == M_AXI_BREADY_wire
+C_M_AXI_ID_WIDTH == M_AXI_ARBURST_wire
+C_M_AXI_ID_WIDTH == r_displ_wire
+C_M_AXI_ID_WIDTH == w_displ_wire
+C_M_AXI_ID_WIDTH == r_phase_wire
+C_M_AXI_ID_WIDTH == w_phase_wire
+INTR_LINE_R == M_AXI_ARVALID_wire
+INTR_LINE_R == AR_CH_DIS
+INTR_LINE_W == AW_CH_DIS
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_AWVALID
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_AWREADY
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_WVALID
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_WREADY
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_ARADDR
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_ARPROT
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_ARVALID
+S_AXI_CTRL_AWPROT == S_AXI_CTRL_ARREADY
+S_AXI_CTRL_AWPROT == r_start_wire
+S_AXI_CTRL_AWPROT == reset_wire
+S_AXI_CTRL_AWPROT == w_done_wire
+S_AXI_CTRL_AWPROT == M_AXI_WUSER
+S_AXI_CTRL_AWPROT == M_AXI_BID
+S_AXI_CTRL_AWPROT == M_AXI_BRESP
+S_AXI_CTRL_AWPROT == M_AXI_BUSER
+S_AXI_CTRL_AWPROT == M_AXI_BVALID
+S_AXI_CTRL_AWPROT == M_AXI_RID
+S_AXI_CTRL_AWPROT == M_AXI_RRESP
+S_AXI_CTRL_AWPROT == M_AXI_RLAST
+S_AXI_CTRL_AWPROT == M_AXI_RUSER
+S_AXI_CTRL_AWPROT == M_AXI_RVALID
+S_AXI_CTRL_AWPROT == i_config
+S_AXI_CTRL_AWPROT == axi_awready
+S_AXI_CTRL_AWPROT == axi_wready
+S_AXI_CTRL_AWPROT == axi_arready
+S_AXI_CTRL_AWPROT == reg01_config
+S_AXI_CTRL_AWPROT == regXX_rden
+S_AXI_CTRL_AWPROT == regXX_wren
+S_AXI_CTRL_AWPROT == M_AXI_AWID_wire
+S_AXI_CTRL_AWPROT == M_AXI_AWLOCK_wire
+S_AXI_CTRL_AWPROT == M_AXI_AWPROT_wire
+S_AXI_CTRL_AWPROT == M_AXI_AWQOS_wire
+S_AXI_CTRL_AWPROT == M_AXI_AWUSER_wire
+S_AXI_CTRL_AWPROT == M_AXI_WUSER_wire
+S_AXI_CTRL_AWPROT == M_AXI_BID_wire
+S_AXI_CTRL_AWPROT == M_AXI_BRESP_wire
+S_AXI_CTRL_AWPROT == M_AXI_BUSER_wire
+S_AXI_CTRL_AWPROT == M_AXI_BVALID_wire
+S_AXI_CTRL_AWPROT == M_AXI_ARID_wire
+S_AXI_CTRL_AWPROT == M_AXI_ARLOCK_wire
+S_AXI_CTRL_AWPROT == M_AXI_ARPROT_wire
+S_AXI_CTRL_AWPROT == M_AXI_ARQOS_wire
+S_AXI_CTRL_AWPROT == M_AXI_ARUSER_wire
+S_AXI_CTRL_AWPROT == M_AXI_RID_wire
+S_AXI_CTRL_AWPROT == M_AXI_RUSER_wire
+S_AXI_CTRL_AWPROT == B_STATE
+S_AXI_CTRL_AWPROT == AW_EN_RST
+S_AXI_CTRL_AWPROT == AR_EN_RST
+S_AXI_CTRL_AWPROT == r_misb_clk_cycle_wire
+S_AXI_CTRL_AWPROT == w_misb_clk_cycle_wire
+S_AXI_CTRL_BRESP == S_AXI_CTRL_BVALID
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RDATA
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RRESP
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RVALID
+S_AXI_CTRL_BRESP == M_AXI_AWID
+S_AXI_CTRL_BRESP == M_AXI_AWLOCK
+S_AXI_CTRL_BRESP == M_AXI_AWPROT
+S_AXI_CTRL_BRESP == M_AXI_AWQOS
+S_AXI_CTRL_BRESP == M_AXI_AWUSER
+S_AXI_CTRL_BRESP == M_AXI_AWVALID
+S_AXI_CTRL_BRESP == M_AXI_WDATA
+S_AXI_CTRL_BRESP == M_AXI_WLAST
+S_AXI_CTRL_BRESP == M_AXI_ARID
+S_AXI_CTRL_BRESP == M_AXI_ARLOCK
+S_AXI_CTRL_BRESP == M_AXI_ARPROT
+S_AXI_CTRL_BRESP == M_AXI_ARQOS
+S_AXI_CTRL_BRESP == M_AXI_ARUSER
+S_AXI_CTRL_BRESP == M_AXI_ARVALID
+S_AXI_CTRL_BRESP == axi_bresp
+S_AXI_CTRL_BRESP == axi_bvalid
+S_AXI_CTRL_BRESP == axi_araddr
+S_AXI_CTRL_BRESP == axi_rdata
+S_AXI_CTRL_BRESP == axi_rresp
+S_AXI_CTRL_BRESP == axi_rvalid
+S_AXI_CTRL_BRESP == reg02_r_anomaly
+S_AXI_CTRL_BRESP == reg07_r_config
+S_AXI_CTRL_BRESP == reg08_r_config
+S_AXI_CTRL_BRESP == reg09_r_config
+S_AXI_CTRL_BRESP == reg11_r_config
+S_AXI_CTRL_BRESP == reg12_r_config
+S_AXI_CTRL_BRESP == reg13_r_config
+S_AXI_CTRL_BRESP == reg14_r_config
+S_AXI_CTRL_BRESP == reg15_r_config
+S_AXI_CTRL_BRESP == reg16_r_config
+S_AXI_CTRL_BRESP == reg17_r_config
+S_AXI_CTRL_BRESP == reg18_r_config
+S_AXI_CTRL_BRESP == reg19_r_config
+S_AXI_CTRL_BRESP == reg20_r_config
+S_AXI_CTRL_BRESP == reg21_r_config
+S_AXI_CTRL_BRESP == reg23_w_config
+S_AXI_CTRL_BRESP == reg24_w_config
+S_AXI_CTRL_BRESP == reg26_w_config
+S_AXI_CTRL_BRESP == reg27_w_config
+S_AXI_CTRL_BRESP == reg28_w_config
+S_AXI_CTRL_BRESP == reg29_w_config
+S_AXI_CTRL_BRESP == reg30_w_config
+S_AXI_CTRL_BRESP == reg31_w_config
+S_AXI_CTRL_BRESP == reg32_w_config
+S_AXI_CTRL_BRESP == reg33_w_config
+S_AXI_CTRL_BRESP == reg34_w_config
+S_AXI_CTRL_BRESP == reg35_w_config
+S_AXI_CTRL_BRESP == reg36_w_config
+S_AXI_CTRL_BRESP == reg37_w_config
+S_AXI_CTRL_BRESP == M_AXI_AWVALID_wire
+S_AXI_CTRL_BRESP == M_AXI_WDATA_wire
+S_AXI_CTRL_BRESP == M_AXI_WLAST_wire
+S_AXI_CTRL_BRESP == M_AXI_RRESP_wire
+S_AXI_CTRL_BRESP == M_AXI_RLAST_wire
+S_AXI_CTRL_BRESP == M_AXI_RVALID_wire
+S_AXI_CTRL_BRESP == M_AXI_AWID_INT
+S_AXI_CTRL_BRESP == M_AXI_AWLOCK_INT
+S_AXI_CTRL_BRESP == M_AXI_AWPROT_INT
+S_AXI_CTRL_BRESP == M_AXI_AWQOS_INT
+S_AXI_CTRL_BRESP == M_AXI_AWUSER_INT
+S_AXI_CTRL_BRESP == M_AXI_ARID_INT
+S_AXI_CTRL_BRESP == M_AXI_ARLOCK_INT
+S_AXI_CTRL_BRESP == M_AXI_ARPROT_INT
+S_AXI_CTRL_BRESP == M_AXI_ARQOS_INT
+S_AXI_CTRL_BRESP == M_AXI_ARUSER_INT
+S_AXI_CTRL_BRESP == AW_ILL_DATA_TRANS_SRV_PTR
+S_AXI_CTRL_BRESP == AW_ILL_TRANS_SRV_PTR
+S_AXI_CTRL_BRESP == AW_STATE
+S_AXI_CTRL_BRESP == AR_STATE
+S_AXI_CTRL_BRESP == R_STATE
+S_AXI_CTRL_BRESP == AW_ILLEGAL_REQ
+S_AXI_CTRL_BRESP == AR_ILLEGAL_REQ
+S_AXI_CTRL_BRESP == reg0_config
+w_start_wire == M_AXI_WVALID_wire
+M_AXI_AWADDR == M_AXI_AWADDR_INT
+M_AXI_AWLEN == M_AXI_AWLEN_INT
+M_AXI_AWSIZE == M_AXI_AWSIZE_INT
+M_AXI_AWBURST == M_AXI_AWREADY_wire
+M_AXI_AWBURST == M_AXI_AWBURST_INT
+M_AXI_AWBURST == W_CH_EN
+M_AXI_AWBURST == AW_CH_EN
+M_AXI_AWBURST == AW_ADDR_VALID_FLAG
+M_AXI_AWCACHE == M_AXI_AWCACHE_INT
+M_AXI_ARADDR == M_AXI_ARADDR_INT
+M_AXI_ARLEN == M_AXI_ARLEN_INT
+M_AXI_ARSIZE == M_AXI_ARSIZE_INT
+M_AXI_ARBURST == M_AXI_ARREADY_wire
+M_AXI_ARBURST == M_AXI_ARBURST_INT
+M_AXI_ARBURST == AR_CH_EN
+M_AXI_ARBURST == AR_ADDR_VALID_FLAG
+M_AXI_ARCACHE == M_AXI_ARCACHE_INT
+M_AXI_RDATA == M_AXI_RDATA_wire
+M_AXI_RREADY == aw_en
+M_AXI_RREADY == M_AXI_RREADY_wire
+M_AXI_RREADY == AW_ILL_TRANS_FIL_PTR
+M_AXI_RREADY == W_DATA_TO_SERVE
+M_AXI_RREADY == W_B_TO_SERVE
+M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
+AR_ILL_TRANS_FIL_PTR == AR_ILL_TRANS_SRV_PTR
+r_max_outs_wire == w_max_outs_wire
+C_S_CTRL_AXI == 32
+C_S_CTRL_AXI_ADDR_WIDTH == 8
+LOG_MAX_OUTS_TRAN == 4
+MAX_OUTS_TRANS == 16
+C_LOG_BUS_SIZE_BYTE == 2
+C_M_AXI_ID_WIDTH == 1
+OPT_MEM_ADDR_BITS == 5
+ACLK one of { 0, 1 }
+INTR_LINE_R one of { -1, 0, 1 }
+INTR_LINE_W one of { -1, 0, 1 }
+S_AXI_CTRL_AWADDR one of { 0, 4 }
+S_AXI_CTRL_AWPROT == 0
+S_AXI_CTRL_WDATA one of { 0, 1, 4294967295L }
+S_AXI_CTRL_WSTRB one of { 0, 15 }
+S_AXI_CTRL_BRESP one of { -1, 0 }
+w_start_wire one of { 0, 1 }
+r_done_wire one of { 0, 1 }
+M_AXI_AWLEN one of { -1, 0, 8 }
+M_AXI_AWSIZE one of { -1, 0, 2 }
+M_AXI_AWBURST one of { -1, 0, 1 }
+M_AXI_AWCACHE one of { -1, 0, 3 }
+M_AXI_WSTRB one of { -1, 0, 15 }
+M_AXI_WVALID one of { 0, 1 }
+M_AXI_ARLEN one of { -1, 0, 8 }
+M_AXI_ARSIZE one of { -1, 0, 2 }
+M_AXI_ARBURST one of { -1, 0, 1 }
+M_AXI_ARCACHE one of { -1, 0, 3 }
+M_AXI_RDATA one of { 0, 3 }
+M_AXI_RREADY one of { -1, 1 }
+o_data one of { -1, 4294901760L }
+axi_awaddr one of { -1, 0, 4 }
+reg00_config one of { -1, 4294967295L }
+reg03_r_anomaly one of { -1, 0, 12582920 }
+reg04_w_anomaly one of { -1, 0, 1032973850 }
+reg05_w_anomaly one of { -1, 0, 12582920 }
+reg06_r_config one of { -1, 1073750016 }
+reg10_r_config one of { -1, 2684383232L }
+reg22_w_config one of { -1, 2952790016L }
+reg25_w_config one of { -1, 4026580992L }
+reg_data_out one of { 0, 4294967295L }
+byte_index one of { -1, 4 }
+M_AXI_AWCACHE_wire == 3
+M_AXI_WSTRB_wire == 15
+AR_ILL_TRANS_FIL_PTR one of { -1, 1, 4 }
+r_max_outs_wire == 6
+internal_data one of { -1, 65535 }
+w_base_addr_wire % C_LOG_BUS_SIZE_BYTE == 0
+ACLK % M_AXI_AWADDR_wire == 0
+ACLK % M_AXI_ARADDR_wire == 0
+ACLK % AR_ILL_TRANS_FIL_PTR == 0
+ACLK % AW_HIGH_ADDR == 0
+ACLK % AR_HIGH_ADDR == 0
+INTR_LINE_R % M_AXI_RREADY == 0
+INTR_LINE_R % AR_ILL_TRANS_FIL_PTR == 0
+INTR_LINE_W % M_AXI_RREADY == 0
+INTR_LINE_W % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_AWADDR % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_WDATA % M_AXI_RREADY == 0
+S_AXI_CTRL_BRESP % M_AXI_AWADDR_wire == 0
+S_AXI_CTRL_BRESP % M_AXI_ARADDR_wire == 0
+S_AXI_CTRL_BRESP % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_BRESP % AW_HIGH_ADDR == 0
+S_AXI_CTRL_BRESP % AR_HIGH_ADDR == 0
+r_base_addr_wire % M_AXI_RREADY == 0
+w_base_addr_wire % M_AXI_RREADY == 0
+w_base_addr_wire % M_AXI_AWADDR_wire == 0
+M_AXI_AWADDR % M_AXI_RREADY == 0
+M_AXI_AWADDR % M_AXI_AWADDR_wire == 0
+M_AXI_AWLEN % M_AXI_RREADY == 0
+M_AXI_AWLEN % byte_index == 0
+M_AXI_AWLEN % AR_ILL_TRANS_FIL_PTR == 0
+M_AXI_AWSIZE % M_AXI_RREADY == 0
+M_AXI_AWBURST % M_AXI_RREADY == 0
+M_AXI_AWCACHE % M_AXI_RREADY == 0
+M_AXI_WSTRB % M_AXI_RREADY == 0
+M_AXI_ARADDR % M_AXI_RREADY == 0
+M_AXI_ARADDR % M_AXI_ARADDR_wire == 0
+M_AXI_ARLEN % M_AXI_RREADY == 0
+M_AXI_ARLEN % byte_index == 0
+M_AXI_ARLEN % AR_ILL_TRANS_FIL_PTR == 0
+M_AXI_ARSIZE % M_AXI_RREADY == 0
+M_AXI_ARBURST % M_AXI_RREADY == 0
+M_AXI_ARCACHE % M_AXI_RREADY == 0
+axi_awaddr % M_AXI_RREADY == 0
+reg03_r_anomaly % M_AXI_RREADY == 0
+reg04_w_anomaly % M_AXI_RREADY == 0
+reg05_w_anomaly % M_AXI_RREADY == 0
+M_AXI_AWADDR_wire % M_AXI_RREADY == 0
+M_AXI_ARADDR_wire % M_AXI_RREADY == 0
+AR_ILL_TRANS_FIL_PTR % M_AXI_RREADY == 0
+AW_ADDR_VALID % M_AXI_RREADY == 0
+AR_ADDR_VALID % M_AXI_RREADY == 0
+AW_HIGH_ADDR % M_AXI_RREADY == 0
+AR_HIGH_ADDR % M_AXI_RREADY == 0
+o_data % AR_ILL_TRANS_FIL_PTR == 0
+axi_awaddr % byte_index == 0
+axi_awaddr % AR_ILL_TRANS_FIL_PTR == 0
+reg03_r_anomaly % byte_index == 0
+reg03_r_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg04_w_anomaly % M_AXI_AWADDR_wire == 0
+reg04_w_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg05_w_anomaly % byte_index == 0
+reg05_w_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg06_r_config % AR_ILL_TRANS_FIL_PTR == 0
+reg10_r_config % AR_ILL_TRANS_FIL_PTR == 0
+reg22_w_config % AR_ILL_TRANS_FIL_PTR == 0
+reg25_w_config % AR_ILL_TRANS_FIL_PTR == 0
+byte_index % AR_ILL_TRANS_FIL_PTR == 0
+ACLK - w_base_addr_wire + M_AXI_AWADDR_wire == 0
+S_AXI_CTRL_WSTRB + 15 * w_base_addr_wire - 15 * M_AXI_AWADDR_wire - 15 == 0
+S_AXI_CTRL_BRESP + w_base_addr_wire - M_AXI_AWADDR_wire == 0
+w_start_wire + w_base_addr_wire - M_AXI_AWADDR_wire - 1 == 0
+2 * w_base_addr_wire + M_AXI_RREADY - 2 * M_AXI_AWADDR_wire - 1 == 0
+1073750017 * w_base_addr_wire + reg06_r_config - 1073750017 * M_AXI_AWADDR_wire - 1073750016 == 0
+2.684383233E9 * w_base_addr_wire + reg10_r_config - 2.684383233E9 * M_AXI_AWADDR_wire - 2.684383232E9 == 0
+2.952790017E9 * w_base_addr_wire + reg22_w_config - 2.952790017E9 * M_AXI_AWADDR_wire - 2.952790016E9 == 0
+5 * w_base_addr_wire + byte_index - 5 * M_AXI_AWADDR_wire - 4 == 0
+65536 * w_base_addr_wire - 65536 * M_AXI_AWADDR_wire + internal_data - 65535 == 0
+===========================================================================
+..tick():::EXIT
+C_S_CTRL_AXI == C_M_AXI_ADDR_WIDTH
+C_S_CTRL_AXI == C_M_AXI_DATA_WIDTH
+C_S_CTRL_AXI == orig(C_S_CTRL_AXI)
+C_S_CTRL_AXI == orig(C_M_AXI_ADDR_WIDTH)
+C_S_CTRL_AXI == orig(C_M_AXI_DATA_WIDTH)
+C_S_CTRL_AXI_ADDR_WIDTH == r_burst_len_wire
+C_S_CTRL_AXI_ADDR_WIDTH == w_burst_len_wire
+C_S_CTRL_AXI_ADDR_WIDTH == M_AXI_AWLEN_wire
+C_S_CTRL_AXI_ADDR_WIDTH == M_AXI_ARLEN_wire
+C_S_CTRL_AXI_ADDR_WIDTH == orig(C_S_CTRL_AXI_ADDR_WIDTH)
+C_S_CTRL_AXI_ADDR_WIDTH == orig(r_burst_len_wire)
+C_S_CTRL_AXI_ADDR_WIDTH == orig(w_burst_len_wire)
+C_S_CTRL_AXI_ADDR_WIDTH == orig(M_AXI_AWLEN_wire)
+C_S_CTRL_AXI_ADDR_WIDTH == orig(M_AXI_ARLEN_wire)
+LOG_MAX_OUTS_TRAN == r_num_trans_wire
+LOG_MAX_OUTS_TRAN == w_num_trans_wire
+LOG_MAX_OUTS_TRAN == orig(LOG_MAX_OUTS_TRAN)
+LOG_MAX_OUTS_TRAN == orig(r_num_trans_wire)
+LOG_MAX_OUTS_TRAN == orig(w_num_trans_wire)
+MAX_OUTS_TRANS == C_M_AXI_BURST_LEN
+MAX_OUTS_TRANS == orig(MAX_OUTS_TRANS)
+MAX_OUTS_TRANS == orig(C_M_AXI_BURST_LEN)
+C_LOG_BUS_SIZE_BYTE == ADDR_LSB
+C_LOG_BUS_SIZE_BYTE == M_AXI_AWSIZE_wire
+C_LOG_BUS_SIZE_BYTE == M_AXI_ARSIZE_wire
+C_LOG_BUS_SIZE_BYTE == orig(C_LOG_BUS_SIZE_BYTE)
+C_LOG_BUS_SIZE_BYTE == orig(ADDR_LSB)
+C_LOG_BUS_SIZE_BYTE == orig(M_AXI_AWSIZE_wire)
+C_LOG_BUS_SIZE_BYTE == orig(M_AXI_ARSIZE_wire)
+C_M_AXI_ID_WIDTH == C_M_AXI_ARUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_AWUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_WUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_RUSER_WIDTH
+C_M_AXI_ID_WIDTH == C_M_AXI_BUSER_WIDTH
+C_M_AXI_ID_WIDTH == ARESETN
+C_M_AXI_ID_WIDTH == S_AXI_CTRL_BREADY
+C_M_AXI_ID_WIDTH == S_AXI_CTRL_RREADY
+C_M_AXI_ID_WIDTH == data_val_wire
+C_M_AXI_ID_WIDTH == M_AXI_AWREADY
+C_M_AXI_ID_WIDTH == M_AXI_WREADY
+C_M_AXI_ID_WIDTH == M_AXI_BREADY
+C_M_AXI_ID_WIDTH == M_AXI_ARREADY
+C_M_AXI_ID_WIDTH == M_AXI_AWBURST_wire
+C_M_AXI_ID_WIDTH == M_AXI_WREADY_wire
+C_M_AXI_ID_WIDTH == M_AXI_BREADY_wire
+C_M_AXI_ID_WIDTH == M_AXI_ARBURST_wire
+C_M_AXI_ID_WIDTH == r_displ_wire
+C_M_AXI_ID_WIDTH == w_displ_wire
+C_M_AXI_ID_WIDTH == r_phase_wire
+C_M_AXI_ID_WIDTH == w_phase_wire
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_ID_WIDTH)
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_ARUSER_WIDTH)
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_AWUSER_WIDTH)
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_WUSER_WIDTH)
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_RUSER_WIDTH)
+C_M_AXI_ID_WIDTH == orig(C_M_AXI_BUSER_WIDTH)
+C_M_AXI_ID_WIDTH == orig(ARESETN)
+C_M_AXI_ID_WIDTH == orig(S_AXI_CTRL_BREADY)
+C_M_AXI_ID_WIDTH == orig(S_AXI_CTRL_RREADY)
+C_M_AXI_ID_WIDTH == orig(data_val_wire)
+C_M_AXI_ID_WIDTH == orig(M_AXI_AWREADY)
+C_M_AXI_ID_WIDTH == orig(M_AXI_WREADY)
+C_M_AXI_ID_WIDTH == orig(M_AXI_BREADY)
+C_M_AXI_ID_WIDTH == orig(M_AXI_ARREADY)
+C_M_AXI_ID_WIDTH == orig(M_AXI_AWBURST_wire)
+C_M_AXI_ID_WIDTH == orig(M_AXI_WREADY_wire)
+C_M_AXI_ID_WIDTH == orig(M_AXI_BREADY_wire)
+C_M_AXI_ID_WIDTH == orig(M_AXI_ARBURST_wire)
+C_M_AXI_ID_WIDTH == orig(r_displ_wire)
+C_M_AXI_ID_WIDTH == orig(w_displ_wire)
+C_M_AXI_ID_WIDTH == orig(r_phase_wire)
+C_M_AXI_ID_WIDTH == orig(w_phase_wire)
+OPT_MEM_ADDR_BITS == orig(OPT_MEM_ADDR_BITS)
+ACLK == S_AXI_CTRL_AWPROT
+ACLK == S_AXI_CTRL_AWVALID
+ACLK == S_AXI_CTRL_AWREADY
+ACLK == S_AXI_CTRL_WVALID
+ACLK == S_AXI_CTRL_WREADY
+ACLK == S_AXI_CTRL_ARADDR
+ACLK == S_AXI_CTRL_ARPROT
+ACLK == S_AXI_CTRL_ARVALID
+ACLK == S_AXI_CTRL_ARREADY
+ACLK == r_start_wire
+ACLK == reset_wire
+ACLK == w_done_wire
+ACLK == M_AXI_WUSER
+ACLK == M_AXI_BID
+ACLK == M_AXI_BRESP
+ACLK == M_AXI_BUSER
+ACLK == M_AXI_BVALID
+ACLK == M_AXI_RID
+ACLK == M_AXI_RRESP
+ACLK == M_AXI_RLAST
+ACLK == M_AXI_RUSER
+ACLK == M_AXI_RVALID
+ACLK == i_config
+ACLK == axi_awready
+ACLK == axi_wready
+ACLK == axi_arready
+ACLK == reg01_config
+ACLK == regXX_rden
+ACLK == regXX_wren
+ACLK == M_AXI_AWID_wire
+ACLK == M_AXI_AWLOCK_wire
+ACLK == M_AXI_AWPROT_wire
+ACLK == M_AXI_AWQOS_wire
+ACLK == M_AXI_AWUSER_wire
+ACLK == M_AXI_WUSER_wire
+ACLK == M_AXI_BID_wire
+ACLK == M_AXI_BRESP_wire
+ACLK == M_AXI_BUSER_wire
+ACLK == M_AXI_BVALID_wire
+ACLK == M_AXI_ARID_wire
+ACLK == M_AXI_ARLOCK_wire
+ACLK == M_AXI_ARPROT_wire
+ACLK == M_AXI_ARQOS_wire
+ACLK == M_AXI_ARUSER_wire
+ACLK == M_AXI_RID_wire
+ACLK == M_AXI_RUSER_wire
+ACLK == B_STATE
+ACLK == AW_EN_RST
+ACLK == AR_EN_RST
+ACLK == r_misb_clk_cycle_wire
+ACLK == w_misb_clk_cycle_wire
+ACLK == orig(S_AXI_CTRL_AWPROT)
+ACLK == orig(S_AXI_CTRL_AWVALID)
+ACLK == orig(S_AXI_CTRL_AWREADY)
+ACLK == orig(S_AXI_CTRL_WVALID)
+ACLK == orig(S_AXI_CTRL_WREADY)
+ACLK == orig(S_AXI_CTRL_ARADDR)
+ACLK == orig(S_AXI_CTRL_ARPROT)
+ACLK == orig(S_AXI_CTRL_ARVALID)
+ACLK == orig(S_AXI_CTRL_ARREADY)
+ACLK == orig(r_start_wire)
+ACLK == orig(reset_wire)
+ACLK == orig(w_done_wire)
+ACLK == orig(M_AXI_WUSER)
+ACLK == orig(M_AXI_BID)
+ACLK == orig(M_AXI_BRESP)
+ACLK == orig(M_AXI_BUSER)
+ACLK == orig(M_AXI_BVALID)
+ACLK == orig(M_AXI_RID)
+ACLK == orig(M_AXI_RRESP)
+ACLK == orig(M_AXI_RLAST)
+ACLK == orig(M_AXI_RUSER)
+ACLK == orig(M_AXI_RVALID)
+ACLK == orig(i_config)
+ACLK == orig(axi_awready)
+ACLK == orig(axi_wready)
+ACLK == orig(axi_arready)
+ACLK == orig(reg01_config)
+ACLK == orig(regXX_rden)
+ACLK == orig(regXX_wren)
+ACLK == orig(M_AXI_AWID_wire)
+ACLK == orig(M_AXI_AWLOCK_wire)
+ACLK == orig(M_AXI_AWPROT_wire)
+ACLK == orig(M_AXI_AWQOS_wire)
+ACLK == orig(M_AXI_AWUSER_wire)
+ACLK == orig(M_AXI_WUSER_wire)
+ACLK == orig(M_AXI_BID_wire)
+ACLK == orig(M_AXI_BRESP_wire)
+ACLK == orig(M_AXI_BUSER_wire)
+ACLK == orig(M_AXI_BVALID_wire)
+ACLK == orig(M_AXI_ARID_wire)
+ACLK == orig(M_AXI_ARLOCK_wire)
+ACLK == orig(M_AXI_ARPROT_wire)
+ACLK == orig(M_AXI_ARQOS_wire)
+ACLK == orig(M_AXI_ARUSER_wire)
+ACLK == orig(M_AXI_RID_wire)
+ACLK == orig(M_AXI_RUSER_wire)
+ACLK == orig(B_STATE)
+ACLK == orig(AW_EN_RST)
+ACLK == orig(AR_EN_RST)
+ACLK == orig(r_misb_clk_cycle_wire)
+ACLK == orig(w_misb_clk_cycle_wire)
+INTR_LINE_R == M_AXI_ARVALID_wire
+INTR_LINE_R == AR_CH_DIS
+INTR_LINE_R == orig(INTR_LINE_R)
+INTR_LINE_R == orig(M_AXI_ARVALID_wire)
+INTR_LINE_R == orig(AR_CH_DIS)
+INTR_LINE_W == AW_CH_DIS
+INTR_LINE_W == orig(INTR_LINE_W)
+INTR_LINE_W == orig(AW_CH_DIS)
+S_AXI_CTRL_AWADDR == orig(S_AXI_CTRL_AWADDR)
+S_AXI_CTRL_WDATA == orig(S_AXI_CTRL_WDATA)
+S_AXI_CTRL_WSTRB == orig(S_AXI_CTRL_WSTRB)
+S_AXI_CTRL_BRESP == S_AXI_CTRL_BVALID
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RDATA
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RRESP
+S_AXI_CTRL_BRESP == S_AXI_CTRL_RVALID
+S_AXI_CTRL_BRESP == M_AXI_AWID
+S_AXI_CTRL_BRESP == M_AXI_AWLOCK
+S_AXI_CTRL_BRESP == M_AXI_AWPROT
+S_AXI_CTRL_BRESP == M_AXI_AWQOS
+S_AXI_CTRL_BRESP == M_AXI_AWUSER
+S_AXI_CTRL_BRESP == M_AXI_AWVALID
+S_AXI_CTRL_BRESP == M_AXI_WLAST
+S_AXI_CTRL_BRESP == M_AXI_ARID
+S_AXI_CTRL_BRESP == M_AXI_ARLOCK
+S_AXI_CTRL_BRESP == M_AXI_ARPROT
+S_AXI_CTRL_BRESP == M_AXI_ARQOS
+S_AXI_CTRL_BRESP == M_AXI_ARUSER
+S_AXI_CTRL_BRESP == M_AXI_ARVALID
+S_AXI_CTRL_BRESP == axi_bresp
+S_AXI_CTRL_BRESP == axi_bvalid
+S_AXI_CTRL_BRESP == axi_araddr
+S_AXI_CTRL_BRESP == axi_rdata
+S_AXI_CTRL_BRESP == axi_rresp
+S_AXI_CTRL_BRESP == axi_rvalid
+S_AXI_CTRL_BRESP == reg02_r_anomaly
+S_AXI_CTRL_BRESP == reg07_r_config
+S_AXI_CTRL_BRESP == reg08_r_config
+S_AXI_CTRL_BRESP == reg09_r_config
+S_AXI_CTRL_BRESP == reg11_r_config
+S_AXI_CTRL_BRESP == reg12_r_config
+S_AXI_CTRL_BRESP == reg13_r_config
+S_AXI_CTRL_BRESP == reg14_r_config
+S_AXI_CTRL_BRESP == reg15_r_config
+S_AXI_CTRL_BRESP == reg16_r_config
+S_AXI_CTRL_BRESP == reg17_r_config
+S_AXI_CTRL_BRESP == reg18_r_config
+S_AXI_CTRL_BRESP == reg19_r_config
+S_AXI_CTRL_BRESP == reg20_r_config
+S_AXI_CTRL_BRESP == reg21_r_config
+S_AXI_CTRL_BRESP == reg23_w_config
+S_AXI_CTRL_BRESP == reg24_w_config
+S_AXI_CTRL_BRESP == reg26_w_config
+S_AXI_CTRL_BRESP == reg27_w_config
+S_AXI_CTRL_BRESP == reg28_w_config
+S_AXI_CTRL_BRESP == reg29_w_config
+S_AXI_CTRL_BRESP == reg30_w_config
+S_AXI_CTRL_BRESP == reg31_w_config
+S_AXI_CTRL_BRESP == reg32_w_config
+S_AXI_CTRL_BRESP == reg33_w_config
+S_AXI_CTRL_BRESP == reg34_w_config
+S_AXI_CTRL_BRESP == reg35_w_config
+S_AXI_CTRL_BRESP == reg36_w_config
+S_AXI_CTRL_BRESP == reg37_w_config
+S_AXI_CTRL_BRESP == M_AXI_WLAST_wire
+S_AXI_CTRL_BRESP == M_AXI_RRESP_wire
+S_AXI_CTRL_BRESP == M_AXI_RLAST_wire
+S_AXI_CTRL_BRESP == M_AXI_RVALID_wire
+S_AXI_CTRL_BRESP == M_AXI_AWID_INT
+S_AXI_CTRL_BRESP == M_AXI_AWLOCK_INT
+S_AXI_CTRL_BRESP == M_AXI_AWPROT_INT
+S_AXI_CTRL_BRESP == M_AXI_AWQOS_INT
+S_AXI_CTRL_BRESP == M_AXI_AWUSER_INT
+S_AXI_CTRL_BRESP == M_AXI_ARID_INT
+S_AXI_CTRL_BRESP == M_AXI_ARLOCK_INT
+S_AXI_CTRL_BRESP == M_AXI_ARPROT_INT
+S_AXI_CTRL_BRESP == M_AXI_ARQOS_INT
+S_AXI_CTRL_BRESP == M_AXI_ARUSER_INT
+S_AXI_CTRL_BRESP == AW_ILL_DATA_TRANS_SRV_PTR
+S_AXI_CTRL_BRESP == AW_ILL_TRANS_SRV_PTR
+S_AXI_CTRL_BRESP == AW_STATE
+S_AXI_CTRL_BRESP == AR_STATE
+S_AXI_CTRL_BRESP == R_STATE
+S_AXI_CTRL_BRESP == AW_ILLEGAL_REQ
+S_AXI_CTRL_BRESP == AR_ILLEGAL_REQ
+S_AXI_CTRL_BRESP == reg0_config
+S_AXI_CTRL_BRESP == orig(S_AXI_CTRL_BRESP)
+S_AXI_CTRL_BRESP == orig(S_AXI_CTRL_BVALID)
+S_AXI_CTRL_BRESP == orig(S_AXI_CTRL_RDATA)
+S_AXI_CTRL_BRESP == orig(S_AXI_CTRL_RRESP)
+S_AXI_CTRL_BRESP == orig(S_AXI_CTRL_RVALID)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWID)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWLOCK)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWPROT)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWQOS)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWUSER)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWVALID)
+S_AXI_CTRL_BRESP == orig(M_AXI_WDATA)
+S_AXI_CTRL_BRESP == orig(M_AXI_WLAST)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARID)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARLOCK)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARPROT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARQOS)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARUSER)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARVALID)
+S_AXI_CTRL_BRESP == orig(axi_bresp)
+S_AXI_CTRL_BRESP == orig(axi_bvalid)
+S_AXI_CTRL_BRESP == orig(axi_araddr)
+S_AXI_CTRL_BRESP == orig(axi_rdata)
+S_AXI_CTRL_BRESP == orig(axi_rresp)
+S_AXI_CTRL_BRESP == orig(axi_rvalid)
+S_AXI_CTRL_BRESP == orig(reg02_r_anomaly)
+S_AXI_CTRL_BRESP == orig(reg07_r_config)
+S_AXI_CTRL_BRESP == orig(reg08_r_config)
+S_AXI_CTRL_BRESP == orig(reg09_r_config)
+S_AXI_CTRL_BRESP == orig(reg11_r_config)
+S_AXI_CTRL_BRESP == orig(reg12_r_config)
+S_AXI_CTRL_BRESP == orig(reg13_r_config)
+S_AXI_CTRL_BRESP == orig(reg14_r_config)
+S_AXI_CTRL_BRESP == orig(reg15_r_config)
+S_AXI_CTRL_BRESP == orig(reg16_r_config)
+S_AXI_CTRL_BRESP == orig(reg17_r_config)
+S_AXI_CTRL_BRESP == orig(reg18_r_config)
+S_AXI_CTRL_BRESP == orig(reg19_r_config)
+S_AXI_CTRL_BRESP == orig(reg20_r_config)
+S_AXI_CTRL_BRESP == orig(reg21_r_config)
+S_AXI_CTRL_BRESP == orig(reg23_w_config)
+S_AXI_CTRL_BRESP == orig(reg24_w_config)
+S_AXI_CTRL_BRESP == orig(reg26_w_config)
+S_AXI_CTRL_BRESP == orig(reg27_w_config)
+S_AXI_CTRL_BRESP == orig(reg28_w_config)
+S_AXI_CTRL_BRESP == orig(reg29_w_config)
+S_AXI_CTRL_BRESP == orig(reg30_w_config)
+S_AXI_CTRL_BRESP == orig(reg31_w_config)
+S_AXI_CTRL_BRESP == orig(reg32_w_config)
+S_AXI_CTRL_BRESP == orig(reg33_w_config)
+S_AXI_CTRL_BRESP == orig(reg34_w_config)
+S_AXI_CTRL_BRESP == orig(reg35_w_config)
+S_AXI_CTRL_BRESP == orig(reg36_w_config)
+S_AXI_CTRL_BRESP == orig(reg37_w_config)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWVALID_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_WDATA_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_WLAST_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_RRESP_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_RLAST_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_RVALID_wire)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWID_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWLOCK_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWPROT_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWQOS_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_AWUSER_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARID_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARLOCK_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARPROT_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARQOS_INT)
+S_AXI_CTRL_BRESP == orig(M_AXI_ARUSER_INT)
+S_AXI_CTRL_BRESP == orig(AW_ILL_DATA_TRANS_SRV_PTR)
+S_AXI_CTRL_BRESP == orig(AW_ILL_TRANS_SRV_PTR)
+S_AXI_CTRL_BRESP == orig(AW_STATE)
+S_AXI_CTRL_BRESP == orig(AR_STATE)
+S_AXI_CTRL_BRESP == orig(R_STATE)
+S_AXI_CTRL_BRESP == orig(AW_ILLEGAL_REQ)
+S_AXI_CTRL_BRESP == orig(AR_ILLEGAL_REQ)
+S_AXI_CTRL_BRESP == orig(reg0_config)
+w_start_wire == M_AXI_WVALID_wire
+w_start_wire == orig(w_start_wire)
+w_start_wire == orig(M_AXI_WVALID_wire)
+r_base_addr_wire == orig(r_base_addr_wire)
+w_base_addr_wire == orig(w_base_addr_wire)
+r_done_wire == orig(r_done_wire)
+M_AXI_AWADDR == M_AXI_AWADDR_INT
+M_AXI_AWADDR == orig(M_AXI_AWADDR)
+M_AXI_AWADDR == orig(M_AXI_AWADDR_INT)
+M_AXI_AWLEN == M_AXI_AWLEN_INT
+M_AXI_AWLEN == orig(M_AXI_AWLEN)
+M_AXI_AWLEN == orig(M_AXI_AWLEN_INT)
+M_AXI_AWSIZE == M_AXI_AWSIZE_INT
+M_AXI_AWSIZE == orig(M_AXI_AWSIZE)
+M_AXI_AWSIZE == orig(M_AXI_AWSIZE_INT)
+M_AXI_AWBURST == M_AXI_WDATA
+M_AXI_AWBURST == M_AXI_AWREADY_wire
+M_AXI_AWBURST == M_AXI_AWBURST_INT
+M_AXI_AWBURST == W_CH_EN
+M_AXI_AWBURST == AW_CH_EN
+M_AXI_AWBURST == AW_ADDR_VALID_FLAG
+M_AXI_AWBURST == orig(M_AXI_AWBURST)
+M_AXI_AWBURST == orig(M_AXI_AWREADY_wire)
+M_AXI_AWBURST == orig(M_AXI_AWBURST_INT)
+M_AXI_AWBURST == orig(W_CH_EN)
+M_AXI_AWBURST == orig(AW_CH_EN)
+M_AXI_AWBURST == orig(AW_ADDR_VALID_FLAG)
+M_AXI_AWCACHE == M_AXI_AWCACHE_INT
+M_AXI_AWCACHE == orig(M_AXI_AWCACHE)
+M_AXI_AWCACHE == orig(M_AXI_AWCACHE_INT)
+M_AXI_WSTRB == orig(M_AXI_WSTRB)
+M_AXI_WVALID == orig(M_AXI_WVALID)
+M_AXI_ARADDR == M_AXI_ARADDR_INT
+M_AXI_ARADDR == orig(M_AXI_ARADDR)
+M_AXI_ARADDR == orig(M_AXI_ARADDR_INT)
+M_AXI_ARLEN == M_AXI_ARLEN_INT
+M_AXI_ARLEN == orig(M_AXI_ARLEN)
+M_AXI_ARLEN == orig(M_AXI_ARLEN_INT)
+M_AXI_ARSIZE == M_AXI_ARSIZE_INT
+M_AXI_ARSIZE == orig(M_AXI_ARSIZE)
+M_AXI_ARSIZE == orig(M_AXI_ARSIZE_INT)
+M_AXI_ARBURST == M_AXI_ARREADY_wire
+M_AXI_ARBURST == M_AXI_ARBURST_INT
+M_AXI_ARBURST == AR_CH_EN
+M_AXI_ARBURST == AR_ADDR_VALID_FLAG
+M_AXI_ARBURST == orig(M_AXI_ARBURST)
+M_AXI_ARBURST == orig(M_AXI_ARREADY_wire)
+M_AXI_ARBURST == orig(M_AXI_ARBURST_INT)
+M_AXI_ARBURST == orig(AR_CH_EN)
+M_AXI_ARBURST == orig(AR_ADDR_VALID_FLAG)
+M_AXI_ARCACHE == M_AXI_ARCACHE_INT
+M_AXI_ARCACHE == orig(M_AXI_ARCACHE)
+M_AXI_ARCACHE == orig(M_AXI_ARCACHE_INT)
+M_AXI_RDATA == M_AXI_RDATA_wire
+M_AXI_RDATA == orig(M_AXI_RDATA)
+M_AXI_RDATA == orig(M_AXI_RDATA_wire)
+M_AXI_RREADY == aw_en
+M_AXI_RREADY == M_AXI_AWVALID_wire
+M_AXI_RREADY == M_AXI_WDATA_wire
+M_AXI_RREADY == M_AXI_RREADY_wire
+M_AXI_RREADY == AW_ILL_TRANS_FIL_PTR
+M_AXI_RREADY == W_DATA_TO_SERVE
+M_AXI_RREADY == W_B_TO_SERVE
+M_AXI_RREADY == orig(M_AXI_RREADY)
+M_AXI_RREADY == orig(aw_en)
+M_AXI_RREADY == orig(M_AXI_RREADY_wire)
+M_AXI_RREADY == orig(AW_ILL_TRANS_FIL_PTR)
+M_AXI_RREADY == orig(W_DATA_TO_SERVE)
+M_AXI_RREADY == orig(W_B_TO_SERVE)
+o_data == orig(o_data)
+axi_awaddr == orig(axi_awaddr)
+reg00_config == orig(reg00_config)
+reg03_r_anomaly == orig(reg03_r_anomaly)
+reg04_w_anomaly == orig(reg04_w_anomaly)
+reg05_w_anomaly == orig(reg05_w_anomaly)
+reg06_r_config == orig(reg06_r_config)
+reg10_r_config == orig(reg10_r_config)
+reg22_w_config == orig(reg22_w_config)
+reg25_w_config == orig(reg25_w_config)
+reg_data_out == orig(reg_data_out)
+byte_index == orig(byte_index)
+M_AXI_AWCACHE_wire == M_AXI_ARCACHE_wire
+M_AXI_AWCACHE_wire == orig(M_AXI_AWCACHE_wire)
+M_AXI_AWCACHE_wire == orig(M_AXI_ARCACHE_wire)
+M_AXI_WSTRB_wire == orig(M_AXI_WSTRB_wire)
+M_AXI_ARADDR_wire == orig(M_AXI_ARADDR_wire)
+AR_ILL_TRANS_FIL_PTR == AR_ILL_TRANS_SRV_PTR
+AR_ILL_TRANS_FIL_PTR == orig(AR_ILL_TRANS_FIL_PTR)
+AR_ILL_TRANS_FIL_PTR == orig(AR_ILL_TRANS_SRV_PTR)
+AW_ADDR_VALID == orig(AW_ADDR_VALID)
+AR_ADDR_VALID == orig(AR_ADDR_VALID)
+AR_HIGH_ADDR == orig(AR_HIGH_ADDR)
+r_max_outs_wire == w_max_outs_wire
+r_max_outs_wire == orig(r_max_outs_wire)
+r_max_outs_wire == orig(w_max_outs_wire)
+internal_data == orig(internal_data)
+C_S_CTRL_AXI == 32
+C_S_CTRL_AXI_ADDR_WIDTH == 8
+LOG_MAX_OUTS_TRAN == 4
+MAX_OUTS_TRANS == 16
+C_LOG_BUS_SIZE_BYTE == 2
+C_M_AXI_ID_WIDTH == 1
+OPT_MEM_ADDR_BITS == 5
+ACLK == 0
+INTR_LINE_R one of { -1, 0, 1 }
+INTR_LINE_W one of { -1, 0, 1 }
+S_AXI_CTRL_AWADDR one of { 0, 4 }
+S_AXI_CTRL_WDATA one of { 0, 1, 4294967295L }
+S_AXI_CTRL_WSTRB one of { 0, 15 }
+S_AXI_CTRL_BRESP one of { -1, 0 }
+w_start_wire one of { 0, 1 }
+r_done_wire one of { 0, 1 }
+M_AXI_AWLEN one of { -1, 0, 8 }
+M_AXI_AWSIZE one of { -1, 0, 2 }
+M_AXI_AWBURST one of { -1, 0, 1 }
+M_AXI_AWCACHE one of { -1, 0, 3 }
+M_AXI_WSTRB one of { -1, 0, 15 }
+M_AXI_WVALID one of { 0, 1 }
+M_AXI_ARLEN one of { -1, 0, 8 }
+M_AXI_ARSIZE one of { -1, 0, 2 }
+M_AXI_ARBURST one of { -1, 0, 1 }
+M_AXI_ARCACHE one of { -1, 0, 3 }
+M_AXI_RDATA one of { 0, 3 }
+M_AXI_RREADY one of { -1, 1 }
+o_data one of { -1, 4294901760L }
+axi_awaddr one of { -1, 0, 4 }
+reg00_config one of { -1, 4294967295L }
+reg03_r_anomaly one of { -1, 0, 12582920 }
+reg04_w_anomaly one of { -1, 0, 1032973850 }
+reg05_w_anomaly one of { -1, 0, 12582920 }
+reg06_r_config one of { -1, 1073750016 }
+reg10_r_config one of { -1, 2684383232L }
+reg22_w_config one of { -1, 2952790016L }
+reg25_w_config one of { -1, 4026580992L }
+reg_data_out one of { 0, 4294967295L }
+byte_index one of { -1, 4 }
+M_AXI_AWCACHE_wire == 3
+M_AXI_WSTRB_wire == 15
+AR_ILL_TRANS_FIL_PTR one of { -1, 1, 4 }
+r_max_outs_wire == 6
+internal_data one of { -1, 65535 }
+w_base_addr_wire % C_LOG_BUS_SIZE_BYTE == 0
+INTR_LINE_R % M_AXI_RREADY == 0
+INTR_LINE_R % AR_ILL_TRANS_FIL_PTR == 0
+INTR_LINE_W % M_AXI_RREADY == 0
+INTR_LINE_W % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_AWADDR % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_WDATA % M_AXI_RREADY == 0
+S_AXI_CTRL_BRESP % M_AXI_AWADDR_wire == 0
+S_AXI_CTRL_BRESP % M_AXI_ARADDR_wire == 0
+S_AXI_CTRL_BRESP % AR_ILL_TRANS_FIL_PTR == 0
+S_AXI_CTRL_BRESP % AW_HIGH_ADDR == 0
+S_AXI_CTRL_BRESP % AR_HIGH_ADDR == 0
+S_AXI_CTRL_BRESP % orig(M_AXI_AWADDR_wire) == 0
+S_AXI_CTRL_BRESP % orig(AW_HIGH_ADDR) == 0
+r_base_addr_wire % M_AXI_RREADY == 0
+w_base_addr_wire % M_AXI_RREADY == 0
+w_base_addr_wire % orig(M_AXI_AWADDR_wire) == 0
+M_AXI_AWADDR % M_AXI_RREADY == 0
+M_AXI_AWADDR % orig(M_AXI_AWADDR_wire) == 0
+M_AXI_AWLEN % M_AXI_RREADY == 0
+M_AXI_AWLEN % byte_index == 0
+M_AXI_AWLEN % AR_ILL_TRANS_FIL_PTR == 0
+M_AXI_AWSIZE % M_AXI_RREADY == 0
+M_AXI_AWBURST % M_AXI_RREADY == 0
+M_AXI_AWCACHE % M_AXI_RREADY == 0
+M_AXI_WSTRB % M_AXI_RREADY == 0
+M_AXI_ARADDR % M_AXI_RREADY == 0
+M_AXI_ARADDR % M_AXI_ARADDR_wire == 0
+M_AXI_ARLEN % M_AXI_RREADY == 0
+M_AXI_ARLEN % byte_index == 0
+M_AXI_ARLEN % AR_ILL_TRANS_FIL_PTR == 0
+M_AXI_ARSIZE % M_AXI_RREADY == 0
+M_AXI_ARBURST % M_AXI_RREADY == 0
+M_AXI_ARCACHE % M_AXI_RREADY == 0
+axi_awaddr % M_AXI_RREADY == 0
+reg03_r_anomaly % M_AXI_RREADY == 0
+reg04_w_anomaly % M_AXI_RREADY == 0
+reg05_w_anomaly % M_AXI_RREADY == 0
+M_AXI_AWADDR_wire % M_AXI_RREADY == 0
+M_AXI_ARADDR_wire % M_AXI_RREADY == 0
+AR_ILL_TRANS_FIL_PTR % M_AXI_RREADY == 0
+AW_ADDR_VALID % M_AXI_RREADY == 0
+AR_ADDR_VALID % M_AXI_RREADY == 0
+AW_HIGH_ADDR % M_AXI_RREADY == 0
+AR_HIGH_ADDR % M_AXI_RREADY == 0
+orig(M_AXI_AWADDR_wire) % M_AXI_RREADY == 0
+orig(AW_HIGH_ADDR) % M_AXI_RREADY == 0
+o_data % AR_ILL_TRANS_FIL_PTR == 0
+axi_awaddr % byte_index == 0
+axi_awaddr % AR_ILL_TRANS_FIL_PTR == 0
+reg03_r_anomaly % byte_index == 0
+reg03_r_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg04_w_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg04_w_anomaly % orig(M_AXI_AWADDR_wire) == 0
+reg05_w_anomaly % byte_index == 0
+reg05_w_anomaly % AR_ILL_TRANS_FIL_PTR == 0
+reg06_r_config % AR_ILL_TRANS_FIL_PTR == 0
+reg10_r_config % AR_ILL_TRANS_FIL_PTR == 0
+reg22_w_config % AR_ILL_TRANS_FIL_PTR == 0
+reg25_w_config % AR_ILL_TRANS_FIL_PTR == 0
+byte_index % AR_ILL_TRANS_FIL_PTR == 0
+orig(ACLK) % M_AXI_AWADDR_wire == 0
+orig(ACLK) % M_AXI_ARADDR_wire == 0
+orig(ACLK) % AR_ILL_TRANS_FIL_PTR == 0
+orig(ACLK) % AW_HIGH_ADDR == 0
+orig(ACLK) % AR_HIGH_ADDR == 0
+37 * S_AXI_CTRL_WSTRB + 15 * w_base_addr_wire - 15 * M_AXI_AWADDR_wire - 15 == 0
+S_AXI_CTRL_WSTRB + 15 * w_base_addr_wire - 15 * orig(M_AXI_AWADDR_wire) - 15 == 0
+12 * S_AXI_CTRL_WSTRB - 5 * M_AXI_AWADDR_wire + 5 * orig(M_AXI_AWADDR_wire) == 0
+12 * S_AXI_CTRL_WSTRB - 5 * AW_HIGH_ADDR + 5 * orig(AW_HIGH_ADDR) == 0
+37 * S_AXI_CTRL_BRESP + w_base_addr_wire - M_AXI_AWADDR_wire + 36 == 0
+S_AXI_CTRL_BRESP + w_base_addr_wire - orig(M_AXI_AWADDR_wire) == 0
+36 * S_AXI_CTRL_BRESP - M_AXI_AWADDR_wire + orig(M_AXI_AWADDR_wire) + 36 == 0
+36 * S_AXI_CTRL_BRESP - AW_HIGH_ADDR + orig(AW_HIGH_ADDR) + 36 == 0
+37 * w_start_wire + w_base_addr_wire - M_AXI_AWADDR_wire - 1 == 0
+w_start_wire + w_base_addr_wire - orig(M_AXI_AWADDR_wire) - 1 == 0
+36 * w_start_wire - M_AXI_AWADDR_wire + orig(M_AXI_AWADDR_wire) == 0
+36 * w_start_wire - AW_HIGH_ADDR + orig(AW_HIGH_ADDR) == 0
+2 * w_base_addr_wire + 37 * M_AXI_RREADY - 2 * M_AXI_AWADDR_wire + 35 == 0
+2 * w_base_addr_wire + M_AXI_RREADY - 2 * orig(M_AXI_AWADDR_wire) - 1 == 0
+1073750017 * w_base_addr_wire + 37 * reg06_r_config - 1073750017 * M_AXI_AWADDR_wire - 1073749980 == 0
+1073750017 * w_base_addr_wire + reg06_r_config - 1073750017 * orig(M_AXI_AWADDR_wire) - 1073750016 == 0
+2.684383233E9 * w_base_addr_wire + 37 * reg10_r_config - 2.684383233E9 * M_AXI_AWADDR_wire - 2.684383196E9 == 0
+2.684383233E9 * w_base_addr_wire + reg10_r_config - 2.684383233E9 * orig(M_AXI_AWADDR_wire) - 2.684383232E9 == 0
+2.952790017E9 * w_base_addr_wire + 37 * reg22_w_config - 2.952790017E9 * M_AXI_AWADDR_wire - 2.95278998E9 == 0
+2.952790017E9 * w_base_addr_wire + reg22_w_config - 2.952790017E9 * orig(M_AXI_AWADDR_wire) - 2.952790016E9 == 0
+5 * w_base_addr_wire + 37 * byte_index - 5 * M_AXI_AWADDR_wire + 32 == 0
+5 * w_base_addr_wire + byte_index - 5 * orig(M_AXI_AWADDR_wire) - 4 == 0
+65536 * w_base_addr_wire - 65536 * M_AXI_AWADDR_wire + 37 * internal_data - 65499 == 0
+w_base_addr_wire - M_AXI_AWADDR_wire - 37 * orig(ACLK) + 36 == 0
+65536 * w_base_addr_wire + internal_data - 65536 * orig(M_AXI_AWADDR_wire) - 65535 == 0
+w_base_addr_wire - orig(ACLK) - orig(M_AXI_AWADDR_wire) == 0
+18 * M_AXI_RREADY - M_AXI_AWADDR_wire + orig(M_AXI_AWADDR_wire) + 18 == 0
+18 * M_AXI_RREADY - AW_HIGH_ADDR + orig(AW_HIGH_ADDR) + 18 == 0
+36 * o_data - 4.294901761E9 * AW_HIGH_ADDR + 4.294901761E9 * orig(AW_HIGH_ADDR) + 36 == 0
+9 * reg00_config - 1073741824 * AW_HIGH_ADDR + 1073741824 * orig(AW_HIGH_ADDR) + 9 == 0
+36 * reg06_r_config - 1073750017 * AW_HIGH_ADDR + 1073750017 * orig(AW_HIGH_ADDR) + 36 == 0
+12 * reg10_r_config - 894794411 * AW_HIGH_ADDR + 894794411 * orig(AW_HIGH_ADDR) + 12 == 0
+12 * reg22_w_config - 984263339 * AW_HIGH_ADDR + 984263339 * orig(AW_HIGH_ADDR) + 12 == 0
+36 * reg25_w_config - 4.026580993E9 * AW_HIGH_ADDR + 4.026580993E9 * orig(AW_HIGH_ADDR) + 36 == 0
+12 * reg_data_out - 1431655765 * AW_HIGH_ADDR + 1431655765 * orig(AW_HIGH_ADDR) == 0
+36 * byte_index - 5 * M_AXI_AWADDR_wire + 5 * orig(M_AXI_AWADDR_wire) + 36 == 0
+36 * byte_index - 5 * AW_HIGH_ADDR + 5 * orig(AW_HIGH_ADDR) + 36 == 0
+16384 * M_AXI_AWADDR_wire - 9 * internal_data - 16384 * orig(M_AXI_AWADDR_wire) - 9 == 0
+M_AXI_AWADDR_wire + 36 * orig(ACLK) - orig(M_AXI_AWADDR_wire) - 36 == 0
+16384 * AW_HIGH_ADDR - 9 * internal_data - 16384 * orig(AW_HIGH_ADDR) - 9 == 0
+AW_HIGH_ADDR + 36 * orig(ACLK) - orig(AW_HIGH_ADDR) - 36 == 0
+Exiting Daikon.
