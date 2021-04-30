@@ -2,11 +2,10 @@ from os import system
 
 regs = ['acw2.AR_CH_DIS', 'acw2.AR_ILLEGAL_REQ', 'acw2.AR_ILL_TRANS_FIL_PTR', 'acw2.AR_ILL_TRANS_SRV_PTR', 'acw2.AR_STATE', 'acw2.AW_CH_DIS', 'acw2.AW_ILLEGAL_REQ', 'acw2.AW_ILL_DATA_TRANS_SRV_PTR', 'acw2.AW_ILL_TRANS_FIL_PTR', 'acw2.AW_ILL_TRANS_SRV_PTR', 'acw2.AW_STATE', 'acw2.B_STATE', 'acw2.M_AXI_ARADDR_INT', 'acw2.M_AXI_ARBURST_INT', 'acw2.M_AXI_ARCACHE_INT', 'acw2.M_AXI_ARID_INT', 'acw2.M_AXI_ARLEN_INT', 'acw2.M_AXI_ARLOCK_INT', 'acw2.M_AXI_ARPROT_INT', 'acw2.M_AXI_ARQOS_INT', 'acw2.M_AXI_ARSIZE_INT', 'acw2.M_AXI_ARUSER_INT', 'acw2.M_AXI_AWADDR_INT', 'acw2.M_AXI_AWBURST_INT', 'acw2.M_AXI_AWCACHE_INT', 'acw2.M_AXI_AWID_INT', 'acw2.M_AXI_AWLEN_INT', 'acw2.M_AXI_AWLOCK_INT', 'acw2.M_AXI_AWPROT_INT', 'acw2.M_AXI_AWQOS_INT', 'acw2.M_AXI_AWSIZE_INT', 'acw2.M_AXI_AWUSER_INT', 'acw2.R_STATE', 'acw2.aw_en', 'acw2.axi_araddr', 'acw2.axi_arready', 'acw2.axi_awaddr', 'acw2.axi_awready', 'acw2.axi_bresp', 'acw2.axi_bvalid', 'acw2.axi_rdata', 'acw2.axi_rresp', 'acw2.axi_rvalid', 'acw2.axi_wready', 'acw2.internal_data', 'acw2.reg00_config', 'acw2.reg01_config', 'acw2.reg02_r_anomaly', 'acw2.reg03_r_anomaly', 'acw2.reg04_w_anomaly', 'acw2.reg05_w_anomaly', 'acw2.reg06_r_config', 'acw2.reg07_r_config', 'acw2.reg08_r_config', 'acw2.reg09_r_config', 'acw2.reg0_config', 'acw2.reg10_r_config', 'acw2.reg11_r_config', 'acw2.reg12_r_config', 'acw2.reg13_r_config', 'acw2.reg14_r_config', 'acw2.reg15_r_config', 'acw2.reg16_r_config', 'acw2.reg17_r_config', 'acw2.reg18_r_config', 'acw2.reg19_r_config', 'acw2.reg20_r_config', 'acw2.reg21_r_config', 'acw2.reg22_w_config', 'acw2.reg23_w_config', 'acw2.reg24_w_config', 'acw2.reg25_w_config', 'acw2.reg26_w_config', 'acw2.reg27_w_config', 'acw2.reg28_w_config', 'acw2.reg29_w_config', 'acw2.reg30_w_config', 'acw2.reg31_w_config', 'acw2.reg32_w_config', 'acw2.reg33_w_config', 'acw2.reg34_w_config', 'acw2.reg35_w_config', 'acw2.reg36_w_config', 'acw2.reg37_w_config', 'acw2.reg_data_out']
 
-indent = "    "
 out_file = open("do_all.txt","w")
-out_file.write("newgrp hyperflogen\ncd /data/cd\nsource setup_radixs\ntouch start_time.txt\ncd iterative_build\n") # setup
+out_file.write("newgrp hyperflogen\ncd /data/cd\nsource setup_radixs\ntouch start_time.txt\ncd confused_deputy\n") # setup
 for reg in regs:
 	out_file.write("cp " + reg + ".as iACW_sps.as\n") # set new source
 	out_file.write("./clean.sh\nradixs_shell -s iACW_explore.script\n./run_questa_explore\n") # run tortuga
-	out_file.write("cd /data/cd\ncp iterative_build/iACW.vcd .\npython refine_vcd.py\nmv r_iACW.vcd " + reg + ".vcd\ncd iterative_build\n")
-out_file.write("cd data/cd\nrm *ACW.vcd\ntouch end_time.txt\nls -al")	
+	out_file.write("cd /data/cd\nmv confused_deputy/iACW.vcd no_r_" + reg + ".vcd\ncd confused_deputy\n")
+out_file.write("cd data/cd\nrm *ACW.vcd\ntouch end_time.txt\nls -al")

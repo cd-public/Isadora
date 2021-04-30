@@ -3,770 +3,600 @@ cd /data/cd
 source setup_radixs
 touch start_time.txt
 cd confused_deputy
-cp acw2.AR_CH_DIS.as iACW_sps.as
+cp acw1.AR_CH_DIS.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AR_CH_DIS.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AR_CH_DIS.vcd
 cd confused_deputy
-cp acw2.AR_ILLEGAL_REQ.as iACW_sps.as
+cp acw1.AR_ILLEGAL_REQ.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AR_ILLEGAL_REQ.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AR_ILLEGAL_REQ.vcd
 cd confused_deputy
-cp acw2.AR_ILL_TRANS_FIL_PTR.as iACW_sps.as
+cp acw1.AR_ILL_TRANS_FIL_PTR.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AR_ILL_TRANS_FIL_PTR.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AR_ILL_TRANS_FIL_PTR.vcd
 cd confused_deputy
-cp acw2.AR_ILL_TRANS_SRV_PTR.as iACW_sps.as
+cp acw1.AR_ILL_TRANS_SRV_PTR.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AR_ILL_TRANS_SRV_PTR.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AR_ILL_TRANS_SRV_PTR.vcd
 cd confused_deputy
-cp acw2.AR_STATE.as iACW_sps.as
+cp acw1.AR_STATE.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AR_STATE.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AR_STATE.vcd
 cd confused_deputy
-cp acw2.AW_CH_DIS.as iACW_sps.as
+cp acw1.AW_CH_DIS.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_CH_DIS.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_CH_DIS.vcd
 cd confused_deputy
-cp acw2.AW_ILLEGAL_REQ.as iACW_sps.as
+cp acw1.AW_ILLEGAL_REQ.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_ILLEGAL_REQ.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_ILLEGAL_REQ.vcd
 cd confused_deputy
-cp acw2.AW_ILL_DATA_TRANS_SRV_PTR.as iACW_sps.as
+cp acw1.AW_ILL_DATA_TRANS_SRV_PTR.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_ILL_DATA_TRANS_SRV_PTR.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_ILL_DATA_TRANS_SRV_PTR.vcd
 cd confused_deputy
-cp acw2.AW_ILL_TRANS_FIL_PTR.as iACW_sps.as
+cp acw1.AW_ILL_TRANS_FIL_PTR.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_ILL_TRANS_FIL_PTR.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_ILL_TRANS_FIL_PTR.vcd
 cd confused_deputy
-cp acw2.AW_ILL_TRANS_SRV_PTR.as iACW_sps.as
+cp acw1.AW_ILL_TRANS_SRV_PTR.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_ILL_TRANS_SRV_PTR.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_ILL_TRANS_SRV_PTR.vcd
 cd confused_deputy
-cp acw2.AW_STATE.as iACW_sps.as
+cp acw1.AW_STATE.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.AW_STATE.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.AW_STATE.vcd
 cd confused_deputy
-cp acw2.B_STATE.as iACW_sps.as
+cp acw1.B_STATE.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.B_STATE.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.B_STATE.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARADDR_INT.as iACW_sps.as
+cp acw1.M_AXI_ARADDR_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARADDR_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARADDR_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARBURST_INT.as iACW_sps.as
+cp acw1.M_AXI_ARBURST_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARBURST_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARBURST_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARCACHE_INT.as iACW_sps.as
+cp acw1.M_AXI_ARCACHE_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARCACHE_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARCACHE_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARID_INT.as iACW_sps.as
+cp acw1.M_AXI_ARID_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARID_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARID_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARLEN_INT.as iACW_sps.as
+cp acw1.M_AXI_ARLEN_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARLEN_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARLEN_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARLOCK_INT.as iACW_sps.as
+cp acw1.M_AXI_ARLOCK_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARLOCK_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARLOCK_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARPROT_INT.as iACW_sps.as
+cp acw1.M_AXI_ARPROT_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARPROT_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARPROT_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARQOS_INT.as iACW_sps.as
+cp acw1.M_AXI_ARQOS_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARQOS_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARQOS_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARSIZE_INT.as iACW_sps.as
+cp acw1.M_AXI_ARSIZE_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARSIZE_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARSIZE_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_ARUSER_INT.as iACW_sps.as
+cp acw1.M_AXI_ARUSER_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_ARUSER_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_ARUSER_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWADDR_INT.as iACW_sps.as
+cp acw1.M_AXI_AWADDR_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWADDR_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWADDR_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWBURST_INT.as iACW_sps.as
+cp acw1.M_AXI_AWBURST_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWBURST_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWBURST_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWCACHE_INT.as iACW_sps.as
+cp acw1.M_AXI_AWCACHE_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWCACHE_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWCACHE_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWID_INT.as iACW_sps.as
+cp acw1.M_AXI_AWID_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWID_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWID_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWLEN_INT.as iACW_sps.as
+cp acw1.M_AXI_AWLEN_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWLEN_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWLEN_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWLOCK_INT.as iACW_sps.as
+cp acw1.M_AXI_AWLOCK_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWLOCK_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWLOCK_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWPROT_INT.as iACW_sps.as
+cp acw1.M_AXI_AWPROT_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWPROT_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWPROT_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWQOS_INT.as iACW_sps.as
+cp acw1.M_AXI_AWQOS_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWQOS_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWQOS_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWSIZE_INT.as iACW_sps.as
+cp acw1.M_AXI_AWSIZE_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWSIZE_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWSIZE_INT.vcd
 cd confused_deputy
-cp acw2.M_AXI_AWUSER_INT.as iACW_sps.as
+cp acw1.M_AXI_AWUSER_INT.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.M_AXI_AWUSER_INT.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.M_AXI_AWUSER_INT.vcd
 cd confused_deputy
-cp acw2.R_STATE.as iACW_sps.as
+cp acw1.R_STATE.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.R_STATE.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.R_STATE.vcd
 cd confused_deputy
-cp acw2.aw_en.as iACW_sps.as
+cp acw1.aw_en.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.aw_en.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.aw_en.vcd
 cd confused_deputy
-cp acw2.axi_araddr.as iACW_sps.as
+cp acw1.axi_araddr.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_araddr.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_araddr.vcd
 cd confused_deputy
-cp acw2.axi_arready.as iACW_sps.as
+cp acw1.axi_arready.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_arready.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_arready.vcd
 cd confused_deputy
-cp acw2.axi_awaddr.as iACW_sps.as
+cp acw1.axi_awaddr.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_awaddr.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_awaddr.vcd
 cd confused_deputy
-cp acw2.axi_awready.as iACW_sps.as
+cp acw1.axi_awready.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_awready.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_awready.vcd
 cd confused_deputy
-cp acw2.axi_bresp.as iACW_sps.as
+cp acw1.axi_bresp.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_bresp.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_bresp.vcd
 cd confused_deputy
-cp acw2.axi_bvalid.as iACW_sps.as
+cp acw1.axi_bvalid.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_bvalid.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_bvalid.vcd
 cd confused_deputy
-cp acw2.axi_rdata.as iACW_sps.as
+cp acw1.axi_rdata.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_rdata.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_rdata.vcd
 cd confused_deputy
-cp acw2.axi_rresp.as iACW_sps.as
+cp acw1.axi_rresp.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_rresp.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_rresp.vcd
 cd confused_deputy
-cp acw2.axi_rvalid.as iACW_sps.as
+cp acw1.axi_rvalid.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_rvalid.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_rvalid.vcd
 cd confused_deputy
-cp acw2.axi_wready.as iACW_sps.as
+cp acw1.axi_wready.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.axi_wready.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.axi_wready.vcd
 cd confused_deputy
-cp acw2.internal_data.as iACW_sps.as
+cp acw1.internal_data.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.internal_data.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.internal_data.vcd
 cd confused_deputy
-cp acw2.reg00_config.as iACW_sps.as
+cp acw1.reg00_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg00_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg00_config.vcd
 cd confused_deputy
-cp acw2.reg01_config.as iACW_sps.as
+cp acw1.reg01_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg01_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg01_config.vcd
 cd confused_deputy
-cp acw2.reg02_r_anomaly.as iACW_sps.as
+cp acw1.reg02_r_anomaly.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg02_r_anomaly.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg02_r_anomaly.vcd
 cd confused_deputy
-cp acw2.reg03_r_anomaly.as iACW_sps.as
+cp acw1.reg03_r_anomaly.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg03_r_anomaly.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg03_r_anomaly.vcd
 cd confused_deputy
-cp acw2.reg04_w_anomaly.as iACW_sps.as
+cp acw1.reg04_w_anomaly.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg04_w_anomaly.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg04_w_anomaly.vcd
 cd confused_deputy
-cp acw2.reg05_w_anomaly.as iACW_sps.as
+cp acw1.reg05_w_anomaly.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg05_w_anomaly.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg05_w_anomaly.vcd
 cd confused_deputy
-cp acw2.reg06_r_config.as iACW_sps.as
+cp acw1.reg06_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg06_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg06_r_config.vcd
 cd confused_deputy
-cp acw2.reg07_r_config.as iACW_sps.as
+cp acw1.reg07_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg07_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg07_r_config.vcd
 cd confused_deputy
-cp acw2.reg08_r_config.as iACW_sps.as
+cp acw1.reg08_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg08_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg08_r_config.vcd
 cd confused_deputy
-cp acw2.reg09_r_config.as iACW_sps.as
+cp acw1.reg09_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg09_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg09_r_config.vcd
 cd confused_deputy
-cp acw2.reg0_config.as iACW_sps.as
+cp acw1.reg0_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg0_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg0_config.vcd
 cd confused_deputy
-cp acw2.reg10_r_config.as iACW_sps.as
+cp acw1.reg10_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg10_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg10_r_config.vcd
 cd confused_deputy
-cp acw2.reg11_r_config.as iACW_sps.as
+cp acw1.reg11_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg11_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg11_r_config.vcd
 cd confused_deputy
-cp acw2.reg12_r_config.as iACW_sps.as
+cp acw1.reg12_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg12_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg12_r_config.vcd
 cd confused_deputy
-cp acw2.reg13_r_config.as iACW_sps.as
+cp acw1.reg13_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg13_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg13_r_config.vcd
 cd confused_deputy
-cp acw2.reg14_r_config.as iACW_sps.as
+cp acw1.reg14_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg14_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg14_r_config.vcd
 cd confused_deputy
-cp acw2.reg15_r_config.as iACW_sps.as
+cp acw1.reg15_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg15_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg15_r_config.vcd
 cd confused_deputy
-cp acw2.reg16_r_config.as iACW_sps.as
+cp acw1.reg16_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg16_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg16_r_config.vcd
 cd confused_deputy
-cp acw2.reg17_r_config.as iACW_sps.as
+cp acw1.reg17_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg17_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg17_r_config.vcd
 cd confused_deputy
-cp acw2.reg18_r_config.as iACW_sps.as
+cp acw1.reg18_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg18_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg18_r_config.vcd
 cd confused_deputy
-cp acw2.reg19_r_config.as iACW_sps.as
+cp acw1.reg19_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg19_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg19_r_config.vcd
 cd confused_deputy
-cp acw2.reg20_r_config.as iACW_sps.as
+cp acw1.reg20_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg20_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg20_r_config.vcd
 cd confused_deputy
-cp acw2.reg21_r_config.as iACW_sps.as
+cp acw1.reg21_r_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg21_r_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg21_r_config.vcd
 cd confused_deputy
-cp acw2.reg22_w_config.as iACW_sps.as
+cp acw1.reg22_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg22_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg22_w_config.vcd
 cd confused_deputy
-cp acw2.reg23_w_config.as iACW_sps.as
+cp acw1.reg23_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg23_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg23_w_config.vcd
 cd confused_deputy
-cp acw2.reg24_w_config.as iACW_sps.as
+cp acw1.reg24_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg24_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg24_w_config.vcd
 cd confused_deputy
-cp acw2.reg25_w_config.as iACW_sps.as
+cp acw1.reg25_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg25_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg25_w_config.vcd
 cd confused_deputy
-cp acw2.reg26_w_config.as iACW_sps.as
+cp acw1.reg26_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg26_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg26_w_config.vcd
 cd confused_deputy
-cp acw2.reg27_w_config.as iACW_sps.as
+cp acw1.reg27_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg27_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg27_w_config.vcd
 cd confused_deputy
-cp acw2.reg28_w_config.as iACW_sps.as
+cp acw1.reg28_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg28_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg28_w_config.vcd
 cd confused_deputy
-cp acw2.reg29_w_config.as iACW_sps.as
+cp acw1.reg29_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg29_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg29_w_config.vcd
 cd confused_deputy
-cp acw2.reg30_w_config.as iACW_sps.as
+cp acw1.reg30_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg30_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg30_w_config.vcd
 cd confused_deputy
-cp acw2.reg31_w_config.as iACW_sps.as
+cp acw1.reg31_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg31_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg31_w_config.vcd
 cd confused_deputy
-cp acw2.reg32_w_config.as iACW_sps.as
+cp acw1.reg32_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg32_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg32_w_config.vcd
 cd confused_deputy
-cp acw2.reg33_w_config.as iACW_sps.as
+cp acw1.reg33_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg33_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg33_w_config.vcd
 cd confused_deputy
-cp acw2.reg34_w_config.as iACW_sps.as
+cp acw1.reg34_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg34_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg34_w_config.vcd
 cd confused_deputy
-cp acw2.reg35_w_config.as iACW_sps.as
+cp acw1.reg35_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg35_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg35_w_config.vcd
 cd confused_deputy
-cp acw2.reg36_w_config.as iACW_sps.as
+cp acw1.reg36_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg36_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg36_w_config.vcd
 cd confused_deputy
-cp acw2.reg37_w_config.as iACW_sps.as
+cp acw1.reg37_w_config.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg37_w_config.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg37_w_config.vcd
 cd confused_deputy
-cp acw2.reg_data_out.as iACW_sps.as
+cp acw1.reg_data_out.as iACW_sps.as
 ./clean.sh
 radixs_shell -s iACW_explore.script
 ./run_questa_explore
 cd /data/cd
-cp confused_deputy/iACW.vcd .
-python refine_2.py
-mv r_iACW.vcd acw2.reg_data_out.vcd
+mv confused_deputy/iACW.vcd no_r_acw1.reg_data_out.vcd
 cd confused_deputy
 cd data/cd
 rm *ACW.vcd
