@@ -22,7 +22,6 @@ def refine(name):
 ## step 0: copy header
 
 		if step0:
-   
 			if "scope" in line:
 				step0 = False
 				step1 = True
@@ -35,7 +34,7 @@ def refine(name):
 
 		if step1:
 			
-			if "module " in line and "module u0" not in line and active:
+			if "module myHWtask" in line:
 				step1 = False
 				step2 = True
 				active = False
@@ -66,12 +65,11 @@ def refine(name):
 				if "module shadow_dut" in line:
 					active = True
 				else:
-					module_name = line.split()[2]
 					active = False
 			elif active:
 				for reg in orig_design_regs:
 					if "shadow_" + reg + " " in line:
-						vcd_out.write(line.replace("shadow","shadow_" + module_name)
+						vcd_out.write(line)
 						refined_vars = refined_vars + [line.split()[3]]
 
 # step 3:

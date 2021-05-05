@@ -349,10 +349,80 @@ def conds_to_dcall(conds):
 	os.chdir(os.getcwd().replace("outs/dfiles", "utils"))
 	return
 
+# END NEW CODE
+
+# BEGIN OLD EXAMINE
+
+def add_to_eq(eqs, in_splits):
+	splits = [ele.strip() for ele in in_splits]
+	for eq in eqs:
+		if splits[0] in eq:
+			eq.append(splits[1])
+			return eqs
+	# new set case
+	eqs.append(splits)
+	return eqs
+
+def dout_to_zs(case):
+	# get file pts
+	cd_orig = os.getcwd()
+	# --- ENTER EDGES DIR --- #
+	os.chdir(os.getcwd().replace("utils","outs/edges"))
+	dout = open(case + ".txt","r")
+	# --- ENTER ZS DIR --- #
+	os.chdir(os.getcwd().replace("edges","zs"))
+	zout = open(case + ".zs.txt","w")
+	# --- RETURN TO DIR --- #
+	os.chdir(cd_orig)
+	# get to relevant dout region
+	for line in dout:
+		if "..tick():::EXIT" in line:
+			break
+	# find equalities
+	# LIST of LISTS of REG_NAMES(str)
+	eqs = []
+	for line in dout:
+		if " == " in line and "%" not in line and "orig" not in line:
+			eqs = add_to_eq(eqs, line.split(" == "))
+	dout.close()
+	# eqs to zs
+	nzs = []
+	zs = []
+	for eq in eqs:
+		eq.sort()
+		if eq[0].strip().isdigit(): # reasonably confident digits always sort first
+			# either zs, nzs. uninits dont pass isdigit
+			if eq[0].strip() == '0':
+				zs = eq[1:]
+			else:
+				nzs = nzs + eq[1:]
+	
+	zout.write("0 == _r_ in {" + str(zs).replace("[","").replace("]","").replace("\'","") + "}\n")
+	nzs.sort()
+	zout.write("0 != _r_ in {" + str(nzs).replace("[","").replace("]","").replace("\'","") + "}\n")
+
+# get all cases
+def conds_to_cases():
+	con = open("conditions.txt","r")
+	cases = []
+	for line in con:
+		if "case: " in line:
+			cases.append(line.replace("case: ","").strip())
+	return cases
+		
+# lets just do all of them
+# this is probably going in times at some point
+def douts_to_zs():
+	for case in conds_to_cases():
+		dout_to_zs(case)
+		
+# END OLD EXAMINE
+
 # run this in /utils with vcds for each relevant source in /vcd
 def make_spec():
 	conds = all_srcs() # find iflow times, relations
 	read(conds_to_times(conds)) # create iflow traces
 	conds_to_dcall(conds) # mine iflow invariants
+	douts_to_zs() # get regs equal to zero etc
 
 make_spec()
