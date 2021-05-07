@@ -157,6 +157,7 @@ def read():
 		if "#" in line[0]:
 			if "0000" in line: # on a major clock tick
 				file.write(points[0] + str(nonce) + "\n" + last_str)
+				nonce = nonce + 1
 				last_str = to_dt(key, strings)
 				file.write(points[1] + str(nonce) + "\n" + last_str)
 		else:
@@ -164,6 +165,7 @@ def read():
 		line = to_read.readline()
 	to_read.close()	
 	system("java daikon.Daikon universal.decls globs.dtrace >globs.txt")
+	#system("rm *.d*")
 	return key
 
 # END OLD MAIN
