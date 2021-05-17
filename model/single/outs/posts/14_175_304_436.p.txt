@@ -1,0 +1,6 @@
+[!eqset1, ARESETN, AR_CH_EN, AW_CH_EN, M_AXI_ARREADY_wire, M_AXI_AWREADY_wire, M_AXI_BREADY, M_AXI_RREADY, M_AXI_RREADY_wire, S_AXI_CTRL_AWVALID, aw_en]
+[!eqset8, !eqsetM_AXI_ARLEN_wire]
+[24, S_AXI_CTRL_AWADDR]
+[36, AR_HIGH_ADDR, AW_HIGH_ADDR]
+[4294901760L, o_data]
+[65535, internal_data]
