@@ -17,7 +17,7 @@ def reg_to_group(reg):
 	reg = reg.replace(',','').replace(']','')
 	for port in ['ACLK', 'ARESETN', 'INTR_LINE_R', 'INTR_LINE_W']:
 		if reg == port:
-			return "GLOBAL PORT"
+			return 'GLOBAL PORT'
 	if 'S_AXI_' in reg:
 		return 'AXI CONFIGURATION S PORTS'
 	if 'M_AXI_' in reg:
@@ -89,5 +89,17 @@ def cond_to_groups():
 		for case in group[1]:
 			by_cond.write('\t' + case.split()[1] + '\n')
 	by_cond.close()
+	csv = open('case_distro.csv','w')
+	names = ['GLOBAL PORT', 'AXI CONFIGURATION S PORTS', 'HARDWARE MODULE PORTS', 'M OUTPUT INTERFACE PORTS', 'AXI S CONFIGURATION SIGNALS', 'AXI M INTERNAL SIGNALS', 'MEMORY CNTRL LOGIC SIGNALS']
+	# src on top, dst down the side
+	csv.write('src_on_top,' + str(names).replace("\'","") + '\n')
+	for name in names:
+		csv.write(name + ',')
+		for src in names:
+			# looking for src ==> name in transpose
+			for group in transpose:
+				if src + ' ==> ' + name == group[0]:
+					csv.write(str(len(group[1])) + ',')
+		csv.write('\n')
 	
 cond_to_groups()
