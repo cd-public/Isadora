@@ -1,0 +1,85 @@
+NOTES:
+
+1220: read/write separation
+1221: correct default values, like 1271
+1258: no flows during reset, other modes (and 1258 and 1272)
+1259: like 1221, regXX defaults during reset
+1266: like 1258
+1267: no flows to configuration from not TE // implicitly here an in other properties - no S_AXI flows found
+1269: these are just notflows, we can check them in the csv // implicitly here an in other properties
+1270: C/P flows given proc. state
+1271: like 1271, default values at reset
+1272: like 1258
+1274: config anomaly changes given state
+1280: control check after access, so have validity set before a flow or something
+1282: think this is notflow into S_AXIs // implicitly here an in other properties - no S_AXI flows found
+1283: anomaly reg flows not from user, ~like 1274
+
+1220 & Channel separation.\\ \hline
+1221-1259-1271 & Correct initialization.\\ \hline
+1258-1266-1270-1272 & No access outside normal operating mode.\\ \hline
+1274-1283 & Anomaly registers update.\\ \hline
+1280 & Control check precedes access.\\ \hline
+1267-1269-1282 & No flows between configuration and user.\\
+
+CASES: 37, 227, 96, 154, 10, 106, 252, 239, 3, 163 (python randint)
+3, 10, 37, 96, 106, 154, 163, 227, 239, 252
+
+case 3: 0_38_199_328_460 
+### CWEs: 1220, 1270, 1280
+	AR_ILL_TRANS_SRV_PTR =?=> [M_AXI_RRESP_wire, M_AXI_RREADY, R_STATE]
+	AR_EN_RST, reg01_config =?=> [INTR_LINE_R, AR_CH_DIS]
+	M_AXI_RLAST, M_AXI_RLAST_wire, M_AXI_RVALID_wire, M_AXI_RVALID =?=> [M_AXI_RREADY]
+	reg01_config =?=> [INTR_LINE_R, AR_CH_DIS]
+	M_AXI_RREADY_wire, r_misb_clk_cycle_wire =?=> [M_AXI_RRESP_wire, R_STATE]
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire	
+	
+case 10: 1
+### CWEs: 1221, 1259, 1271,
+	<many defaults set>
+
+case 37: 3_13_174_303_435
+### CWEs: 1220, 1274, 1280, 1283,
+	w_start_wire =?=> [AW_ILL_TRANS_FIL_PTR, reg05_w_anomaly, reg04_w_anomaly, M_AXI_WSTRB, M_AXI_AWVALID, M_AXI_AWREADY_wire, AW_STATE, AW_ILLEGAL_REQ, W_DATA_TO_SERVE, W_B_TO_SERVE, W_CH_EN, AW_CH_EN]
+	r_start_wire =?=> [AR_ILL_TRANS_FIL_PTR, reg03_r_anomaly, M_AXI_ARVALID, M_AXI_ARREADY_wire, AR_STATE, AR_ILLEGAL_REQ, AR_CH_EN]
+0 == _r_ in {ACLK, AR_EN_RST, AW_EN_RST, B_STATE, M_AXI_ARID_wire, M_AXI_ARLOCK_wire, M_AXI_ARPROT_wire, M_AXI_ARQOS_wire, M_AXI_ARUSER_wire, M_AXI_AWID_wire, M_AXI_AWLOCK_wire, M_AXI_AWPROT_wire, M_AXI_AWQOS_wire, M_AXI_AWUSER_wire, M_AXI_BID, M_AXI_BID_wire, M_AXI_BRESP, M_AXI_BRESP_wire, M_AXI_BUSER, M_AXI_BUSER_wire, M_AXI_BVALID, M_AXI_BVALID_wire, M_AXI_RDATA, M_AXI_RDATA_wire, M_AXI_RID, M_AXI_RID_wire, M_AXI_RLAST, M_AXI_RRESP, M_AXI_RUSER, M_AXI_RUSER_wire, M_AXI_RVALID, M_AXI_WUSER, M_AXI_WUSER_wire, M_AXI_WVALID, M_AXI_WVALID_wire, S_AXI_CTRL_ARADDR, S_AXI_CTRL_ARPROT, S_AXI_CTRL_ARREADY, S_AXI_CTRL_ARVALID, S_AXI_CTRL_AWPROT, S_AXI_CTRL_AWREADY, S_AXI_CTRL_WREADY, S_AXI_CTRL_WVALID, axi_arready, axi_awready, axi_wready, i_config, r_done_wire, r_misb_clk_cycle_wire, r_start_wire, reg01_config, regXX_rden, regXX_wren, reg_data_out, reset_wire, w_done_wire, w_misb_clk_cycle_wire, w_start_wire
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 96: 0_248_377_541
+### CWEs 1220, 1274, 1283 (21, 67, 82 relevant)
+	reg<22-37>_w_config =?=> [M_AXI_AWADDR, M_AXI_AWCACHE_INT, M_AXI_AWBURST_INT, M_AXI_AWSIZE_INT, M_AXI_AWLEN_INT, M_AXI_AWADDR_INT, reg05_w_anomaly, reg04_w_anomaly, M_AXI_AWCACHE, M_AXI_AWBURST, M_AXI_AWSIZE, M_AXI_AWLEN, M_AXI_AWVALID, AW_ILLEGAL_REQ]
+0 == _r_ in {AR_EN_RST, AW_EN_RST, B_STATE, M_AXI_ARID_wire, M_AXI_ARLOCK_wire, M_AXI_ARPROT_wire, M_AXI_ARQOS_wire, M_AXI_ARUSER_wire, M_AXI_AWID_wire, M_AXI_AWLOCK_wire, M_AXI_AWPROT_wire, M_AXI_AWQOS_wire, M_AXI_AWUSER_wire, M_AXI_BID, M_AXI_BID_wire, M_AXI_BRESP, M_AXI_BRESP_wire, M_AXI_BUSER, M_AXI_BUSER_wire, M_AXI_BVALID, M_AXI_BVALID_wire, M_AXI_RID, M_AXI_RID_wire, M_AXI_RLAST, M_AXI_RRESP, M_AXI_RUSER, M_AXI_RUSER_wire, M_AXI_RVALID, M_AXI_WUSER, M_AXI_WUSER_wire, M_AXI_WVALID, M_AXI_WVALID_wire, S_AXI_CTRL_ARADDR, S_AXI_CTRL_ARPROT, S_AXI_CTRL_ARREADY, S_AXI_CTRL_ARVALID, S_AXI_CTRL_AWPROT, S_AXI_CTRL_AWREADY, S_AXI_CTRL_AWVALID, S_AXI_CTRL_WREADY, S_AXI_CTRL_WVALID, axi_arready, axi_awready, axi_wready, i_config, r_misb_clk_cycle_wire, r_start_wire, reg01_config, regXX_rden, regXX_wren, reset_wire, w_done_wire, w_misb_clk_cycle_wire
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 106: 1_249_378_542
+### CWEs 1220 (21, 67, 82 relevant)
+	reg<22-37>_w_config =?=> [INTR_LINE_W, AW_CH_DIS]
+0 == _r_ in {ACLK, AR_EN_RST, AW_EN_RST, B_STATE, M_AXI_ARID_wire, M_AXI_ARLOCK_wire, M_AXI_ARPROT_wire, M_AXI_ARQOS_wire, M_AXI_ARUSER_wire, M_AXI_AWID_wire, M_AXI_AWLOCK_wire, M_AXI_AWPROT_wire, M_AXI_AWQOS_wire, M_AXI_AWUSER_wire, M_AXI_BID, M_AXI_BID_wire, M_AXI_BRESP, M_AXI_BRESP_wire, M_AXI_BUSER, M_AXI_BUSER_wire, M_AXI_BVALID, M_AXI_BVALID_wire, M_AXI_RID, M_AXI_RID_wire, M_AXI_RLAST, M_AXI_RRESP, M_AXI_RUSER, M_AXI_RUSER_wire, M_AXI_RVALID, M_AXI_WUSER, M_AXI_WUSER_wire, M_AXI_WVALID, M_AXI_WVALID_wire, S_AXI_CTRL_ARADDR, S_AXI_CTRL_ARPROT, S_AXI_CTRL_ARREADY, S_AXI_CTRL_ARVALID, S_AXI_CTRL_AWPROT, S_AXI_CTRL_AWREADY, S_AXI_CTRL_AWVALID, S_AXI_CTRL_WREADY, S_AXI_CTRL_WVALID, axi_arready, axi_awready, axi_wready, i_config, r_misb_clk_cycle_wire, r_start_wire, reg01_config, regXX_rden, regXX_wren, reset_wire, w_done_wire, w_misb_clk_cycle_wire
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 154: 2_121_250_379_543
+### CWEs 1258, 1270 // base address to user visible, but not during reset
+	w_base_addr_wire, M_AXI_AWREADY_wire, AW_CH_DIS, w_max_outs_wire, AW_ILLEGAL_REQ, w_num_trans_wire, AW_STATE, AW_CH_EN  =?=> [M_AXI_WDATA]
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 163: 0_128_137_146_155_257_266_275_284_386_550_559_568_577
+### CWEs 1220
+	W_CH_EN, AW_ILL_DATA_TRANS_SRV_PTR =?=> [M_AXI_WLAST]
+0 == _r_ in {AR_EN_RST, AW_EN_RST, B_STATE, M_AXI_ARID_wire, M_AXI_ARLOCK_wire, M_AXI_ARPROT_wire, M_AXI_ARQOS_wire, M_AXI_ARUSER_wire, M_AXI_AWID_wire, M_AXI_AWLOCK_wire, M_AXI_AWPROT_wire, M_AXI_AWQOS_wire, M_AXI_AWUSER_wire, M_AXI_BID, M_AXI_BID_wire, M_AXI_BRESP, M_AXI_BRESP_wire, M_AXI_BUSER, M_AXI_BUSER_wire, M_AXI_BVALID, M_AXI_BVALID_wire, M_AXI_RID, M_AXI_RID_wire, M_AXI_RLAST, M_AXI_RRESP, M_AXI_RUSER, M_AXI_RUSER_wire, M_AXI_RVALID, M_AXI_WUSER, M_AXI_WUSER_wire, S_AXI_CTRL_ARADDR, S_AXI_CTRL_ARPROT, S_AXI_CTRL_ARREADY, S_AXI_CTRL_ARVALID, S_AXI_CTRL_AWPROT, S_AXI_CTRL_AWREADY, S_AXI_CTRL_AWVALID, S_AXI_CTRL_WREADY, S_AXI_CTRL_WVALID, axi_arready, axi_awready, axi_wready, i_config, r_misb_clk_cycle_wire, r_start_wire, reg01_config, regXX_rden, regXX_wren, reset_wire, w_done_wire, w_misb_clk_cycle_wire
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 227: 0_121_248_377_541
+### CWEs 1220, 1274, 1283
+	M_AXI_AWVALID_wire =?=> [reg04_w_anomaly]
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 239: 0_118_247_376_540
+### CWEs 1220, 1270, 1280
+	M_AXI_AWREADY_wire, AW_CH_DIS, ACLK, AW_ILLEGAL_REQ, AW_STATE, AW_CH_EN =?=> [M_AXI_AWVALID_wire]
+0 == _r_ in {AR_EN_RST, AW_EN_RST, B_STATE, M_AXI_ARID_wire, M_AXI_ARLOCK_wire, M_AXI_ARPROT_wire, M_AXI_ARQOS_wire, M_AXI_ARUSER_wire, M_AXI_AWID_wire, M_AXI_AWLOCK_wire, M_AXI_AWPROT_wire, M_AXI_AWQOS_wire, M_AXI_AWUSER_wire, M_AXI_BID, M_AXI_BID_wire, M_AXI_BRESP, M_AXI_BRESP_wire, M_AXI_BUSER, M_AXI_BUSER_wire, M_AXI_BVALID, M_AXI_BVALID_wire, M_AXI_RID, M_AXI_RID_wire, M_AXI_RLAST, M_AXI_RRESP, M_AXI_RUSER, M_AXI_RUSER_wire, M_AXI_RVALID, M_AXI_WUSER, M_AXI_WUSER_wire, M_AXI_WVALID, M_AXI_WVALID_wire, S_AXI_CTRL_ARADDR, S_AXI_CTRL_ARPROT, S_AXI_CTRL_ARREADY, S_AXI_CTRL_ARVALID, S_AXI_CTRL_AWPROT, S_AXI_CTRL_AWREADY, S_AXI_CTRL_AWVALID, S_AXI_CTRL_WREADY, S_AXI_CTRL_WVALID, axi_arready, axi_awready, axi_wready, i_config, r_misb_clk_cycle_wire, r_start_wire, reg01_config, regXX_rden, regXX_wren, reset_wire, w_done_wire, w_misb_clk_cycle_wire
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
+
+case 252: 0_38_60_78_96_114_199_328_460_482_500_518_536
+### CWEs none I think - maybe 1280?
+	[AR_ILL_TRANS_SRV_PTR, M_AXI_RREADY_wire, r_misb_clk_cycle_wire] =?=> [M_AXI_RLAST_wire, M_AXI_RVALID_wire]
+0 != _r_ in {ADDR_LSB, ARESETN, C_LOG_BUS_SIZE_BYTE, C_M_AXI_ADDR_WIDTH, C_M_AXI_ARUSER_WIDTH, C_M_AXI_AWUSER_WIDTH, C_M_AXI_BURST_LEN, C_M_AXI_BUSER_WIDTH, C_M_AXI_DATA_WIDTH, C_M_AXI_ID_WIDTH, C_M_AXI_RUSER_WIDTH, C_M_AXI_WUSER_WIDTH, C_S_CTRL_AXI, C_S_CTRL_AXI_ADDR_WIDTH, LOG_MAX_OUTS_TRAN, MAX_OUTS_TRANS, M_AXI_ARBURST_wire, M_AXI_ARCACHE_wire, M_AXI_ARLEN_wire, M_AXI_ARREADY, M_AXI_ARSIZE_wire, M_AXI_AWBURST_wire, M_AXI_AWCACHE_wire, M_AXI_AWLEN_wire, M_AXI_AWREADY, M_AXI_AWSIZE_wire, M_AXI_BREADY, M_AXI_BREADY_wire, M_AXI_WREADY, M_AXI_WREADY_wire, M_AXI_WSTRB_wire, OPT_MEM_ADDR_BITS, S_AXI_CTRL_BREADY, S_AXI_CTRL_RREADY, data_val_wire, r_burst_len_wire, r_displ_wire, r_max_outs_wire, r_num_trans_wire, r_phase_wire, w_burst_len_wire, w_displ_wire, w_max_outs_wire, w_num_trans_wire, w_phase_wire
