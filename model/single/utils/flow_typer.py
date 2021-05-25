@@ -92,14 +92,16 @@ def cond_to_groups():
 	csv = open('case_distro.csv','w')
 	names = ['GLOBAL PORT', 'AXI CONFIGURATION S PORTS', 'HARDWARE MODULE PORTS', 'M OUTPUT INTERFACE PORTS', 'AXI S CONFIGURATION SIGNALS', 'AXI M INTERNAL SIGNALS', 'MEMORY CNTRL LOGIC SIGNALS']
 	# src on top, dst down the side
-	csv.write('src_on_top,' + str(names).replace("\'","") + '\n')
+	csv.write('src_on_top,' + str(names).replace("\'","")[1:-1] + '\n')
 	for name in names:
 		csv.write(name + ',')
 		for src in names:
 			# looking for src ==> name in transpose
+			cnt = 0
 			for group in transpose:
 				if src + ' ==> ' + name == group[0]:
-					csv.write(str(len(group[1])) + ',')
+					cnt = len(group[1])
+			csv.write(str(cnt) + ',')
 		csv.write('\n')
 	
 cond_to_groups()
