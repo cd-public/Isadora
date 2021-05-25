@@ -11,6 +11,15 @@ distro = [[3,2,12,4,7,5,10],
 [6,23,20,10,27,15,17],
 [18,16,96,40,55,65,78],
 [14,25,68,31,69,53,64]]
-ax = sns.heatmap(distro)
-plt.title("Heatmap Flight Data")
-plt.show()
+distro.reverse()
+ax = sns.heatmap(distro, cmap='Blues', annot=True)
+labels = ['GLOB', 'S PORT', 'HW', 'M OUT', 'S SIG', 'M INT', 'MEM']
+ax.set_xticklabels(labels)
+labels.reverse()  
+ax.set_yticklabels(labels)  
+plt.xlabel("Source Group")
+plt.ylabel("Sink Group")
+plt.yticks(rotation=45)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('heat.png')
