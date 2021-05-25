@@ -3,6 +3,12 @@ from os import path
 import os
 import sys
 
+"""
+export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
+export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
+export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
+"""
+
 # forked from main to handle times
 
 # BEGIN OLD MAIN
@@ -139,6 +145,7 @@ def read(times):
 	# make sure theres a dfiles directory in outs
 	system("mkdir ../outs")
 	system("mkdir ../outs/dfiles")
+	system("mkdir ../outs/zs")
 	# --- ENTER DFILES DIR --- #
 	os.chdir(os.getcwd().replace("utils","outs/dfiles"))
 	# read in vcd header
@@ -343,7 +350,7 @@ def conds_to_dcall(conds):
 	for time in conds:
 		dcall = "java daikon.Daikon universal.decls "
 		dts = "".join([str(tick) + ".dtrace " for tick in time[0]])
-		out_loc = ">../edges/" + str(time[0])[1:-1].replace(", ","_")  + ".txt"
+		out_loc = ">../edges/" + str(time[0])[1:-1].replace(", ","_")[:200]  + ".txt"
 		system(dcall + dts + out_loc)
 	# --- LEAVE DFILES DIR --- #
 	os.chdir(os.getcwd().replace("outs/dfiles", "utils"))
@@ -368,10 +375,10 @@ def dout_to_zs(case):
 	cd_orig = os.getcwd()
 	# --- ENTER EDGES DIR --- #
 	os.chdir(os.getcwd().replace("utils","outs/edges"))
-	dout = open(case + ".txt","r")
+	dout = open(case[:200] + ".txt","r")
 	# --- ENTER ZS DIR --- #
 	os.chdir(os.getcwd().replace("edges","zs"))
-	zout = open(case + ".zs.txt","w")
+	zout = open(case[:200] + ".zs.txt","w")
 	# --- RETURN TO DIR --- #
 	os.chdir(cd_orig)
 	# get to relevant dout region
@@ -426,3 +433,9 @@ def make_spec():
 	douts_to_zs() # get regs equal to zero etc
 
 make_spec()
+
+"""
+export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
+export CLASSPATH="/home/mars/radish/daikon-5.7.2/daikon.jar"
+export DAIKONDIR="/home/mars/radish/daikon-5.7.2"
+"""
