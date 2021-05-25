@@ -1,0 +1,2335 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 46 dtrace files:
+
+===========================================================================
+..tick():::ENTER
+trap == mem_valid
+trap == mem_wstrb
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_state
+trap == mem_wordsize
+trap == mem_do_rinst
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == last_mem_valid
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_lui
+trap == instr_auipc
+trap == instr_jal
+trap == instr_jalr
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_lb
+trap == instr_lh
+trap == instr_lw
+trap == instr_lbu
+trap == instr_lhu
+trap == instr_sb
+trap == instr_sh
+trap == instr_sw
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_slli
+trap == instr_srli
+trap == instr_srai
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == instr_rdcycle
+trap == instr_rdcycleh
+trap == instr_rdinstr
+trap == instr_rdinstrh
+trap == instr_ecall_ebreak
+trap == instr_getq
+trap == instr_setq
+trap == instr_retirq
+trap == instr_maskirq
+trap == instr_waitirq
+trap == instr_timer
+trap == decoder_trigger
+trap == decoder_pseudo_trigger
+trap == compressed_instr
+trap == is_lui_auipc_jal
+trap == is_lb_lh_lw_lbu_lhu
+trap == is_slli_srli_srai
+trap == is_sb_sh_sw
+trap == is_sll_srl_sra
+trap == is_slti_blt_slt
+trap == is_sltiu_bltu_sltu
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_alu_reg_reg
+trap == is_compare
+trap == dbg_rs1val_valid
+trap == dbg_rs2val_valid
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_store
+trap == latched_stalu
+trap == latched_branch
+trap == latched_compr
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+mem_la_wdata == pcpi_insn
+mem_la_wdata == trace_data
+mem_la_wdata == reg_op2
+mem_la_wdata == reg_out
+mem_la_wdata == reg_sh
+mem_la_wdata == irq_pending
+mem_la_wdata == pcpi_int_rd
+mem_la_wdata == mem_16bit_buffer
+mem_la_wdata == dbg_rs1val
+mem_la_wdata == dbg_rs2val
+mem_la_wdata == current_pc
+mem_la_wdata == pcpi_timeout_counter
+mem_la_wdata == next_irq_pending
+mem_la_wdata == alu_out
+mem_la_wdata == alu_out_q
+mem_la_wdata == alu_out_0
+mem_la_wdata == alu_out_0_q
+mem_la_wdata == alu_add_sub
+mem_la_wdata == alu_shl
+mem_la_wdata == alu_shr
+mem_la_wdata == alu_eq
+mem_la_wdata == alu_ltu
+mem_la_wdata == alu_lts
+mem_la_wdata == cpuregs_wrdata
+mem_la_wdata == decoded_rs
+reg_pc == dbg_insn_addr
+reg_op1 == cpuregs_rs2
+next_insn_opcode == mem_rdata_word
+next_insn_opcode == mem_rdata_q
+mem_do_prefetch == instr_addi
+mem_do_prefetch == decoder_trigger_q
+mem_do_prefetch == is_jalr_addi_slti_sltiu_xori_ori_andi
+mem_do_prefetch == is_alu_reg_imm
+mem_do_prefetch == dbg_next
+mem_do_prefetch == dbg_valid_insn
+decoded_rd == dbg_insn_rd
+decoded_rd == latched_rd
+decoded_rs1 == dbg_insn_rs1
+decoded_rs2 == dbg_insn_rs2
+decoded_imm == dbg_insn_imm
+decoder_pseudo_trigger_q == is_lui_auipc_jal_jalr_addi_add_sub
+is_lbu_lhu_lw == q_insn_imm
+is_lbu_lhu_lw == q_insn_rs2
+new_ascii_instr == dbg_ascii_instr
+q_insn_rs1 == cached_insn_imm
+q_insn_rs1 == cached_insn_rs2
+q_insn_rd == cached_insn_rs1
+q_insn_rd == cached_insn_rd
+trap == 0
+mem_instr one of { 0, 1 }
+mem_addr one of { 0, 1020 }
+mem_la_wdata == -1
+mem_la_wstrb == 15
+reg_pc one of { 0, 12 }
+reg_next_pc one of { 4, 16 }
+reg_op1 one of { -1, 1020 }
+dbg_insn_opcode one of { 1114387, 1069547667 }
+irq_mask == 4294967295L
+mem_do_prefetch == 1
+decoded_rd one of { 1, 2 }
+decoded_rs1 one of { 0, 2 }
+decoded_rs2 one of { 1, 28 }
+decoded_imm one of { 1, 1020 }
+decoded_imm_j one of { 1020, 67584 }
+decoder_pseudo_trigger_q one of { 0, 1 }
+is_lbu_lhu_lw one of { -1, 0 }
+new_ascii_instr == 1633969257
+q_ascii_instr one of { -1, 27767 }
+q_insn_opcode one of { -1, 41219 }
+q_insn_rs1 one of { -1, 1 }
+q_insn_rs1 != 0
+q_insn_rd one of { -1, 2 }
+q_insn_rd != 0
+cached_ascii_instr one of { -1, 1633969257 }
+cached_insn_opcode one of { -1, 1114387 }
+cpu_state == 32
+dbg_ascii_state == 119178353865521L
+trap <= mem_instr
+trap <= mem_addr
+trap < count_cycle
+trap < count_instr
+trap <= reg_pc
+trap < reg_next_pc
+trap != reg_op1
+trap <= next_insn_opcode
+trap < dbg_insn_opcode
+trap < decoded_rd
+trap <= decoded_rs1
+trap < decoded_rs2
+trap < decoded_imm
+trap < decoded_imm_j
+trap <= decoder_pseudo_trigger_q
+trap >= is_lbu_lhu_lw
+trap != q_ascii_instr
+trap != q_insn_opcode
+trap != q_insn_rs1
+trap != q_insn_rd
+trap != cached_ascii_instr
+trap != cached_insn_opcode
+trap <= cpuregs_rs1
+mem_instr != mem_addr
+mem_instr > mem_la_wdata
+mem_instr < mem_la_wstrb
+mem_instr < count_cycle
+mem_instr % count_instr == 0
+mem_instr <= count_instr
+mem_instr != reg_pc
+mem_instr < reg_next_pc
+mem_instr != reg_op1
+mem_instr <= next_insn_opcode
+mem_instr < dbg_insn_opcode
+mem_instr < irq_mask
+mem_instr <= mem_do_prefetch
+mem_instr <= decoded_rd
+mem_instr != decoded_rs1
+mem_instr < decoded_rs2
+mem_instr < decoded_imm
+mem_instr < decoded_imm_j
+mem_instr != decoder_pseudo_trigger_q
+mem_instr >= is_lbu_lhu_lw
+mem_instr < new_ascii_instr
+mem_instr != q_ascii_instr
+mem_instr != q_insn_opcode
+mem_instr != q_insn_rs1
+mem_instr != q_insn_rd
+mem_instr != cached_ascii_instr
+mem_instr != cached_insn_opcode
+mem_instr < cpu_state
+mem_instr < dbg_ascii_state
+mem_addr > mem_wdata
+mem_addr > mem_la_wdata
+mem_addr != mem_la_wstrb
+mem_addr != count_cycle
+mem_addr != count_instr
+mem_addr >= reg_pc
+mem_addr != reg_next_pc
+mem_addr >= reg_op1
+mem_addr != next_insn_opcode
+mem_addr < dbg_insn_opcode
+mem_addr < irq_mask
+mem_addr != mem_do_prefetch
+mem_addr != decoded_rd
+mem_addr >= decoded_rs1
+mem_addr != decoded_rs2
+mem_addr != decoded_imm
+mem_addr < decoded_imm_j
+mem_addr >= decoder_pseudo_trigger_q
+mem_addr > is_lbu_lhu_lw
+mem_addr < new_ascii_instr
+mem_addr != q_ascii_instr
+mem_addr != q_insn_opcode
+mem_addr > q_insn_rs1
+mem_addr > q_insn_rd
+mem_addr != cached_ascii_instr
+mem_addr != cached_insn_opcode
+mem_addr != cpu_state
+mem_addr < dbg_ascii_state
+mem_addr >= cpuregs_rs1
+mem_wdata >= mem_la_wdata
+mem_wdata < count_cycle
+mem_wdata < count_instr
+mem_wdata <= reg_op1
+mem_wdata <= next_insn_opcode
+mem_wdata < dbg_insn_opcode
+mem_wdata < irq_mask
+mem_wdata < decoded_imm_j
+mem_wdata >= is_lbu_lhu_lw
+mem_wdata < new_ascii_instr
+mem_wdata <= q_ascii_instr
+mem_wdata <= q_insn_opcode
+mem_wdata % q_insn_rs1 == 0
+mem_wdata <= cached_ascii_instr
+mem_wdata <= cached_insn_opcode
+mem_wdata < dbg_ascii_state
+mem_wdata <= cpuregs_rs1
+mem_la_wdata < count_cycle
+mem_la_wdata < count_instr
+mem_la_wdata < reg_pc
+mem_la_wdata < reg_next_pc
+mem_la_wdata <= reg_op1
+mem_la_wdata < next_insn_opcode
+mem_la_wdata < dbg_insn_opcode
+mem_la_wdata < decoded_rd
+mem_la_wdata < decoded_rs1
+mem_la_wdata < decoded_rs2
+mem_la_wdata < decoded_imm
+mem_la_wdata < decoded_imm_j
+mem_la_wdata < decoder_pseudo_trigger_q
+mem_la_wdata <= is_lbu_lhu_lw
+mem_la_wdata <= q_ascii_instr
+mem_la_wdata <= q_insn_opcode
+mem_la_wdata <= q_insn_rs1
+mem_la_wdata <= q_insn_rd
+mem_la_wdata <= cached_ascii_instr
+mem_la_wdata <= cached_insn_opcode
+mem_la_wdata < cpuregs_rs1
+mem_la_wstrb != count_cycle
+mem_la_wstrb != count_instr
+mem_la_wstrb > reg_pc
+mem_la_wstrb != reg_next_pc
+mem_la_wstrb != reg_op1
+mem_la_wstrb < dbg_insn_opcode
+mem_la_wstrb > decoded_rd
+mem_la_wstrb > decoded_rs1
+mem_la_wstrb != decoded_rs2
+mem_la_wstrb != decoded_imm
+mem_la_wstrb < decoded_imm_j
+mem_la_wstrb > decoder_pseudo_trigger_q
+mem_la_wstrb > is_lbu_lhu_lw
+mem_la_wstrb != q_ascii_instr
+mem_la_wstrb != q_insn_opcode
+mem_la_wstrb > q_insn_rs1
+mem_la_wstrb > q_insn_rd
+mem_la_wstrb != cached_ascii_instr
+mem_la_wstrb != cached_insn_opcode
+count_cycle > count_instr
+count_cycle > reg_pc
+count_cycle > reg_next_pc
+count_cycle != reg_op1
+count_cycle != next_insn_opcode
+count_cycle < dbg_insn_opcode
+count_cycle < irq_mask
+count_cycle > mem_do_prefetch
+count_cycle > decoded_rd
+count_cycle > decoded_rs1
+count_cycle != decoded_rs2
+count_cycle != decoded_imm
+count_cycle < decoded_imm_j
+count_cycle > decoder_pseudo_trigger_q
+count_cycle > is_lbu_lhu_lw
+count_cycle < new_ascii_instr
+count_cycle != q_ascii_instr
+count_cycle != q_insn_opcode
+count_cycle % q_insn_rs1 == 0
+count_cycle > q_insn_rs1
+count_cycle > q_insn_rd
+count_cycle != cached_ascii_instr
+count_cycle != cached_insn_opcode
+count_cycle != cpu_state
+count_cycle < dbg_ascii_state
+count_cycle > cpuregs_rs1
+count_instr != reg_op1
+count_instr != next_insn_opcode
+count_instr < dbg_insn_opcode
+count_instr < irq_mask
+count_instr >= mem_do_prefetch
+count_instr % decoded_rd == 0
+count_instr >= decoded_rd
+count_instr > decoded_rs1
+count_instr != decoded_rs2
+count_instr != decoded_imm
+count_instr < decoded_imm_j
+count_instr > decoder_pseudo_trigger_q
+count_instr > is_lbu_lhu_lw
+is_lbu_lhu_lw % count_instr == 0
+count_instr < new_ascii_instr
+count_instr != q_ascii_instr
+count_instr != q_insn_opcode
+count_instr % q_insn_rs1 == 0
+count_instr > q_insn_rs1
+count_instr % q_insn_rd == 0
+count_instr > q_insn_rd
+count_instr != cached_ascii_instr
+count_instr != cached_insn_opcode
+count_instr < dbg_ascii_state
+count_instr > cpuregs_rs1
+reg_pc < reg_next_pc
+reg_pc != reg_op1
+reg_pc < dbg_insn_opcode
+reg_pc < irq_mask
+reg_pc != mem_do_prefetch
+reg_pc != decoded_rd
+reg_pc >= decoded_rs1
+reg_pc != decoded_rs2
+reg_pc != decoded_imm
+reg_pc < decoded_imm_j
+reg_pc >= decoder_pseudo_trigger_q
+reg_pc > is_lbu_lhu_lw
+reg_pc < new_ascii_instr
+reg_pc != q_ascii_instr
+reg_pc != q_insn_opcode
+reg_pc > q_insn_rs1
+reg_pc > q_insn_rd
+reg_pc != cached_ascii_instr
+reg_pc != cached_insn_opcode
+reg_pc < cpu_state
+reg_pc < dbg_ascii_state
+reg_next_pc != reg_op1
+reg_next_pc < dbg_insn_opcode
+reg_next_pc < irq_mask
+reg_next_pc > mem_do_prefetch
+reg_next_pc > decoded_rd
+reg_next_pc > decoded_rs1
+reg_next_pc != decoded_rs2
+reg_next_pc != decoded_imm
+reg_next_pc < decoded_imm_j
+reg_next_pc > decoder_pseudo_trigger_q
+reg_next_pc > is_lbu_lhu_lw
+reg_next_pc < new_ascii_instr
+reg_next_pc != q_ascii_instr
+reg_next_pc != q_insn_opcode
+reg_next_pc > q_insn_rs1
+reg_next_pc > q_insn_rd
+reg_next_pc != cached_ascii_instr
+reg_next_pc != cached_insn_opcode
+reg_next_pc < cpu_state
+reg_next_pc < dbg_ascii_state
+reg_op1 != next_insn_opcode
+reg_op1 < dbg_insn_opcode
+reg_op1 < irq_mask
+reg_op1 != mem_do_prefetch
+reg_op1 != decoded_rd
+reg_op1 != decoded_rs1
+reg_op1 != decoded_rs2
+reg_op1 != decoded_imm
+reg_op1 < decoded_imm_j
+reg_op1 != decoder_pseudo_trigger_q
+reg_op1 >= is_lbu_lhu_lw
+reg_op1 < new_ascii_instr
+reg_op1 <= q_ascii_instr
+reg_op1 <= q_insn_opcode
+reg_op1 >= q_insn_rs1
+reg_op1 >= q_insn_rd
+reg_op1 <= cached_ascii_instr
+reg_op1 <= cached_insn_opcode
+reg_op1 != cpu_state
+reg_op1 < dbg_ascii_state
+reg_op1 != cpuregs_rs1
+next_insn_opcode <= dbg_insn_opcode
+next_insn_opcode < irq_mask
+next_insn_opcode != decoded_imm_j
+next_insn_opcode >= is_lbu_lhu_lw
+next_insn_opcode < new_ascii_instr
+next_insn_opcode != q_ascii_instr
+next_insn_opcode != q_insn_opcode
+next_insn_opcode % q_insn_rs1 == 0
+next_insn_opcode != cached_ascii_instr
+next_insn_opcode != cached_insn_opcode
+next_insn_opcode < dbg_ascii_state
+next_insn_opcode >= cpuregs_rs1
+dbg_insn_opcode < irq_mask
+dbg_insn_opcode > mem_do_prefetch
+dbg_insn_opcode > decoded_rd
+dbg_insn_opcode > decoded_rs1
+dbg_insn_opcode > decoded_rs2
+dbg_insn_opcode > decoded_imm
+dbg_insn_opcode > decoded_imm_j
+dbg_insn_opcode > decoder_pseudo_trigger_q
+dbg_insn_opcode > is_lbu_lhu_lw
+dbg_insn_opcode < new_ascii_instr
+dbg_insn_opcode > q_ascii_instr
+dbg_insn_opcode > q_insn_opcode
+dbg_insn_opcode > q_insn_rs1
+dbg_insn_opcode > q_insn_rd
+dbg_insn_opcode != cached_ascii_instr
+dbg_insn_opcode >= cached_insn_opcode
+dbg_insn_opcode > cpu_state
+dbg_insn_opcode < dbg_ascii_state
+dbg_insn_opcode > cpuregs_rs1
+irq_mask > decoded_rd
+irq_mask > decoded_rs1
+irq_mask > decoded_rs2
+irq_mask > decoded_imm
+irq_mask > decoded_imm_j
+irq_mask > decoder_pseudo_trigger_q
+irq_mask > is_lbu_lhu_lw
+irq_mask > q_ascii_instr
+irq_mask > q_insn_opcode
+irq_mask > q_insn_rs1
+irq_mask > q_insn_rd
+irq_mask > cached_ascii_instr
+irq_mask > cached_insn_opcode
+irq_mask > cpuregs_rs1
+mem_do_prefetch <= decoded_rd
+mem_do_prefetch != decoded_rs1
+mem_do_prefetch <= decoded_rs2
+mem_do_prefetch <= decoded_imm
+mem_do_prefetch < decoded_imm_j
+mem_do_prefetch >= decoder_pseudo_trigger_q
+mem_do_prefetch > is_lbu_lhu_lw
+mem_do_prefetch != q_ascii_instr
+mem_do_prefetch != q_insn_opcode
+mem_do_prefetch >= q_insn_rs1
+mem_do_prefetch != q_insn_rd
+mem_do_prefetch != cached_ascii_instr
+mem_do_prefetch != cached_insn_opcode
+decoded_rd >= decoded_rs1
+decoded_rd != decoded_rs2
+decoded_rd != decoded_imm
+decoded_rd < decoded_imm_j
+decoded_rd > decoder_pseudo_trigger_q
+decoded_rd > is_lbu_lhu_lw
+decoded_rd < new_ascii_instr
+decoded_rd != q_ascii_instr
+decoded_rd != q_insn_opcode
+decoded_rd > q_insn_rs1
+decoded_rd >= q_insn_rd
+decoded_rd != cached_ascii_instr
+decoded_rd != cached_insn_opcode
+decoded_rd < cpu_state
+decoded_rd < dbg_ascii_state
+decoded_rs1 != decoded_rs2
+decoded_rs1 != decoded_imm
+decoded_rs1 < decoded_imm_j
+decoded_rs1 >= decoder_pseudo_trigger_q
+decoded_rs1 > is_lbu_lhu_lw
+decoded_rs1 < new_ascii_instr
+decoded_rs1 != q_ascii_instr
+decoded_rs1 != q_insn_opcode
+decoded_rs1 > q_insn_rs1
+decoded_rs1 >= q_insn_rd
+decoded_rs1 != cached_ascii_instr
+decoded_rs1 != cached_insn_opcode
+decoded_rs1 < cpu_state
+decoded_rs1 < dbg_ascii_state
+decoded_rs2 <= decoded_imm
+decoded_rs2 < decoded_imm_j
+decoded_rs2 >= decoder_pseudo_trigger_q
+decoded_rs2 > is_lbu_lhu_lw
+decoded_rs2 < new_ascii_instr
+decoded_rs2 != q_ascii_instr
+decoded_rs2 != q_insn_opcode
+decoded_rs2 >= q_insn_rs1
+decoded_rs2 != q_insn_rd
+decoded_rs2 != cached_ascii_instr
+decoded_rs2 != cached_insn_opcode
+decoded_rs2 < cpu_state
+decoded_rs2 < dbg_ascii_state
+cpuregs_rs1 % decoded_rs2 == 0
+decoded_imm <= decoded_imm_j
+decoded_imm >= decoder_pseudo_trigger_q
+decoded_imm > is_lbu_lhu_lw
+decoded_imm < new_ascii_instr
+decoded_imm != q_ascii_instr
+decoded_imm != q_insn_opcode
+decoded_imm >= q_insn_rs1
+decoded_imm != q_insn_rd
+decoded_imm != cached_ascii_instr
+decoded_imm != cached_insn_opcode
+decoded_imm != cpu_state
+decoded_imm < dbg_ascii_state
+cpuregs_rs1 % decoded_imm == 0
+decoded_imm_j > decoder_pseudo_trigger_q
+decoded_imm_j > is_lbu_lhu_lw
+decoded_imm_j < new_ascii_instr
+decoded_imm_j > q_ascii_instr
+decoded_imm_j > q_insn_opcode
+decoded_imm_j > q_insn_rs1
+decoded_imm_j > q_insn_rd
+decoded_imm_j != cached_ascii_instr
+decoded_imm_j != cached_insn_opcode
+decoded_imm_j > cpu_state
+decoded_imm_j < dbg_ascii_state
+decoded_imm_j > cpuregs_rs1
+decoder_pseudo_trigger_q > is_lbu_lhu_lw
+decoder_pseudo_trigger_q < new_ascii_instr
+decoder_pseudo_trigger_q != q_ascii_instr
+decoder_pseudo_trigger_q != q_insn_opcode
+decoder_pseudo_trigger_q >= q_insn_rs1
+decoder_pseudo_trigger_q != q_insn_rd
+decoder_pseudo_trigger_q != cached_ascii_instr
+decoder_pseudo_trigger_q != cached_insn_opcode
+decoder_pseudo_trigger_q < cpu_state
+decoder_pseudo_trigger_q < dbg_ascii_state
+is_lbu_lhu_lw < new_ascii_instr
+is_lbu_lhu_lw <= q_ascii_instr
+is_lbu_lhu_lw <= q_insn_opcode
+is_lbu_lhu_lw <= q_insn_rs1
+is_lbu_lhu_lw <= q_insn_rd
+is_lbu_lhu_lw <= cached_ascii_instr
+is_lbu_lhu_lw <= cached_insn_opcode
+is_lbu_lhu_lw < cpu_state
+is_lbu_lhu_lw < dbg_ascii_state
+is_lbu_lhu_lw <= cpuregs_rs1
+new_ascii_instr > q_ascii_instr
+new_ascii_instr > q_insn_opcode
+new_ascii_instr > q_insn_rs1
+new_ascii_instr > q_insn_rd
+new_ascii_instr >= cached_ascii_instr
+new_ascii_instr > cached_insn_opcode
+new_ascii_instr > cpuregs_rs1
+q_ascii_instr <= q_insn_opcode
+q_ascii_instr >= q_insn_rs1
+q_ascii_instr >= q_insn_rd
+q_ascii_instr <= cached_ascii_instr
+q_ascii_instr <= cached_insn_opcode
+q_ascii_instr != cpu_state
+q_ascii_instr < dbg_ascii_state
+q_ascii_instr != cpuregs_rs1
+q_insn_opcode >= q_insn_rs1
+q_insn_opcode >= q_insn_rd
+q_insn_opcode <= cached_ascii_instr
+q_insn_opcode <= cached_insn_opcode
+q_insn_opcode != cpu_state
+q_insn_opcode < dbg_ascii_state
+q_insn_opcode != cpuregs_rs1
+q_insn_rs1 <= q_insn_rd
+q_insn_rs1 <= cached_ascii_instr
+q_insn_rs1 <= cached_insn_opcode
+q_insn_rs1 < cpu_state
+q_insn_rs1 < dbg_ascii_state
+cpuregs_rs1 % q_insn_rs1 == 0
+q_insn_rd <= cached_ascii_instr
+q_insn_rd <= cached_insn_opcode
+q_insn_rd < cpu_state
+q_insn_rd < dbg_ascii_state
+cached_ascii_instr >= cached_insn_opcode
+cached_ascii_instr != cpu_state
+cached_ascii_instr < dbg_ascii_state
+cached_ascii_instr != cpuregs_rs1
+cached_insn_opcode != cpu_state
+cached_insn_opcode < dbg_ascii_state
+cached_insn_opcode != cpuregs_rs1
+dbg_ascii_state > cpuregs_rs1
+4 * mem_instr + 22 * mem_wdata - count_cycle + 23 == 0
+mem_instr + 4 * mem_wdata - count_instr + 4 == 0
+1069547668 * mem_instr + mem_wdata - next_insn_opcode == 0
+mem_instr + mem_wdata - cpuregs_rs1 == 0
+3 * mem_instr + 2 * count_cycle - 11 * count_instr - 2 == 0
+2.3530048692E10 * mem_instr + count_cycle - 22 * next_insn_opcode - 23 == 0
+18 * mem_instr + count_cycle - 22 * cpuregs_rs1 - 23 == 0
+4.278190671E9 * mem_instr + count_instr - 4 * next_insn_opcode - 4 == 0
+3 * mem_instr + count_instr - 4 * cpuregs_rs1 - 4 == 0
+1069547667 * mem_instr - next_insn_opcode + cpuregs_rs1 == 0
+mem_addr - 5610 * mem_wdata + 255 * count_cycle - 6885 == 0
+mem_addr - 4080 * mem_wdata + 1020 * count_instr - 5100 == 0
+267386917 * mem_addr - 255 * mem_wdata + 255 * next_insn_opcode - 2.7273465534E11 == 0
+mem_addr - 1020 * mem_wdata + 1020 * cpuregs_rs1 - 1020 == 0
+mem_addr - 680 * count_cycle + 3740 * count_instr - 340 == 0
+1960837391 * mem_addr - 85 * count_cycle + 1870 * next_insn_opcode - 2.000054136865E12 == 0
+3 * mem_addr - 170 * count_cycle + 3740 * cpuregs_rs1 + 850 == 0
+1426063557 * mem_addr - 340 * count_instr + 1360 * next_insn_opcode - 1.45458482678E12 == 0
+mem_addr - 340 * count_instr + 1360 * cpuregs_rs1 + 340 == 0
+356515889 * mem_addr + 340 * next_insn_opcode - 340 * cpuregs_rs1 - 3.6364620678E11 == 0
+6 * mem_wdata - count_cycle + 4 * count_instr + 7 == 0
+66 * mem_wdata - 3 * count_cycle - reg_pc + 81 == 0
+66 * mem_wdata - 3 * count_cycle - reg_next_pc + 85 == 0
+22462 * mem_wdata - 1021 * count_cycle - 4 * reg_op1 + 27563 == 0
+5.882512173E9 * mem_wdata - 267386917 * count_cycle + next_insn_opcode + 6.149899091E9 == 0
+5.87638304E9 * mem_wdata - 267108320 * count_cycle + dbg_insn_opcode + 6.142376973E9 == 0
+22 * mem_wdata - count_cycle - 4 * decoded_rd + 31 == 0
+22 * mem_wdata - count_cycle - 2 * decoded_rs1 + 27 == 0
+594 * mem_wdata - 27 * count_cycle + 4 * decoded_rs2 + 617 == 0
+22418 * mem_wdata - 1019 * count_cycle + 4 * decoded_imm + 23433 == 0
+366102 * mem_wdata - 16641 * count_cycle - decoded_imm_j + 450327 == 0
+22 * mem_wdata - count_cycle - 4 * decoder_pseudo_trigger_q + 27 == 0
+22 * mem_wdata - count_cycle - 4 * is_lbu_lhu_lw + 23 == 0
+152724 * mem_wdata - 6942 * count_cycle - q_ascii_instr + 187433 == 0
+226710 * mem_wdata - 10305 * count_cycle - q_insn_opcode + 278234 == 0
+22 * mem_wdata - count_cycle - 2 * q_insn_rs1 + 25 == 0
+66 * mem_wdata - 3 * count_cycle - 4 * q_insn_rd + 77 == 0
+1.7973661838E10 * mem_wdata - 816984629 * count_cycle - 2 * cached_ascii_instr + 2.2058584981E10 == 0
+6129134 * mem_wdata - 278597 * count_cycle - cached_insn_opcode + 7522118 == 0
+18 * mem_wdata - count_cycle + 4 * cpuregs_rs1 + 23 == 0
+48 * mem_wdata - 12 * count_instr - reg_pc + 60 == 0
+48 * mem_wdata - 12 * count_instr - reg_next_pc + 64 == 0
+4084 * mem_wdata - 1021 * count_instr - reg_op1 + 5104 == 0
+4.278190671E9 * mem_wdata - 1069547668 * count_instr + next_insn_opcode + 4.278190672E9 == 0
+4.27373312E9 * mem_wdata - 1068433280 * count_instr + dbg_insn_opcode + 4.272618733E9 == 0
+4 * mem_wdata - count_instr - decoded_rd + 6 == 0
+8 * mem_wdata - 2 * count_instr - decoded_rs1 + 10 == 0
+108 * mem_wdata - 27 * count_instr + decoded_rs2 + 107 == 0
+4076 * mem_wdata - 1019 * count_instr + decoded_imm + 4075 == 0
+266256 * mem_wdata - 66564 * count_instr - decoded_imm_j + 333840 == 0
+4 * mem_wdata - count_instr - decoder_pseudo_trigger_q + 5 == 0
+4 * mem_wdata - count_instr - is_lbu_lhu_lw + 4 == 0
+111072 * mem_wdata - 27768 * count_instr - q_ascii_instr + 138839 == 0
+164880 * mem_wdata - 41220 * count_instr - q_insn_opcode + 206099 == 0
+8 * mem_wdata - 2 * count_instr - q_insn_rs1 + 9 == 0
+12 * mem_wdata - 3 * count_instr - q_insn_rd + 14 == 0
+6.535877032E9 * mem_wdata - 1633969258 * count_instr - cached_ascii_instr + 8.169846289E9 == 0
+4457552 * mem_wdata - 1114388 * count_instr - cached_insn_opcode + 5571939 == 0
+3 * mem_wdata - count_instr + cpuregs_rs1 + 4 == 0
+3 * mem_wdata - 267386917 * reg_pc - 3 * next_insn_opcode + 3.208643004E9 == 0
+12 * mem_wdata - reg_pc - 12 * cpuregs_rs1 + 12 == 0
+3 * mem_wdata - 267386917 * reg_next_pc - 3 * next_insn_opcode + 4.278190672E9 == 0
+12 * mem_wdata - reg_next_pc - 12 * cpuregs_rs1 + 16 == 0
+1021 * mem_wdata - 1069547668 * reg_op1 - 1021 * next_insn_opcode + 1.09093862136E12 == 0
+1021 * mem_wdata - reg_op1 - 1021 * cpuregs_rs1 + 1020 == 0
+267108320 * mem_wdata - 267108320 * next_insn_opcode + 267386917 * dbg_insn_opcode - 2.97972504274879E14 == 0
+mem_wdata - next_insn_opcode - 1069547668 * decoded_rd + 2139095336 == 0
+mem_wdata - next_insn_opcode - 534773834 * decoded_rs1 + 1069547668 == 0
+27 * mem_wdata - 27 * next_insn_opcode + 1069547668 * decoded_rs2 - 1069547668 == 0
+1019 * mem_wdata - 1019 * next_insn_opcode + 1069547668 * decoded_imm - 1069547668 == 0
+16641 * mem_wdata - 16641 * next_insn_opcode - 267386917 * decoded_imm_j + 1.8071077398528E13 == 0
+mem_wdata - next_insn_opcode - 1069547668 * decoder_pseudo_trigger_q + 1069547668 == 0
+mem_wdata - next_insn_opcode - 1069547668 * is_lbu_lhu_lw == 0
+6942 * mem_wdata - 6942 * next_insn_opcode - 267386917 * q_ascii_instr + 7.424532524339E12 == 0
+10305 * mem_wdata - 10305 * next_insn_opcode - 267386917 * q_insn_opcode + 1.1021421331823E13 == 0
+mem_wdata - next_insn_opcode - 534773834 * q_insn_rs1 + 534773834 == 0
+3 * mem_wdata - 3 * next_insn_opcode - 1069547668 * q_insn_rd + 2139095336 == 0
+816984629 * mem_wdata - 816984629 * next_insn_opcode - 534773834 * cached_ascii_instr + 8.7380400420402138E17 == 0
+278597 * mem_wdata - 278597 * next_insn_opcode - 267386917 * cached_insn_opcode + 2.97972504274879E14 == 0
+1069547667 * mem_wdata + next_insn_opcode - 1069547668 * cpuregs_rs1 == 0
+1068433280 * mem_wdata + dbg_insn_opcode - 1068433280 * cpuregs_rs1 - 1114387 == 0
+mem_wdata - decoded_rd - cpuregs_rs1 + 2 == 0
+2 * mem_wdata - decoded_rs1 - 2 * cpuregs_rs1 + 2 == 0
+27 * mem_wdata + decoded_rs2 - 27 * cpuregs_rs1 - 1 == 0
+1019 * mem_wdata + decoded_imm - 1019 * cpuregs_rs1 - 1 == 0
+66564 * mem_wdata - decoded_imm_j - 66564 * cpuregs_rs1 + 67584 == 0
+mem_wdata - decoder_pseudo_trigger_q - cpuregs_rs1 + 1 == 0
+mem_wdata - is_lbu_lhu_lw - cpuregs_rs1 == 0
+27768 * mem_wdata - q_ascii_instr - 27768 * cpuregs_rs1 + 27767 == 0
+41220 * mem_wdata - q_insn_opcode - 41220 * cpuregs_rs1 + 41219 == 0
+2 * mem_wdata - q_insn_rs1 - 2 * cpuregs_rs1 + 1 == 0
+3 * mem_wdata - q_insn_rd - 3 * cpuregs_rs1 + 2 == 0
+1633969258 * mem_wdata - cached_ascii_instr - 1633969258 * cpuregs_rs1 + 1633969257 == 0
+1114388 * mem_wdata - cached_insn_opcode - 1114388 * cpuregs_rs1 + 1114387 == 0
+8 * count_cycle - 44 * count_instr - reg_pc + 4 == 0
+8 * count_cycle - 44 * count_instr - reg_next_pc + 8 == 0
+2042 * count_cycle - 11231 * count_instr - 3 * reg_op1 + 1018 == 0
+1426063557 * count_cycle - 7.843349564E9 * count_instr + 2 * next_insn_opcode - 1426063555 == 0
+2136866560 * count_cycle - 1.175276608E10 * count_instr + 3 * dbg_insn_opcode - 2140209721 == 0
+2 * count_cycle - 11 * count_instr - 3 * decoded_rd + 4 == 0
+4 * count_cycle - 22 * count_instr - 3 * decoded_rs1 + 2 == 0
+18 * count_cycle - 99 * count_instr + decoded_rs2 - 19 == 0
+2038 * count_cycle - 11209 * count_instr + 3 * decoded_imm - 2041 == 0
+44376 * count_cycle - 244068 * count_instr - decoded_imm_j + 23208 == 0
+2 * count_cycle - 11 * count_instr - 3 * decoder_pseudo_trigger_q + 1 == 0
+2 * count_cycle - 11 * count_instr - 3 * is_lbu_lhu_lw - 2 == 0
+18512 * count_cycle - 101816 * count_instr - q_ascii_instr + 9255 == 0
+27480 * count_cycle - 151140 * count_instr - q_insn_opcode + 13739 == 0
+4 * count_cycle - 22 * count_instr - 3 * q_insn_rs1 - 1 == 0
+2 * count_cycle - 11 * count_instr - q_insn_rd == 0
+3.267938516E9 * count_cycle - 1.7973661838E10 * count_instr - 3 * cached_ascii_instr + 1633969255 == 0
+2228776 * count_cycle - 12258268 * count_instr - 3 * cached_insn_opcode + 1114385 == 0
+count_cycle - 6 * count_instr + 2 * cpuregs_rs1 + 1 == 0
+count_cycle - 1960837391 * reg_pc - 22 * next_insn_opcode + 2.3530048669E10 == 0
+2 * count_cycle - 3 * reg_pc - 44 * cpuregs_rs1 - 10 == 0
+count_cycle - 1960837391 * reg_next_pc - 22 * next_insn_opcode + 3.1373398233E10 == 0
+2 * count_cycle - 3 * reg_next_pc - 44 * cpuregs_rs1 + 2 == 0
+1021 * count_cycle - 2.3530048692E10 * reg_op1 - 22462 * next_insn_opcode + 2.4000649642357E13 == 0
+1021 * count_cycle - 18 * reg_op1 - 22462 * cpuregs_rs1 - 5123 == 0
+267108320 * count_cycle - 5.87638304E9 * next_insn_opcode + 5.882512173E9 * dbg_insn_opcode - 6.555401236424311E15 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * decoded_rd + 4.7060097361E10 == 0
+count_cycle - 22 * next_insn_opcode - 1.1765024346E10 * decoded_rs1 + 2.3530048669E10 == 0
+9 * count_cycle - 198 * next_insn_opcode + 7.843349564E9 * decoded_rs2 - 7.843349771E9 == 0
+1019 * count_cycle - 22418 * next_insn_opcode + 2.3530048692E10 * decoded_imm - 2.3530072129E10 == 0
+5547 * count_cycle - 122034 * next_insn_opcode - 1960837391 * decoded_imm_j + 1.32521234105763E14 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * decoder_pseudo_trigger_q + 2.3530048669E10 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * is_lbu_lhu_lw - 23 == 0
+2314 * count_cycle - 50908 * next_insn_opcode - 1960837391 * q_ascii_instr + 5.4446571782675E13 == 0
+3435 * count_cycle - 75570 * next_insn_opcode - 1960837391 * q_insn_opcode + 8.0823756340624E13 == 0
+count_cycle - 22 * next_insn_opcode - 1.1765024346E10 * q_insn_rs1 + 1.1765024323E10 == 0
+count_cycle - 22 * next_insn_opcode - 7.843349564E9 * q_insn_rd + 1.5686699105E10 == 0
+278597 * count_cycle - 6129134 * next_insn_opcode - 5.882512173E9 * cached_insn_opcode + 6.55539508652522E15 == 0
+356515889 * count_cycle + 6 * next_insn_opcode - 7.843349564E9 * cpuregs_rs1 - 8.199865447E9 == 0
+534216640 * count_cycle + 9 * dbg_insn_opcode - 1.175276608E10 * cpuregs_rs1 - 1.2297012203E10 == 0
+count_cycle - 18 * decoded_rd - 22 * cpuregs_rs1 + 13 == 0
+count_cycle - 9 * decoded_rs1 - 22 * cpuregs_rs1 - 5 == 0
+3 * count_cycle + 2 * decoded_rs2 - 66 * cpuregs_rs1 - 71 == 0
+1019 * count_cycle + 18 * decoded_imm - 22418 * cpuregs_rs1 - 23455 == 0
+3698 * count_cycle - decoded_imm_j - 81356 * cpuregs_rs1 - 17470 == 0
+count_cycle - 18 * decoder_pseudo_trigger_q - 22 * cpuregs_rs1 - 5 == 0
+count_cycle - 18 * is_lbu_lhu_lw - 22 * cpuregs_rs1 - 23 == 0
+4628 * count_cycle - 3 * q_ascii_instr - 101816 * cpuregs_rs1 - 23143 == 0
+2290 * count_cycle - q_insn_opcode - 50380 * cpuregs_rs1 - 11451 == 0
+count_cycle - 9 * q_insn_rs1 - 22 * cpuregs_rs1 - 14 == 0
+count_cycle - 6 * q_insn_rd - 22 * cpuregs_rs1 - 11 == 0
+816984629 * count_cycle - 9 * cached_ascii_instr - 1.7973661838E10 * cpuregs_rs1 - 4.084923154E9 == 0
+557194 * count_cycle - 9 * cached_insn_opcode - 12258268 * cpuregs_rs1 - 2785979 == 0
+4 * count_instr - 1426063557 * reg_pc - 16 * next_insn_opcode + 1.7112762668E10 == 0
+4 * count_instr - reg_pc - 16 * cpuregs_rs1 - 4 == 0
+4 * count_instr - 1426063557 * reg_next_pc - 16 * next_insn_opcode + 2.2817016896E10 == 0
+4 * count_instr - reg_next_pc - 16 * cpuregs_rs1 == 0
+1021 * count_instr - 4.278190671E9 * reg_op1 - 4084 * next_insn_opcode + 4.363754480336E12 == 0
+1021 * count_instr - 3 * reg_op1 - 4084 * cpuregs_rs1 - 1024 == 0
+1068433280 * count_instr - 4.27373312E9 * next_insn_opcode + 4.278190671E9 * dbg_insn_opcode - 4.767564341016797E15 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * decoded_rd + 8.556381338E9 == 0
+2 * count_instr - 8 * next_insn_opcode - 4.278190671E9 * decoded_rs1 + 8.556381334E9 == 0
+3 * count_instr - 12 * next_insn_opcode + 475354519 * decoded_rs2 - 475354531 == 0
+1019 * count_instr - 4076 * next_insn_opcode + 4.278190671E9 * decoded_imm - 4.278194747E9 == 0
+7396 * count_instr - 29584 * next_insn_opcode - 475354519 * decoded_imm_j + 3.2126359782512E13 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * decoder_pseudo_trigger_q + 4.278190667E9 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * is_lbu_lhu_lw - 4 == 0
+9256 * count_instr - 37024 * next_insn_opcode - 1426063557 * q_ascii_instr + 3.9597506750195E13 == 0
+4580 * count_instr - 18320 * next_insn_opcode - 475354519 * q_insn_opcode + 1.9593637900341E13 == 0
+2 * count_instr - 8 * next_insn_opcode - 4.278190671E9 * q_insn_rs1 + 4.278190663E9 == 0
+count_instr - 4 * next_insn_opcode - 1426063557 * q_insn_rd + 2.85212711E9 == 0
+1114388 * count_instr - 4457552 * next_insn_opcode - 4.278190671E9 * cached_insn_opcode + 4.767560062826125E15 == 0
+356515889 * count_instr + next_insn_opcode - 1426063557 * cpuregs_rs1 - 1426063556 == 0
+1068433280 * count_instr + 3 * dbg_insn_opcode - 4.27373312E9 * cpuregs_rs1 - 4.277076281E9 == 0
+count_instr - 3 * decoded_rd - 4 * cpuregs_rs1 + 2 == 0
+2 * count_instr - 3 * decoded_rs1 - 8 * cpuregs_rs1 - 2 == 0
+9 * count_instr + decoded_rs2 - 36 * cpuregs_rs1 - 37 == 0
+1019 * count_instr + 3 * decoded_imm - 4076 * cpuregs_rs1 - 4079 == 0
+22188 * count_instr - decoded_imm_j - 88752 * cpuregs_rs1 - 21168 == 0
+count_instr - 3 * decoder_pseudo_trigger_q - 4 * cpuregs_rs1 - 1 == 0
+count_instr - 3 * is_lbu_lhu_lw - 4 * cpuregs_rs1 - 4 == 0
+9256 * count_instr - q_ascii_instr - 37024 * cpuregs_rs1 - 9257 == 0
+13740 * count_instr - q_insn_opcode - 54960 * cpuregs_rs1 - 13741 == 0
+2 * count_instr - 3 * q_insn_rs1 - 8 * cpuregs_rs1 - 5 == 0
+count_instr - q_insn_rd - 4 * cpuregs_rs1 - 2 == 0
+1633969258 * count_instr - 3 * cached_ascii_instr - 6.535877032E9 * cpuregs_rs1 - 1633969261 == 0
+1114388 * count_instr - 3 * cached_insn_opcode - 4457552 * cpuregs_rs1 - 1114391 == 0
+356515889 * reg_pc + 4 * next_insn_opcode - 4 * cpuregs_rs1 - 4.278190668E9 == 0
+356515889 * reg_next_pc + 4 * next_insn_opcode - 4 * cpuregs_rs1 - 5.704254224E9 == 0
+1069547667 * reg_op1 + 1021 * next_insn_opcode - 1021 * cpuregs_rs1 - 1.09093862034E12 == 0
+1068433280 * next_insn_opcode - 1069547667 * dbg_insn_opcode - 1068433280 * cpuregs_rs1 + 1.191890015985129E15 == 0
+next_insn_opcode + 1069547667 * decoded_rd - cpuregs_rs1 - 2139095334 == 0
+2 * next_insn_opcode + 1069547667 * decoded_rs1 - 2 * cpuregs_rs1 - 2139095334 == 0
+9 * next_insn_opcode - 356515889 * decoded_rs2 - 9 * cpuregs_rs1 + 356515889 == 0
+1019 * next_insn_opcode - 1069547667 * decoded_imm - 1019 * cpuregs_rs1 + 1069547667 == 0
+22188 * next_insn_opcode + 356515889 * decoded_imm_j - 22188 * cpuregs_rs1 - 2.4094769842176E13 == 0
+next_insn_opcode + 1069547667 * decoder_pseudo_trigger_q - cpuregs_rs1 - 1069547667 == 0
+next_insn_opcode + 1069547667 * is_lbu_lhu_lw - cpuregs_rs1 == 0
+9256 * next_insn_opcode + 356515889 * q_ascii_instr - 9256 * cpuregs_rs1 - 9.899376689863E12 == 0
+13740 * next_insn_opcode + 356515889 * q_insn_opcode - 13740 * cpuregs_rs1 - 1.4695228428691E13 == 0
+2 * next_insn_opcode + 1069547667 * q_insn_rs1 - 2 * cpuregs_rs1 - 1069547667 == 0
+next_insn_opcode + 356515889 * q_insn_rd - cpuregs_rs1 - 713031778 == 0
+1633969258 * next_insn_opcode + 1069547667 * cached_ascii_instr - 1633969258 * cpuregs_rs1 - 1.74760800677407334E18 == 0
+1114388 * next_insn_opcode + 1069547667 * cached_insn_opcode - 1114388 * cpuregs_rs1 - 1.191890015985129E15 == 0
+===========================================================================
+..tick():::EXIT
+trap == mem_wstrb
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_wordsize
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == last_mem_valid
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_lui
+trap == instr_auipc
+trap == instr_jal
+trap == instr_jalr
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_lb
+trap == instr_lh
+trap == instr_lw
+trap == instr_lbu
+trap == instr_lhu
+trap == instr_sb
+trap == instr_sh
+trap == instr_sw
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_slli
+trap == instr_srli
+trap == instr_srai
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == instr_rdcycle
+trap == instr_rdcycleh
+trap == instr_rdinstr
+trap == instr_rdinstrh
+trap == instr_ecall_ebreak
+trap == instr_getq
+trap == instr_setq
+trap == instr_retirq
+trap == instr_maskirq
+trap == instr_waitirq
+trap == instr_timer
+trap == decoder_trigger
+trap == decoder_trigger_q
+trap == decoder_pseudo_trigger
+trap == decoder_pseudo_trigger_q
+trap == compressed_instr
+trap == is_lui_auipc_jal
+trap == is_lb_lh_lw_lbu_lhu
+trap == is_slli_srli_srai
+trap == is_sb_sh_sw
+trap == is_sll_srl_sra
+trap == is_slti_blt_slt
+trap == is_sltiu_bltu_sltu
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_lbu_lhu_lw
+trap == is_alu_reg_reg
+trap == is_compare
+trap == dbg_rs2val_valid
+trap == dbg_next
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_store
+trap == latched_stalu
+trap == latched_branch
+trap == latched_compr
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+trap == orig(trap)
+trap == orig(mem_valid)
+trap == orig(mem_wstrb)
+trap == orig(pcpi_valid)
+trap == orig(eoi)
+trap == orig(trace_valid)
+trap == orig(irq_delay)
+trap == orig(irq_active)
+trap == orig(timer)
+trap == orig(pcpi_int_wr)
+trap == orig(pcpi_int_wait)
+trap == orig(pcpi_int_ready)
+trap == orig(mem_state)
+trap == orig(mem_wordsize)
+trap == orig(mem_do_rinst)
+trap == orig(mem_do_rdata)
+trap == orig(mem_do_wdata)
+trap == orig(mem_la_secondword)
+trap == orig(mem_la_firstword_reg)
+trap == orig(last_mem_valid)
+trap == orig(prefetched_high_word)
+trap == orig(clear_prefetched_high_word)
+trap == orig(instr_lui)
+trap == orig(instr_auipc)
+trap == orig(instr_jal)
+trap == orig(instr_jalr)
+trap == orig(instr_beq)
+trap == orig(instr_bne)
+trap == orig(instr_blt)
+trap == orig(instr_bge)
+trap == orig(instr_bltu)
+trap == orig(instr_bgeu)
+trap == orig(instr_lb)
+trap == orig(instr_lh)
+trap == orig(instr_lw)
+trap == orig(instr_lbu)
+trap == orig(instr_lhu)
+trap == orig(instr_sb)
+trap == orig(instr_sh)
+trap == orig(instr_sw)
+trap == orig(instr_slti)
+trap == orig(instr_sltiu)
+trap == orig(instr_xori)
+trap == orig(instr_ori)
+trap == orig(instr_andi)
+trap == orig(instr_slli)
+trap == orig(instr_srli)
+trap == orig(instr_srai)
+trap == orig(instr_add)
+trap == orig(instr_sub)
+trap == orig(instr_sll)
+trap == orig(instr_slt)
+trap == orig(instr_sltu)
+trap == orig(instr_xor)
+trap == orig(instr_srl)
+trap == orig(instr_sra)
+trap == orig(instr_or)
+trap == orig(instr_and)
+trap == orig(instr_rdcycle)
+trap == orig(instr_rdcycleh)
+trap == orig(instr_rdinstr)
+trap == orig(instr_rdinstrh)
+trap == orig(instr_ecall_ebreak)
+trap == orig(instr_getq)
+trap == orig(instr_setq)
+trap == orig(instr_retirq)
+trap == orig(instr_maskirq)
+trap == orig(instr_waitirq)
+trap == orig(instr_timer)
+trap == orig(decoder_trigger)
+trap == orig(decoder_pseudo_trigger)
+trap == orig(compressed_instr)
+trap == orig(is_lui_auipc_jal)
+trap == orig(is_lb_lh_lw_lbu_lhu)
+trap == orig(is_slli_srli_srai)
+trap == orig(is_sb_sh_sw)
+trap == orig(is_sll_srl_sra)
+trap == orig(is_slti_blt_slt)
+trap == orig(is_sltiu_bltu_sltu)
+trap == orig(is_beq_bne_blt_bge_bltu_bgeu)
+trap == orig(is_alu_reg_reg)
+trap == orig(is_compare)
+trap == orig(dbg_rs1val_valid)
+trap == orig(dbg_rs2val_valid)
+trap == orig(irq_state)
+trap == orig(set_mem_do_rinst)
+trap == orig(set_mem_do_rdata)
+trap == orig(set_mem_do_wdata)
+trap == orig(latched_store)
+trap == orig(latched_stalu)
+trap == orig(latched_branch)
+trap == orig(latched_compr)
+trap == orig(latched_trace)
+trap == orig(latched_is_lu)
+trap == orig(latched_is_lh)
+trap == orig(latched_is_lb)
+trap == orig(pcpi_timeout)
+trap == orig(do_waitirq)
+trap == orig(alu_wait)
+trap == orig(alu_wait_2)
+trap == orig(clear_prefetched_high_word_q)
+trap == orig(cpuregs_write)
+mem_valid == mem_instr
+mem_valid == mem_state
+mem_valid == mem_do_prefetch
+mem_valid == mem_do_rinst
+mem_valid == instr_addi
+mem_valid == is_jalr_addi_slti_sltiu_xori_ori_andi
+mem_valid == is_lui_auipc_jal_jalr_addi_add_sub
+mem_valid == is_alu_reg_imm
+mem_valid == dbg_rs1val_valid
+mem_valid == dbg_valid_insn
+mem_valid == orig(mem_do_prefetch)
+mem_valid == orig(instr_addi)
+mem_valid == orig(decoder_trigger_q)
+mem_valid == orig(is_jalr_addi_slti_sltiu_xori_ori_andi)
+mem_valid == orig(is_alu_reg_imm)
+mem_valid == orig(dbg_next)
+mem_valid == orig(dbg_valid_insn)
+mem_addr == reg_next_pc
+mem_addr == orig(reg_next_pc)
+mem_wdata == orig(mem_wdata)
+mem_la_wdata == reg_op2
+mem_la_wdata == decoded_imm
+mem_la_wdata == dbg_insn_imm
+mem_la_wdata == q_insn_imm
+mem_la_wdata == cached_insn_imm
+mem_la_wdata == orig(decoded_imm)
+mem_la_wdata == orig(dbg_insn_imm)
+mem_la_wstrb == orig(mem_la_wstrb)
+pcpi_insn == trace_data
+pcpi_insn == reg_out
+pcpi_insn == reg_sh
+pcpi_insn == irq_pending
+pcpi_insn == pcpi_int_rd
+pcpi_insn == mem_16bit_buffer
+pcpi_insn == dbg_rs2val
+pcpi_insn == current_pc
+pcpi_insn == pcpi_timeout_counter
+pcpi_insn == next_irq_pending
+pcpi_insn == alu_out_q
+pcpi_insn == alu_out_0
+pcpi_insn == alu_out_0_q
+pcpi_insn == cpuregs_wrdata
+pcpi_insn == decoded_rs
+pcpi_insn == orig(mem_la_wdata)
+pcpi_insn == orig(pcpi_insn)
+pcpi_insn == orig(trace_data)
+pcpi_insn == orig(reg_op2)
+pcpi_insn == orig(reg_out)
+pcpi_insn == orig(reg_sh)
+pcpi_insn == orig(irq_pending)
+pcpi_insn == orig(pcpi_int_rd)
+pcpi_insn == orig(mem_16bit_buffer)
+pcpi_insn == orig(dbg_rs1val)
+pcpi_insn == orig(dbg_rs2val)
+pcpi_insn == orig(current_pc)
+pcpi_insn == orig(pcpi_timeout_counter)
+pcpi_insn == orig(next_irq_pending)
+pcpi_insn == orig(alu_out)
+pcpi_insn == orig(alu_out_q)
+pcpi_insn == orig(alu_out_0)
+pcpi_insn == orig(alu_out_0_q)
+pcpi_insn == orig(alu_add_sub)
+pcpi_insn == orig(alu_shl)
+pcpi_insn == orig(alu_shr)
+pcpi_insn == orig(alu_eq)
+pcpi_insn == orig(alu_ltu)
+pcpi_insn == orig(alu_lts)
+pcpi_insn == orig(cpuregs_wrdata)
+pcpi_insn == orig(decoded_rs)
+count_instr == orig(count_instr)
+reg_pc == dbg_insn_addr
+reg_pc == orig(reg_pc)
+reg_pc == orig(dbg_insn_addr)
+reg_op1 == dbg_rs1val
+reg_op1 == cpuregs_rs1
+reg_op1 == orig(cpuregs_rs1)
+next_insn_opcode == mem_rdata_word
+next_insn_opcode == mem_rdata_q
+next_insn_opcode == cached_insn_opcode
+next_insn_opcode == orig(next_insn_opcode)
+next_insn_opcode == orig(mem_rdata_word)
+next_insn_opcode == orig(mem_rdata_q)
+dbg_insn_opcode == q_insn_opcode
+dbg_insn_opcode == orig(dbg_insn_opcode)
+irq_mask == orig(irq_mask)
+decoded_rd == dbg_insn_rd
+decoded_rd == q_insn_rd
+decoded_rd == cached_insn_rd
+decoded_rd == latched_rd
+decoded_rd == orig(decoded_rd)
+decoded_rd == orig(dbg_insn_rd)
+decoded_rd == orig(latched_rd)
+decoded_rs1 == dbg_insn_rs1
+decoded_rs1 == q_insn_rs1
+decoded_rs1 == cached_insn_rs1
+decoded_rs1 == orig(decoded_rs1)
+decoded_rs1 == orig(dbg_insn_rs1)
+decoded_rs2 == dbg_insn_rs2
+decoded_rs2 == q_insn_rs2
+decoded_rs2 == cached_insn_rs2
+decoded_rs2 == orig(decoded_rs2)
+decoded_rs2 == orig(dbg_insn_rs2)
+decoded_imm_j == orig(decoded_imm_j)
+new_ascii_instr == dbg_ascii_instr
+new_ascii_instr == q_ascii_instr
+new_ascii_instr == cached_ascii_instr
+new_ascii_instr == orig(new_ascii_instr)
+new_ascii_instr == orig(dbg_ascii_instr)
+alu_out == alu_add_sub
+alu_ltu == alu_lts
+cpuregs_rs2 == orig(reg_op1)
+cpuregs_rs2 == orig(cpuregs_rs2)
+trap == 0
+mem_valid == 1
+mem_addr one of { 4, 16 }
+mem_la_wdata one of { 1, 1020 }
+mem_la_wstrb == 15
+pcpi_insn == -1
+reg_pc one of { 0, 12 }
+dbg_insn_opcode one of { 1114387, 1069547667 }
+irq_mask == 4294967295L
+decoded_rd one of { 1, 2 }
+decoded_rs1 one of { 0, 2 }
+decoded_rs2 one of { 1, 28 }
+decoded_imm_j one of { 1020, 67584 }
+new_ascii_instr == 1633969257
+cpu_state == 8
+dbg_ascii_state == 1702389091
+alu_shr >= 0
+alu_eq one of { 0, 1 }
+alu_ltu one of { 0, 1 }
+cpuregs_rs2 one of { -1, 1020 }
+trap < mem_addr
+trap < mem_la_wdata
+trap < count_cycle
+trap < count_instr
+trap <= reg_pc
+trap <= reg_op1
+trap <= next_insn_opcode
+trap < dbg_insn_opcode
+trap < decoded_rd
+trap <= decoded_rs1
+trap < decoded_rs2
+trap < decoded_imm_j
+trap < alu_out
+trap <= alu_shl
+trap <= alu_shr
+trap <= alu_eq
+trap <= alu_ltu
+trap != cpuregs_rs2
+trap <= orig(mem_instr)
+trap <= orig(mem_addr)
+trap < orig(count_cycle)
+trap <= orig(decoder_pseudo_trigger_q)
+trap >= orig(is_lbu_lhu_lw)
+trap != orig(q_ascii_instr)
+trap != orig(q_insn_opcode)
+trap != orig(q_insn_rs1)
+trap != orig(q_insn_rd)
+trap != orig(cached_ascii_instr)
+trap != orig(cached_insn_opcode)
+mem_valid < mem_addr
+mem_valid <= mem_la_wdata
+mem_valid < count_cycle
+mem_valid <= count_instr
+mem_valid != reg_pc
+mem_valid < dbg_insn_opcode
+mem_valid <= decoded_rd
+mem_valid != decoded_rs1
+mem_valid <= decoded_rs2
+mem_valid < decoded_imm_j
+mem_valid <= alu_out
+mem_valid != alu_shl
+mem_valid >= alu_eq
+mem_valid >= alu_ltu
+mem_valid != cpuregs_rs2
+mem_valid >= orig(mem_instr)
+mem_valid != orig(mem_addr)
+mem_valid < orig(count_cycle)
+mem_valid >= orig(decoder_pseudo_trigger_q)
+mem_valid > orig(is_lbu_lhu_lw)
+mem_valid != orig(q_ascii_instr)
+mem_valid != orig(q_insn_opcode)
+mem_valid >= orig(q_insn_rs1)
+mem_valid != orig(q_insn_rd)
+mem_valid != orig(cached_ascii_instr)
+mem_valid != orig(cached_insn_opcode)
+mem_addr != mem_la_wdata
+mem_addr != mem_la_wstrb
+mem_addr > pcpi_insn
+mem_addr < count_cycle
+mem_addr > reg_pc
+mem_addr < dbg_insn_opcode
+mem_addr < irq_mask
+mem_addr > decoded_rd
+mem_addr > decoded_rs1
+mem_addr != decoded_rs2
+mem_addr < decoded_imm_j
+mem_addr < new_ascii_instr
+mem_addr != cpu_state
+mem_addr < dbg_ascii_state
+mem_addr > alu_eq
+mem_addr > alu_ltu
+mem_addr != cpuregs_rs2
+mem_addr > orig(mem_instr)
+mem_addr != orig(mem_addr)
+mem_addr < orig(count_cycle)
+mem_addr > orig(decoder_pseudo_trigger_q)
+mem_addr > orig(is_lbu_lhu_lw)
+mem_addr != orig(q_ascii_instr)
+mem_addr != orig(q_insn_opcode)
+mem_addr > orig(q_insn_rs1)
+mem_addr > orig(q_insn_rd)
+mem_addr != orig(cached_ascii_instr)
+mem_addr != orig(cached_insn_opcode)
+mem_addr < orig(cpu_state)
+mem_addr < orig(dbg_ascii_state)
+mem_wdata >= pcpi_insn
+mem_wdata < count_cycle
+mem_wdata < count_instr
+mem_wdata <= reg_op1
+mem_wdata <= next_insn_opcode
+mem_wdata < dbg_insn_opcode
+mem_wdata < irq_mask
+mem_wdata < decoded_imm_j
+mem_wdata < new_ascii_instr
+mem_wdata < dbg_ascii_state
+mem_wdata < alu_out
+mem_wdata <= alu_shl
+mem_wdata != alu_ltu
+mem_wdata <= cpuregs_rs2
+mem_wdata < orig(mem_addr)
+mem_wdata < orig(count_cycle)
+mem_wdata >= orig(is_lbu_lhu_lw)
+mem_wdata <= orig(q_ascii_instr)
+mem_wdata <= orig(q_insn_opcode)
+mem_wdata % orig(q_insn_rs1) == 0
+mem_wdata <= orig(cached_ascii_instr)
+mem_wdata <= orig(cached_insn_opcode)
+mem_wdata < orig(dbg_ascii_state)
+mem_la_wdata != mem_la_wstrb
+mem_la_wdata > pcpi_insn
+mem_la_wdata != count_cycle
+mem_la_wdata != count_instr
+mem_la_wdata != reg_pc
+reg_op1 % mem_la_wdata == 0
+mem_la_wdata < dbg_insn_opcode
+mem_la_wdata < irq_mask
+mem_la_wdata != decoded_rd
+mem_la_wdata != decoded_rs1
+mem_la_wdata >= decoded_rs2
+mem_la_wdata <= decoded_imm_j
+mem_la_wdata < new_ascii_instr
+mem_la_wdata != cpu_state
+mem_la_wdata < dbg_ascii_state
+alu_out % mem_la_wdata == 0
+mem_la_wdata <= alu_out
+alu_shl % mem_la_wdata == 0
+mem_la_wdata != alu_shl
+alu_shr % mem_la_wdata == 0
+mem_la_wdata >= alu_eq
+mem_la_wdata >= alu_ltu
+mem_la_wdata != cpuregs_rs2
+mem_la_wdata > orig(mem_instr)
+mem_la_wdata != orig(mem_addr)
+mem_la_wdata != orig(count_cycle)
+mem_la_wdata >= orig(decoder_pseudo_trigger_q)
+mem_la_wdata > orig(is_lbu_lhu_lw)
+mem_la_wdata != orig(q_ascii_instr)
+mem_la_wdata != orig(q_insn_opcode)
+mem_la_wdata >= orig(q_insn_rs1)
+mem_la_wdata != orig(q_insn_rd)
+mem_la_wdata != orig(cached_ascii_instr)
+mem_la_wdata != orig(cached_insn_opcode)
+mem_la_wdata != orig(cpu_state)
+mem_la_wdata < orig(dbg_ascii_state)
+mem_la_wstrb != count_cycle
+mem_la_wstrb != count_instr
+mem_la_wstrb > reg_pc
+mem_la_wstrb < dbg_insn_opcode
+mem_la_wstrb > decoded_rd
+mem_la_wstrb > decoded_rs1
+mem_la_wstrb != decoded_rs2
+mem_la_wstrb < decoded_imm_j
+mem_la_wstrb != alu_shl
+mem_la_wstrb > alu_eq
+mem_la_wstrb > alu_ltu
+mem_la_wstrb != cpuregs_rs2
+mem_la_wstrb > orig(mem_instr)
+mem_la_wstrb != orig(mem_addr)
+mem_la_wstrb != orig(count_cycle)
+mem_la_wstrb > orig(decoder_pseudo_trigger_q)
+mem_la_wstrb > orig(is_lbu_lhu_lw)
+mem_la_wstrb != orig(q_ascii_instr)
+mem_la_wstrb != orig(q_insn_opcode)
+mem_la_wstrb > orig(q_insn_rs1)
+mem_la_wstrb > orig(q_insn_rd)
+mem_la_wstrb != orig(cached_ascii_instr)
+mem_la_wstrb != orig(cached_insn_opcode)
+pcpi_insn < count_cycle
+pcpi_insn < count_instr
+pcpi_insn < reg_pc
+pcpi_insn < reg_op1
+pcpi_insn < next_insn_opcode
+pcpi_insn < dbg_insn_opcode
+pcpi_insn < decoded_rd
+pcpi_insn < decoded_rs1
+pcpi_insn < decoded_rs2
+pcpi_insn < decoded_imm_j
+pcpi_insn < alu_out
+pcpi_insn < alu_shl
+pcpi_insn < alu_shr
+pcpi_insn < alu_eq
+pcpi_insn < alu_ltu
+pcpi_insn <= cpuregs_rs2
+pcpi_insn < orig(mem_instr)
+pcpi_insn < orig(mem_addr)
+pcpi_insn < orig(count_cycle)
+pcpi_insn < orig(decoder_pseudo_trigger_q)
+pcpi_insn <= orig(is_lbu_lhu_lw)
+pcpi_insn <= orig(q_ascii_instr)
+pcpi_insn <= orig(q_insn_opcode)
+pcpi_insn <= orig(q_insn_rs1)
+pcpi_insn <= orig(q_insn_rd)
+pcpi_insn <= orig(cached_ascii_instr)
+pcpi_insn <= orig(cached_insn_opcode)
+count_cycle > count_instr
+count_cycle > reg_pc
+count_cycle > reg_op1
+count_cycle != next_insn_opcode
+count_cycle < dbg_insn_opcode
+count_cycle < irq_mask
+count_cycle % decoded_rd == 0
+count_cycle > decoded_rd
+count_cycle > decoded_rs1
+count_cycle != decoded_rs2
+count_cycle < decoded_imm_j
+count_cycle < new_ascii_instr
+count_cycle != cpu_state
+count_cycle < dbg_ascii_state
+count_cycle != alu_out
+count_cycle > alu_shl
+count_cycle > alu_shr
+count_cycle > alu_eq
+count_cycle > alu_ltu
+count_cycle != cpuregs_rs2
+count_cycle > orig(mem_instr)
+count_cycle != orig(mem_addr)
+count_cycle - orig(count_cycle) - 1 == 0
+count_cycle > orig(decoder_pseudo_trigger_q)
+count_cycle > orig(is_lbu_lhu_lw)
+count_cycle != orig(q_ascii_instr)
+count_cycle != orig(q_insn_opcode)
+count_cycle % orig(q_insn_rs1) == 0
+count_cycle > orig(q_insn_rs1)
+count_cycle % orig(q_insn_rd) == 0
+count_cycle > orig(q_insn_rd)
+count_cycle != orig(cached_ascii_instr)
+count_cycle != orig(cached_insn_opcode)
+count_cycle != orig(cpu_state)
+count_cycle < orig(dbg_ascii_state)
+count_instr > reg_op1
+count_instr != next_insn_opcode
+count_instr < dbg_insn_opcode
+count_instr < irq_mask
+count_instr % decoded_rd == 0
+count_instr >= decoded_rd
+count_instr > decoded_rs1
+count_instr != decoded_rs2
+count_instr < decoded_imm_j
+count_instr < new_ascii_instr
+count_instr < dbg_ascii_state
+count_instr != alu_out
+count_instr > alu_shl
+count_instr > alu_shr
+count_instr > alu_eq
+count_instr >= alu_ltu
+count_instr != cpuregs_rs2
+count_instr >= orig(mem_instr)
+orig(mem_instr) % count_instr == 0
+count_instr != orig(mem_addr)
+count_instr < orig(count_cycle)
+count_instr > orig(decoder_pseudo_trigger_q)
+count_instr > orig(is_lbu_lhu_lw)
+orig(is_lbu_lhu_lw) % count_instr == 0
+count_instr != orig(q_ascii_instr)
+count_instr != orig(q_insn_opcode)
+count_instr % orig(q_insn_rs1) == 0
+count_instr > orig(q_insn_rs1)
+count_instr % orig(q_insn_rd) == 0
+count_instr > orig(q_insn_rd)
+count_instr != orig(cached_ascii_instr)
+count_instr != orig(cached_insn_opcode)
+count_instr < orig(dbg_ascii_state)
+reg_pc < dbg_insn_opcode
+reg_pc < irq_mask
+reg_pc != decoded_rd
+reg_pc >= decoded_rs1
+reg_pc != decoded_rs2
+reg_pc < decoded_imm_j
+reg_pc < new_ascii_instr
+reg_pc != cpu_state
+reg_pc < dbg_ascii_state
+reg_pc >= alu_eq
+reg_pc != alu_ltu
+reg_pc != cpuregs_rs2
+reg_pc != orig(mem_instr)
+reg_pc <= orig(mem_addr)
+reg_pc < orig(count_cycle)
+reg_pc >= orig(decoder_pseudo_trigger_q)
+reg_pc > orig(is_lbu_lhu_lw)
+reg_pc != orig(q_ascii_instr)
+reg_pc != orig(q_insn_opcode)
+reg_pc > orig(q_insn_rs1)
+reg_pc > orig(q_insn_rd)
+reg_pc != orig(cached_ascii_instr)
+reg_pc != orig(cached_insn_opcode)
+reg_pc < orig(cpu_state)
+reg_pc < orig(dbg_ascii_state)
+reg_op1 <= next_insn_opcode
+reg_op1 < dbg_insn_opcode
+reg_op1 < irq_mask
+reg_op1 % decoded_rs2 == 0
+reg_op1 < decoded_imm_j
+reg_op1 < new_ascii_instr
+reg_op1 < dbg_ascii_state
+reg_op1 < alu_out
+2 * reg_op1 - alu_shl == 0
+reg_op1 <= alu_shl
+reg_op1 >= alu_shr
+reg_op1 >= alu_eq
+reg_op1 != alu_ltu
+reg_op1 != cpuregs_rs2
+reg_op1 <= orig(mem_addr)
+reg_op1 < orig(count_cycle)
+reg_op1 >= orig(is_lbu_lhu_lw)
+reg_op1 != orig(q_ascii_instr)
+reg_op1 != orig(q_insn_opcode)
+reg_op1 % orig(q_insn_rs1) == 0
+reg_op1 != orig(cached_ascii_instr)
+reg_op1 != orig(cached_insn_opcode)
+reg_op1 < orig(dbg_ascii_state)
+next_insn_opcode <= dbg_insn_opcode
+next_insn_opcode < irq_mask
+next_insn_opcode != decoded_imm_j
+next_insn_opcode < new_ascii_instr
+next_insn_opcode < dbg_ascii_state
+next_insn_opcode != alu_out
+next_insn_opcode >= alu_shr
+next_insn_opcode >= alu_eq
+next_insn_opcode != alu_ltu
+next_insn_opcode != cpuregs_rs2
+next_insn_opcode >= orig(mem_instr)
+next_insn_opcode != orig(mem_addr)
+next_insn_opcode != orig(count_cycle)
+next_insn_opcode >= orig(is_lbu_lhu_lw)
+next_insn_opcode != orig(q_ascii_instr)
+next_insn_opcode != orig(q_insn_opcode)
+next_insn_opcode % orig(q_insn_rs1) == 0
+next_insn_opcode != orig(cached_ascii_instr)
+next_insn_opcode != orig(cached_insn_opcode)
+next_insn_opcode < orig(dbg_ascii_state)
+dbg_insn_opcode < irq_mask
+dbg_insn_opcode > decoded_rd
+dbg_insn_opcode > decoded_rs1
+dbg_insn_opcode > decoded_rs2
+dbg_insn_opcode > decoded_imm_j
+dbg_insn_opcode < new_ascii_instr
+dbg_insn_opcode > cpu_state
+dbg_insn_opcode < dbg_ascii_state
+dbg_insn_opcode > alu_out
+dbg_insn_opcode > alu_shl
+dbg_insn_opcode > alu_shr
+dbg_insn_opcode > alu_eq
+dbg_insn_opcode > alu_ltu
+dbg_insn_opcode > cpuregs_rs2
+dbg_insn_opcode > orig(mem_instr)
+dbg_insn_opcode > orig(mem_addr)
+dbg_insn_opcode > orig(count_cycle)
+dbg_insn_opcode > orig(decoder_pseudo_trigger_q)
+dbg_insn_opcode > orig(is_lbu_lhu_lw)
+dbg_insn_opcode > orig(q_ascii_instr)
+dbg_insn_opcode > orig(q_insn_opcode)
+dbg_insn_opcode > orig(q_insn_rs1)
+dbg_insn_opcode > orig(q_insn_rd)
+dbg_insn_opcode != orig(cached_ascii_instr)
+dbg_insn_opcode >= orig(cached_insn_opcode)
+dbg_insn_opcode > orig(cpu_state)
+dbg_insn_opcode < orig(dbg_ascii_state)
+irq_mask > decoded_rd
+irq_mask > decoded_rs1
+irq_mask > decoded_rs2
+irq_mask > decoded_imm_j
+irq_mask > alu_out
+irq_mask > alu_shl
+irq_mask > alu_shr
+irq_mask > alu_eq
+irq_mask > alu_ltu
+irq_mask > cpuregs_rs2
+irq_mask > orig(mem_instr)
+irq_mask > orig(mem_addr)
+irq_mask > orig(count_cycle)
+irq_mask > orig(decoder_pseudo_trigger_q)
+irq_mask > orig(is_lbu_lhu_lw)
+irq_mask > orig(q_ascii_instr)
+irq_mask > orig(q_insn_opcode)
+irq_mask > orig(q_insn_rs1)
+irq_mask > orig(q_insn_rd)
+irq_mask > orig(cached_ascii_instr)
+irq_mask > orig(cached_insn_opcode)
+decoded_rd >= decoded_rs1
+decoded_rd != decoded_rs2
+decoded_rd < decoded_imm_j
+decoded_rd < new_ascii_instr
+decoded_rd < cpu_state
+decoded_rd < dbg_ascii_state
+alu_shl % decoded_rd == 0
+decoded_rd > alu_eq
+decoded_rd >= alu_ltu
+decoded_rd != cpuregs_rs2
+decoded_rd >= orig(mem_instr)
+decoded_rd != orig(mem_addr)
+decoded_rd < orig(count_cycle)
+decoded_rd > orig(decoder_pseudo_trigger_q)
+decoded_rd > orig(is_lbu_lhu_lw)
+decoded_rd != orig(q_ascii_instr)
+decoded_rd != orig(q_insn_opcode)
+decoded_rd > orig(q_insn_rs1)
+decoded_rd >= orig(q_insn_rd)
+decoded_rd != orig(cached_ascii_instr)
+decoded_rd != orig(cached_insn_opcode)
+decoded_rd < orig(cpu_state)
+decoded_rd < orig(dbg_ascii_state)
+decoded_rs1 != decoded_rs2
+decoded_rs1 < decoded_imm_j
+decoded_rs1 < new_ascii_instr
+decoded_rs1 < cpu_state
+decoded_rs1 < dbg_ascii_state
+decoded_rs1 >= alu_eq
+decoded_rs1 != alu_ltu
+decoded_rs1 != cpuregs_rs2
+decoded_rs1 != orig(mem_instr)
+decoded_rs1 <= orig(mem_addr)
+decoded_rs1 < orig(count_cycle)
+decoded_rs1 >= orig(decoder_pseudo_trigger_q)
+decoded_rs1 > orig(is_lbu_lhu_lw)
+decoded_rs1 != orig(q_ascii_instr)
+decoded_rs1 != orig(q_insn_opcode)
+decoded_rs1 > orig(q_insn_rs1)
+decoded_rs1 >= orig(q_insn_rd)
+decoded_rs1 != orig(cached_ascii_instr)
+decoded_rs1 != orig(cached_insn_opcode)
+decoded_rs1 < orig(cpu_state)
+decoded_rs1 < orig(dbg_ascii_state)
+decoded_rs2 < decoded_imm_j
+decoded_rs2 < new_ascii_instr
+decoded_rs2 != cpu_state
+decoded_rs2 < dbg_ascii_state
+decoded_rs2 <= alu_out
+alu_shl % decoded_rs2 == 0
+decoded_rs2 != alu_shl
+alu_shr % decoded_rs2 == 0
+decoded_rs2 >= alu_eq
+decoded_rs2 >= alu_ltu
+decoded_rs2 != cpuregs_rs2
+decoded_rs2 > orig(mem_instr)
+decoded_rs2 != orig(mem_addr)
+decoded_rs2 != orig(count_cycle)
+decoded_rs2 >= orig(decoder_pseudo_trigger_q)
+decoded_rs2 > orig(is_lbu_lhu_lw)
+decoded_rs2 != orig(q_ascii_instr)
+decoded_rs2 != orig(q_insn_opcode)
+decoded_rs2 >= orig(q_insn_rs1)
+decoded_rs2 != orig(q_insn_rd)
+decoded_rs2 != orig(cached_ascii_instr)
+decoded_rs2 != orig(cached_insn_opcode)
+decoded_rs2 < orig(cpu_state)
+decoded_rs2 < orig(dbg_ascii_state)
+decoded_imm_j < new_ascii_instr
+decoded_imm_j > cpu_state
+decoded_imm_j < dbg_ascii_state
+decoded_imm_j >= alu_out
+decoded_imm_j > alu_shl
+decoded_imm_j > alu_shr
+decoded_imm_j > alu_eq
+decoded_imm_j > alu_ltu
+decoded_imm_j > cpuregs_rs2
+decoded_imm_j > orig(mem_instr)
+decoded_imm_j > orig(mem_addr)
+decoded_imm_j > orig(count_cycle)
+decoded_imm_j > orig(decoder_pseudo_trigger_q)
+decoded_imm_j > orig(is_lbu_lhu_lw)
+decoded_imm_j > orig(q_ascii_instr)
+decoded_imm_j > orig(q_insn_opcode)
+decoded_imm_j > orig(q_insn_rs1)
+decoded_imm_j > orig(q_insn_rd)
+decoded_imm_j != orig(cached_ascii_instr)
+decoded_imm_j != orig(cached_insn_opcode)
+decoded_imm_j > orig(cpu_state)
+decoded_imm_j < orig(dbg_ascii_state)
+new_ascii_instr > alu_out
+new_ascii_instr > alu_shl
+new_ascii_instr > alu_shr
+new_ascii_instr > alu_eq
+new_ascii_instr > alu_ltu
+new_ascii_instr > cpuregs_rs2
+new_ascii_instr > orig(mem_instr)
+new_ascii_instr > orig(mem_addr)
+new_ascii_instr > orig(count_cycle)
+new_ascii_instr > orig(decoder_pseudo_trigger_q)
+new_ascii_instr > orig(is_lbu_lhu_lw)
+new_ascii_instr > orig(q_ascii_instr)
+new_ascii_instr > orig(q_insn_opcode)
+new_ascii_instr > orig(q_insn_rs1)
+new_ascii_instr > orig(q_insn_rd)
+new_ascii_instr >= orig(cached_ascii_instr)
+new_ascii_instr > orig(cached_insn_opcode)
+cpu_state > alu_eq
+cpu_state > alu_ltu
+cpu_state != cpuregs_rs2
+cpu_state > orig(mem_instr)
+cpu_state != orig(mem_addr)
+cpu_state != orig(count_cycle)
+cpu_state > orig(decoder_pseudo_trigger_q)
+cpu_state > orig(is_lbu_lhu_lw)
+cpu_state != orig(q_ascii_instr)
+cpu_state != orig(q_insn_opcode)
+cpu_state > orig(q_insn_rs1)
+cpu_state > orig(q_insn_rd)
+cpu_state != orig(cached_ascii_instr)
+cpu_state != orig(cached_insn_opcode)
+dbg_ascii_state > alu_out
+dbg_ascii_state > alu_shl
+dbg_ascii_state > alu_shr
+dbg_ascii_state > alu_eq
+dbg_ascii_state > alu_ltu
+dbg_ascii_state > cpuregs_rs2
+dbg_ascii_state > orig(mem_instr)
+dbg_ascii_state > orig(mem_addr)
+dbg_ascii_state > orig(count_cycle)
+dbg_ascii_state > orig(decoder_pseudo_trigger_q)
+dbg_ascii_state > orig(is_lbu_lhu_lw)
+dbg_ascii_state > orig(q_ascii_instr)
+dbg_ascii_state > orig(q_insn_opcode)
+dbg_ascii_state > orig(q_insn_rs1)
+dbg_ascii_state > orig(q_insn_rd)
+dbg_ascii_state > orig(cached_ascii_instr)
+dbg_ascii_state > orig(cached_insn_opcode)
+alu_out > alu_shr
+alu_out > alu_eq
+alu_out >= alu_ltu
+alu_out != cpuregs_rs2
+alu_out > orig(mem_instr)
+alu_out != orig(mem_addr)
+alu_out != orig(count_cycle)
+alu_out >= orig(decoder_pseudo_trigger_q)
+alu_out > orig(is_lbu_lhu_lw)
+alu_out != orig(q_ascii_instr)
+alu_out != orig(q_insn_opcode)
+alu_out % orig(q_insn_rs1) == 0
+alu_out >= orig(q_insn_rs1)
+alu_out != orig(cached_ascii_instr)
+alu_out != orig(cached_insn_opcode)
+alu_out < orig(dbg_ascii_state)
+alu_shl >= alu_shr
+alu_shl >= alu_eq
+alu_shl != alu_ltu
+alu_shl != cpuregs_rs2
+alu_shl <= orig(mem_addr)
+alu_shl < orig(count_cycle)
+alu_shl >= orig(is_lbu_lhu_lw)
+alu_shl != orig(q_ascii_instr)
+alu_shl != orig(q_insn_opcode)
+alu_shl != orig(q_insn_rs1)
+alu_shl % orig(q_insn_rs1) == 0
+alu_shl % orig(q_insn_rd) == 0
+alu_shl != orig(cached_ascii_instr)
+alu_shl != orig(cached_insn_opcode)
+alu_shl < orig(dbg_ascii_state)
+alu_shr != cpuregs_rs2
+alu_shr <= orig(mem_addr)
+alu_shr < orig(count_cycle)
+alu_shr >= orig(is_lbu_lhu_lw)
+alu_shr != orig(q_ascii_instr)
+alu_shr != orig(q_insn_opcode)
+alu_shr % orig(q_insn_rs1) == 0
+alu_shr != orig(cached_ascii_instr)
+alu_shr != orig(cached_insn_opcode)
+alu_shr < orig(cpu_state)
+alu_shr < orig(dbg_ascii_state)
+alu_eq != cpuregs_rs2
+alu_eq <= orig(mem_addr)
+alu_eq < orig(count_cycle)
+alu_eq <= orig(decoder_pseudo_trigger_q)
+alu_eq >= orig(is_lbu_lhu_lw)
+alu_eq != orig(q_ascii_instr)
+alu_eq != orig(q_insn_opcode)
+alu_eq != orig(q_insn_rd)
+alu_eq != orig(cached_ascii_instr)
+alu_eq != orig(cached_insn_opcode)
+alu_eq < orig(cpu_state)
+alu_eq < orig(dbg_ascii_state)
+alu_ltu != cpuregs_rs2
+alu_ltu >= orig(mem_instr)
+alu_ltu != orig(mem_addr)
+alu_ltu < orig(count_cycle)
+alu_ltu >= orig(is_lbu_lhu_lw)
+alu_ltu != orig(q_ascii_instr)
+alu_ltu != orig(q_insn_opcode)
+alu_ltu != orig(q_insn_rd)
+alu_ltu != orig(cached_ascii_instr)
+alu_ltu != orig(cached_insn_opcode)
+alu_ltu < orig(cpu_state)
+alu_ltu < orig(dbg_ascii_state)
+cpuregs_rs2 != orig(mem_instr)
+cpuregs_rs2 <= orig(mem_addr)
+cpuregs_rs2 != orig(count_cycle)
+cpuregs_rs2 != orig(decoder_pseudo_trigger_q)
+cpuregs_rs2 >= orig(is_lbu_lhu_lw)
+cpuregs_rs2 <= orig(q_ascii_instr)
+cpuregs_rs2 <= orig(q_insn_opcode)
+cpuregs_rs2 >= orig(q_insn_rs1)
+cpuregs_rs2 >= orig(q_insn_rd)
+cpuregs_rs2 <= orig(cached_ascii_instr)
+cpuregs_rs2 <= orig(cached_insn_opcode)
+cpuregs_rs2 != orig(cpu_state)
+cpuregs_rs2 < orig(dbg_ascii_state)
+mem_addr - 66 * mem_wdata + 3 * count_cycle - 88 == 0
+mem_addr - 48 * mem_wdata + 12 * count_instr - 64 == 0
+mem_addr - 12 * mem_wdata + 12 * reg_op1 - 16 == 0
+267386917 * mem_addr - 3 * mem_wdata + 3 * next_insn_opcode - 4.278190672E9 == 0
+85 * mem_addr - mem_wdata + alu_out - 1361 == 0
+mem_addr - 12 * mem_wdata + 6 * alu_shl - 16 == 0
+mem_addr - 66 * mem_wdata + 3 * orig(count_cycle) - 85 == 0
+mem_addr - 8 * count_cycle + 44 * count_instr == 0
+3 * mem_addr - 2 * count_cycle + 44 * reg_op1 == 0
+1960837391 * mem_addr - count_cycle + 22 * next_insn_opcode - 3.1373398232E10 == 0
+5609 * mem_addr - 3 * count_cycle + 66 * alu_out - 89738 == 0
+3 * mem_addr - 2 * count_cycle + 22 * alu_shl == 0
+mem_addr - 4 * count_instr + 16 * reg_op1 == 0
+1426063557 * mem_addr - 4 * count_instr + 16 * next_insn_opcode - 2.2817016896E10 == 0
+4079 * mem_addr - 12 * count_instr + 48 * alu_out - 65264 == 0
+mem_addr - 4 * count_instr + 8 * alu_shl == 0
+mem_addr + 44 * count_instr - 8 * orig(count_cycle) - 8 == 0
+356515889 * mem_addr - 4 * reg_op1 + 4 * next_insn_opcode - 5.704254224E9 == 0
+1019 * mem_addr - 12 * reg_op1 + 12 * alu_out - 16316 == 0
+3 * mem_addr + 44 * reg_op1 - 2 * orig(count_cycle) - 2 == 0
+267386662 * mem_addr + 3 * next_insn_opcode - 3 * alu_out - 4.278186589E9 == 0
+356515889 * mem_addr + 4 * next_insn_opcode - 2 * alu_shl - 5.704254224E9 == 0
+356515889 * mem_addr + 4 * next_insn_opcode - 8 * alu_shr - 5.704254224E9 == 0
+356515889 * mem_addr + 4 * next_insn_opcode - 4 * alu_eq - 5.704254224E9 == 0
+356515889 * mem_addr + 4 * next_insn_opcode + 4 * alu_ltu - 5.704254228E9 == 0
+1960837391 * mem_addr + 22 * next_insn_opcode - orig(count_cycle) - 3.1373398233E10 == 0
+1019 * mem_addr + 12 * alu_out - 6 * alu_shl - 16316 == 0
+5609 * mem_addr + 66 * alu_out - 3 * orig(count_cycle) - 89741 == 0
+3 * mem_addr + 22 * alu_shl - 2 * orig(count_cycle) - 2 == 0
+22418 * mem_wdata + 4 * mem_la_wdata - 1019 * count_cycle + 24452 == 0
+4076 * mem_wdata + mem_la_wdata - 1019 * count_instr + 4075 == 0
+1019 * mem_wdata + mem_la_wdata - 1019 * reg_op1 - 1 == 0
+1019 * mem_wdata + 1069547668 * mem_la_wdata - 1019 * next_insn_opcode - 1069547668 == 0
+1019 * mem_wdata + 1020 * mem_la_wdata - 1019 * alu_out - 1 == 0
+2038 * mem_wdata + 2 * mem_la_wdata - 1019 * alu_shl - 2 == 0
+22418 * mem_wdata + 4 * mem_la_wdata - 1019 * orig(count_cycle) + 23433 == 0
+6 * mem_wdata - count_cycle + 4 * count_instr + 8 == 0
+66 * mem_wdata - 3 * count_cycle - reg_pc + 84 == 0
+18 * mem_wdata - count_cycle + 4 * reg_op1 + 24 == 0
+5.882512173E9 * mem_wdata - 267386917 * count_cycle + next_insn_opcode + 6.417286008E9 == 0
+5.87638304E9 * mem_wdata - 267108320 * count_cycle + dbg_insn_opcode + 6.409485293E9 == 0
+22 * mem_wdata - count_cycle - 4 * decoded_rd + 32 == 0
+22 * mem_wdata - count_cycle - 2 * decoded_rs1 + 28 == 0
+594 * mem_wdata - 27 * count_cycle + 4 * decoded_rs2 + 644 == 0
+366102 * mem_wdata - 16641 * count_cycle - decoded_imm_j + 466968 == 0
+5609 * mem_wdata - 255 * count_cycle + alu_out + 6119 == 0
+18 * mem_wdata - count_cycle + 2 * alu_shl + 24 == 0
+22462 * mem_wdata - 1021 * count_cycle - 4 * cpuregs_rs2 + 28584 == 0
+22 * mem_wdata - count_cycle + 4 * orig(mem_instr) + 24 == 0
+5610 * mem_wdata - 255 * count_cycle - orig(mem_addr) + 7140 == 0
+22 * mem_wdata - count_cycle - 4 * orig(decoder_pseudo_trigger_q) + 28 == 0
+22 * mem_wdata - count_cycle - 4 * orig(is_lbu_lhu_lw) + 24 == 0
+152724 * mem_wdata - 6942 * count_cycle - orig(q_ascii_instr) + 194375 == 0
+226710 * mem_wdata - 10305 * count_cycle - orig(q_insn_opcode) + 288539 == 0
+22 * mem_wdata - count_cycle - 2 * orig(q_insn_rs1) + 26 == 0
+66 * mem_wdata - 3 * count_cycle - 4 * orig(q_insn_rd) + 80 == 0
+1.7973661838E10 * mem_wdata - 816984629 * count_cycle - 2 * orig(cached_ascii_instr) + 2.287556961E10 == 0
+6129134 * mem_wdata - 278597 * count_cycle - orig(cached_insn_opcode) + 7800715 == 0
+48 * mem_wdata - 12 * count_instr - reg_pc + 60 == 0
+3 * mem_wdata - count_instr + reg_op1 + 4 == 0
+4.278190671E9 * mem_wdata - 1069547668 * count_instr + next_insn_opcode + 4.278190672E9 == 0
+4.27373312E9 * mem_wdata - 1068433280 * count_instr + dbg_insn_opcode + 4.272618733E9 == 0
+4 * mem_wdata - count_instr - decoded_rd + 6 == 0
+8 * mem_wdata - 2 * count_instr - decoded_rs1 + 10 == 0
+108 * mem_wdata - 27 * count_instr + decoded_rs2 + 107 == 0
+266256 * mem_wdata - 66564 * count_instr - decoded_imm_j + 333840 == 0
+4079 * mem_wdata - 1020 * count_instr + alu_out + 4079 == 0
+6 * mem_wdata - 2 * count_instr + alu_shl + 8 == 0
+4084 * mem_wdata - 1021 * count_instr - cpuregs_rs2 + 5104 == 0
+4 * mem_wdata - count_instr + orig(mem_instr) + 4 == 0
+4080 * mem_wdata - 1020 * count_instr - orig(mem_addr) + 5100 == 0
+6 * mem_wdata + 4 * count_instr - orig(count_cycle) + 7 == 0
+4 * mem_wdata - count_instr - orig(decoder_pseudo_trigger_q) + 5 == 0
+4 * mem_wdata - count_instr - orig(is_lbu_lhu_lw) + 4 == 0
+111072 * mem_wdata - 27768 * count_instr - orig(q_ascii_instr) + 138839 == 0
+164880 * mem_wdata - 41220 * count_instr - orig(q_insn_opcode) + 206099 == 0
+8 * mem_wdata - 2 * count_instr - orig(q_insn_rs1) + 9 == 0
+12 * mem_wdata - 3 * count_instr - orig(q_insn_rd) + 14 == 0
+6.535877032E9 * mem_wdata - 1633969258 * count_instr - orig(cached_ascii_instr) + 8.169846289E9 == 0
+4457552 * mem_wdata - 1114388 * count_instr - orig(cached_insn_opcode) + 5571939 == 0
+12 * mem_wdata - reg_pc - 12 * reg_op1 + 12 == 0
+3 * mem_wdata - 267386917 * reg_pc - 3 * next_insn_opcode + 3.208643004E9 == 0
+mem_wdata - 85 * reg_pc - alu_out + 1021 == 0
+12 * mem_wdata - reg_pc - 6 * alu_shl + 12 == 0
+66 * mem_wdata - reg_pc - 3 * orig(count_cycle) + 81 == 0
+1069547667 * mem_wdata - 1069547668 * reg_op1 + next_insn_opcode == 0
+1068433280 * mem_wdata - 1068433280 * reg_op1 + dbg_insn_opcode - 1114387 == 0
+mem_wdata - reg_op1 - decoded_rd + 2 == 0
+2 * mem_wdata - 2 * reg_op1 - decoded_rs1 + 2 == 0
+27 * mem_wdata - 27 * reg_op1 + decoded_rs2 - 1 == 0
+66564 * mem_wdata - 66564 * reg_op1 - decoded_imm_j + 67584 == 0
+1019 * mem_wdata - 1020 * reg_op1 + alu_out - 1 == 0
+1021 * mem_wdata - 1021 * reg_op1 - cpuregs_rs2 + 1020 == 0
+mem_wdata - reg_op1 + orig(mem_instr) == 0
+1020 * mem_wdata - 1020 * reg_op1 - orig(mem_addr) + 1020 == 0
+18 * mem_wdata + 4 * reg_op1 - orig(count_cycle) + 23 == 0
+mem_wdata - reg_op1 - orig(decoder_pseudo_trigger_q) + 1 == 0
+mem_wdata - reg_op1 - orig(is_lbu_lhu_lw) == 0
+27768 * mem_wdata - 27768 * reg_op1 - orig(q_ascii_instr) + 27767 == 0
+41220 * mem_wdata - 41220 * reg_op1 - orig(q_insn_opcode) + 41219 == 0
+2 * mem_wdata - 2 * reg_op1 - orig(q_insn_rs1) + 1 == 0
+3 * mem_wdata - 3 * reg_op1 - orig(q_insn_rd) + 2 == 0
+1633969258 * mem_wdata - 1633969258 * reg_op1 - orig(cached_ascii_instr) + 1633969257 == 0
+1114388 * mem_wdata - 1114388 * reg_op1 - orig(cached_insn_opcode) + 1114387 == 0
+267108320 * mem_wdata - 267108320 * next_insn_opcode + 267386917 * dbg_insn_opcode - 2.97972504274879E14 == 0
+mem_wdata - next_insn_opcode - 1069547668 * decoded_rd + 2139095336 == 0
+mem_wdata - next_insn_opcode - 534773834 * decoded_rs1 + 1069547668 == 0
+27 * mem_wdata - 27 * next_insn_opcode + 1069547668 * decoded_rs2 - 1069547668 == 0
+16641 * mem_wdata - 16641 * next_insn_opcode - 267386917 * decoded_imm_j + 1.8071077398528E13 == 0
+267386662 * mem_wdata + 255 * next_insn_opcode - 267386917 * alu_out + 267386917 == 0
+1069547667 * mem_wdata + next_insn_opcode - 534773834 * alu_shl == 0
+1021 * mem_wdata - 1021 * next_insn_opcode - 1069547668 * cpuregs_rs2 + 1.09093862136E12 == 0
+mem_wdata - next_insn_opcode + 1069547668 * orig(mem_instr) == 0
+255 * mem_wdata - 255 * next_insn_opcode - 267386917 * orig(mem_addr) + 2.7273465534E11 == 0
+5.882512173E9 * mem_wdata + next_insn_opcode - 267386917 * orig(count_cycle) + 6.149899091E9 == 0
+mem_wdata - next_insn_opcode - 1069547668 * orig(decoder_pseudo_trigger_q) + 1069547668 == 0
+mem_wdata - next_insn_opcode - 1069547668 * orig(is_lbu_lhu_lw) == 0
+6942 * mem_wdata - 6942 * next_insn_opcode - 267386917 * orig(q_ascii_instr) + 7.424532524339E12 == 0
+10305 * mem_wdata - 10305 * next_insn_opcode - 267386917 * orig(q_insn_opcode) + 1.1021421331823E13 == 0
+mem_wdata - next_insn_opcode - 534773834 * orig(q_insn_rs1) + 534773834 == 0
+3 * mem_wdata - 3 * next_insn_opcode - 1069547668 * orig(q_insn_rd) + 2139095336 == 0
+816984629 * mem_wdata - 816984629 * next_insn_opcode - 534773834 * orig(cached_ascii_instr) + 8.7380400420402138E17 == 0
+278597 * mem_wdata - 278597 * next_insn_opcode - 267386917 * orig(cached_insn_opcode) + 2.97972504274879E14 == 0
+53421664 * mem_wdata + 51 * dbg_insn_opcode - 53421664 * alu_out - 3412073 == 0
+1068433280 * mem_wdata + dbg_insn_opcode - 534216640 * alu_shl - 1114387 == 0
+5.87638304E9 * mem_wdata + dbg_insn_opcode - 267108320 * orig(count_cycle) + 6.142376973E9 == 0
+mem_wdata - 1020 * decoded_rd - alu_out + 2041 == 0
+2 * mem_wdata - 2 * decoded_rd - alu_shl + 4 == 0
+22 * mem_wdata - 4 * decoded_rd - orig(count_cycle) + 31 == 0
+mem_wdata - 510 * decoded_rs1 - alu_out + 1021 == 0
+2 * mem_wdata - decoded_rs1 - alu_shl + 2 == 0
+22 * mem_wdata - 2 * decoded_rs1 - orig(count_cycle) + 27 == 0
+9 * mem_wdata + 340 * decoded_rs2 - 9 * alu_out - 331 == 0
+54 * mem_wdata + 2 * decoded_rs2 - 27 * alu_shl - 2 == 0
+594 * mem_wdata + 4 * decoded_rs2 - 27 * orig(count_cycle) + 617 == 0
+5547 * mem_wdata - 85 * decoded_imm_j - 5547 * alu_out + 5750187 == 0
+66564 * mem_wdata - decoded_imm_j - 33282 * alu_shl + 67584 == 0
+366102 * mem_wdata - decoded_imm_j - 16641 * orig(count_cycle) + 450327 == 0
+1019 * mem_wdata + alu_out - 510 * alu_shl - 1 == 0
+1021 * mem_wdata - 1021 * alu_out - 1020 * cpuregs_rs2 + 1041421 == 0
+mem_wdata - alu_out + 1020 * orig(mem_instr) + 1 == 0
+mem_wdata - alu_out - orig(mem_addr) + 1021 == 0
+5609 * mem_wdata + alu_out - 255 * orig(count_cycle) + 5864 == 0
+mem_wdata - alu_out - 1020 * orig(decoder_pseudo_trigger_q) + 1021 == 0
+mem_wdata - alu_out - 1020 * orig(is_lbu_lhu_lw) + 1 == 0
+2314 * mem_wdata - 2314 * alu_out - 85 * orig(q_ascii_instr) + 2362509 == 0
+687 * mem_wdata - 687 * alu_out - 17 * orig(q_insn_opcode) + 701410 == 0
+mem_wdata - alu_out - 510 * orig(q_insn_rs1) + 511 == 0
+mem_wdata - alu_out - 340 * orig(q_insn_rd) + 681 == 0
+816984629 * mem_wdata - 816984629 * alu_out - 510 * orig(cached_ascii_instr) + 8.34141305699E11 == 0
+278597 * mem_wdata - 278597 * alu_out - 255 * orig(cached_insn_opcode) + 284447282 == 0
+2042 * mem_wdata - 1021 * alu_shl - 2 * cpuregs_rs2 + 2040 == 0
+2 * mem_wdata - alu_shl + 2 * orig(mem_instr) == 0
+1020 * mem_wdata - 510 * alu_shl - orig(mem_addr) + 1020 == 0
+18 * mem_wdata + 2 * alu_shl - orig(count_cycle) + 23 == 0
+2 * mem_wdata - alu_shl - 2 * orig(decoder_pseudo_trigger_q) + 2 == 0
+2 * mem_wdata - alu_shl - 2 * orig(is_lbu_lhu_lw) == 0
+27768 * mem_wdata - 13884 * alu_shl - orig(q_ascii_instr) + 27767 == 0
+41220 * mem_wdata - 20610 * alu_shl - orig(q_insn_opcode) + 41219 == 0
+2 * mem_wdata - alu_shl - orig(q_insn_rs1) + 1 == 0
+6 * mem_wdata - 3 * alu_shl - 2 * orig(q_insn_rd) + 4 == 0
+1633969258 * mem_wdata - 816984629 * alu_shl - orig(cached_ascii_instr) + 1633969257 == 0
+1114388 * mem_wdata - 557194 * alu_shl - orig(cached_insn_opcode) + 1114387 == 0
+22462 * mem_wdata - 4 * cpuregs_rs2 - 1021 * orig(count_cycle) + 27563 == 0
+22 * mem_wdata + 4 * orig(mem_instr) - orig(count_cycle) + 23 == 0
+5610 * mem_wdata - orig(mem_addr) - 255 * orig(count_cycle) + 6885 == 0
+22 * mem_wdata - orig(count_cycle) - 4 * orig(decoder_pseudo_trigger_q) + 27 == 0
+22 * mem_wdata - orig(count_cycle) - 4 * orig(is_lbu_lhu_lw) + 23 == 0
+152724 * mem_wdata - 6942 * orig(count_cycle) - orig(q_ascii_instr) + 187433 == 0
+226710 * mem_wdata - 10305 * orig(count_cycle) - orig(q_insn_opcode) + 278234 == 0
+22 * mem_wdata - orig(count_cycle) - 2 * orig(q_insn_rs1) + 25 == 0
+66 * mem_wdata - 3 * orig(count_cycle) - 4 * orig(q_insn_rd) + 77 == 0
+1.7973661838E10 * mem_wdata - 816984629 * orig(count_cycle) - 2 * orig(cached_ascii_instr) + 2.2058584981E10 == 0
+6129134 * mem_wdata - 278597 * orig(count_cycle) - orig(cached_insn_opcode) + 7522118 == 0
+3 * mem_la_wdata + 2038 * count_cycle - 11209 * count_instr - 4079 == 0
+18 * mem_la_wdata + 1019 * count_cycle - 22418 * reg_op1 - 24474 == 0
+2.3530048692E10 * mem_la_wdata + 1019 * count_cycle - 22418 * next_insn_opcode - 2.3530073148E10 == 0
+22436 * mem_la_wdata + 1019 * count_cycle - 22418 * alu_out - 24474 == 0
+18 * mem_la_wdata + 1019 * count_cycle - 11209 * alu_shl - 24474 == 0
+3 * mem_la_wdata + 1019 * count_instr - 4076 * reg_op1 - 4079 == 0
+4.278190671E9 * mem_la_wdata + 1019 * count_instr - 4076 * next_insn_opcode - 4.278194747E9 == 0
+4079 * mem_la_wdata + 1019 * count_instr - 4076 * alu_out - 4079 == 0
+3 * mem_la_wdata + 1019 * count_instr - 2038 * alu_shl - 4079 == 0
+3 * mem_la_wdata - 11209 * count_instr + 2038 * orig(count_cycle) - 2041 == 0
+1069547667 * mem_la_wdata + 1019 * reg_op1 - 1019 * next_insn_opcode - 1069547667 == 0
+mem_la_wdata + reg_op1 - alu_out == 0
+18 * mem_la_wdata - 22418 * reg_op1 + 1019 * orig(count_cycle) - 23455 == 0
+1069546648 * mem_la_wdata - 1019 * next_insn_opcode + 1019 * alu_out - 1069547667 == 0
+2139095334 * mem_la_wdata - 2038 * next_insn_opcode + 1019 * alu_shl - 2139095334 == 0
+1069547667 * mem_la_wdata - 1019 * next_insn_opcode + 2038 * alu_shr - 1069547667 == 0
+1069547667 * mem_la_wdata - 1019 * next_insn_opcode + 1019 * alu_eq - 1069547667 == 0
+1069547667 * mem_la_wdata - 1019 * next_insn_opcode - 1019 * alu_ltu - 1069546648 == 0
+2.3530048692E10 * mem_la_wdata - 22418 * next_insn_opcode + 1019 * orig(count_cycle) - 2.3530072129E10 == 0
+2 * mem_la_wdata - 2 * alu_out + alu_shl == 0
+22436 * mem_la_wdata - 22418 * alu_out + 1019 * orig(count_cycle) - 23455 == 0
+18 * mem_la_wdata - 11209 * alu_shl + 1019 * orig(count_cycle) - 23455 == 0
+8 * count_cycle - 44 * count_instr - reg_pc - 4 == 0
+count_cycle - 6 * count_instr + 2 * reg_op1 == 0
+1426063557 * count_cycle - 7.843349564E9 * count_instr + 2 * next_insn_opcode - 2.852127112E9 == 0
+2136866560 * count_cycle - 1.175276608E10 * count_instr + 3 * dbg_insn_opcode - 4.277076281E9 == 0
+2 * count_cycle - 11 * count_instr - 3 * decoded_rd + 2 == 0
+4 * count_cycle - 22 * count_instr - 3 * decoded_rs1 - 2 == 0
+18 * count_cycle - 99 * count_instr + decoded_rs2 - 37 == 0
+44376 * count_cycle - 244068 * count_instr - decoded_imm_j - 21168 == 0
+4079 * count_cycle - 22436 * count_instr + 6 * alu_out - 8158 == 0
+count_cycle - 6 * count_instr + alu_shl == 0
+2042 * count_cycle - 11231 * count_instr - 3 * cpuregs_rs2 - 1024 == 0
+2 * count_cycle - 11 * count_instr + 3 * orig(mem_instr) - 4 == 0
+680 * count_cycle - 3740 * count_instr - orig(mem_addr) - 340 == 0
+2 * count_cycle - 11 * count_instr - 3 * orig(decoder_pseudo_trigger_q) - 1 == 0
+2 * count_cycle - 11 * count_instr - 3 * orig(is_lbu_lhu_lw) - 4 == 0
+18512 * count_cycle - 101816 * count_instr - orig(q_ascii_instr) - 9257 == 0
+27480 * count_cycle - 151140 * count_instr - orig(q_insn_opcode) - 13741 == 0
+4 * count_cycle - 22 * count_instr - 3 * orig(q_insn_rs1) - 5 == 0
+2 * count_cycle - 11 * count_instr - orig(q_insn_rd) - 2 == 0
+3.267938516E9 * count_cycle - 1.7973661838E10 * count_instr - 3 * orig(cached_ascii_instr) - 1633969261 == 0
+2228776 * count_cycle - 12258268 * count_instr - 3 * orig(cached_insn_opcode) - 1114391 == 0
+2 * count_cycle - 3 * reg_pc - 44 * reg_op1 - 12 == 0
+count_cycle - 1960837391 * reg_pc - 22 * next_insn_opcode + 2.3530048668E10 == 0
+3 * count_cycle - 5609 * reg_pc - 66 * alu_out + 67302 == 0
+2 * count_cycle - 3 * reg_pc - 22 * alu_shl - 12 == 0
+356515889 * count_cycle - 7.843349564E9 * reg_op1 + 6 * next_insn_opcode - 8.556381336E9 == 0
+534216640 * count_cycle - 1.175276608E10 * reg_op1 + 9 * dbg_insn_opcode - 1.2831228843E10 == 0
+count_cycle - 22 * reg_op1 - 18 * decoded_rd + 12 == 0
+count_cycle - 22 * reg_op1 - 9 * decoded_rs1 - 6 == 0
+3 * count_cycle - 66 * reg_op1 + 2 * decoded_rs2 - 74 == 0
+3698 * count_cycle - 81356 * reg_op1 - decoded_imm_j - 21168 == 0
+1019 * count_cycle - 22436 * reg_op1 + 18 * alu_out - 24474 == 0
+1021 * count_cycle - 22462 * reg_op1 - 18 * cpuregs_rs2 - 6144 == 0
+count_cycle - 22 * reg_op1 + 18 * orig(mem_instr) - 24 == 0
+170 * count_cycle - 3740 * reg_op1 - 3 * orig(mem_addr) - 1020 == 0
+count_cycle - 22 * reg_op1 - 18 * orig(decoder_pseudo_trigger_q) - 6 == 0
+count_cycle - 22 * reg_op1 - 18 * orig(is_lbu_lhu_lw) - 24 == 0
+4628 * count_cycle - 101816 * reg_op1 - 3 * orig(q_ascii_instr) - 27771 == 0
+2290 * count_cycle - 50380 * reg_op1 - orig(q_insn_opcode) - 13741 == 0
+count_cycle - 22 * reg_op1 - 9 * orig(q_insn_rs1) - 15 == 0
+count_cycle - 22 * reg_op1 - 6 * orig(q_insn_rd) - 12 == 0
+816984629 * count_cycle - 1.7973661838E10 * reg_op1 - 9 * orig(cached_ascii_instr) - 4.901907783E9 == 0
+557194 * count_cycle - 12258268 * reg_op1 - 9 * orig(cached_insn_opcode) - 3343173 == 0
+267108320 * count_cycle - 5.87638304E9 * next_insn_opcode + 5.882512173E9 * dbg_insn_opcode - 6.555401503532631E15 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * decoded_rd + 4.706009736E10 == 0
+count_cycle - 22 * next_insn_opcode - 1.1765024346E10 * decoded_rs1 + 2.3530048668E10 == 0
+9 * count_cycle - 198 * next_insn_opcode + 7.843349564E9 * decoded_rs2 - 7.84334978E9 == 0
+5547 * count_cycle - 122034 * next_insn_opcode - 1960837391 * decoded_imm_j + 1.32521234100216E14 == 0
+267386662 * count_cycle + 5609 * next_insn_opcode - 5.882512173E9 * alu_out - 534767715 == 0
+356515889 * count_cycle + 6 * next_insn_opcode - 3.921674782E9 * alu_shl - 8.556381336E9 == 0
+1021 * count_cycle - 22462 * next_insn_opcode - 2.3530048692E10 * cpuregs_rs2 + 2.4000649641336E13 == 0
+count_cycle - 22 * next_insn_opcode + 2.3530048692E10 * orig(mem_instr) - 24 == 0
+85 * count_cycle - 1870 * next_insn_opcode - 1960837391 * orig(mem_addr) + 2.00005413678E12 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * orig(decoder_pseudo_trigger_q) + 2.3530048668E10 == 0
+count_cycle - 22 * next_insn_opcode - 2.3530048692E10 * orig(is_lbu_lhu_lw) - 24 == 0
+2314 * count_cycle - 50908 * next_insn_opcode - 1960837391 * orig(q_ascii_instr) + 5.4446571780361E13 == 0
+3435 * count_cycle - 75570 * next_insn_opcode - 1960837391 * orig(q_insn_opcode) + 8.0823756337189E13 == 0
+count_cycle - 22 * next_insn_opcode - 1.1765024346E10 * orig(q_insn_rs1) + 1.1765024322E10 == 0
+count_cycle - 22 * next_insn_opcode - 7.843349564E9 * orig(q_insn_rd) + 1.5686699104E10 == 0
+278597 * count_cycle - 6129134 * next_insn_opcode - 5.882512173E9 * orig(cached_insn_opcode) + 6.555395086246623E15 == 0
+267108320 * count_cycle + 5609 * dbg_insn_opcode - 5.87638304E9 * alu_out - 6.784813323E9 == 0
+534216640 * count_cycle + 9 * dbg_insn_opcode - 5.87638304E9 * alu_shl - 1.2831228843E10 == 0
+count_cycle - 22436 * decoded_rd - 22 * alu_out + 44870 == 0
+count_cycle - 18 * decoded_rd - 11 * alu_shl + 12 == 0
+count_cycle - 11218 * decoded_rs1 - 22 * alu_out + 22434 == 0
+count_cycle - 9 * decoded_rs1 - 11 * alu_shl - 6 == 0
+27 * count_cycle + 22436 * decoded_rs2 - 594 * alu_out - 22490 == 0
+3 * count_cycle + 2 * decoded_rs2 - 33 * alu_shl - 74 == 0
+16641 * count_cycle - 5609 * decoded_imm_j - 366102 * alu_out + 379045374 == 0
+3698 * count_cycle - decoded_imm_j - 40678 * alu_shl - 21168 == 0
+1019 * count_cycle + 18 * alu_out - 11218 * alu_shl - 24474 == 0
+1021 * count_cycle - 22462 * alu_out - 22436 * cpuregs_rs2 + 22882678 == 0
+count_cycle - 22 * alu_out + 22436 * orig(mem_instr) - 2 == 0
+255 * count_cycle - 5610 * alu_out - 5609 * orig(mem_addr) + 5720670 == 0
+count_cycle - 22 * alu_out - 22436 * orig(decoder_pseudo_trigger_q) + 22434 == 0
+count_cycle - 22 * alu_out - 22436 * orig(is_lbu_lhu_lw) - 2 == 0
+6942 * count_cycle - 152724 * alu_out - 5609 * orig(q_ascii_instr) + 155731219 == 0
+10305 * count_cycle - 226710 * alu_out - 5609 * orig(q_insn_opcode) + 231176761 == 0
+count_cycle - 22 * alu_out - 11218 * orig(q_insn_rs1) + 11216 == 0
+3 * count_cycle - 66 * alu_out - 22436 * orig(q_insn_rd) + 44866 == 0
+816984629 * count_cycle - 1.7973661838E10 * alu_out - 11218 * orig(cached_ascii_instr) + 1.8328233155768E13 == 0
+278597 * count_cycle - 6129134 * alu_out - 5609 * orig(cached_insn_opcode) + 6.250039489E9 == 0
+1021 * count_cycle - 11231 * alu_shl - 18 * cpuregs_rs2 - 6144 == 0
+count_cycle - 11 * alu_shl + 18 * orig(mem_instr) - 24 == 0
+170 * count_cycle - 1870 * alu_shl - 3 * orig(mem_addr) - 1020 == 0
+count_cycle - 11 * alu_shl - 18 * orig(decoder_pseudo_trigger_q) - 6 == 0
+count_cycle - 11 * alu_shl - 18 * orig(is_lbu_lhu_lw) - 24 == 0
+4628 * count_cycle - 50908 * alu_shl - 3 * orig(q_ascii_instr) - 27771 == 0
+2290 * count_cycle - 25190 * alu_shl - orig(q_insn_opcode) - 13741 == 0
+count_cycle - 11 * alu_shl - 9 * orig(q_insn_rs1) - 15 == 0
+count_cycle - 11 * alu_shl - 6 * orig(q_insn_rd) - 12 == 0
+816984629 * count_cycle - 8.986830919E9 * alu_shl - 9 * orig(cached_ascii_instr) - 4.901907783E9 == 0
+557194 * count_cycle - 6129134 * alu_shl - 9 * orig(cached_insn_opcode) - 3343173 == 0
+4 * count_instr - reg_pc - 16 * reg_op1 - 4 == 0
+4 * count_instr - 1426063557 * reg_pc - 16 * next_insn_opcode + 1.7112762668E10 == 0
+12 * count_instr - 4079 * reg_pc - 48 * alu_out + 48948 == 0
+4 * count_instr - reg_pc - 8 * alu_shl - 4 == 0
+44 * count_instr + reg_pc - 8 * orig(count_cycle) - 4 == 0
+356515889 * count_instr - 1426063557 * reg_op1 + next_insn_opcode - 1426063556 == 0
+1068433280 * count_instr - 4.27373312E9 * reg_op1 + 3 * dbg_insn_opcode - 4.277076281E9 == 0
+count_instr - 4 * reg_op1 - 3 * decoded_rd + 2 == 0
+2 * count_instr - 8 * reg_op1 - 3 * decoded_rs1 - 2 == 0
+9 * count_instr - 36 * reg_op1 + decoded_rs2 - 37 == 0
+22188 * count_instr - 88752 * reg_op1 - decoded_imm_j - 21168 == 0
+1019 * count_instr - 4079 * reg_op1 + 3 * alu_out - 4079 == 0
+1021 * count_instr - 4084 * reg_op1 - 3 * cpuregs_rs2 - 1024 == 0
+count_instr - 4 * reg_op1 + 3 * orig(mem_instr) - 4 == 0
+340 * count_instr - 1360 * reg_op1 - orig(mem_addr) - 340 == 0
+6 * count_instr - 2 * reg_op1 - orig(count_cycle) - 1 == 0
+count_instr - 4 * reg_op1 - 3 * orig(decoder_pseudo_trigger_q) - 1 == 0
+count_instr - 4 * reg_op1 - 3 * orig(is_lbu_lhu_lw) - 4 == 0
+9256 * count_instr - 37024 * reg_op1 - orig(q_ascii_instr) - 9257 == 0
+13740 * count_instr - 54960 * reg_op1 - orig(q_insn_opcode) - 13741 == 0
+2 * count_instr - 8 * reg_op1 - 3 * orig(q_insn_rs1) - 5 == 0
+count_instr - 4 * reg_op1 - orig(q_insn_rd) - 2 == 0
+1633969258 * count_instr - 6.535877032E9 * reg_op1 - 3 * orig(cached_ascii_instr) - 1633969261 == 0
+1114388 * count_instr - 4457552 * reg_op1 - 3 * orig(cached_insn_opcode) - 1114391 == 0
+1068433280 * count_instr - 4.27373312E9 * next_insn_opcode + 4.278190671E9 * dbg_insn_opcode - 4.767564341016797E15 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * decoded_rd + 8.556381338E9 == 0
+2 * count_instr - 8 * next_insn_opcode - 4.278190671E9 * decoded_rs1 + 8.556381334E9 == 0
+3 * count_instr - 12 * next_insn_opcode + 475354519 * decoded_rs2 - 475354531 == 0
+7396 * count_instr - 29584 * next_insn_opcode - 475354519 * decoded_imm_j + 3.2126359782512E13 == 0
+1069546648 * count_instr + 4079 * next_insn_opcode - 4.278190671E9 * alu_out + 4079 == 0
+713031778 * count_instr + 2 * next_insn_opcode - 1426063557 * alu_shl - 2.852127112E9 == 0
+1021 * count_instr - 4084 * next_insn_opcode - 4.278190671E9 * cpuregs_rs2 + 4.363754480336E12 == 0
+count_instr - 4 * next_insn_opcode + 4.278190671E9 * orig(mem_instr) - 4 == 0
+340 * count_instr - 1360 * next_insn_opcode - 1426063557 * orig(mem_addr) + 1.45458482678E12 == 0
+7.843349564E9 * count_instr - 2 * next_insn_opcode - 1426063557 * orig(count_cycle) + 1426063555 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * orig(decoder_pseudo_trigger_q) + 4.278190667E9 == 0
+count_instr - 4 * next_insn_opcode - 4.278190671E9 * orig(is_lbu_lhu_lw) - 4 == 0
+9256 * count_instr - 37024 * next_insn_opcode - 1426063557 * orig(q_ascii_instr) + 3.9597506750195E13 == 0
+4580 * count_instr - 18320 * next_insn_opcode - 475354519 * orig(q_insn_opcode) + 1.9593637900341E13 == 0
+2 * count_instr - 8 * next_insn_opcode - 4.278190671E9 * orig(q_insn_rs1) + 4.278190663E9 == 0
+count_instr - 4 * next_insn_opcode - 1426063557 * orig(q_insn_rd) + 2.85212711E9 == 0
+1114388 * count_instr - 4457552 * next_insn_opcode - 4.278190671E9 * orig(cached_insn_opcode) + 4.767560062826125E15 == 0
+1068433280 * count_instr + 4079 * dbg_insn_opcode - 4.27373312E9 * alu_out - 4.545584573E9 == 0
+1068433280 * count_instr + 3 * dbg_insn_opcode - 2136866560 * alu_shl - 4.277076281E9 == 0
+1.175276608E10 * count_instr - 3 * dbg_insn_opcode - 2136866560 * orig(count_cycle) + 2140209721 == 0
+count_instr - 4079 * decoded_rd - 4 * alu_out + 8158 == 0
+count_instr - 3 * decoded_rd - 2 * alu_shl + 2 == 0
+11 * count_instr + 3 * decoded_rd - 2 * orig(count_cycle) - 4 == 0
+2 * count_instr - 4079 * decoded_rs1 - 8 * alu_out + 8158 == 0
+2 * count_instr - 3 * decoded_rs1 - 4 * alu_shl - 2 == 0
+22 * count_instr + 3 * decoded_rs1 - 4 * orig(count_cycle) - 2 == 0
+27 * count_instr + 4079 * decoded_rs2 - 108 * alu_out - 4079 == 0
+9 * count_instr + decoded_rs2 - 18 * alu_shl - 37 == 0
+99 * count_instr - decoded_rs2 - 18 * orig(count_cycle) + 19 == 0
+66564 * count_instr - 4079 * decoded_imm_j - 266256 * alu_out + 275675136 == 0
+22188 * count_instr - decoded_imm_j - 44376 * alu_shl - 21168 == 0
+244068 * count_instr + decoded_imm_j - 44376 * orig(count_cycle) - 23208 == 0
+2038 * count_instr + 6 * alu_out - 4079 * alu_shl - 8158 == 0
+1021 * count_instr - 4084 * alu_out - 4079 * cpuregs_rs2 + 4160580 == 0
+count_instr - 4 * alu_out + 4079 * orig(mem_instr) == 0
+1020 * count_instr - 4080 * alu_out - 4079 * orig(mem_addr) + 4160580 == 0
+22436 * count_instr - 6 * alu_out - 4079 * orig(count_cycle) + 4079 == 0
+count_instr - 4 * alu_out - 4079 * orig(decoder_pseudo_trigger_q) + 4079 == 0
+count_instr - 4 * alu_out - 4079 * orig(is_lbu_lhu_lw) == 0
+27768 * count_instr - 111072 * alu_out - 4079 * orig(q_ascii_instr) + 113261593 == 0
+41220 * count_instr - 164880 * alu_out - 4079 * orig(q_insn_opcode) + 168132301 == 0
+2 * count_instr - 8 * alu_out - 4079 * orig(q_insn_rs1) + 4079 == 0
+3 * count_instr - 12 * alu_out - 4079 * orig(q_insn_rd) + 8158 == 0
+1633969258 * count_instr - 6.535877032E9 * alu_out - 4079 * orig(cached_ascii_instr) + 6.664960599303E12 == 0
+1114388 * count_instr - 4457552 * alu_out - 4079 * orig(cached_insn_opcode) + 4.545584573E9 == 0
+1021 * count_instr - 2042 * alu_shl - 3 * cpuregs_rs2 - 1024 == 0
+count_instr - 2 * alu_shl + 3 * orig(mem_instr) - 4 == 0
+340 * count_instr - 680 * alu_shl - orig(mem_addr) - 340 == 0
+6 * count_instr - alu_shl - orig(count_cycle) - 1 == 0
+count_instr - 2 * alu_shl - 3 * orig(decoder_pseudo_trigger_q) - 1 == 0
+count_instr - 2 * alu_shl - 3 * orig(is_lbu_lhu_lw) - 4 == 0
+9256 * count_instr - 18512 * alu_shl - orig(q_ascii_instr) - 9257 == 0
+13740 * count_instr - 27480 * alu_shl - orig(q_insn_opcode) - 13741 == 0
+2 * count_instr - 4 * alu_shl - 3 * orig(q_insn_rs1) - 5 == 0
+count_instr - 2 * alu_shl - orig(q_insn_rd) - 2 == 0
+1633969258 * count_instr - 3.267938516E9 * alu_shl - 3 * orig(cached_ascii_instr) - 1633969261 == 0
+1114388 * count_instr - 2228776 * alu_shl - 3 * orig(cached_insn_opcode) - 1114391 == 0
+11231 * count_instr + 3 * cpuregs_rs2 - 2042 * orig(count_cycle) - 1018 == 0
+11 * count_instr - 3 * orig(mem_instr) - 2 * orig(count_cycle) + 2 == 0
+3740 * count_instr + orig(mem_addr) - 680 * orig(count_cycle) - 340 == 0
+11 * count_instr - 2 * orig(count_cycle) + 3 * orig(decoder_pseudo_trigger_q) - 1 == 0
+11 * count_instr - 2 * orig(count_cycle) + 3 * orig(is_lbu_lhu_lw) + 2 == 0
+101816 * count_instr - 18512 * orig(count_cycle) + orig(q_ascii_instr) - 9255 == 0
+151140 * count_instr - 27480 * orig(count_cycle) + orig(q_insn_opcode) - 13739 == 0
+22 * count_instr - 4 * orig(count_cycle) + 3 * orig(q_insn_rs1) + 1 == 0
+11 * count_instr - 2 * orig(count_cycle) + orig(q_insn_rd) == 0
+1.7973661838E10 * count_instr - 3.267938516E9 * orig(count_cycle) + 3 * orig(cached_ascii_instr) - 1633969255 == 0
+12258268 * count_instr - 2228776 * orig(count_cycle) + 3 * orig(cached_insn_opcode) - 1114385 == 0
+356515889 * reg_pc - 4 * reg_op1 + 4 * next_insn_opcode - 4.278190668E9 == 0
+1019 * reg_pc - 12 * reg_op1 + 12 * alu_out - 12240 == 0
+3 * reg_pc + 44 * reg_op1 - 2 * orig(count_cycle) + 10 == 0
+267386662 * reg_pc + 3 * next_insn_opcode - 3 * alu_out - 3.208639941E9 == 0
+356515889 * reg_pc + 4 * next_insn_opcode - 2 * alu_shl - 4.278190668E9 == 0
+356515889 * reg_pc + 4 * next_insn_opcode - 8 * alu_shr - 4.278190668E9 == 0
+356515889 * reg_pc + 4 * next_insn_opcode - 4 * alu_eq - 4.278190668E9 == 0
+356515889 * reg_pc + 4 * next_insn_opcode + 4 * alu_ltu - 4.278190672E9 == 0
+1960837391 * reg_pc + 22 * next_insn_opcode - orig(count_cycle) - 2.3530048669E10 == 0
+1019 * reg_pc + 12 * alu_out - 6 * alu_shl - 12240 == 0
+5609 * reg_pc + 66 * alu_out - 3 * orig(count_cycle) - 67305 == 0
+3 * reg_pc + 22 * alu_shl - 2 * orig(count_cycle) + 10 == 0
+1068433280 * reg_op1 - 1068433280 * next_insn_opcode + 1069547667 * dbg_insn_opcode - 1.191890015985129E15 == 0
+reg_op1 - next_insn_opcode - 1069547667 * decoded_rd + 2139095334 == 0
+2 * reg_op1 - 2 * next_insn_opcode - 1069547667 * decoded_rs1 + 2139095334 == 0
+9 * reg_op1 - 9 * next_insn_opcode + 356515889 * decoded_rs2 - 356515889 == 0
+22188 * reg_op1 - 22188 * next_insn_opcode - 356515889 * decoded_imm_j + 2.4094769842176E13 == 0
+1069546648 * reg_op1 + 1019 * next_insn_opcode - 1069547667 * alu_out + 1069547667 == 0
+1021 * reg_op1 - 1021 * next_insn_opcode - 1069547667 * cpuregs_rs2 + 1.09093862034E12 == 0
+reg_op1 - next_insn_opcode + 1069547667 * orig(mem_instr) == 0
+340 * reg_op1 - 340 * next_insn_opcode - 356515889 * orig(mem_addr) + 3.6364620678E11 == 0
+7.843349564E9 * reg_op1 - 6 * next_insn_opcode - 356515889 * orig(count_cycle) + 8.199865447E9 == 0
+reg_op1 - next_insn_opcode - 1069547667 * orig(decoder_pseudo_trigger_q) + 1069547667 == 0
+reg_op1 - next_insn_opcode - 1069547667 * orig(is_lbu_lhu_lw) == 0
+9256 * reg_op1 - 9256 * next_insn_opcode - 356515889 * orig(q_ascii_instr) + 9.899376689863E12 == 0
+13740 * reg_op1 - 13740 * next_insn_opcode - 356515889 * orig(q_insn_opcode) + 1.4695228428691E13 == 0
+2 * reg_op1 - 2 * next_insn_opcode - 1069547667 * orig(q_insn_rs1) + 1069547667 == 0
+reg_op1 - next_insn_opcode - 356515889 * orig(q_insn_rd) + 713031778 == 0
+1633969258 * reg_op1 - 1633969258 * next_insn_opcode - 1069547667 * orig(cached_ascii_instr) + 1.74760800677407334E18 == 0
+1114388 * reg_op1 - 1114388 * next_insn_opcode - 1069547667 * orig(cached_insn_opcode) + 1.191890015985129E15 == 0
+1068433280 * reg_op1 + 1019 * dbg_insn_opcode - 1068433280 * alu_out - 67127073 == 0
+1.175276608E10 * reg_op1 - 9 * dbg_insn_opcode - 534216640 * orig(count_cycle) + 1.2297012203E10 == 0
+reg_op1 - 1019 * decoded_rd - alu_out + 2039 == 0
+22 * reg_op1 + 18 * decoded_rd - orig(count_cycle) - 13 == 0
+2 * reg_op1 - 1019 * decoded_rs1 - 2 * alu_out + 2040 == 0
+22 * reg_op1 + 9 * decoded_rs1 - orig(count_cycle) + 5 == 0
+27 * reg_op1 + 1019 * decoded_rs2 - 27 * alu_out - 992 == 0
+66 * reg_op1 - 2 * decoded_rs2 - 3 * orig(count_cycle) + 71 == 0
+66564 * reg_op1 - 1019 * decoded_imm_j - 66564 * alu_out + 68934660 == 0
+81356 * reg_op1 + decoded_imm_j - 3698 * orig(count_cycle) + 17470 == 0
+1021 * reg_op1 - 1021 * alu_out - 1019 * cpuregs_rs2 + 1040401 == 0
+reg_op1 - alu_out + 1019 * orig(mem_instr) + 1 == 0
+1020 * reg_op1 - 1020 * alu_out - 1019 * orig(mem_addr) + 1040400 == 0
+22436 * reg_op1 - 18 * alu_out - 1019 * orig(count_cycle) + 23455 == 0
+reg_op1 - alu_out - 1019 * orig(decoder_pseudo_trigger_q) + 1020 == 0
+reg_op1 - alu_out - 1019 * orig(is_lbu_lhu_lw) + 1 == 0
+27768 * reg_op1 - 27768 * alu_out - 1019 * orig(q_ascii_instr) + 28322341 == 0
+41220 * reg_op1 - 41220 * alu_out - 1019 * orig(q_insn_opcode) + 42043381 == 0
+2 * reg_op1 - 2 * alu_out - 1019 * orig(q_insn_rs1) + 1021 == 0
+3 * reg_op1 - 3 * alu_out - 1019 * orig(q_insn_rd) + 2041 == 0
+1633969258 * reg_op1 - 1633969258 * alu_out - 1019 * orig(cached_ascii_instr) + 1.666648642141E12 == 0
+1114388 * reg_op1 - 1114388 * alu_out - 1019 * orig(cached_insn_opcode) + 1136674741 == 0
+22462 * reg_op1 + 18 * cpuregs_rs2 - 1021 * orig(count_cycle) + 5123 == 0
+22 * reg_op1 - 18 * orig(mem_instr) - orig(count_cycle) + 23 == 0
+3740 * reg_op1 + 3 * orig(mem_addr) - 170 * orig(count_cycle) + 850 == 0
+22 * reg_op1 - orig(count_cycle) + 18 * orig(decoder_pseudo_trigger_q) + 5 == 0
+22 * reg_op1 - orig(count_cycle) + 18 * orig(is_lbu_lhu_lw) + 23 == 0
+101816 * reg_op1 - 4628 * orig(count_cycle) + 3 * orig(q_ascii_instr) + 23143 == 0
+50380 * reg_op1 - 2290 * orig(count_cycle) + orig(q_insn_opcode) + 11451 == 0
+22 * reg_op1 - orig(count_cycle) + 9 * orig(q_insn_rs1) + 14 == 0
+22 * reg_op1 - orig(count_cycle) + 6 * orig(q_insn_rd) + 11 == 0
+1.7973661838E10 * reg_op1 - 816984629 * orig(count_cycle) + 9 * orig(cached_ascii_instr) + 4.084923154E9 == 0
+12258268 * reg_op1 - 557194 * orig(count_cycle) + 9 * orig(cached_insn_opcode) + 2785979 == 0
+133554160 * next_insn_opcode - 133693331 * dbg_insn_opcode - 133554160 * alu_out + 1.48986243607257E14 == 0
+1068433280 * next_insn_opcode - 1069547667 * dbg_insn_opcode - 534216640 * alu_shl + 1.191890015985129E15 == 0
+1068433280 * next_insn_opcode - 1069547667 * dbg_insn_opcode - 3.20529984E9 * alu_shr + 1.191890015985129E15 == 0
+1068433280 * next_insn_opcode - 1069547667 * dbg_insn_opcode + 3.20529984E9 * alu_ltu + 1.191886810685289E15 == 0
+5.87638304E9 * next_insn_opcode - 5.882512173E9 * dbg_insn_opcode - 267108320 * orig(count_cycle) + 6.555401236424311E15 == 0
+next_insn_opcode + 1069546648 * decoded_rd - alu_out - 2139093295 == 0
+2 * next_insn_opcode + 2139095334 * decoded_rd - alu_shl - 4.278190668E9 == 0
+next_insn_opcode + 1069547667 * decoded_rd - 2 * alu_shr - 2139095334 == 0
+next_insn_opcode + 1069547667 * decoded_rd - alu_eq - 2139095334 == 0
+next_insn_opcode + 1069547667 * decoded_rd + alu_ltu - 2139095335 == 0
+22 * next_insn_opcode + 2.3530048692E10 * decoded_rd - orig(count_cycle) - 4.7060097361E10 == 0
+next_insn_opcode + 534773324 * decoded_rs1 - alu_out - 1069546647 == 0
+2 * next_insn_opcode + 1069547667 * decoded_rs1 - alu_shl - 2139095334 == 0
+2 * next_insn_opcode + 1069547667 * decoded_rs1 - 4 * alu_shr - 2139095334 == 0
+2 * next_insn_opcode + 1069547667 * decoded_rs1 - 2 * alu_eq - 2139095334 == 0
+2 * next_insn_opcode + 1069547667 * decoded_rs1 + 2 * alu_ltu - 2139095336 == 0
+22 * next_insn_opcode + 1.1765024346E10 * decoded_rs1 - orig(count_cycle) - 2.3530048669E10 == 0
+27 * next_insn_opcode - 1069546648 * decoded_rs2 - 27 * alu_out + 1069546675 == 0
+18 * next_insn_opcode - 713031778 * decoded_rs2 - 9 * alu_shl + 713031778 == 0
+9 * next_insn_opcode - 356515889 * decoded_rs2 - 18 * alu_shr + 356515889 == 0
+9 * next_insn_opcode - 356515889 * decoded_rs2 - 9 * alu_eq + 356515889 == 0
+9 * next_insn_opcode - 356515889 * decoded_rs2 + 9 * alu_ltu + 356515880 == 0
+198 * next_insn_opcode - 7.843349564E9 * decoded_rs2 - 9 * orig(count_cycle) + 7.843349771E9 == 0
+16641 * next_insn_opcode + 267386662 * decoded_imm_j - 16641 * alu_out - 1.8071060147967E13 == 0
+22188 * next_insn_opcode + 356515889 * decoded_imm_j - 11094 * alu_shl - 2.4094769842176E13 == 0
+22188 * next_insn_opcode + 356515889 * decoded_imm_j - 44376 * alu_shr - 2.4094769842176E13 == 0
+22188 * next_insn_opcode + 356515889 * decoded_imm_j - 22188 * alu_eq - 2.4094769842176E13 == 0
+22188 * next_insn_opcode + 356515889 * decoded_imm_j + 22188 * alu_ltu - 2.4094769864364E13 == 0
+122034 * next_insn_opcode + 1960837391 * decoded_imm_j - 5547 * orig(count_cycle) - 1.32521234105763E14 == 0
+1019 * next_insn_opcode - 1069547667 * alu_out + 534773324 * alu_shl + 1069547667 == 0
+1021 * next_insn_opcode - 1021 * alu_out + 1069546648 * cpuregs_rs2 - 1.090937579939E12 == 0
+next_insn_opcode - alu_out - 1069546648 * orig(mem_instr) + 1 == 0
+255 * next_insn_opcode - 255 * alu_out + 267386662 * orig(mem_addr) - 2.72734394985E11 == 0
+5609 * next_insn_opcode - 5.882512173E9 * alu_out + 267386662 * orig(count_cycle) - 267381053 == 0
+next_insn_opcode - alu_out + 1069546648 * orig(decoder_pseudo_trigger_q) - 1069546647 == 0
+next_insn_opcode - alu_out + 1069546648 * orig(is_lbu_lhu_lw) + 1 == 0
+3471 * next_insn_opcode - 3471 * alu_out + 133693331 * orig(q_ascii_instr) - 3.712262718406E12 == 0
+10305 * next_insn_opcode - 10305 * alu_out + 267386662 * orig(q_insn_opcode) - 1.1021410810673E13 == 0
+next_insn_opcode - alu_out + 534773324 * orig(q_insn_rs1) - 534773323 == 0
+3 * next_insn_opcode - 3 * alu_out + 1069546648 * orig(q_insn_rd) - 2139093293 == 0
+816984629 * next_insn_opcode - 816984629 * alu_out + 534773324 * orig(cached_ascii_instr) - 8.7380317006271552E17 == 0
+278597 * next_insn_opcode - 278597 * alu_out + 267386662 * orig(cached_insn_opcode) - 2.97972219827597E14 == 0
+2042 * next_insn_opcode - 1021 * alu_shl + 2139095334 * cpuregs_rs2 - 2.18187724068E12 == 0
+2 * next_insn_opcode - alu_shl - 2139095334 * orig(mem_instr) == 0
+340 * next_insn_opcode - 170 * alu_shl + 356515889 * orig(mem_addr) - 3.6364620678E11 == 0
+6 * next_insn_opcode - 3.921674782E9 * alu_shl + 356515889 * orig(count_cycle) - 8.199865447E9 == 0
+2 * next_insn_opcode - alu_shl + 2139095334 * orig(decoder_pseudo_trigger_q) - 2139095334 == 0
+2 * next_insn_opcode - alu_shl + 2139095334 * orig(is_lbu_lhu_lw) == 0
+9256 * next_insn_opcode - 4628 * alu_shl + 356515889 * orig(q_ascii_instr) - 9.899376689863E12 == 0
+13740 * next_insn_opcode - 6870 * alu_shl + 356515889 * orig(q_insn_opcode) - 1.4695228428691E13 == 0
+2 * next_insn_opcode - alu_shl + 1069547667 * orig(q_insn_rs1) - 1069547667 == 0
+2 * next_insn_opcode - alu_shl + 713031778 * orig(q_insn_rd) - 1426063556 == 0
+1114388 * next_insn_opcode - 557194 * alu_shl + 1069547667 * orig(cached_insn_opcode) - 1.191890015985129E15 == 0
+1021 * next_insn_opcode - 2042 * alu_shr + 1069547667 * cpuregs_rs2 - 1.09093862034E12 == 0
+340 * next_insn_opcode - 680 * alu_shr + 356515889 * orig(mem_addr) - 3.6364620678E11 == 0
+next_insn_opcode - 2 * alu_shr + 1069547667 * orig(decoder_pseudo_trigger_q) - 1069547667 == 0
+9256 * next_insn_opcode - 18512 * alu_shr + 356515889 * orig(q_ascii_instr) - 9.899376689863E12 == 0
+13740 * next_insn_opcode - 27480 * alu_shr + 356515889 * orig(q_insn_opcode) - 1.4695228428691E13 == 0
+2 * next_insn_opcode - 4 * alu_shr + 1069547667 * orig(q_insn_rs1) - 1069547667 == 0
+next_insn_opcode - 2 * alu_shr + 356515889 * orig(q_insn_rd) - 713031778 == 0
+1633969258 * next_insn_opcode - 4.901907774E9 * alu_shr + 1069547667 * orig(cached_ascii_instr) - 1.74760800677407334E18 == 0
+1114388 * next_insn_opcode - 2228776 * alu_shr + 1069547667 * orig(cached_insn_opcode) - 1.191890015985129E15 == 0
+1021 * next_insn_opcode - 1021 * alu_eq + 1069547667 * cpuregs_rs2 - 1.09093862034E12 == 0
+340 * next_insn_opcode - 340 * alu_eq + 356515889 * orig(mem_addr) - 3.6364620678E11 == 0
+next_insn_opcode - alu_eq + 1069547667 * orig(decoder_pseudo_trigger_q) - 1069547667 == 0
+9256 * next_insn_opcode - 9256 * alu_eq + 356515889 * orig(q_ascii_instr) - 9.899376689863E12 == 0
+13740 * next_insn_opcode - 13740 * alu_eq + 356515889 * orig(q_insn_opcode) - 1.4695228428691E13 == 0
+2 * next_insn_opcode - 2 * alu_eq + 1069547667 * orig(q_insn_rs1) - 1069547667 == 0
+next_insn_opcode - alu_eq + 356515889 * orig(q_insn_rd) - 713031778 == 0
+1114388 * next_insn_opcode - 1114388 * alu_eq + 1069547667 * orig(cached_insn_opcode) - 1.191890015985129E15 == 0
+1021 * next_insn_opcode + 1021 * alu_ltu + 1069547667 * cpuregs_rs2 - 1.090938621361E12 == 0
+340 * next_insn_opcode + 340 * alu_ltu + 356515889 * orig(mem_addr) - 3.6364620712E11 == 0
+next_insn_opcode + alu_ltu + 1069547667 * orig(decoder_pseudo_trigger_q) - 1069547668 == 0
+9256 * next_insn_opcode + 9256 * alu_ltu + 356515889 * orig(q_ascii_instr) - 9.899376699119E12 == 0
+13740 * next_insn_opcode + 13740 * alu_ltu + 356515889 * orig(q_insn_opcode) - 1.4695228442431E13 == 0
+2 * next_insn_opcode + 2 * alu_ltu + 1069547667 * orig(q_insn_rs1) - 1069547669 == 0
+next_insn_opcode + alu_ltu + 356515889 * orig(q_insn_rd) - 713031779 == 0
+1633969258 * next_insn_opcode + 4.901907774E9 * alu_ltu + 1069547667 * orig(cached_ascii_instr) - 1.74760801167598131E18 == 0
+1114388 * next_insn_opcode + 1114388 * alu_ltu + 1069547667 * orig(cached_insn_opcode) - 1.191890017099517E15 == 0
+22462 * next_insn_opcode + 2.3530048692E10 * cpuregs_rs2 - 1021 * orig(count_cycle) - 2.4000649642357E13 == 0
+22 * next_insn_opcode - 2.3530048692E10 * orig(mem_instr) - orig(count_cycle) + 23 == 0
+1870 * next_insn_opcode + 1960837391 * orig(mem_addr) - 85 * orig(count_cycle) - 2.000054136865E12 == 0
+22 * next_insn_opcode - orig(count_cycle) + 2.3530048692E10 * orig(decoder_pseudo_trigger_q) - 2.3530048669E10 == 0
+22 * next_insn_opcode - orig(count_cycle) + 2.3530048692E10 * orig(is_lbu_lhu_lw) + 23 == 0
+50908 * next_insn_opcode - 2314 * orig(count_cycle) + 1960837391 * orig(q_ascii_instr) - 5.4446571782675E13 == 0
+75570 * next_insn_opcode - 3435 * orig(count_cycle) + 1960837391 * orig(q_insn_opcode) - 8.0823756340624E13 == 0
+22 * next_insn_opcode - orig(count_cycle) + 1.1765024346E10 * orig(q_insn_rs1) - 1.1765024323E10 == 0
+22 * next_insn_opcode - orig(count_cycle) + 7.843349564E9 * orig(q_insn_rd) - 1.5686699105E10 == 0
+6129134 * next_insn_opcode - 278597 * orig(count_cycle) + 5.882512173E9 * orig(cached_insn_opcode) - 6.55539508652522E15 == 0
+1019 * dbg_insn_opcode - 1068433280 * alu_out + 534216640 * alu_shl - 67127073 == 0
+5609 * dbg_insn_opcode - 5.87638304E9 * alu_out + 267108320 * orig(count_cycle) - 6.517705003E9 == 0
+9 * dbg_insn_opcode - 5.87638304E9 * alu_shl + 534216640 * orig(count_cycle) - 1.2297012203E10 == 0
+2038 * decoded_rd + 2 * alu_out - alu_shl - 4078 == 0
+22436 * decoded_rd + 22 * alu_out - orig(count_cycle) - 44871 == 0
+18 * decoded_rd + 11 * alu_shl - orig(count_cycle) - 13 == 0
+1019 * decoded_rs1 + 2 * alu_out - alu_shl - 2040 == 0
+11218 * decoded_rs1 + 22 * alu_out - orig(count_cycle) - 22435 == 0
+9 * decoded_rs1 + 11 * alu_shl - orig(count_cycle) + 5 == 0
+2038 * decoded_rs2 - 54 * alu_out + 27 * alu_shl - 1984 == 0
+22436 * decoded_rs2 - 594 * alu_out + 27 * orig(count_cycle) - 22463 == 0
+2 * decoded_rs2 - 33 * alu_shl + 3 * orig(count_cycle) - 71 == 0
+1019 * decoded_imm_j + 66564 * alu_out - 33282 * alu_shl - 68934660 == 0
+5609 * decoded_imm_j + 366102 * alu_out - 16641 * orig(count_cycle) - 379062015 == 0
+decoded_imm_j + 40678 * alu_shl - 3698 * orig(count_cycle) + 17470 == 0
+2042 * alu_out - 1021 * alu_shl + 2038 * cpuregs_rs2 - 2080802 == 0
+2 * alu_out - alu_shl - 2038 * orig(mem_instr) - 2 == 0
+1020 * alu_out - 510 * alu_shl + 1019 * orig(mem_addr) - 1040400 == 0
+18 * alu_out - 11218 * alu_shl + 1019 * orig(count_cycle) - 23455 == 0
+2 * alu_out - alu_shl + 2038 * orig(decoder_pseudo_trigger_q) - 2040 == 0
+2 * alu_out - alu_shl + 2038 * orig(is_lbu_lhu_lw) - 2 == 0
+27768 * alu_out - 13884 * alu_shl + 1019 * orig(q_ascii_instr) - 28322341 == 0
+41220 * alu_out - 20610 * alu_shl + 1019 * orig(q_insn_opcode) - 42043381 == 0
+2 * alu_out - alu_shl + 1019 * orig(q_insn_rs1) - 1021 == 0
+6 * alu_out - 3 * alu_shl + 2038 * orig(q_insn_rd) - 4082 == 0
+1633969258 * alu_out - 816984629 * alu_shl + 1019 * orig(cached_ascii_instr) - 1.666648642141E12 == 0
+1114388 * alu_out - 557194 * alu_shl + 1019 * orig(cached_insn_opcode) - 1136674741 == 0
+22462 * alu_out + 22436 * cpuregs_rs2 - 1021 * orig(count_cycle) - 22883699 == 0
+22 * alu_out - 22436 * orig(mem_instr) - orig(count_cycle) + 1 == 0
+5610 * alu_out + 5609 * orig(mem_addr) - 255 * orig(count_cycle) - 5720925 == 0
+22 * alu_out - orig(count_cycle) + 22436 * orig(decoder_pseudo_trigger_q) - 22435 == 0
+22 * alu_out - orig(count_cycle) + 22436 * orig(is_lbu_lhu_lw) + 1 == 0
+152724 * alu_out - 6942 * orig(count_cycle) + 5609 * orig(q_ascii_instr) - 155738161 == 0
+226710 * alu_out - 10305 * orig(count_cycle) + 5609 * orig(q_insn_opcode) - 231187066 == 0
+22 * alu_out - orig(count_cycle) + 11218 * orig(q_insn_rs1) - 11217 == 0
+66 * alu_out - 3 * orig(count_cycle) + 22436 * orig(q_insn_rd) - 44869 == 0
+1.7973661838E10 * alu_out - 816984629 * orig(count_cycle) + 11218 * orig(cached_ascii_instr) - 1.8329050140397E13 == 0
+6129134 * alu_out - 278597 * orig(count_cycle) + 5609 * orig(cached_insn_opcode) - 6.250318086E9 == 0
+11231 * alu_shl + 18 * cpuregs_rs2 - 1021 * orig(count_cycle) + 5123 == 0
+11 * alu_shl - 18 * orig(mem_instr) - orig(count_cycle) + 23 == 0
+1870 * alu_shl + 3 * orig(mem_addr) - 170 * orig(count_cycle) + 850 == 0
+11 * alu_shl - orig(count_cycle) + 18 * orig(decoder_pseudo_trigger_q) + 5 == 0
+11 * alu_shl - orig(count_cycle) + 18 * orig(is_lbu_lhu_lw) + 23 == 0
+50908 * alu_shl - 4628 * orig(count_cycle) + 3 * orig(q_ascii_instr) + 23143 == 0
+25190 * alu_shl - 2290 * orig(count_cycle) + orig(q_insn_opcode) + 11451 == 0
+11 * alu_shl - orig(count_cycle) + 9 * orig(q_insn_rs1) + 14 == 0
+11 * alu_shl - orig(count_cycle) + 6 * orig(q_insn_rd) + 11 == 0
+8.986830919E9 * alu_shl - 816984629 * orig(count_cycle) + 9 * orig(cached_ascii_instr) + 4.084923154E9 == 0
+6129134 * alu_shl - 557194 * orig(count_cycle) + 9 * orig(cached_insn_opcode) + 2785979 == 0
+Exiting Daikon.

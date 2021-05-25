@@ -1,0 +1,2 @@
+0 == _r_ in {680 * alu_out - 340 * alu_shl - cpuregs_rs2 + 340}
+0 != _r_ in {cached_insn_rd, dbg_insn_rd, dbg_rs1val_valid, dbg_valid_insn, decoded_rd, last_mem_valid, latched_rd, latched_store, mem_do_prefetch, mem_do_rinst, mem_instr, mem_la_wstrb, mem_state, mem_valid, q_insn_rd}

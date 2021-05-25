@@ -1,0 +1,2 @@
+0 == _r_ in {22287584 * q_insn_rs1 - 32316995 * q_insn_rs2 - 9 * cached_insn_opcode - 12258101}
+0 != _r_ in {cpu_state, dbg_next, dbg_valid_insn, decoder_trigger_q, mem_do_prefetch, mem_la_wstrb}

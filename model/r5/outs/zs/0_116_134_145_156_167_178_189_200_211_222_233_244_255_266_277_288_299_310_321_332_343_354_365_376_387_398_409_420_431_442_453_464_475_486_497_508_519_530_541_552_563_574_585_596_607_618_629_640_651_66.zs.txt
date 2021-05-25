@@ -1,0 +1,2 @@
+0 == _r_ in {mem_la_wdata - alu_add_sub + 1020 * alu_eq + 1020}
+0 != _r_ in {cpu_state}

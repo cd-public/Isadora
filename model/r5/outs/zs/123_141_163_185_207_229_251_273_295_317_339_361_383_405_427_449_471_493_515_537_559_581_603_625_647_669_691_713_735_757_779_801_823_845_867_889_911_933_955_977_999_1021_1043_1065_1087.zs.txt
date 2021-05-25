@@ -1,0 +1,2 @@
+0 == _r_ in {510 * count_cycle - 2805 * count_instr - 2 * cpuregs_rs2 - 765}
+0 != _r_ in {cached_insn_rd, dbg_ascii_instr, dbg_insn_addr, dbg_insn_opcode, dbg_insn_rd, dbg_insn_rs1, dbg_rs1val, dbg_rs1val_valid, dbg_valid_insn, decoded_rd, latched_rd, latched_store, mem_la_wstrb, q_ascii_instr, q_insn_opcode, q_insn_rd, q_insn_rs1, reg_next_pc, reg_op1, reg_pc}

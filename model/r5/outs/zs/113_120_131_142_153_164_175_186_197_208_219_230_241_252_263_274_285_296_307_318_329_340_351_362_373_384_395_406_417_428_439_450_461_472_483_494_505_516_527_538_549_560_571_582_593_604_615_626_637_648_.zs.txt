@@ -1,0 +1,2 @@
+0 == _r_ in {1042441 * dbg_ascii_state - 3.0333206528E10 * cpuregs_rs1 + 3.0970203865088E13 * cpuregs_rs2 - 5.168890380480903E17}
+0 != _r_ in {cached_insn_rs1, dbg_insn_rs1, dbg_rs1val, dbg_rs1val_valid, dbg_valid_insn, decoder_trigger, mem_instr, mem_la_wstrb, q_insn_rs1, reg_op1}

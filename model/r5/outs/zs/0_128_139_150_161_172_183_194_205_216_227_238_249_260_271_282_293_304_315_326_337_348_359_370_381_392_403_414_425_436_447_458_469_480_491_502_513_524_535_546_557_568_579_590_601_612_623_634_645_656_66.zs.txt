@@ -1,0 +1,2 @@
+0 == _r_ in {4080 * decoded_imm_j + 5222783 * cpu_state + 16 * alu_shr - 334254016}
+0 != _r_ in {}

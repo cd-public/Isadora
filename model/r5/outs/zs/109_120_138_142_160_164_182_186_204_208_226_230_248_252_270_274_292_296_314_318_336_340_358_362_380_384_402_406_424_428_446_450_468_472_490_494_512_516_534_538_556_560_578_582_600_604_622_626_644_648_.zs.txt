@@ -1,0 +1,2 @@
+0 == _r_ in {63 * cached_insn_opcode + 1069547666 * cpu_state - 6.7381503021E10 * alu_ltu - 6.8451050624E10}
+0 != _r_ in {dbg_valid_insn, decoder_trigger, mem_instr, mem_la_wstrb}

@@ -1,0 +1,2 @@
+0 == _r_ in {25 * next_insn_opcode - 25 * alu_out + 1021 * cpuregs_wrdata + 1021}
+0 != _r_ in {cpu_state}

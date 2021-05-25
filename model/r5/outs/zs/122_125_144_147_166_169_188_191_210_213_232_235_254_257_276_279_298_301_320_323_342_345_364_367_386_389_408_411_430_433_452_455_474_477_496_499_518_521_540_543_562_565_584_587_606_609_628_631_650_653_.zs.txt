@@ -1,0 +1,2 @@
+0 == _r_ in {3 * dbg_ascii_state + 9.27677939732E11 * alu_out - 4.63838969866E11 * alu_shl - 9.32785107005E11}
+0 != _r_ in {cached_ascii_instr, cached_insn_imm, cached_insn_rd, cached_insn_rs1, cached_insn_rs2, cpuregs_rs2, dbg_insn_rd, dbg_rs1val_valid, dbg_valid_insn, decoded_imm, decoded_imm_j, decoded_rd, decoded_rs1, decoded_rs2, instr_addi, is_alu_reg_imm, is_jalr_addi_slti_sltiu_xori_ori_andi, is_lui_auipc_jal_jalr_addi_add_sub, latched_rd, mem_la_wstrb, mem_state, mem_valid, new_ascii_instr, q_insn_rd}

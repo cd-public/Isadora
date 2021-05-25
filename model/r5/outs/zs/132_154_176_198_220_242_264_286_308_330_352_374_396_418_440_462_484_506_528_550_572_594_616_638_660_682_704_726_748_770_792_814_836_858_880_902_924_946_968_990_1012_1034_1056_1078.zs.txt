@@ -1,0 +1,2 @@
+0 == _r_ in {count_instr - 4 * alu_add_sub + 4079}
+0 != _r_ in {cached_ascii_instr, cached_insn_opcode, cached_insn_rs1, cached_insn_rs2, cpu_state, dbg_ascii_instr, dbg_insn_addr, dbg_insn_opcode, dbg_insn_rs1, dbg_insn_rs2, dbg_rs1val, dbg_rs1val_valid, dbg_rs2val_valid, dbg_valid_insn, decoded_rs1, decoded_rs2, decoder_trigger_q, instr_jal, is_lui_auipc_jal, mem_addr, mem_do_wdata, mem_la_wstrb, mem_state, mem_valid, mem_wstrb, new_ascii_instr, q_ascii_instr, q_insn_opcode, q_insn_rs1, q_insn_rs2, reg_next_pc, reg_op1, reg_pc}

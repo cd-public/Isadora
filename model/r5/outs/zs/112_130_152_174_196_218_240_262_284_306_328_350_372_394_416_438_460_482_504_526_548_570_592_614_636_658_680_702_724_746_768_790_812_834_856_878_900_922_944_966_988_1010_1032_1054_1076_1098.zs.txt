@@ -1,0 +1,2 @@
+0 == _r_ in {2 * count_instr + decoded_imm_j - 8 * alu_add_sub - 32804}
+0 != _r_ in {cached_ascii_instr, cached_insn_rs1, cpu_state, cpuregs_rs1, dbg_ascii_instr, dbg_insn_rs1, dbg_rs1val, dbg_rs1val_valid, dbg_rs2val_valid, dbg_valid_insn, decoded_rs1, instr_sw, is_sb_sh_sw, last_mem_valid, mem_do_prefetch, mem_do_rinst, mem_instr, mem_la_wstrb, mem_state, mem_valid, new_ascii_instr, q_ascii_instr, q_insn_rs1, reg_op1}

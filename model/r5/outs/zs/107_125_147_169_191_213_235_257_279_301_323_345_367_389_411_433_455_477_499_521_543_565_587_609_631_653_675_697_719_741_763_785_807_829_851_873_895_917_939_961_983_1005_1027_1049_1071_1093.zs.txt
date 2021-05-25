@@ -1,0 +1,2 @@
+0 == _r_ in {2042 * alu_out - 1021 * alu_shl + 2038 * cpuregs_rs2 - 2080802}
+0 != _r_ in {cached_ascii_instr, cpu_state, dbg_ascii_instr, dbg_ascii_state, dbg_rs1val_valid, dbg_valid_insn, instr_addi, is_alu_reg_imm, is_jalr_addi_slti_sltiu_xori_ori_andi, is_lui_auipc_jal_jalr_addi_add_sub, mem_do_prefetch, mem_do_rinst, mem_instr, mem_la_wstrb, mem_state, mem_valid, new_ascii_instr, q_ascii_instr}

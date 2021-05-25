@@ -1,0 +1,2 @@
+0 == _r_ in {1021 * next_insn_opcode - 1021 * cpuregs_rs1 + 4.284477552E9 * cpuregs_rs2 - 4.37016710304E12}
+0 != _r_ in {dbg_valid_insn, decoder_trigger_q, mem_addr, mem_la_wstrb, q_insn_rs1, reg_op1}

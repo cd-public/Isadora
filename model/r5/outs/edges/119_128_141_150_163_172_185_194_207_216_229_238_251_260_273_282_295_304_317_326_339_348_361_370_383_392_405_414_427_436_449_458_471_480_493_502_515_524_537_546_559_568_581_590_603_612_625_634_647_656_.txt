@@ -1,0 +1,2181 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 90 dtrace files:
+
+===========================================================================
+..tick():::ENTER
+trap == mem_wstrb
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_wordsize
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == last_mem_valid
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_lui
+trap == instr_auipc
+trap == instr_jal
+trap == instr_jalr
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_lb
+trap == instr_lh
+trap == instr_lbu
+trap == instr_lhu
+trap == instr_sb
+trap == instr_sh
+trap == instr_sw
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_slli
+trap == instr_srli
+trap == instr_srai
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == instr_rdcycle
+trap == instr_rdcycleh
+trap == instr_rdinstr
+trap == instr_rdinstrh
+trap == instr_ecall_ebreak
+trap == instr_getq
+trap == instr_setq
+trap == instr_retirq
+trap == instr_maskirq
+trap == instr_waitirq
+trap == instr_timer
+trap == decoder_trigger_q
+trap == decoder_pseudo_trigger
+trap == decoder_pseudo_trigger_q
+trap == compressed_instr
+trap == is_lui_auipc_jal
+trap == is_slli_srli_srai
+trap == is_sll_srl_sra
+trap == is_slti_blt_slt
+trap == is_sltiu_bltu_sltu
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_alu_reg_imm
+trap == is_alu_reg_reg
+trap == is_compare
+trap == dbg_rs2val_valid
+trap == dbg_next
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_store
+trap == latched_stalu
+trap == latched_branch
+trap == latched_compr
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+mem_valid == mem_state
+mem_valid == mem_do_prefetch
+mem_valid == mem_do_rinst
+mem_valid == instr_lw
+mem_valid == is_lb_lh_lw_lbu_lhu
+mem_valid == is_lbu_lhu_lw
+mem_instr == decoded_rs1
+mem_instr == dbg_rs1val_valid
+mem_instr == dbg_valid_insn
+mem_addr == reg_next_pc
+mem_la_wdata == reg_op2
+pcpi_insn == trace_data
+pcpi_insn == reg_out
+pcpi_insn == reg_sh
+pcpi_insn == irq_pending
+pcpi_insn == pcpi_int_rd
+pcpi_insn == mem_16bit_buffer
+pcpi_insn == dbg_rs2val
+pcpi_insn == current_pc
+pcpi_insn == pcpi_timeout_counter
+pcpi_insn == next_irq_pending
+pcpi_insn == alu_out_0
+pcpi_insn == alu_out_0_q
+pcpi_insn == cpuregs_wrdata
+pcpi_insn == decoded_rs
+reg_op1 == dbg_rs1val
+next_insn_opcode == mem_rdata_word
+next_insn_opcode == mem_rdata_q
+dbg_insn_opcode == q_insn_opcode
+instr_addi == decoded_imm
+instr_addi == decoder_trigger
+instr_addi == is_jalr_addi_slti_sltiu_xori_ori_andi
+instr_addi == is_sb_sh_sw
+instr_addi == is_lui_auipc_jal_jalr_addi_add_sub
+instr_addi == dbg_insn_imm
+instr_addi == dbg_insn_rs2
+instr_addi == q_insn_imm
+instr_addi == q_insn_rs2
+instr_addi == cached_insn_imm
+instr_addi == cached_insn_rs2
+new_ascii_instr == dbg_ascii_instr
+new_ascii_instr == q_ascii_instr
+new_ascii_instr == cached_ascii_instr
+dbg_insn_rs1 == q_insn_rs1
+dbg_insn_rs1 == cached_insn_rs1
+dbg_insn_rd == q_insn_rd
+dbg_insn_rd == cached_insn_rd
+dbg_insn_rd == latched_rd
+alu_out == alu_out_q
+alu_out == alu_add_sub
+alu_ltu == alu_lts
+trap == 0
+mem_valid one of { 0, 1 }
+mem_instr == 1
+mem_addr one of { 12, 16 }
+mem_la_wdata one of { -1, 1 }
+mem_la_wdata != 0
+mem_la_wstrb == 15
+pcpi_insn == -1
+reg_pc one of { 8, 16 }
+next_insn_opcode one of { -1, 41219, 2138147 }
+dbg_insn_opcode one of { 41219, 1114387 }
+dbg_insn_addr one of { 8, 12 }
+irq_mask == 4294967295L
+instr_addi one of { 0, 1 }
+decoded_rd one of { 0, 2 }
+decoded_rs2 one of { 0, 2 }
+decoded_imm_j one of { 40960, 40962 }
+new_ascii_instr one of { 27767, 1633969257 }
+dbg_insn_rs1 one of { 1, 2 }
+dbg_insn_rd == 2
+cpu_state one of { 1, 64 }
+dbg_ascii_state one of { 439788790632L, 465541358957L }
+alu_out >= -1
+alu_shl >= -1
+alu_shr >= -1
+alu_eq one of { -1, 0, 1 }
+alu_ltu one of { -1, 0, 1 }
+cpuregs_rs1 == 1020
+cpuregs_rs2 >= 0
+trap <= mem_valid
+trap < mem_addr
+trap <= mem_wdata
+trap != mem_la_wdata
+trap < count_cycle
+trap < count_instr
+trap < reg_pc
+trap <= reg_op1
+trap != next_insn_opcode
+trap < dbg_insn_opcode
+trap < dbg_insn_addr
+trap <= instr_addi
+trap <= decoded_rd
+trap <= decoded_rs2
+trap < decoded_imm_j
+trap < new_ascii_instr
+trap < dbg_insn_rs1
+trap < cpu_state
+trap < dbg_ascii_state
+trap != alu_out
+trap <= cpuregs_rs2
+mem_valid <= mem_instr
+mem_valid < mem_addr
+mem_valid != mem_la_wdata
+mem_valid < mem_la_wstrb
+mem_valid > pcpi_insn
+mem_valid < count_cycle
+mem_valid < count_instr
+mem_valid < reg_pc
+mem_valid <= reg_op1
+mem_valid != next_insn_opcode
+mem_valid < dbg_insn_opcode
+mem_valid < dbg_insn_addr
+mem_valid < irq_mask
+mem_valid != instr_addi
+mem_valid <= decoded_rd
+mem_valid != decoded_rs2
+mem_valid < decoded_imm_j
+mem_valid < new_ascii_instr
+mem_valid <= dbg_insn_rs1
+mem_valid < dbg_insn_rd
+mem_valid <= cpu_state
+mem_valid < dbg_ascii_state
+mem_valid != alu_out
+mem_valid % alu_out == 0
+mem_valid < cpuregs_rs1
+mem_valid != cpuregs_rs2
+mem_instr < mem_addr
+mem_instr >= mem_la_wdata
+mem_instr < count_cycle
+mem_instr < count_instr
+mem_instr < reg_pc
+mem_instr != next_insn_opcode
+mem_instr < dbg_insn_opcode
+mem_instr < dbg_insn_addr
+mem_instr >= instr_addi
+mem_instr != decoded_rd
+mem_instr != decoded_rs2
+mem_instr < decoded_imm_j
+mem_instr < new_ascii_instr
+mem_instr <= dbg_insn_rs1
+mem_instr <= cpu_state
+mem_instr < dbg_ascii_state
+mem_instr != alu_shl
+mem_instr >= alu_eq
+mem_instr >= alu_ltu
+mem_addr > mem_la_wdata
+mem_addr != mem_la_wstrb
+mem_addr > pcpi_insn
+mem_addr < count_cycle
+mem_addr >= reg_pc
+mem_addr != next_insn_opcode
+mem_addr < dbg_insn_opcode
+mem_addr > dbg_insn_addr
+mem_addr < irq_mask
+mem_addr > instr_addi
+mem_addr > decoded_rd
+mem_addr > decoded_rs2
+mem_addr < decoded_imm_j
+mem_addr < new_ascii_instr
+mem_addr > dbg_insn_rs1
+mem_addr > dbg_insn_rd
+mem_addr != cpu_state
+mem_addr < dbg_ascii_state
+mem_addr > alu_eq
+mem_addr > alu_ltu
+mem_addr < cpuregs_rs1
+mem_wdata % mem_la_wdata == 0
+mem_wdata > pcpi_insn
+mem_wdata < count_cycle
+mem_wdata < count_instr
+mem_wdata <= reg_op1
+mem_wdata != next_insn_opcode
+mem_wdata < dbg_insn_opcode
+mem_wdata < irq_mask
+mem_wdata < decoded_imm_j
+mem_wdata < new_ascii_instr
+mem_wdata < dbg_ascii_state
+mem_wdata != alu_out
+mem_wdata >= alu_shr
+mem_wdata >= alu_eq
+mem_wdata != alu_ltu
+mem_wdata < cpuregs_rs1
+mem_la_wdata < mem_la_wstrb
+mem_la_wdata >= pcpi_insn
+count_cycle % mem_la_wdata == 0
+mem_la_wdata < count_cycle
+count_instr % mem_la_wdata == 0
+mem_la_wdata < count_instr
+mem_la_wdata < reg_pc
+reg_op1 % mem_la_wdata == 0
+mem_la_wdata <= next_insn_opcode
+next_insn_opcode % mem_la_wdata == 0
+mem_la_wdata < dbg_insn_opcode
+mem_la_wdata < dbg_insn_addr
+mem_la_wdata < irq_mask
+mem_la_wdata <= instr_addi
+mem_la_wdata != decoded_rd
+mem_la_wdata < decoded_rs2
+mem_la_wdata < decoded_imm_j
+mem_la_wdata < new_ascii_instr
+mem_la_wdata < dbg_insn_rs1
+mem_la_wdata < dbg_insn_rd
+cached_insn_opcode % mem_la_wdata == 0
+mem_la_wdata < cpu_state
+mem_la_wdata < dbg_ascii_state
+alu_out % mem_la_wdata == 0
+mem_la_wdata <= alu_out
+alu_shl % mem_la_wdata == 0
+alu_shr % mem_la_wdata == 0
+alu_eq % mem_la_wdata == 0
+mem_la_wdata >= alu_eq
+alu_ltu % mem_la_wdata == 0
+mem_la_wdata >= alu_ltu
+mem_la_wdata < cpuregs_rs1
+cpuregs_rs2 % mem_la_wdata == 0
+mem_la_wdata <= cpuregs_rs2
+mem_la_wstrb < count_cycle
+mem_la_wstrb != reg_pc
+mem_la_wstrb != next_insn_opcode
+mem_la_wstrb < dbg_insn_opcode
+mem_la_wstrb > dbg_insn_addr
+mem_la_wstrb > instr_addi
+mem_la_wstrb > decoded_rd
+mem_la_wstrb > decoded_rs2
+mem_la_wstrb < decoded_imm_j
+mem_la_wstrb < new_ascii_instr
+mem_la_wstrb > dbg_insn_rs1
+mem_la_wstrb != cpu_state
+mem_la_wstrb < dbg_ascii_state
+mem_la_wstrb != alu_shl
+mem_la_wstrb > alu_eq
+mem_la_wstrb > alu_ltu
+pcpi_insn < count_cycle
+pcpi_insn < count_instr
+pcpi_insn < reg_pc
+pcpi_insn < reg_op1
+pcpi_insn <= next_insn_opcode
+pcpi_insn < dbg_insn_opcode
+pcpi_insn < dbg_insn_addr
+pcpi_insn < instr_addi
+pcpi_insn < decoded_rd
+pcpi_insn < decoded_rs2
+pcpi_insn < decoded_imm_j
+pcpi_insn < new_ascii_instr
+pcpi_insn < dbg_insn_rs1
+pcpi_insn <= cached_insn_opcode
+pcpi_insn < cpu_state
+pcpi_insn < dbg_ascii_state
+pcpi_insn <= alu_out
+pcpi_insn <= alu_shl
+pcpi_insn <= alu_shr
+pcpi_insn <= alu_eq
+pcpi_insn <= alu_ltu
+pcpi_insn < cpuregs_rs2
+count_cycle > count_instr
+count_cycle > reg_pc
+count_cycle != reg_op1
+count_cycle != next_insn_opcode
+count_cycle < dbg_insn_opcode
+count_cycle > dbg_insn_addr
+count_cycle < irq_mask
+count_cycle > instr_addi
+count_cycle > decoded_rd
+count_cycle > decoded_rs2
+count_cycle < decoded_imm_j
+count_cycle < new_ascii_instr
+count_cycle % dbg_insn_rs1 == 0
+count_cycle > dbg_insn_rs1
+count_cycle > dbg_insn_rd
+count_cycle != cached_insn_opcode
+count_cycle != cpu_state
+count_cycle < dbg_ascii_state
+count_cycle > alu_out
+count_cycle > alu_shl
+count_cycle > alu_shr
+count_cycle > alu_eq
+count_cycle > alu_ltu
+count_cycle < cpuregs_rs1
+count_cycle > cpuregs_rs2
+count_instr != reg_op1
+count_instr != next_insn_opcode
+count_instr < dbg_insn_opcode
+count_instr < irq_mask
+count_instr > instr_addi
+count_instr > decoded_rd
+count_instr > decoded_rs2
+count_instr < decoded_imm_j
+count_instr < new_ascii_instr
+count_instr % dbg_insn_rs1 == 0
+count_instr > dbg_insn_rs1
+count_instr > dbg_insn_rd
+count_instr != cached_insn_opcode
+count_instr < dbg_ascii_state
+count_instr % alu_out == 0
+count_instr > alu_out
+count_instr > alu_shl
+count_instr > alu_shr
+count_instr > alu_eq
+count_instr > alu_ltu
+count_instr < cpuregs_rs1
+count_instr > cpuregs_rs2
+reg_pc != next_insn_opcode
+reg_pc < dbg_insn_opcode
+reg_pc >= dbg_insn_addr
+reg_pc < irq_mask
+reg_pc > instr_addi
+reg_pc > decoded_rd
+reg_pc > decoded_rs2
+reg_pc < decoded_imm_j
+reg_pc < new_ascii_instr
+reg_pc > dbg_insn_rs1
+reg_pc > dbg_insn_rd
+reg_pc != cpu_state
+reg_pc < dbg_ascii_state
+reg_pc > alu_eq
+reg_pc > alu_ltu
+reg_pc < cpuregs_rs1
+reg_op1 != next_insn_opcode
+reg_op1 < dbg_insn_opcode
+reg_op1 < irq_mask
+reg_op1 >= decoded_rd
+reg_op1 < decoded_imm_j
+reg_op1 < new_ascii_instr
+reg_op1 != cpu_state
+reg_op1 < dbg_ascii_state
+reg_op1 != alu_out
+reg_op1 >= alu_shr
+reg_op1 >= alu_eq
+reg_op1 != alu_ltu
+reg_op1 <= cpuregs_rs1
+reg_op1 != cpuregs_rs2
+next_insn_opcode != dbg_insn_addr
+next_insn_opcode < irq_mask
+next_insn_opcode != instr_addi
+next_insn_opcode != decoded_rd
+next_insn_opcode != decoded_rs2
+next_insn_opcode != decoded_imm_j
+next_insn_opcode != new_ascii_instr
+next_insn_opcode != dbg_insn_rs1
+next_insn_opcode != dbg_insn_rd
+next_insn_opcode >= cached_insn_opcode
+next_insn_opcode != cpu_state
+next_insn_opcode < dbg_ascii_state
+next_insn_opcode >= alu_out
+next_insn_opcode >= alu_shl
+next_insn_opcode >= alu_shr
+next_insn_opcode >= alu_eq
+next_insn_opcode >= alu_ltu
+next_insn_opcode != cpuregs_rs1
+next_insn_opcode != cpuregs_rs2
+dbg_insn_opcode > dbg_insn_addr
+dbg_insn_opcode < irq_mask
+dbg_insn_opcode > instr_addi
+dbg_insn_opcode > decoded_rd
+dbg_insn_opcode > decoded_rs2
+dbg_insn_opcode > decoded_imm_j
+dbg_insn_opcode != new_ascii_instr
+dbg_insn_opcode > dbg_insn_rs1
+dbg_insn_opcode > dbg_insn_rd
+dbg_insn_opcode >= cached_insn_opcode
+dbg_insn_opcode > cpu_state
+dbg_insn_opcode < dbg_ascii_state
+dbg_insn_opcode > alu_out
+dbg_insn_opcode > alu_shl
+dbg_insn_opcode > alu_shr
+dbg_insn_opcode > alu_eq
+dbg_insn_opcode > alu_ltu
+dbg_insn_opcode > cpuregs_rs1
+dbg_insn_opcode > cpuregs_rs2
+dbg_insn_addr < irq_mask
+dbg_insn_addr > instr_addi
+dbg_insn_addr > decoded_rd
+dbg_insn_addr > decoded_rs2
+dbg_insn_addr < decoded_imm_j
+dbg_insn_addr < new_ascii_instr
+dbg_insn_addr > dbg_insn_rs1
+dbg_insn_addr > dbg_insn_rd
+dbg_insn_addr != cpu_state
+dbg_insn_addr < dbg_ascii_state
+dbg_insn_addr > alu_eq
+dbg_insn_addr > alu_ltu
+dbg_insn_addr < cpuregs_rs1
+irq_mask > instr_addi
+irq_mask > decoded_rd
+irq_mask > decoded_rs2
+irq_mask > decoded_imm_j
+irq_mask > new_ascii_instr
+irq_mask > dbg_insn_rs1
+irq_mask > cached_insn_opcode
+irq_mask > cpu_state
+irq_mask < dbg_ascii_state
+irq_mask > alu_out
+irq_mask > alu_shl
+irq_mask > alu_shr
+irq_mask > alu_eq
+irq_mask > alu_ltu
+irq_mask > cpuregs_rs2
+instr_addi != decoded_rd
+instr_addi <= decoded_rs2
+instr_addi < decoded_imm_j
+instr_addi < new_ascii_instr
+instr_addi < dbg_insn_rs1
+instr_addi < dbg_insn_rd
+instr_addi < cpu_state
+instr_addi < dbg_ascii_state
+instr_addi != alu_shl
+instr_addi >= alu_eq
+instr_addi >= alu_ltu
+instr_addi < cpuregs_rs1
+instr_addi <= cpuregs_rs2
+decoded_rd != decoded_rs2
+decoded_rd < decoded_imm_j
+decoded_rd < new_ascii_instr
+decoded_rd != dbg_insn_rs1
+decoded_rd <= dbg_insn_rd
+decoded_rd != cpu_state
+decoded_rd < dbg_ascii_state
+decoded_rd != alu_out
+decoded_rd % alu_out == 0
+decoded_rd < cpuregs_rs1
+decoded_rd != cpuregs_rs2
+decoded_rs2 < decoded_imm_j
+decoded_rs2 < new_ascii_instr
+decoded_rs2 <= dbg_insn_rs1
+decoded_rs2 <= dbg_insn_rd
+decoded_rs2 < cpu_state
+decoded_rs2 < dbg_ascii_state
+decoded_rs2 > alu_eq
+decoded_rs2 > alu_ltu
+decoded_rs2 < cpuregs_rs1
+decoded_imm_j != new_ascii_instr
+decoded_imm_j > dbg_insn_rs1
+decoded_imm_j > dbg_insn_rd
+decoded_imm_j != cached_insn_opcode
+decoded_imm_j > cpu_state
+decoded_imm_j < dbg_ascii_state
+decoded_imm_j > alu_out
+decoded_imm_j > alu_shl
+decoded_imm_j > alu_shr
+decoded_imm_j > alu_eq
+decoded_imm_j > alu_ltu
+decoded_imm_j > cpuregs_rs1
+decoded_imm_j > cpuregs_rs2
+new_ascii_instr > dbg_insn_rs1
+new_ascii_instr > dbg_insn_rd
+new_ascii_instr != cached_insn_opcode
+new_ascii_instr > cpu_state
+new_ascii_instr < dbg_ascii_state
+new_ascii_instr > alu_out
+new_ascii_instr > alu_shl
+new_ascii_instr > alu_shr
+new_ascii_instr > alu_eq
+new_ascii_instr > alu_ltu
+new_ascii_instr > cpuregs_rs1
+new_ascii_instr > cpuregs_rs2
+dbg_insn_rs1 <= dbg_insn_rd
+dbg_insn_rs1 <= cpu_state
+dbg_insn_rs1 < dbg_ascii_state
+alu_shl % dbg_insn_rs1 == 0
+dbg_insn_rs1 > alu_eq
+dbg_insn_rs1 > alu_ltu
+dbg_insn_rs1 < cpuregs_rs1
+dbg_insn_rd != cpu_state
+dbg_insn_rd < dbg_ascii_state
+dbg_insn_rd > alu_eq
+dbg_insn_rd > alu_ltu
+cached_insn_opcode != cpu_state
+cached_insn_opcode < dbg_ascii_state
+cached_insn_opcode >= alu_shr
+cached_insn_opcode >= alu_eq
+cached_insn_opcode != cpuregs_rs1
+cached_insn_opcode != cpuregs_rs2
+cpu_state < dbg_ascii_state
+cpu_state > alu_out
+cpu_state > alu_shr
+cpu_state > alu_eq
+cpu_state > alu_ltu
+cpu_state < cpuregs_rs1
+cpu_state > cpuregs_rs2
+dbg_ascii_state > alu_out
+dbg_ascii_state > alu_shl
+dbg_ascii_state > alu_shr
+dbg_ascii_state > alu_eq
+dbg_ascii_state > alu_ltu
+dbg_ascii_state > cpuregs_rs1
+dbg_ascii_state > cpuregs_rs2
+alu_out >= alu_shr
+alu_out >= alu_eq
+alu_ltu % alu_out == 0
+alu_out >= alu_ltu
+alu_out < cpuregs_rs1
+alu_out <= cpuregs_rs2
+cpuregs_rs2 % alu_out == 0
+alu_shl >= alu_shr
+alu_shl >= alu_eq
+alu_shl < cpuregs_rs1
+alu_shr < cpuregs_rs1
+alu_shr < cpuregs_rs2
+alu_eq < cpuregs_rs1
+alu_eq < cpuregs_rs2
+alu_ltu < cpuregs_rs1
+alu_ltu <= cpuregs_rs2
+cpuregs_rs1 > cpuregs_rs2
+9 * mem_valid - 22 * mem_wdata + count_cycle - 26 == 0
+mem_valid - 4 * mem_wdata + count_instr - 4 == 0
+7 * mem_valid + 2 * count_cycle - 11 * count_instr - 8 == 0
+1022 * mem_valid - reg_op1 + alu_out - 1 == 0
+2041 * mem_valid - 2 * reg_op1 + alu_shl == 0
+1021 * mem_valid - reg_op1 + cpuregs_rs2 - 1 == 0
+2138147 * mem_valid + next_insn_opcode - cached_insn_opcode - 2138147 == 0
+3 * mem_valid + 2 * alu_out - alu_shl - 2 == 0
+mem_valid + alu_out - cpuregs_rs2 == 0
+mem_valid - alu_shl + 2 * cpuregs_rs2 - 2 == 0
+9 * mem_addr + 88 * mem_wdata - 4 * count_cycle - 40 == 0
+mem_addr + 16 * mem_wdata - 4 * count_instr == 0
+7 * mem_addr - 8 * count_cycle + 44 * count_instr - 80 == 0
+511 * mem_addr + 2 * reg_op1 - 2 * alu_out - 8174 == 0
+2041 * mem_addr + 8 * reg_op1 - 4 * alu_shl - 32656 == 0
+1021 * mem_addr + 4 * reg_op1 - 4 * cpuregs_rs2 - 16332 == 0
+2138147 * mem_addr - 4 * next_insn_opcode + 4 * cached_insn_opcode - 25657764 == 0
+3 * mem_addr - 8 * alu_out + 4 * alu_shl - 40 == 0
+mem_addr - 4 * alu_out + 4 * cpuregs_rs2 - 16 == 0
+mem_addr + 4 * alu_shl - 8 * cpuregs_rs2 - 8 == 0
+44 * mem_wdata + 9 * mem_la_wdata - 2 * count_cycle + 43 == 0
+8 * mem_wdata + mem_la_wdata - 2 * count_instr + 7 == 0
+14 * mem_wdata + count_cycle - 9 * count_instr + 10 == 0
+176 * mem_wdata - 8 * count_cycle + 9 * reg_pc + 64 == 0
+23609696 * mem_wdata - 1073168 * count_cycle + 9 * dbg_insn_opcode + 17872885 == 0
+88 * mem_wdata - 4 * count_cycle + 9 * dbg_insn_addr - 4 == 0
+22 * mem_wdata - count_cycle + 9 * instr_addi + 17 == 0
+44 * mem_wdata - 2 * count_cycle - 9 * decoded_rd + 52 == 0
+44 * mem_wdata - 2 * count_cycle + 9 * decoded_rs2 + 34 == 0
+44 * mem_wdata - 2 * count_cycle + 9 * decoded_imm_j - 368606 == 0
+3.594671278E10 * mem_wdata - 1633941490 * count_cycle + 9 * new_ascii_instr + 2.7776755427E10 == 0
+22 * mem_wdata - count_cycle + 9 * dbg_insn_rs1 + 8 == 0
+154 * mem_wdata - 7 * count_cycle + cpu_state + 118 == 0
+5.6655650315E11 * mem_wdata - 2.5752568325E10 * count_cycle - 9 * dbg_ascii_state + 4.627665892138E12 == 0
+32 * mem_wdata - 8 * count_instr + reg_pc + 16 == 0
+4292672 * mem_wdata - 1073168 * count_instr + dbg_insn_opcode + 3178285 == 0
+16 * mem_wdata - 4 * count_instr + dbg_insn_addr + 4 == 0
+4 * mem_wdata - count_instr + instr_addi + 3 == 0
+8 * mem_wdata - 2 * count_instr - decoded_rd + 8 == 0
+8 * mem_wdata - 2 * count_instr + decoded_rs2 + 6 == 0
+8 * mem_wdata - 2 * count_instr + decoded_imm_j - 40954 == 0
+6.53576596E9 * mem_wdata - 1633941490 * count_instr + new_ascii_instr + 4.901796703E9 == 0
+4 * mem_wdata - count_instr + dbg_insn_rs1 + 2 == 0
+252 * mem_wdata - 63 * count_instr + cpu_state + 188 == 0
+1.030102733E11 * mem_wdata - 2.5752568325E10 * count_instr - dbg_ascii_state + 5.42799063932E11 == 0
+7 * mem_la_wdata - 4 * count_cycle + 22 * count_instr + 9 == 0
+511 * mem_la_wdata + reg_op1 - alu_out - 510 == 0
+2041 * mem_la_wdata + 4 * reg_op1 - 2 * alu_shl - 2041 == 0
+1021 * mem_la_wdata + 2 * reg_op1 - 2 * cpuregs_rs2 - 1019 == 0
+2138147 * mem_la_wdata - 2 * next_insn_opcode + 2 * cached_insn_opcode + 2138147 == 0
+3 * mem_la_wdata - 4 * alu_out + 2 * alu_shl + 1 == 0
+mem_la_wdata - 2 * alu_out + 2 * cpuregs_rs2 - 1 == 0
+mem_la_wdata + 2 * alu_shl - 4 * cpuregs_rs2 + 3 == 0
+16 * count_cycle - 88 * count_instr - 7 * reg_pc + 48 == 0
+2146336 * count_cycle - 11804848 * count_instr - 7 * dbg_insn_opcode - 784635 == 0
+8 * count_cycle - 44 * count_instr - 7 * dbg_insn_addr + 52 == 0
+2 * count_cycle - 11 * count_instr - 7 * instr_addi - 1 == 0
+4 * count_cycle - 22 * count_instr + 7 * decoded_rd - 16 == 0
+4 * count_cycle - 22 * count_instr - 7 * decoded_rs2 - 2 == 0
+4 * count_cycle - 22 * count_instr - 7 * decoded_imm_j + 286718 == 0
+3.26788298E9 * count_cycle - 1.797335639E10 * count_instr - 7 * new_ascii_instr - 1633747121 == 0
+2 * count_cycle - 11 * count_instr - 7 * dbg_insn_rs1 + 6 == 0
+18 * count_cycle - 99 * count_instr - cpu_state - 8 == 0
+5.150513665E10 * count_cycle - 2.83278251575E11 * count_instr + 7 * dbg_ascii_state - 3.284542081024E12 == 0
+511 * reg_pc + 4 * reg_op1 - 4 * alu_out - 8172 == 0
+2041 * reg_pc + 16 * reg_op1 - 8 * alu_shl - 32656 == 0
+1021 * reg_pc + 8 * reg_op1 - 8 * cpuregs_rs2 - 16328 == 0
+2138147 * reg_pc - 8 * next_insn_opcode + 8 * cached_insn_opcode - 17105176 == 0
+3 * reg_pc - 16 * alu_out + 8 * alu_shl - 32 == 0
+reg_pc - 8 * alu_out + 8 * cpuregs_rs2 - 16 == 0
+reg_pc + 8 * alu_shl - 16 * cpuregs_rs2 == 0
+536584 * reg_op1 + 511 * dbg_insn_opcode - 536584 * alu_out - 568915173 == 0
+2146336 * reg_op1 + 2041 * dbg_insn_opcode - 1073168 * alu_shl - 2.274463867E9 == 0
+1073168 * reg_op1 + 1021 * dbg_insn_opcode - 1073168 * cpuregs_rs2 - 1136715959 == 0
+2 * reg_op1 + 511 * dbg_insn_addr - 2 * alu_out - 6130 == 0
+8 * reg_op1 + 2041 * dbg_insn_addr - 4 * alu_shl - 24492 == 0
+4 * reg_op1 + 1021 * dbg_insn_addr - 4 * cpuregs_rs2 - 12248 == 0
+reg_op1 + 1022 * instr_addi - alu_out - 1021 == 0
+2 * reg_op1 + 2041 * instr_addi - alu_shl - 2041 == 0
+reg_op1 + 1021 * instr_addi - cpuregs_rs2 - 1020 == 0
+reg_op1 - 511 * decoded_rd - alu_out + 1 == 0
+4 * reg_op1 - 2041 * decoded_rd - 2 * alu_shl == 0
+2 * reg_op1 - 1021 * decoded_rd - 2 * cpuregs_rs2 + 2 == 0
+reg_op1 + 511 * decoded_rs2 - alu_out - 1021 == 0
+4 * reg_op1 + 2041 * decoded_rs2 - 2 * alu_shl - 4082 == 0
+2 * reg_op1 + 1021 * decoded_rs2 - 2 * cpuregs_rs2 - 2040 == 0
+reg_op1 + 511 * decoded_imm_j - alu_out - 20931581 == 0
+4 * reg_op1 + 2041 * decoded_imm_j - 2 * alu_shl - 83603442 == 0
+reg_op1 + 511 * decoded_imm_j - 2 * alu_shr - 20931582 == 0
+2 * reg_op1 + 1021 * decoded_imm_j - 2 * alu_eq - 41822202 == 0
+reg_op1 + 509 * decoded_imm_j + alu_ltu - 20849659 == 0
+2 * reg_op1 + 1021 * decoded_imm_j - 2 * cpuregs_rs2 - 41822200 == 0
+816970745 * reg_op1 + 511 * new_ascii_instr - 816970745 * alu_out - 8.34141319582E11 == 0
+3.26788298E9 * reg_op1 + 2041 * new_ascii_instr - 1633941490 * alu_shl - 3.334931253537E12 == 0
+1633941490 * reg_op1 + 1021 * new_ascii_instr - 1633941490 * cpuregs_rs2 - 1.666648669907E12 == 0
+reg_op1 + 1022 * dbg_insn_rs1 - alu_out - 2043 == 0
+2 * reg_op1 + 2041 * dbg_insn_rs1 - alu_shl - 4082 == 0
+reg_op1 + 1021 * dbg_insn_rs1 - cpuregs_rs2 - 2041 == 0
+9 * reg_op1 + 146 * cpu_state - 9 * alu_out - 9335 == 0
+126 * reg_op1 + 2041 * cpu_state - 63 * alu_shl - 130624 == 0
+63 * reg_op1 + 1021 * cpu_state - 63 * cpuregs_rs2 - 65281 == 0
+2.5752568325E10 * reg_op1 - 1022 * dbg_ascii_state - 2.5752568325E10 * alu_out + 4.49489896594229E14 == 0
+5.150513665E10 * reg_op1 - 2041 * dbg_ascii_state - 2.5752568325E10 * alu_shl + 8.97608921679912E14 == 0
+2.5752568325E10 * reg_op1 - 1021 * dbg_ascii_state - 2.5752568325E10 * cpuregs_rs2 + 4.49050107803597E14 == 0
+3 * reg_op1 + 2041 * alu_out - 1022 * alu_shl - 2041 == 0
+reg_op1 + 1021 * alu_out - 1022 * cpuregs_rs2 + 1 == 0
+reg_op1 - 1021 * alu_shl + 2041 * cpuregs_rs2 - 2041 == 0
+4 * next_insn_opcode - 2138147 * dbg_insn_addr - 4 * cached_insn_opcode + 17105176 == 0
+2 * next_insn_opcode + 2138147 * decoded_rd - 2 * cached_insn_opcode - 4276294 == 0
+2 * next_insn_opcode - 2138147 * decoded_imm_j - 2 * cached_insn_opcode + 8.757850112E10 == 0
+next_insn_opcode - 2138147 * dbg_insn_rs1 - cached_insn_opcode + 2138147 == 0
+3 * dbg_insn_opcode - 2146336 * alu_out + 1073168 * alu_shl - 1196825 == 0
+dbg_insn_opcode - 1073168 * alu_out + 1073168 * cpuregs_rs2 - 1114387 == 0
+dbg_insn_opcode + 1073168 * alu_shl - 2146336 * cpuregs_rs2 + 1031949 == 0
+3 * dbg_insn_addr - 8 * alu_out + 4 * alu_shl - 28 == 0
+dbg_insn_addr - 4 * alu_out + 4 * cpuregs_rs2 - 12 == 0
+dbg_insn_addr + 4 * alu_shl - 8 * cpuregs_rs2 - 4 == 0
+3 * instr_addi - 2 * alu_out + alu_shl - 1 == 0
+instr_addi - alu_out + cpuregs_rs2 - 1 == 0
+instr_addi + alu_shl - 2 * cpuregs_rs2 + 1 == 0
+3 * decoded_rd + 4 * alu_out - 2 * alu_shl - 4 == 0
+decoded_rd + 2 * alu_out - 2 * cpuregs_rs2 == 0
+decoded_rd - 2 * alu_shl + 4 * cpuregs_rs2 - 4 == 0
+3 * decoded_rs2 - 4 * alu_out + 2 * alu_shl - 2 == 0
+decoded_rs2 - 2 * alu_out + 2 * cpuregs_rs2 - 2 == 0
+decoded_rs2 + 2 * alu_shl - 4 * cpuregs_rs2 + 2 == 0
+3 * decoded_imm_j - 4 * alu_out + 2 * alu_shl - 122882 == 0
+decoded_imm_j - 2 * alu_out + 2 * cpuregs_rs2 - 40962 == 0
+decoded_imm_j + 2 * alu_shl - 4 * cpuregs_rs2 - 40958 == 0
+3 * new_ascii_instr - 3.26788298E9 * alu_out + 1633941490 * alu_shl - 1634024791 == 0
+new_ascii_instr - 1633941490 * alu_out + 1633941490 * cpuregs_rs2 - 1633969257 == 0
+new_ascii_instr + 1633941490 * alu_shl - 3.26788298E9 * cpuregs_rs2 + 1633913723 == 0
+3 * dbg_insn_rs1 - 2 * alu_out + alu_shl - 4 == 0
+dbg_insn_rs1 - alu_out + cpuregs_rs2 - 2 == 0
+dbg_insn_rs1 + alu_shl - 2 * cpuregs_rs2 == 0
+cpu_state - 42 * alu_out + 21 * alu_shl - 22 == 0
+cpu_state - 63 * alu_out + 63 * cpuregs_rs2 - 64 == 0
+cpu_state + 63 * alu_shl - 126 * cpuregs_rs2 + 62 == 0
+3 * dbg_ascii_state + 5.150513665E10 * alu_out - 2.5752568325E10 * alu_shl - 1.370871508546E12 == 0
+dbg_ascii_state + 2.5752568325E10 * alu_out - 2.5752568325E10 * cpuregs_rs2 - 4.39788790632E11 == 0
+dbg_ascii_state - 2.5752568325E10 * alu_shl + 5.150513665E10 * cpuregs_rs2 - 4.91293927282E11 == 0
+alu_out + alu_shl - 3 * cpuregs_rs2 + 2 == 0
+===========================================================================
+..tick():::EXIT
+trap == mem_wstrb
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_wordsize
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_lui
+trap == instr_auipc
+trap == instr_jal
+trap == instr_jalr
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_lb
+trap == instr_lh
+trap == instr_lbu
+trap == instr_lhu
+trap == instr_sb
+trap == instr_sh
+trap == instr_addi
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_slli
+trap == instr_srli
+trap == instr_srai
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == instr_rdcycle
+trap == instr_rdcycleh
+trap == instr_rdinstr
+trap == instr_rdinstrh
+trap == instr_ecall_ebreak
+trap == instr_getq
+trap == instr_setq
+trap == instr_retirq
+trap == instr_maskirq
+trap == instr_waitirq
+trap == instr_timer
+trap == decoded_imm
+trap == decoder_trigger
+trap == decoder_pseudo_trigger
+trap == decoder_pseudo_trigger_q
+trap == compressed_instr
+trap == is_lui_auipc_jal
+trap == is_slli_srli_srai
+trap == is_jalr_addi_slti_sltiu_xori_ori_andi
+trap == is_sll_srl_sra
+trap == is_lui_auipc_jal_jalr_addi_add_sub
+trap == is_slti_blt_slt
+trap == is_sltiu_bltu_sltu
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_alu_reg_imm
+trap == is_alu_reg_reg
+trap == is_compare
+trap == dbg_insn_imm
+trap == dbg_rs2val_valid
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_stalu
+trap == latched_branch
+trap == latched_compr
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+trap == orig(trap)
+trap == orig(mem_wstrb)
+trap == orig(pcpi_valid)
+trap == orig(eoi)
+trap == orig(trace_valid)
+trap == orig(irq_delay)
+trap == orig(irq_active)
+trap == orig(timer)
+trap == orig(pcpi_int_wr)
+trap == orig(pcpi_int_wait)
+trap == orig(pcpi_int_ready)
+trap == orig(mem_wordsize)
+trap == orig(mem_do_rdata)
+trap == orig(mem_do_wdata)
+trap == orig(mem_la_secondword)
+trap == orig(mem_la_firstword_reg)
+trap == orig(last_mem_valid)
+trap == orig(prefetched_high_word)
+trap == orig(clear_prefetched_high_word)
+trap == orig(instr_lui)
+trap == orig(instr_auipc)
+trap == orig(instr_jal)
+trap == orig(instr_jalr)
+trap == orig(instr_beq)
+trap == orig(instr_bne)
+trap == orig(instr_blt)
+trap == orig(instr_bge)
+trap == orig(instr_bltu)
+trap == orig(instr_bgeu)
+trap == orig(instr_lb)
+trap == orig(instr_lh)
+trap == orig(instr_lbu)
+trap == orig(instr_lhu)
+trap == orig(instr_sb)
+trap == orig(instr_sh)
+trap == orig(instr_sw)
+trap == orig(instr_slti)
+trap == orig(instr_sltiu)
+trap == orig(instr_xori)
+trap == orig(instr_ori)
+trap == orig(instr_andi)
+trap == orig(instr_slli)
+trap == orig(instr_srli)
+trap == orig(instr_srai)
+trap == orig(instr_add)
+trap == orig(instr_sub)
+trap == orig(instr_sll)
+trap == orig(instr_slt)
+trap == orig(instr_sltu)
+trap == orig(instr_xor)
+trap == orig(instr_srl)
+trap == orig(instr_sra)
+trap == orig(instr_or)
+trap == orig(instr_and)
+trap == orig(instr_rdcycle)
+trap == orig(instr_rdcycleh)
+trap == orig(instr_rdinstr)
+trap == orig(instr_rdinstrh)
+trap == orig(instr_ecall_ebreak)
+trap == orig(instr_getq)
+trap == orig(instr_setq)
+trap == orig(instr_retirq)
+trap == orig(instr_maskirq)
+trap == orig(instr_waitirq)
+trap == orig(instr_timer)
+trap == orig(decoder_trigger_q)
+trap == orig(decoder_pseudo_trigger)
+trap == orig(decoder_pseudo_trigger_q)
+trap == orig(compressed_instr)
+trap == orig(is_lui_auipc_jal)
+trap == orig(is_slli_srli_srai)
+trap == orig(is_sll_srl_sra)
+trap == orig(is_slti_blt_slt)
+trap == orig(is_sltiu_bltu_sltu)
+trap == orig(is_beq_bne_blt_bge_bltu_bgeu)
+trap == orig(is_alu_reg_imm)
+trap == orig(is_alu_reg_reg)
+trap == orig(is_compare)
+trap == orig(dbg_rs2val_valid)
+trap == orig(dbg_next)
+trap == orig(irq_state)
+trap == orig(set_mem_do_rinst)
+trap == orig(set_mem_do_rdata)
+trap == orig(set_mem_do_wdata)
+trap == orig(latched_store)
+trap == orig(latched_stalu)
+trap == orig(latched_branch)
+trap == orig(latched_compr)
+trap == orig(latched_trace)
+trap == orig(latched_is_lu)
+trap == orig(latched_is_lh)
+trap == orig(latched_is_lb)
+trap == orig(pcpi_timeout)
+trap == orig(do_waitirq)
+trap == orig(alu_wait)
+trap == orig(alu_wait_2)
+trap == orig(clear_prefetched_high_word_q)
+trap == orig(cpuregs_write)
+mem_valid == mem_state
+mem_valid == mem_do_rinst
+mem_valid == last_mem_valid
+mem_valid == instr_lw
+mem_valid == is_lb_lh_lw_lbu_lhu
+mem_valid == is_lbu_lhu_lw
+mem_valid == dbg_rs1val_valid
+mem_valid == latched_store
+mem_valid == orig(mem_valid)
+mem_valid == orig(mem_state)
+mem_valid == orig(mem_do_prefetch)
+mem_valid == orig(mem_do_rinst)
+mem_valid == orig(instr_lw)
+mem_valid == orig(is_lb_lh_lw_lbu_lhu)
+mem_valid == orig(is_lbu_lhu_lw)
+mem_instr == mem_do_prefetch
+mem_instr == decoded_rs1
+mem_instr == dbg_insn_rs1
+mem_instr == dbg_valid_insn
+mem_instr == orig(mem_instr)
+mem_instr == orig(decoded_rs1)
+mem_instr == orig(dbg_rs1val_valid)
+mem_instr == orig(dbg_valid_insn)
+mem_addr == orig(mem_addr)
+mem_addr == orig(reg_next_pc)
+mem_wdata == orig(mem_wdata)
+mem_la_wdata == reg_op2
+mem_la_wdata == orig(mem_la_wdata)
+mem_la_wdata == orig(reg_op2)
+mem_la_wstrb == orig(mem_la_wstrb)
+pcpi_insn == trace_data
+pcpi_insn == reg_out
+pcpi_insn == reg_sh
+pcpi_insn == irq_pending
+pcpi_insn == pcpi_int_rd
+pcpi_insn == mem_16bit_buffer
+pcpi_insn == dbg_rs2val
+pcpi_insn == current_pc
+pcpi_insn == pcpi_timeout_counter
+pcpi_insn == next_irq_pending
+pcpi_insn == alu_out
+pcpi_insn == alu_out_0
+pcpi_insn == alu_out_0_q
+pcpi_insn == cpuregs_wrdata
+pcpi_insn == decoded_rs
+pcpi_insn == orig(pcpi_insn)
+pcpi_insn == orig(trace_data)
+pcpi_insn == orig(reg_out)
+pcpi_insn == orig(reg_sh)
+pcpi_insn == orig(irq_pending)
+pcpi_insn == orig(pcpi_int_rd)
+pcpi_insn == orig(mem_16bit_buffer)
+pcpi_insn == orig(dbg_rs2val)
+pcpi_insn == orig(current_pc)
+pcpi_insn == orig(pcpi_timeout_counter)
+pcpi_insn == orig(next_irq_pending)
+pcpi_insn == orig(alu_out_0)
+pcpi_insn == orig(alu_out_0_q)
+pcpi_insn == orig(cpuregs_wrdata)
+pcpi_insn == orig(decoded_rs)
+reg_pc == dbg_insn_addr
+reg_pc == orig(reg_pc)
+reg_op1 == orig(reg_op1)
+reg_op1 == orig(dbg_rs1val)
+next_insn_opcode == mem_rdata_q
+next_insn_opcode == orig(next_insn_opcode)
+next_insn_opcode == orig(mem_rdata_word)
+next_insn_opcode == orig(mem_rdata_q)
+irq_mask == orig(irq_mask)
+instr_sw == decoder_trigger_q
+instr_sw == is_sb_sh_sw
+instr_sw == q_insn_imm
+instr_sw == q_insn_rs2
+instr_sw == dbg_next
+instr_sw == cached_insn_imm
+instr_sw == cached_insn_rs2
+instr_sw == orig(instr_addi)
+instr_sw == orig(decoded_imm)
+instr_sw == orig(decoder_trigger)
+instr_sw == orig(is_jalr_addi_slti_sltiu_xori_ori_andi)
+instr_sw == orig(is_sb_sh_sw)
+instr_sw == orig(is_lui_auipc_jal_jalr_addi_add_sub)
+instr_sw == orig(dbg_insn_imm)
+instr_sw == orig(dbg_insn_rs2)
+instr_sw == orig(q_insn_imm)
+instr_sw == orig(q_insn_rs2)
+instr_sw == orig(cached_insn_imm)
+instr_sw == orig(cached_insn_rs2)
+decoded_rd == dbg_insn_rd
+decoded_rd == latched_rd
+decoded_rd == orig(decoded_rd)
+decoded_rs2 == dbg_insn_rs2
+decoded_rs2 == orig(decoded_rs2)
+decoded_imm_j == orig(decoded_imm_j)
+new_ascii_instr == dbg_ascii_instr
+q_ascii_instr == cached_ascii_instr
+q_ascii_instr == orig(new_ascii_instr)
+q_ascii_instr == orig(dbg_ascii_instr)
+q_ascii_instr == orig(q_ascii_instr)
+q_ascii_instr == orig(cached_ascii_instr)
+q_insn_opcode == orig(dbg_insn_opcode)
+q_insn_opcode == orig(q_insn_opcode)
+q_insn_rs1 == cached_insn_rs1
+q_insn_rs1 == orig(dbg_insn_rs1)
+q_insn_rs1 == orig(q_insn_rs1)
+q_insn_rs1 == orig(cached_insn_rs1)
+q_insn_rd == cached_insn_rd
+q_insn_rd == orig(dbg_insn_rd)
+q_insn_rd == orig(q_insn_rd)
+q_insn_rd == orig(cached_insn_rd)
+q_insn_rd == orig(latched_rd)
+cached_insn_opcode == orig(cached_insn_opcode)
+alu_out_q == alu_add_sub
+alu_out_q == orig(alu_out)
+alu_out_q == orig(alu_out_q)
+alu_out_q == orig(alu_add_sub)
+alu_shl == orig(alu_shl)
+alu_shr == orig(alu_shr)
+alu_eq == orig(alu_eq)
+alu_ltu == alu_lts
+alu_ltu == orig(alu_ltu)
+alu_ltu == orig(alu_lts)
+cpuregs_rs1 == orig(cpuregs_rs1)
+cpuregs_rs2 == orig(cpuregs_rs2)
+trap == 0
+mem_valid one of { 0, 1 }
+mem_instr == 1
+mem_addr one of { 12, 16 }
+mem_la_wdata one of { -1, 1 }
+mem_la_wdata != 0
+mem_la_wstrb == 15
+pcpi_insn == -1
+reg_pc one of { 8, 16 }
+reg_next_pc one of { 12, 20 }
+next_insn_opcode one of { -1, 41219, 2138147 }
+dbg_insn_opcode one of { 41219, 2138147 }
+irq_mask == 4294967295L
+mem_rdata_word one of { 1114387, 2138147 }
+instr_sw one of { 0, 1 }
+decoded_rd one of { 0, 2 }
+decoded_rs2 one of { 0, 2 }
+decoded_imm_j one of { 40960, 40962 }
+new_ascii_instr one of { 27767, 29559 }
+dbg_rs1val one of { -1, 1020 }
+q_ascii_instr one of { 27767, 1633969257 }
+q_insn_opcode one of { 41219, 1114387 }
+q_insn_rs1 one of { 1, 2 }
+q_insn_rd == 2
+cpu_state one of { 1, 32 }
+dbg_ascii_state one of { 465541358957L, 119178353865521L }
+alu_out_q >= -1
+alu_shl >= -1
+alu_shr >= -1
+alu_eq one of { -1, 0, 1 }
+alu_ltu one of { -1, 0, 1 }
+cpuregs_rs1 == 1020
+cpuregs_rs2 >= 0
+trap <= mem_valid
+trap < mem_addr
+trap <= mem_wdata
+trap != mem_la_wdata
+trap < count_cycle
+trap < count_instr
+trap < reg_pc
+trap < reg_next_pc
+trap <= reg_op1
+trap != next_insn_opcode
+trap < dbg_insn_opcode
+trap < mem_rdata_word
+trap <= instr_sw
+trap <= decoded_rd
+trap <= decoded_rs2
+trap < decoded_imm_j
+trap < new_ascii_instr
+trap != dbg_rs1val
+trap < q_ascii_instr
+trap < q_insn_opcode
+trap < q_insn_rs1
+trap < cpu_state
+trap < dbg_ascii_state
+trap != alu_out_q
+trap <= cpuregs_rs2
+trap < orig(count_cycle)
+trap < orig(count_instr)
+trap < orig(dbg_insn_addr)
+trap < orig(cpu_state)
+trap < orig(dbg_ascii_state)
+mem_valid <= mem_instr
+mem_valid < mem_addr
+mem_valid != mem_la_wdata
+mem_valid < mem_la_wstrb
+mem_valid > pcpi_insn
+mem_valid < count_cycle
+mem_valid < count_instr
+mem_valid < reg_pc
+mem_valid < reg_next_pc
+mem_valid <= reg_op1
+mem_valid != next_insn_opcode
+mem_valid < dbg_insn_opcode
+mem_valid < irq_mask
+mem_valid < mem_rdata_word
+mem_valid != instr_sw
+mem_valid <= decoded_rd
+mem_valid != decoded_rs2
+mem_valid < decoded_imm_j
+mem_valid < new_ascii_instr
+mem_valid != dbg_rs1val
+mem_valid < q_ascii_instr
+mem_valid < q_insn_opcode
+mem_valid <= q_insn_rs1
+mem_valid < q_insn_rd
+mem_valid <= cpu_state
+mem_valid < dbg_ascii_state
+mem_valid != alu_out_q
+mem_valid % alu_out_q == 0
+mem_valid < cpuregs_rs1
+mem_valid != cpuregs_rs2
+mem_valid < orig(count_cycle)
+mem_valid < orig(count_instr)
+mem_valid < orig(dbg_insn_addr)
+mem_valid <= orig(cpu_state)
+mem_valid < orig(dbg_ascii_state)
+mem_instr < mem_addr
+mem_instr >= mem_la_wdata
+mem_instr < count_cycle
+mem_instr < count_instr
+mem_instr < reg_pc
+mem_instr < reg_next_pc
+mem_instr != next_insn_opcode
+mem_instr < dbg_insn_opcode
+mem_instr < mem_rdata_word
+mem_instr >= instr_sw
+mem_instr != decoded_rd
+mem_instr != decoded_rs2
+mem_instr < decoded_imm_j
+mem_instr < new_ascii_instr
+mem_instr != dbg_rs1val
+mem_instr < q_ascii_instr
+mem_instr < q_insn_opcode
+mem_instr <= q_insn_rs1
+mem_instr <= cpu_state
+mem_instr < dbg_ascii_state
+mem_instr != alu_shl
+mem_instr >= alu_eq
+mem_instr >= alu_ltu
+mem_instr < orig(count_cycle)
+mem_instr < orig(count_instr)
+mem_instr < orig(dbg_insn_addr)
+mem_instr <= orig(cpu_state)
+mem_instr < orig(dbg_ascii_state)
+mem_addr > mem_la_wdata
+mem_addr != mem_la_wstrb
+mem_addr > pcpi_insn
+mem_addr < count_cycle
+mem_addr != count_instr
+mem_addr >= reg_pc
+mem_addr <= reg_next_pc
+mem_addr != next_insn_opcode
+mem_addr < dbg_insn_opcode
+mem_addr < irq_mask
+mem_addr < mem_rdata_word
+mem_addr > instr_sw
+mem_addr > decoded_rd
+mem_addr > decoded_rs2
+mem_addr < decoded_imm_j
+mem_addr < new_ascii_instr
+mem_addr != dbg_rs1val
+mem_addr < q_ascii_instr
+mem_addr < q_insn_opcode
+mem_addr > q_insn_rs1
+mem_addr > q_insn_rd
+mem_addr != cpu_state
+mem_addr < dbg_ascii_state
+mem_addr > alu_eq
+mem_addr > alu_ltu
+mem_addr < cpuregs_rs1
+mem_addr < orig(count_cycle)
+mem_addr > orig(dbg_insn_addr)
+mem_addr != orig(cpu_state)
+mem_addr < orig(dbg_ascii_state)
+mem_wdata % mem_la_wdata == 0
+mem_wdata > pcpi_insn
+mem_wdata < count_cycle
+mem_wdata < count_instr
+mem_wdata <= reg_op1
+mem_wdata != next_insn_opcode
+mem_wdata < dbg_insn_opcode
+mem_wdata < irq_mask
+mem_wdata < mem_rdata_word
+mem_wdata < decoded_imm_j
+mem_wdata < new_ascii_instr
+mem_wdata != dbg_rs1val
+mem_wdata < q_ascii_instr
+mem_wdata < q_insn_opcode
+mem_wdata < dbg_ascii_state
+mem_wdata != alu_out_q
+mem_wdata >= alu_shr
+mem_wdata >= alu_eq
+mem_wdata != alu_ltu
+mem_wdata < cpuregs_rs1
+mem_wdata < orig(count_cycle)
+mem_wdata < orig(count_instr)
+mem_wdata < orig(dbg_ascii_state)
+mem_la_wdata < mem_la_wstrb
+mem_la_wdata >= pcpi_insn
+count_cycle % mem_la_wdata == 0
+mem_la_wdata < count_cycle
+count_instr % mem_la_wdata == 0
+mem_la_wdata < count_instr
+mem_la_wdata < reg_pc
+mem_la_wdata < reg_next_pc
+reg_op1 % mem_la_wdata == 0
+mem_la_wdata <= next_insn_opcode
+next_insn_opcode % mem_la_wdata == 0
+mem_la_wdata < dbg_insn_opcode
+mem_la_wdata < irq_mask
+mem_la_wdata < mem_rdata_word
+mem_la_wdata <= instr_sw
+mem_la_wdata != decoded_rd
+mem_la_wdata < decoded_rs2
+mem_la_wdata < decoded_imm_j
+mem_la_wdata < new_ascii_instr
+mem_la_wdata != dbg_rs1val
+mem_la_wdata < q_ascii_instr
+mem_la_wdata < q_insn_opcode
+mem_la_wdata < q_insn_rs1
+mem_la_wdata < q_insn_rd
+cached_insn_opcode % mem_la_wdata == 0
+mem_la_wdata < cpu_state
+mem_la_wdata < dbg_ascii_state
+alu_out_q % mem_la_wdata == 0
+mem_la_wdata <= alu_out_q
+alu_shl % mem_la_wdata == 0
+alu_shr % mem_la_wdata == 0
+alu_eq % mem_la_wdata == 0
+mem_la_wdata >= alu_eq
+alu_ltu % mem_la_wdata == 0
+mem_la_wdata >= alu_ltu
+mem_la_wdata < cpuregs_rs1
+cpuregs_rs2 % mem_la_wdata == 0
+mem_la_wdata <= cpuregs_rs2
+mem_la_wdata < orig(count_cycle)
+orig(count_cycle) % mem_la_wdata == 0
+mem_la_wdata < orig(count_instr)
+orig(count_instr) % mem_la_wdata == 0
+mem_la_wdata < orig(dbg_insn_addr)
+mem_la_wdata < orig(cpu_state)
+mem_la_wdata < orig(dbg_ascii_state)
+mem_la_wstrb < count_cycle
+mem_la_wstrb != reg_pc
+mem_la_wstrb != reg_next_pc
+mem_la_wstrb != next_insn_opcode
+mem_la_wstrb < dbg_insn_opcode
+mem_la_wstrb < mem_rdata_word
+mem_la_wstrb > instr_sw
+mem_la_wstrb > decoded_rd
+mem_la_wstrb > decoded_rs2
+mem_la_wstrb < decoded_imm_j
+mem_la_wstrb < new_ascii_instr
+mem_la_wstrb != dbg_rs1val
+mem_la_wstrb < q_ascii_instr
+mem_la_wstrb < q_insn_opcode
+mem_la_wstrb > q_insn_rs1
+mem_la_wstrb != cpu_state
+mem_la_wstrb < dbg_ascii_state
+mem_la_wstrb != alu_shl
+mem_la_wstrb > alu_eq
+mem_la_wstrb > alu_ltu
+mem_la_wstrb < orig(count_cycle)
+mem_la_wstrb > orig(dbg_insn_addr)
+mem_la_wstrb != orig(cpu_state)
+mem_la_wstrb < orig(dbg_ascii_state)
+pcpi_insn < count_cycle
+pcpi_insn < count_instr
+pcpi_insn < reg_pc
+pcpi_insn < reg_next_pc
+pcpi_insn < reg_op1
+pcpi_insn <= next_insn_opcode
+pcpi_insn < dbg_insn_opcode
+pcpi_insn < mem_rdata_word
+pcpi_insn < instr_sw
+pcpi_insn < decoded_rd
+pcpi_insn < decoded_rs2
+pcpi_insn < decoded_imm_j
+pcpi_insn < new_ascii_instr
+pcpi_insn <= dbg_rs1val
+pcpi_insn < q_ascii_instr
+pcpi_insn < q_insn_opcode
+pcpi_insn < q_insn_rs1
+pcpi_insn <= cached_insn_opcode
+pcpi_insn < cpu_state
+pcpi_insn < dbg_ascii_state
+pcpi_insn <= alu_out_q
+pcpi_insn <= alu_shl
+pcpi_insn <= alu_shr
+pcpi_insn <= alu_eq
+pcpi_insn <= alu_ltu
+pcpi_insn < cpuregs_rs2
+pcpi_insn < orig(count_cycle)
+pcpi_insn < orig(count_instr)
+pcpi_insn < orig(dbg_insn_addr)
+pcpi_insn < orig(cpu_state)
+pcpi_insn < orig(dbg_ascii_state)
+count_cycle > count_instr
+count_cycle > reg_pc
+count_cycle > reg_next_pc
+count_cycle != reg_op1
+count_cycle != next_insn_opcode
+count_cycle < dbg_insn_opcode
+count_cycle < irq_mask
+count_cycle < mem_rdata_word
+count_cycle > instr_sw
+count_cycle > decoded_rd
+count_cycle > decoded_rs2
+count_cycle < decoded_imm_j
+count_cycle < new_ascii_instr
+count_cycle != dbg_rs1val
+count_cycle < q_ascii_instr
+count_cycle < q_insn_opcode
+count_cycle > q_insn_rs1
+count_cycle > q_insn_rd
+count_cycle != cached_insn_opcode
+count_cycle != cpu_state
+count_cycle < dbg_ascii_state
+count_cycle > alu_out_q
+count_cycle > alu_shl
+count_cycle > alu_shr
+count_cycle > alu_eq
+count_cycle > alu_ltu
+count_cycle < cpuregs_rs1
+count_cycle > cpuregs_rs2
+count_cycle - orig(count_cycle) - 1 == 0
+count_cycle > orig(count_instr)
+count_cycle > orig(dbg_insn_addr)
+count_cycle != orig(cpu_state)
+count_cycle < orig(dbg_ascii_state)
+count_instr != reg_pc
+count_instr != reg_next_pc
+count_instr != reg_op1
+count_instr != next_insn_opcode
+count_instr < dbg_insn_opcode
+count_instr < irq_mask
+count_instr < mem_rdata_word
+count_instr > instr_sw
+count_instr > decoded_rd
+count_instr > decoded_rs2
+count_instr < decoded_imm_j
+count_instr < new_ascii_instr
+count_instr != dbg_rs1val
+count_instr < q_ascii_instr
+count_instr < q_insn_opcode
+count_instr > q_insn_rs1
+count_instr > q_insn_rd
+count_instr != cached_insn_opcode
+count_instr != cpu_state
+count_instr < dbg_ascii_state
+count_instr > alu_out_q
+count_instr > alu_shl
+count_instr > alu_shr
+count_instr > alu_eq
+count_instr > alu_ltu
+count_instr < cpuregs_rs1
+count_instr > cpuregs_rs2
+count_instr < orig(count_cycle)
+count_instr >= orig(count_instr)
+count_instr != orig(dbg_insn_addr)
+count_instr != orig(cpu_state)
+count_instr < orig(dbg_ascii_state)
+reg_pc < reg_next_pc
+reg_pc != next_insn_opcode
+reg_pc < dbg_insn_opcode
+reg_pc < irq_mask
+reg_pc < mem_rdata_word
+reg_pc > instr_sw
+reg_pc > decoded_rd
+reg_pc > decoded_rs2
+reg_pc < decoded_imm_j
+reg_pc < new_ascii_instr
+reg_pc != dbg_rs1val
+reg_pc < q_ascii_instr
+reg_pc < q_insn_opcode
+reg_pc > q_insn_rs1
+reg_pc > q_insn_rd
+reg_pc != cpu_state
+reg_pc < dbg_ascii_state
+reg_pc > alu_eq
+reg_pc > alu_ltu
+reg_pc < cpuregs_rs1
+reg_pc < orig(count_cycle)
+reg_pc >= orig(dbg_insn_addr)
+reg_pc != orig(cpu_state)
+reg_pc < orig(dbg_ascii_state)
+reg_next_pc != next_insn_opcode
+reg_next_pc < dbg_insn_opcode
+reg_next_pc < irq_mask
+reg_next_pc < mem_rdata_word
+reg_next_pc > instr_sw
+reg_next_pc > decoded_rd
+reg_next_pc > decoded_rs2
+reg_next_pc < decoded_imm_j
+reg_next_pc < new_ascii_instr
+reg_next_pc != dbg_rs1val
+reg_next_pc < q_ascii_instr
+reg_next_pc < q_insn_opcode
+reg_next_pc > q_insn_rs1
+reg_next_pc > q_insn_rd
+reg_next_pc != cpu_state
+reg_next_pc < dbg_ascii_state
+reg_next_pc > alu_eq
+reg_next_pc > alu_ltu
+reg_next_pc < cpuregs_rs1
+reg_next_pc < orig(count_cycle)
+reg_next_pc > orig(dbg_insn_addr)
+reg_next_pc != orig(cpu_state)
+reg_next_pc < orig(dbg_ascii_state)
+reg_op1 != next_insn_opcode
+reg_op1 < dbg_insn_opcode
+reg_op1 < irq_mask
+reg_op1 < mem_rdata_word
+reg_op1 >= decoded_rd
+reg_op1 < decoded_imm_j
+reg_op1 < new_ascii_instr
+reg_op1 % dbg_rs1val == 0
+reg_op1 >= dbg_rs1val
+reg_op1 < q_ascii_instr
+reg_op1 < q_insn_opcode
+reg_op1 < dbg_ascii_state
+reg_op1 != alu_out_q
+reg_op1 >= alu_shr
+reg_op1 >= alu_eq
+reg_op1 != alu_ltu
+reg_op1 <= cpuregs_rs1
+reg_op1 != cpuregs_rs2
+reg_op1 != orig(count_cycle)
+reg_op1 != orig(count_instr)
+reg_op1 != orig(cpu_state)
+reg_op1 < orig(dbg_ascii_state)
+dbg_insn_opcode % next_insn_opcode == 0
+next_insn_opcode <= dbg_insn_opcode
+next_insn_opcode < irq_mask
+next_insn_opcode <= mem_rdata_word
+next_insn_opcode != instr_sw
+next_insn_opcode != decoded_rd
+next_insn_opcode != decoded_rs2
+next_insn_opcode != decoded_imm_j
+next_insn_opcode != new_ascii_instr
+next_insn_opcode != dbg_rs1val
+next_insn_opcode != q_ascii_instr
+next_insn_opcode != q_insn_rs1
+next_insn_opcode != q_insn_rd
+next_insn_opcode >= cached_insn_opcode
+next_insn_opcode != cpu_state
+next_insn_opcode < dbg_ascii_state
+next_insn_opcode >= alu_out_q
+next_insn_opcode >= alu_shl
+next_insn_opcode >= alu_shr
+next_insn_opcode >= alu_eq
+next_insn_opcode >= alu_ltu
+next_insn_opcode != cpuregs_rs1
+next_insn_opcode != cpuregs_rs2
+next_insn_opcode != orig(count_cycle)
+next_insn_opcode != orig(count_instr)
+next_insn_opcode != orig(dbg_insn_addr)
+next_insn_opcode != orig(cpu_state)
+next_insn_opcode < orig(dbg_ascii_state)
+dbg_insn_opcode < irq_mask
+dbg_insn_opcode <= mem_rdata_word
+dbg_insn_opcode > instr_sw
+dbg_insn_opcode > decoded_rd
+dbg_insn_opcode > decoded_rs2
+dbg_insn_opcode > decoded_imm_j
+dbg_insn_opcode > new_ascii_instr
+dbg_insn_opcode > dbg_rs1val
+dbg_insn_opcode != q_ascii_instr
+dbg_insn_opcode >= q_insn_opcode
+dbg_insn_opcode > q_insn_rs1
+dbg_insn_opcode > q_insn_rd
+dbg_insn_opcode >= cached_insn_opcode
+dbg_insn_opcode > cpu_state
+dbg_insn_opcode < dbg_ascii_state
+dbg_insn_opcode > alu_out_q
+dbg_insn_opcode > alu_shl
+dbg_insn_opcode > alu_shr
+dbg_insn_opcode > alu_eq
+dbg_insn_opcode > alu_ltu
+dbg_insn_opcode > cpuregs_rs1
+dbg_insn_opcode > cpuregs_rs2
+dbg_insn_opcode > orig(count_cycle)
+dbg_insn_opcode > orig(count_instr)
+dbg_insn_opcode > orig(dbg_insn_addr)
+dbg_insn_opcode > orig(cpu_state)
+dbg_insn_opcode < orig(dbg_ascii_state)
+irq_mask > mem_rdata_word
+irq_mask > instr_sw
+irq_mask > decoded_rd
+irq_mask > decoded_rs2
+irq_mask > decoded_imm_j
+irq_mask > new_ascii_instr
+irq_mask > dbg_rs1val
+irq_mask > q_ascii_instr
+irq_mask > q_insn_opcode
+irq_mask > q_insn_rs1
+irq_mask > cached_insn_opcode
+irq_mask > cpu_state
+irq_mask < dbg_ascii_state
+irq_mask > alu_out_q
+irq_mask > alu_shl
+irq_mask > alu_shr
+irq_mask > alu_eq
+irq_mask > alu_ltu
+irq_mask > cpuregs_rs2
+irq_mask > orig(count_cycle)
+irq_mask > orig(count_instr)
+irq_mask > orig(dbg_insn_addr)
+irq_mask > orig(cpu_state)
+irq_mask < orig(dbg_ascii_state)
+mem_rdata_word > instr_sw
+mem_rdata_word > decoded_rd
+mem_rdata_word > decoded_rs2
+mem_rdata_word > decoded_imm_j
+mem_rdata_word > new_ascii_instr
+mem_rdata_word > dbg_rs1val
+mem_rdata_word != q_ascii_instr
+mem_rdata_word > q_insn_opcode
+mem_rdata_word > q_insn_rs1
+mem_rdata_word > q_insn_rd
+mem_rdata_word > cached_insn_opcode
+mem_rdata_word > cpu_state
+mem_rdata_word < dbg_ascii_state
+mem_rdata_word > alu_out_q
+mem_rdata_word > alu_shl
+mem_rdata_word > alu_shr
+mem_rdata_word > alu_eq
+mem_rdata_word > alu_ltu
+mem_rdata_word > cpuregs_rs1
+mem_rdata_word > cpuregs_rs2
+mem_rdata_word > orig(count_cycle)
+mem_rdata_word > orig(count_instr)
+mem_rdata_word > orig(dbg_insn_addr)
+mem_rdata_word > orig(cpu_state)
+mem_rdata_word < orig(dbg_ascii_state)
+instr_sw != decoded_rd
+instr_sw <= decoded_rs2
+instr_sw < decoded_imm_j
+instr_sw < new_ascii_instr
+instr_sw != dbg_rs1val
+instr_sw < q_ascii_instr
+instr_sw < q_insn_opcode
+instr_sw < q_insn_rs1
+instr_sw < q_insn_rd
+instr_sw < cpu_state
+instr_sw < dbg_ascii_state
+instr_sw != alu_shl
+instr_sw >= alu_eq
+instr_sw >= alu_ltu
+instr_sw < cpuregs_rs1
+instr_sw <= cpuregs_rs2
+instr_sw < orig(count_cycle)
+instr_sw < orig(count_instr)
+instr_sw < orig(dbg_insn_addr)
+instr_sw < orig(cpu_state)
+instr_sw < orig(dbg_ascii_state)
+decoded_rd != decoded_rs2
+decoded_rd < decoded_imm_j
+decoded_rd < new_ascii_instr
+decoded_rd != dbg_rs1val
+decoded_rd < q_ascii_instr
+decoded_rd < q_insn_opcode
+decoded_rd != q_insn_rs1
+decoded_rd <= q_insn_rd
+decoded_rd != cpu_state
+decoded_rd < dbg_ascii_state
+decoded_rd != alu_out_q
+decoded_rd % alu_out_q == 0
+decoded_rd < cpuregs_rs1
+decoded_rd != cpuregs_rs2
+decoded_rd < orig(count_cycle)
+decoded_rd < orig(count_instr)
+decoded_rd < orig(dbg_insn_addr)
+decoded_rd != orig(cpu_state)
+decoded_rd < orig(dbg_ascii_state)
+decoded_rs2 < decoded_imm_j
+decoded_rs2 < new_ascii_instr
+decoded_rs2 != dbg_rs1val
+decoded_rs2 < q_ascii_instr
+decoded_rs2 < q_insn_opcode
+decoded_rs2 <= q_insn_rs1
+decoded_rs2 <= q_insn_rd
+decoded_rs2 < cpu_state
+decoded_rs2 < dbg_ascii_state
+decoded_rs2 > alu_eq
+decoded_rs2 > alu_ltu
+decoded_rs2 < cpuregs_rs1
+decoded_rs2 < orig(count_cycle)
+decoded_rs2 < orig(count_instr)
+decoded_rs2 < orig(dbg_insn_addr)
+decoded_rs2 < orig(cpu_state)
+decoded_rs2 < orig(dbg_ascii_state)
+decoded_imm_j > new_ascii_instr
+decoded_imm_j > dbg_rs1val
+decoded_imm_j != q_ascii_instr
+decoded_imm_j < q_insn_opcode
+decoded_imm_j > q_insn_rs1
+decoded_imm_j > q_insn_rd
+decoded_imm_j != cached_insn_opcode
+decoded_imm_j > cpu_state
+decoded_imm_j < dbg_ascii_state
+decoded_imm_j > alu_out_q
+decoded_imm_j > alu_shl
+decoded_imm_j > alu_shr
+decoded_imm_j > alu_eq
+decoded_imm_j > alu_ltu
+decoded_imm_j > cpuregs_rs1
+decoded_imm_j > cpuregs_rs2
+decoded_imm_j > orig(count_cycle)
+decoded_imm_j > orig(count_instr)
+decoded_imm_j > orig(dbg_insn_addr)
+decoded_imm_j > orig(cpu_state)
+decoded_imm_j < orig(dbg_ascii_state)
+new_ascii_instr > dbg_rs1val
+new_ascii_instr <= q_ascii_instr
+new_ascii_instr < q_insn_opcode
+new_ascii_instr > q_insn_rs1
+new_ascii_instr > q_insn_rd
+new_ascii_instr != cached_insn_opcode
+new_ascii_instr > cpu_state
+new_ascii_instr < dbg_ascii_state
+new_ascii_instr > alu_out_q
+new_ascii_instr > alu_shl
+new_ascii_instr > alu_shr
+new_ascii_instr > alu_eq
+new_ascii_instr > alu_ltu
+new_ascii_instr > cpuregs_rs1
+new_ascii_instr > cpuregs_rs2
+new_ascii_instr > orig(count_cycle)
+new_ascii_instr > orig(count_instr)
+new_ascii_instr > orig(dbg_insn_addr)
+new_ascii_instr > orig(cpu_state)
+new_ascii_instr < orig(dbg_ascii_state)
+dbg_rs1val < q_ascii_instr
+dbg_rs1val < q_insn_opcode
+dbg_rs1val != q_insn_rs1
+dbg_rs1val != q_insn_rd
+dbg_rs1val != cached_insn_opcode
+dbg_rs1val != cpu_state
+dbg_rs1val < dbg_ascii_state
+dbg_rs1val != alu_out_q
+dbg_rs1val != alu_shl
+dbg_rs1val != alu_shr
+dbg_rs1val != alu_eq
+dbg_rs1val != alu_ltu
+dbg_rs1val <= cpuregs_rs1
+cpuregs_rs2 % dbg_rs1val == 0
+dbg_rs1val != cpuregs_rs2
+dbg_rs1val != orig(count_cycle)
+dbg_rs1val != orig(count_instr)
+dbg_rs1val != orig(dbg_insn_addr)
+dbg_rs1val != orig(cpu_state)
+dbg_rs1val < orig(dbg_ascii_state)
+q_ascii_instr != q_insn_opcode
+q_ascii_instr > q_insn_rs1
+q_ascii_instr > q_insn_rd
+q_ascii_instr != cached_insn_opcode
+q_ascii_instr > cpu_state
+q_ascii_instr < dbg_ascii_state
+q_ascii_instr > alu_out_q
+q_ascii_instr > alu_shl
+q_ascii_instr > alu_shr
+q_ascii_instr > alu_eq
+q_ascii_instr > alu_ltu
+q_ascii_instr > cpuregs_rs1
+q_ascii_instr > cpuregs_rs2
+q_ascii_instr > orig(count_cycle)
+q_ascii_instr > orig(count_instr)
+q_ascii_instr > orig(dbg_insn_addr)
+q_ascii_instr > orig(cpu_state)
+q_ascii_instr < orig(dbg_ascii_state)
+q_insn_opcode > q_insn_rs1
+q_insn_opcode > q_insn_rd
+q_insn_opcode >= cached_insn_opcode
+q_insn_opcode > cpu_state
+q_insn_opcode < dbg_ascii_state
+q_insn_opcode > alu_out_q
+q_insn_opcode > alu_shl
+q_insn_opcode > alu_shr
+q_insn_opcode > alu_eq
+q_insn_opcode > alu_ltu
+q_insn_opcode > cpuregs_rs1
+q_insn_opcode > cpuregs_rs2
+q_insn_opcode > orig(count_cycle)
+q_insn_opcode > orig(count_instr)
+q_insn_opcode > orig(dbg_insn_addr)
+q_insn_opcode > orig(cpu_state)
+q_insn_opcode < orig(dbg_ascii_state)
+q_insn_rs1 <= q_insn_rd
+q_insn_rs1 <= cpu_state
+q_insn_rs1 < dbg_ascii_state
+alu_shl % q_insn_rs1 == 0
+q_insn_rs1 > alu_eq
+q_insn_rs1 > alu_ltu
+q_insn_rs1 < cpuregs_rs1
+orig(count_cycle) % q_insn_rs1 == 0
+q_insn_rs1 < orig(count_cycle)
+orig(count_instr) % q_insn_rs1 == 0
+q_insn_rs1 < orig(count_instr)
+q_insn_rs1 < orig(dbg_insn_addr)
+q_insn_rs1 <= orig(cpu_state)
+q_insn_rs1 < orig(dbg_ascii_state)
+q_insn_rd != cpu_state
+q_insn_rd < dbg_ascii_state
+q_insn_rd > alu_eq
+q_insn_rd > alu_ltu
+q_insn_rd < orig(count_cycle)
+q_insn_rd < orig(count_instr)
+q_insn_rd < orig(dbg_insn_addr)
+q_insn_rd != orig(cpu_state)
+q_insn_rd < orig(dbg_ascii_state)
+cached_insn_opcode < dbg_ascii_state
+cached_insn_opcode >= alu_shr
+cached_insn_opcode >= alu_eq
+cached_insn_opcode != cpuregs_rs1
+cached_insn_opcode != cpuregs_rs2
+cached_insn_opcode != orig(count_cycle)
+cached_insn_opcode != orig(count_instr)
+cached_insn_opcode != orig(cpu_state)
+cached_insn_opcode < orig(dbg_ascii_state)
+cpu_state < dbg_ascii_state
+cpu_state > alu_shr
+cpu_state > alu_eq
+cpu_state > alu_ltu
+cpu_state < cpuregs_rs1
+cpu_state != orig(count_cycle)
+cpu_state != orig(dbg_insn_addr)
+cpu_state <= orig(cpu_state)
+cpu_state < orig(dbg_ascii_state)
+dbg_ascii_state > alu_out_q
+dbg_ascii_state > alu_shl
+dbg_ascii_state > alu_shr
+dbg_ascii_state > alu_eq
+dbg_ascii_state > alu_ltu
+dbg_ascii_state > cpuregs_rs1
+dbg_ascii_state > cpuregs_rs2
+dbg_ascii_state > orig(count_cycle)
+dbg_ascii_state > orig(count_instr)
+dbg_ascii_state > orig(dbg_insn_addr)
+dbg_ascii_state > orig(cpu_state)
+dbg_ascii_state >= orig(dbg_ascii_state)
+alu_out_q >= alu_shr
+alu_out_q >= alu_eq
+alu_ltu % alu_out_q == 0
+alu_out_q >= alu_ltu
+alu_out_q < cpuregs_rs1
+alu_out_q <= cpuregs_rs2
+cpuregs_rs2 % alu_out_q == 0
+alu_out_q < orig(count_cycle)
+alu_out_q < orig(count_instr)
+orig(count_instr) % alu_out_q == 0
+alu_out_q < orig(cpu_state)
+alu_out_q < orig(dbg_ascii_state)
+alu_shl >= alu_shr
+alu_shl >= alu_eq
+alu_shl < cpuregs_rs1
+alu_shl < orig(count_cycle)
+alu_shl < orig(count_instr)
+alu_shl < orig(dbg_ascii_state)
+alu_shr < cpuregs_rs1
+alu_shr < cpuregs_rs2
+alu_shr < orig(count_cycle)
+alu_shr < orig(count_instr)
+alu_shr < orig(cpu_state)
+alu_shr < orig(dbg_ascii_state)
+alu_eq < cpuregs_rs1
+alu_eq < cpuregs_rs2
+alu_eq < orig(count_cycle)
+alu_eq < orig(count_instr)
+alu_eq < orig(dbg_insn_addr)
+alu_eq < orig(cpu_state)
+alu_eq < orig(dbg_ascii_state)
+alu_ltu < cpuregs_rs1
+alu_ltu <= cpuregs_rs2
+alu_ltu < orig(count_cycle)
+alu_ltu < orig(count_instr)
+alu_ltu < orig(dbg_insn_addr)
+alu_ltu < orig(cpu_state)
+alu_ltu < orig(dbg_ascii_state)
+cpuregs_rs1 > cpuregs_rs2
+cpuregs_rs1 > orig(count_cycle)
+cpuregs_rs1 > orig(count_instr)
+cpuregs_rs1 > orig(dbg_insn_addr)
+cpuregs_rs1 > orig(cpu_state)
+cpuregs_rs1 < orig(dbg_ascii_state)
+cpuregs_rs2 < orig(count_cycle)
+cpuregs_rs2 < orig(count_instr)
+cpuregs_rs2 < orig(cpu_state)
+cpuregs_rs2 < orig(dbg_ascii_state)
+9 * mem_valid - 22 * mem_wdata + count_cycle - 27 == 0
+2 * mem_valid - 4 * mem_wdata + count_instr - 5 == 0
+9 * mem_valid - 22 * mem_wdata + orig(count_cycle) - 26 == 0
+mem_valid - 4 * mem_wdata + orig(count_instr) - 4 == 0
+4 * mem_valid - 2 * count_cycle + 11 * count_instr - 1 == 0
+7 * mem_valid + 2 * count_cycle - 11 * orig(count_instr) - 10 == 0
+4 * mem_valid + 11 * count_instr - 2 * orig(count_cycle) - 3 == 0
+mem_valid + count_instr - orig(count_instr) - 1 == 0
+1022 * mem_valid - reg_op1 + alu_out_q - 1 == 0
+2041 * mem_valid - 2 * reg_op1 + alu_shl == 0
+1021 * mem_valid - reg_op1 + cpuregs_rs2 - 1 == 0
+2138147 * mem_valid + next_insn_opcode - cached_insn_opcode - 2138147 == 0
+3 * mem_valid + 2 * alu_out_q - alu_shl - 2 == 0
+mem_valid + alu_out_q - cpuregs_rs2 == 0
+mem_valid - alu_shl + 2 * cpuregs_rs2 - 2 == 0
+7 * mem_valid + 2 * orig(count_cycle) - 11 * orig(count_instr) - 8 == 0
+9 * mem_addr + 88 * mem_wdata - 4 * count_cycle - 36 == 0
+mem_addr + 8 * mem_wdata - 2 * count_instr - 6 == 0
+9 * mem_addr + 88 * mem_wdata - 4 * orig(count_cycle) - 40 == 0
+mem_addr + 16 * mem_wdata - 4 * orig(count_instr) == 0
+mem_addr + 2 * count_cycle - 11 * count_instr - 15 == 0
+7 * mem_addr - 8 * count_cycle + 44 * orig(count_instr) - 72 == 0
+mem_addr - 11 * count_instr + 2 * orig(count_cycle) - 13 == 0
+mem_addr - 4 * count_instr + 4 * orig(count_instr) - 12 == 0
+511 * mem_addr + 2 * reg_op1 - 2 * alu_out_q - 8174 == 0
+2041 * mem_addr + 8 * reg_op1 - 4 * alu_shl - 32656 == 0
+1021 * mem_addr + 4 * reg_op1 - 4 * cpuregs_rs2 - 16332 == 0
+2138147 * mem_addr - 4 * next_insn_opcode + 4 * cached_insn_opcode - 25657764 == 0
+3 * mem_addr - 8 * alu_out_q + 4 * alu_shl - 40 == 0
+mem_addr - 4 * alu_out_q + 4 * cpuregs_rs2 - 16 == 0
+mem_addr + 4 * alu_shl - 8 * cpuregs_rs2 - 8 == 0
+7 * mem_addr - 8 * orig(count_cycle) + 44 * orig(count_instr) - 80 == 0
+44 * mem_wdata + 9 * mem_la_wdata - 2 * count_cycle + 45 == 0
+4 * mem_wdata + mem_la_wdata - count_instr + 4 == 0
+44 * mem_wdata + 9 * mem_la_wdata - 2 * orig(count_cycle) + 43 == 0
+8 * mem_wdata + mem_la_wdata - 2 * orig(count_instr) + 7 == 0
+8 * mem_wdata - 2 * count_cycle + 9 * count_instr + 9 == 0
+176 * mem_wdata - 8 * count_cycle + 9 * reg_pc + 72 == 0
+176 * mem_wdata - 8 * count_cycle + 9 * reg_next_pc + 36 == 0
+5125824 * mem_wdata - 232992 * count_cycle + dbg_insn_opcode + 4152637 == 0
+22522720 * mem_wdata - 1023760 * count_cycle + 9 * mem_rdata_word + 8398197 == 0
+22 * mem_wdata - count_cycle + 9 * instr_sw + 18 == 0
+44 * mem_wdata - 2 * count_cycle - 9 * decoded_rd + 54 == 0
+44 * mem_wdata - 2 * count_cycle + 9 * decoded_rs2 + 36 == 0
+44 * mem_wdata - 2 * count_cycle + 9 * decoded_imm_j - 368604 == 0
+39424 * mem_wdata - 1792 * count_cycle + 9 * new_ascii_instr - 217647 == 0
+22462 * mem_wdata - 1021 * count_cycle - 9 * dbg_rs1val + 27558 == 0
+3.594671278E10 * mem_wdata - 1633941490 * count_cycle + 9 * q_ascii_instr + 2.9410696917E10 == 0
+23609696 * mem_wdata - 1073168 * count_cycle + 9 * q_insn_opcode + 18946053 == 0
+22 * mem_wdata - count_cycle + 9 * q_insn_rs1 + 9 == 0
+682 * mem_wdata - 31 * count_cycle + 9 * cpu_state + 549 == 0
+8.70560625048136E14 * mem_wdata - 3.9570937502188E13 * count_cycle + 3 * dbg_ascii_state + 7.10880250962513E14 == 0
+14 * mem_wdata + count_cycle - 9 * orig(count_instr) + 9 == 0
+88 * mem_wdata - 4 * count_cycle + 9 * orig(dbg_insn_addr) == 0
+154 * mem_wdata - 7 * count_cycle + orig(cpu_state) + 125 == 0
+5.6655650315E11 * mem_wdata - 2.5752568325E10 * count_cycle - 9 * orig(dbg_ascii_state) + 4.653418460463E12 == 0
+16 * mem_wdata - 4 * count_instr + reg_pc + 4 == 0
+16 * mem_wdata - 4 * count_instr + reg_next_pc == 0
+4193856 * mem_wdata - 1048464 * count_instr + dbg_insn_opcode + 3104173 == 0
+2047520 * mem_wdata - 511880 * count_instr + mem_rdata_word + 421253 == 0
+4 * mem_wdata - count_instr + 2 * instr_sw + 3 == 0
+4 * mem_wdata - count_instr - decoded_rd + 5 == 0
+4 * mem_wdata - count_instr + decoded_rs2 + 3 == 0
+4 * mem_wdata - count_instr + decoded_imm_j - 40957 == 0
+3584 * mem_wdata - 896 * count_instr + new_ascii_instr - 25079 == 0
+4084 * mem_wdata - 1021 * count_instr - 2 * dbg_rs1val + 5103 == 0
+3.26788298E9 * mem_wdata - 816970745 * count_instr + q_ascii_instr + 2.450884468E9 == 0
+2146336 * mem_wdata - 536584 * count_instr + q_insn_opcode + 1568533 == 0
+4 * mem_wdata - count_instr + 2 * q_insn_rs1 + 1 == 0
+124 * mem_wdata - 31 * count_instr + 2 * cpu_state + 91 == 0
+2.37425625013128E14 * mem_wdata - 5.9356406253282E13 * count_instr + dbg_ascii_state + 1.77603677400889E14 == 0
+8 * mem_wdata + 9 * count_instr - 2 * orig(count_cycle) + 7 == 0
+4 * mem_wdata + count_instr - 2 * orig(count_instr) + 3 == 0
+8 * mem_wdata - 2 * count_instr + orig(dbg_insn_addr) - 2 == 0
+252 * mem_wdata - 63 * count_instr + 2 * orig(cpu_state) + 187 == 0
+1.030102733E11 * mem_wdata - 2.5752568325E10 * count_instr - 2 * orig(dbg_ascii_state) + 1.008340422889E12 == 0
+176 * mem_wdata + 9 * reg_pc - 8 * orig(count_cycle) + 64 == 0
+32 * mem_wdata + reg_pc - 8 * orig(count_instr) + 16 == 0
+176 * mem_wdata + 9 * reg_next_pc - 8 * orig(count_cycle) + 28 == 0
+32 * mem_wdata + reg_next_pc - 8 * orig(count_instr) + 12 == 0
+5125824 * mem_wdata + dbg_insn_opcode - 232992 * orig(count_cycle) + 3919645 == 0
+8387712 * mem_wdata + dbg_insn_opcode - 2096928 * orig(count_instr) + 6249565 == 0
+22522720 * mem_wdata + 9 * mem_rdata_word - 1023760 * orig(count_cycle) + 7374437 == 0
+4095040 * mem_wdata + mem_rdata_word - 1023760 * orig(count_instr) + 1956893 == 0
+22 * mem_wdata + 9 * instr_sw - orig(count_cycle) + 17 == 0
+4 * mem_wdata + instr_sw - orig(count_instr) + 3 == 0
+44 * mem_wdata - 9 * decoded_rd - 2 * orig(count_cycle) + 52 == 0
+8 * mem_wdata - decoded_rd - 2 * orig(count_instr) + 8 == 0
+44 * mem_wdata + 9 * decoded_rs2 - 2 * orig(count_cycle) + 34 == 0
+8 * mem_wdata + decoded_rs2 - 2 * orig(count_instr) + 6 == 0
+44 * mem_wdata + 9 * decoded_imm_j - 2 * orig(count_cycle) - 368606 == 0
+8 * mem_wdata + decoded_imm_j - 2 * orig(count_instr) - 40954 == 0
+39424 * mem_wdata + 9 * new_ascii_instr - 1792 * orig(count_cycle) - 219439 == 0
+7168 * mem_wdata + new_ascii_instr - 1792 * orig(count_instr) - 22391 == 0
+22462 * mem_wdata - 9 * dbg_rs1val - 1021 * orig(count_cycle) + 26537 == 0
+4084 * mem_wdata - dbg_rs1val - 1021 * orig(count_instr) + 4083 == 0
+3.594671278E10 * mem_wdata + 9 * q_ascii_instr - 1633941490 * orig(count_cycle) + 2.7776755427E10 == 0
+6.53576596E9 * mem_wdata + q_ascii_instr - 1633941490 * orig(count_instr) + 4.901796703E9 == 0
+23609696 * mem_wdata + 9 * q_insn_opcode - 1073168 * orig(count_cycle) + 17872885 == 0
+4292672 * mem_wdata + q_insn_opcode - 1073168 * orig(count_instr) + 3178285 == 0
+22 * mem_wdata + 9 * q_insn_rs1 - orig(count_cycle) + 8 == 0
+4 * mem_wdata + q_insn_rs1 - orig(count_instr) + 2 == 0
+682 * mem_wdata + 9 * cpu_state - 31 * orig(count_cycle) + 518 == 0
+124 * mem_wdata + cpu_state - 31 * orig(count_instr) + 92 == 0
+8.70560625048136E14 * mem_wdata + 3 * dbg_ascii_state - 3.9570937502188E13 * orig(count_cycle) + 6.71309313460325E14 == 0
+4.74851250026256E14 * mem_wdata + dbg_ascii_state - 1.18712812506564E14 * orig(count_instr) + 3.55672896160735E14 == 0
+14 * mem_wdata + orig(count_cycle) - 9 * orig(count_instr) + 10 == 0
+88 * mem_wdata - 4 * orig(count_cycle) + 9 * orig(dbg_insn_addr) - 4 == 0
+154 * mem_wdata - 7 * orig(count_cycle) + orig(cpu_state) + 118 == 0
+5.6655650315E11 * mem_wdata - 2.5752568325E10 * orig(count_cycle) - 9 * orig(dbg_ascii_state) + 4.627665892138E12 == 0
+16 * mem_wdata - 4 * orig(count_instr) + orig(dbg_insn_addr) + 4 == 0
+252 * mem_wdata - 63 * orig(count_instr) + orig(cpu_state) + 188 == 0
+1.030102733E11 * mem_wdata - 2.5752568325E10 * orig(count_instr) - orig(dbg_ascii_state) + 5.42799063932E11 == 0
+2 * mem_la_wdata + 2 * count_cycle - 11 * count_instr - 1 == 0
+7 * mem_la_wdata - 4 * count_cycle + 22 * orig(count_instr) + 13 == 0
+2 * mem_la_wdata - 11 * count_instr + 2 * orig(count_cycle) + 1 == 0
+mem_la_wdata - 2 * count_instr + 2 * orig(count_instr) + 1 == 0
+511 * mem_la_wdata + reg_op1 - alu_out_q - 510 == 0
+2041 * mem_la_wdata + 4 * reg_op1 - 2 * alu_shl - 2041 == 0
+1021 * mem_la_wdata + 2 * reg_op1 - 2 * cpuregs_rs2 - 1019 == 0
+2138147 * mem_la_wdata - 2 * next_insn_opcode + 2 * cached_insn_opcode + 2138147 == 0
+3 * mem_la_wdata - 4 * alu_out_q + 2 * alu_shl + 1 == 0
+mem_la_wdata - 2 * alu_out_q + 2 * cpuregs_rs2 - 1 == 0
+mem_la_wdata + 2 * alu_shl - 4 * cpuregs_rs2 + 3 == 0
+7 * mem_la_wdata - 4 * orig(count_cycle) + 22 * orig(count_instr) + 9 == 0
+4 * count_cycle - 22 * count_instr + reg_pc - 14 == 0
+4 * count_cycle - 22 * count_instr + reg_next_pc - 18 == 0
+1048464 * count_cycle - 5766552 * count_instr + dbg_insn_opcode - 1613915 == 0
+511880 * count_cycle - 2815340 * count_instr + mem_rdata_word - 1882207 == 0
+2 * count_cycle - 11 * count_instr + 4 * instr_sw - 3 == 0
+2 * count_cycle - 11 * count_instr - 2 * decoded_rd + 1 == 0
+2 * count_cycle - 11 * count_instr + 2 * decoded_rs2 - 3 == 0
+2 * count_cycle - 11 * count_instr + 2 * decoded_imm_j - 81923 == 0
+896 * count_cycle - 4928 * count_instr + new_ascii_instr - 29111 == 0
+2042 * count_cycle - 11231 * count_instr - 4 * dbg_rs1val + 1017 == 0
+1633941490 * count_cycle - 8.986678195E9 * count_instr + 2 * q_ascii_instr - 2.450967769E9 == 0
+536584 * count_cycle - 2951212 * count_instr + q_insn_opcode - 846095 == 0
+2 * count_cycle - 11 * count_instr + 4 * q_insn_rs1 - 7 == 0
+62 * count_cycle - 341 * count_instr + 4 * cpu_state - 97 == 0
+5.9356406253282E13 * count_cycle - 3.26460234393051E14 * count_instr + dbg_ascii_state - 8.950015073888E13 == 0
+2 * count_cycle - 7 * count_instr - 4 * orig(count_instr) - 3 == 0
+2 * count_cycle - 11 * count_instr + orig(dbg_insn_addr) - 11 == 0
+126 * count_cycle - 693 * count_instr + 4 * orig(cpu_state) - 193 == 0
+5.150513665E10 * count_cycle - 2.83278251575E11 * count_instr - 4 * orig(dbg_ascii_state) + 1.784907730853E12 == 0
+16 * count_cycle - 7 * reg_pc - 88 * orig(count_instr) + 32 == 0
+16 * count_cycle - 7 * reg_next_pc - 88 * orig(count_instr) + 60 == 0
+4193856 * count_cycle - 7 * dbg_insn_opcode - 23066208 * orig(count_instr) - 6002251 == 0
+2047520 * count_cycle - 7 * mem_rdata_word - 11261360 * orig(count_instr) + 4729429 == 0
+2 * count_cycle - 7 * instr_sw - 11 * orig(count_instr) - 3 == 0
+4 * count_cycle + 7 * decoded_rd - 22 * orig(count_instr) - 20 == 0
+4 * count_cycle - 7 * decoded_rs2 - 22 * orig(count_instr) - 6 == 0
+4 * count_cycle - 7 * decoded_imm_j - 22 * orig(count_instr) + 286714 == 0
+512 * count_cycle - new_ascii_instr - 2816 * orig(count_instr) + 26999 == 0
+2042 * count_cycle + 7 * dbg_rs1val - 11231 * orig(count_instr) - 10203 == 0
+3.26788298E9 * count_cycle - 7 * q_ascii_instr - 1.797335639E10 * orig(count_instr) - 4.901630101E9 == 0
+2146336 * count_cycle - 7 * q_insn_opcode - 11804848 * orig(count_instr) - 2930971 == 0
+2 * count_cycle - 7 * q_insn_rs1 - 11 * orig(count_instr) + 4 == 0
+62 * count_cycle - 7 * cpu_state - 341 * orig(count_instr) - 86 == 0
+2.37425625013128E14 * count_cycle - 7 * dbg_ascii_state - 1.305840937572204E15 * orig(count_instr) - 3.52879648006993E14 == 0
+8 * count_cycle - 44 * orig(count_instr) - 7 * orig(dbg_insn_addr) + 44 == 0
+18 * count_cycle - 99 * orig(count_instr) - orig(cpu_state) - 26 == 0
+5.150513665E10 * count_cycle - 2.83278251575E11 * orig(count_instr) + 7 * orig(dbg_ascii_state) - 3.336047217674E12 == 0
+22 * count_instr - reg_pc - 4 * orig(count_cycle) + 10 == 0
+8 * count_instr - reg_pc - 8 * orig(count_instr) + 8 == 0
+22 * count_instr - reg_next_pc - 4 * orig(count_cycle) + 14 == 0
+8 * count_instr - reg_next_pc - 8 * orig(count_instr) + 12 == 0
+5766552 * count_instr - dbg_insn_opcode - 1048464 * orig(count_cycle) + 565451 == 0
+2096928 * count_instr - dbg_insn_opcode - 2096928 * orig(count_instr) + 41219 == 0
+2815340 * count_instr - mem_rdata_word - 511880 * orig(count_cycle) + 1370327 == 0
+1023760 * count_instr - mem_rdata_word - 1023760 * orig(count_instr) + 1114387 == 0
+11 * count_instr - 4 * instr_sw - 2 * orig(count_cycle) + 1 == 0
+count_instr - instr_sw - orig(count_instr) == 0
+11 * count_instr + 2 * decoded_rd - 2 * orig(count_cycle) - 3 == 0
+2 * count_instr + decoded_rd - 2 * orig(count_instr) - 2 == 0
+11 * count_instr - 2 * decoded_rs2 - 2 * orig(count_cycle) + 1 == 0
+2 * count_instr - decoded_rs2 - 2 * orig(count_instr) == 0
+11 * count_instr - 2 * decoded_imm_j - 2 * orig(count_cycle) + 81921 == 0
+2 * count_instr - decoded_imm_j - 2 * orig(count_instr) + 40960 == 0
+4928 * count_instr - new_ascii_instr - 896 * orig(count_cycle) + 28215 == 0
+1792 * count_instr - new_ascii_instr - 1792 * orig(count_instr) + 27767 == 0
+11231 * count_instr + 4 * dbg_rs1val - 2042 * orig(count_cycle) - 3059 == 0
+1021 * count_instr + dbg_rs1val - 1021 * orig(count_instr) - 1020 == 0
+8.986678195E9 * count_instr - 2 * q_ascii_instr - 1633941490 * orig(count_cycle) + 817026279 == 0
+1633941490 * count_instr - q_ascii_instr - 1633941490 * orig(count_instr) + 27767 == 0
+2951212 * count_instr - q_insn_opcode - 536584 * orig(count_cycle) + 309511 == 0
+1073168 * count_instr - q_insn_opcode - 1073168 * orig(count_instr) + 41219 == 0
+11 * count_instr - 4 * q_insn_rs1 - 2 * orig(count_cycle) + 5 == 0
+count_instr - q_insn_rs1 - orig(count_instr) + 1 == 0
+341 * count_instr - 4 * cpu_state - 62 * orig(count_cycle) + 35 == 0
+31 * count_instr - cpu_state - 31 * orig(count_instr) + 1 == 0
+3.26460234393051E14 * count_instr - dbg_ascii_state - 5.9356406253282E13 * orig(count_cycle) + 3.0143744485598E13 == 0
+1.18712812506564E14 * count_instr - dbg_ascii_state - 1.18712812506564E14 * orig(count_instr) + 4.65541358957E11 == 0
+7 * count_instr - 2 * orig(count_cycle) + 4 * orig(count_instr) + 1 == 0
+11 * count_instr - 2 * orig(count_cycle) - orig(dbg_insn_addr) + 9 == 0
+693 * count_instr - 126 * orig(count_cycle) - 4 * orig(cpu_state) + 67 == 0
+2.83278251575E11 * count_instr - 5.150513665E10 * orig(count_cycle) + 4 * orig(dbg_ascii_state) - 1.836412867503E12 == 0
+4 * count_instr - 4 * orig(count_instr) - orig(dbg_insn_addr) + 8 == 0
+63 * count_instr - 63 * orig(count_instr) - orig(cpu_state) + 1 == 0
+2.5752568325E10 * count_instr - 2.5752568325E10 * orig(count_instr) + orig(dbg_ascii_state) - 4.65541358957E11 == 0
+511 * reg_pc + 4 * reg_op1 - 4 * alu_out_q - 8172 == 0
+2041 * reg_pc + 16 * reg_op1 - 8 * alu_shl - 32656 == 0
+1021 * reg_pc + 8 * reg_op1 - 8 * cpuregs_rs2 - 16328 == 0
+2138147 * reg_pc - 8 * next_insn_opcode + 8 * cached_insn_opcode - 17105176 == 0
+3 * reg_pc - 16 * alu_out_q + 8 * alu_shl - 32 == 0
+reg_pc - 8 * alu_out_q + 8 * cpuregs_rs2 - 16 == 0
+reg_pc + 8 * alu_shl - 16 * cpuregs_rs2 == 0
+7 * reg_pc - 16 * orig(count_cycle) + 88 * orig(count_instr) - 48 == 0
+511 * reg_next_pc + 4 * reg_op1 - 4 * alu_out_q - 10216 == 0
+2041 * reg_next_pc + 16 * reg_op1 - 8 * alu_shl - 40820 == 0
+1021 * reg_next_pc + 8 * reg_op1 - 8 * cpuregs_rs2 - 20412 == 0
+2138147 * reg_next_pc - 8 * next_insn_opcode + 8 * cached_insn_opcode - 25657764 == 0
+3 * reg_next_pc - 16 * alu_out_q + 8 * alu_shl - 44 == 0
+reg_next_pc - 8 * alu_out_q + 8 * cpuregs_rs2 - 20 == 0
+reg_next_pc + 8 * alu_shl - 16 * cpuregs_rs2 - 4 == 0
+7 * reg_next_pc - 16 * orig(count_cycle) + 88 * orig(count_instr) - 76 == 0
+1048464 * reg_op1 + 511 * dbg_insn_opcode - 1048464 * alu_out_q - 1091544653 == 0
+4193856 * reg_op1 + 2041 * dbg_insn_opcode - 2096928 * alu_shl - 4.363958027E9 == 0
+2096928 * reg_op1 + 1021 * dbg_insn_opcode - 2096928 * cpuregs_rs2 - 2.180951159E9 == 0
+511880 * reg_op1 + 511 * mem_rdata_word - 511880 * alu_out_q - 1092081237 == 0
+2047520 * reg_op1 + 2041 * mem_rdata_word - 1023760 * alu_shl - 4.363958027E9 == 0
+1023760 * reg_op1 + 1021 * mem_rdata_word - 1023760 * cpuregs_rs2 - 2.182024327E9 == 0
+reg_op1 + 1022 * instr_sw - alu_out_q - 1021 == 0
+2 * reg_op1 + 2041 * instr_sw - alu_shl - 2041 == 0
+reg_op1 + 1021 * instr_sw - cpuregs_rs2 - 1020 == 0
+reg_op1 - 511 * decoded_rd - alu_out_q + 1 == 0
+4 * reg_op1 - 2041 * decoded_rd - 2 * alu_shl == 0
+2 * reg_op1 - 1021 * decoded_rd - 2 * cpuregs_rs2 + 2 == 0
+reg_op1 + 511 * decoded_rs2 - alu_out_q - 1021 == 0
+4 * reg_op1 + 2041 * decoded_rs2 - 2 * alu_shl - 4082 == 0
+2 * reg_op1 + 1021 * decoded_rs2 - 2 * cpuregs_rs2 - 2040 == 0
+reg_op1 + 511 * decoded_imm_j - alu_out_q - 20931581 == 0
+4 * reg_op1 + 2041 * decoded_imm_j - 2 * alu_shl - 83603442 == 0
+reg_op1 + 511 * decoded_imm_j - 2 * alu_shr - 20931582 == 0
+2 * reg_op1 + 1021 * decoded_imm_j - 2 * alu_eq - 41822202 == 0
+reg_op1 + 509 * decoded_imm_j + alu_ltu - 20849659 == 0
+2 * reg_op1 + 1021 * decoded_imm_j - 2 * cpuregs_rs2 - 41822200 == 0
+128 * reg_op1 + 73 * new_ascii_instr - 128 * alu_out_q - 2157679 == 0
+3584 * reg_op1 + 2041 * new_ascii_instr - 1792 * alu_shl - 60329919 == 0
+1792 * reg_op1 + 1021 * new_ascii_instr - 1792 * cpuregs_rs2 - 30177947 == 0
+1021 * reg_op1 - 1022 * dbg_rs1val - 1021 * alu_out_q - 1 == 0
+2042 * reg_op1 - 2041 * dbg_rs1val - 1021 * alu_shl - 2041 == 0
+reg_op1 - dbg_rs1val - cpuregs_rs2 == 0
+816970745 * reg_op1 + 511 * q_ascii_instr - 816970745 * alu_out_q - 8.34141319582E11 == 0
+3.26788298E9 * reg_op1 + 2041 * q_ascii_instr - 1633941490 * alu_shl - 3.334931253537E12 == 0
+1633941490 * reg_op1 + 1021 * q_ascii_instr - 1633941490 * cpuregs_rs2 - 1.666648669907E12 == 0
+536584 * reg_op1 + 511 * q_insn_opcode - 536584 * alu_out_q - 568915173 == 0
+2146336 * reg_op1 + 2041 * q_insn_opcode - 1073168 * alu_shl - 2.274463867E9 == 0
+1073168 * reg_op1 + 1021 * q_insn_opcode - 1073168 * cpuregs_rs2 - 1136715959 == 0
+reg_op1 + 1022 * q_insn_rs1 - alu_out_q - 2043 == 0
+2 * reg_op1 + 2041 * q_insn_rs1 - alu_shl - 4082 == 0
+reg_op1 + 1021 * q_insn_rs1 - cpuregs_rs2 - 2041 == 0
+31 * reg_op1 + 1022 * cpu_state - 31 * alu_out_q - 32673 == 0
+62 * reg_op1 + 2041 * cpu_state - 31 * alu_shl - 65312 == 0
+31 * reg_op1 + 1021 * cpu_state - 31 * cpuregs_rs2 - 32641 == 0
+5.9356406253282E13 * reg_op1 + 511 * dbg_ascii_state - 5.9356406253282E13 * alu_out_q - 6.0840782419027944E16 == 0
+2.37425625013128E14 * reg_op1 + 2041 * dbg_ascii_state - 1.18712812506564E14 * alu_shl - 2.43243020239528352E17 == 0
+1.18712812506564E14 * reg_op1 + 1021 * dbg_ascii_state - 1.18712812506564E14 * cpuregs_rs2 - 1.21562386484190384E17 == 0
+3 * reg_op1 + 2041 * alu_out_q - 1022 * alu_shl - 2041 == 0
+reg_op1 + 1021 * alu_out_q - 1022 * cpuregs_rs2 + 1 == 0
+2 * reg_op1 - 2 * alu_out_q + 511 * orig(dbg_insn_addr) - 6130 == 0
+9 * reg_op1 - 9 * alu_out_q + 146 * orig(cpu_state) - 9335 == 0
+2.5752568325E10 * reg_op1 - 2.5752568325E10 * alu_out_q - 1022 * orig(dbg_ascii_state) + 4.49489896594229E14 == 0
+reg_op1 - 1021 * alu_shl + 2041 * cpuregs_rs2 - 2041 == 0
+8 * reg_op1 - 4 * alu_shl + 2041 * orig(dbg_insn_addr) - 24492 == 0
+126 * reg_op1 - 63 * alu_shl + 2041 * orig(cpu_state) - 130624 == 0
+5.150513665E10 * reg_op1 - 2.5752568325E10 * alu_shl - 2041 * orig(dbg_ascii_state) + 8.97608921679912E14 == 0
+4 * reg_op1 - 4 * cpuregs_rs2 + 1021 * orig(dbg_insn_addr) - 12248 == 0
+63 * reg_op1 - 63 * cpuregs_rs2 + 1021 * orig(cpu_state) - 65281 == 0
+2.5752568325E10 * reg_op1 - 2.5752568325E10 * cpuregs_rs2 - 1021 * orig(dbg_ascii_state) + 4.49050107803597E14 == 0
+1023760 * next_insn_opcode - 2138147 * mem_rdata_word - 1023760 * cached_insn_opcode + 2.382723220889E12 == 0
+2 * next_insn_opcode + 2138147 * decoded_rd - 2 * cached_insn_opcode - 4276294 == 0
+2 * next_insn_opcode - 2138147 * decoded_imm_j - 2 * cached_insn_opcode + 8.757850112E10 == 0
+1792 * next_insn_opcode - 2138147 * new_ascii_instr - 1792 * cached_insn_opcode + 5.9369927749E10 == 0
+1021 * next_insn_opcode + 2138147 * dbg_rs1val - 1021 * cached_insn_opcode - 2.18090994E9 == 0
+next_insn_opcode - 2138147 * q_insn_rs1 - cached_insn_opcode + 2138147 == 0
+4 * next_insn_opcode - 4 * cached_insn_opcode - 2138147 * orig(dbg_insn_addr) + 17105176 == 0
+dbg_insn_opcode - 1397952 * alu_out_q + 698976 * alu_shl - 740195 == 0
+dbg_insn_opcode - 2096928 * alu_out_q + 2096928 * cpuregs_rs2 - 2138147 == 0
+dbg_insn_opcode + 2096928 * alu_shl - 4193856 * cpuregs_rs2 + 2055709 == 0
+7 * dbg_insn_opcode - 4193856 * orig(count_cycle) + 23066208 * orig(count_instr) + 1808395 == 0
+3 * mem_rdata_word - 2047520 * alu_out_q + 1023760 * alu_shl - 4366921 == 0
+mem_rdata_word - 1023760 * alu_out_q + 1023760 * cpuregs_rs2 - 2138147 == 0
+mem_rdata_word + 1023760 * alu_shl - 2047520 * cpuregs_rs2 - 90627 == 0
+7 * mem_rdata_word - 2047520 * orig(count_cycle) + 11261360 * orig(count_instr) - 6776949 == 0
+3 * instr_sw - 2 * alu_out_q + alu_shl - 1 == 0
+instr_sw - alu_out_q + cpuregs_rs2 - 1 == 0
+instr_sw + alu_shl - 2 * cpuregs_rs2 + 1 == 0
+7 * instr_sw - 2 * orig(count_cycle) + 11 * orig(count_instr) + 1 == 0
+3 * decoded_rd + 4 * alu_out_q - 2 * alu_shl - 4 == 0
+decoded_rd + 2 * alu_out_q - 2 * cpuregs_rs2 == 0
+decoded_rd - 2 * alu_shl + 4 * cpuregs_rs2 - 4 == 0
+7 * decoded_rd + 4 * orig(count_cycle) - 22 * orig(count_instr) - 16 == 0
+3 * decoded_rs2 - 4 * alu_out_q + 2 * alu_shl - 2 == 0
+decoded_rs2 - 2 * alu_out_q + 2 * cpuregs_rs2 - 2 == 0
+decoded_rs2 + 2 * alu_shl - 4 * cpuregs_rs2 + 2 == 0
+7 * decoded_rs2 - 4 * orig(count_cycle) + 22 * orig(count_instr) + 2 == 0
+3 * decoded_imm_j - 4 * alu_out_q + 2 * alu_shl - 122882 == 0
+decoded_imm_j - 2 * alu_out_q + 2 * cpuregs_rs2 - 40962 == 0
+decoded_imm_j + 2 * alu_shl - 4 * cpuregs_rs2 - 40958 == 0
+7 * decoded_imm_j - 4 * orig(count_cycle) + 22 * orig(count_instr) - 286718 == 0
+3 * new_ascii_instr - 3584 * alu_out_q + 1792 * alu_shl - 85093 == 0
+new_ascii_instr - 1792 * alu_out_q + 1792 * cpuregs_rs2 - 29559 == 0
+new_ascii_instr + 1792 * alu_shl - 3584 * cpuregs_rs2 - 25975 == 0
+new_ascii_instr - 512 * orig(count_cycle) + 2816 * orig(count_instr) - 27511 == 0
+3 * dbg_rs1val + 2042 * alu_out_q - 1021 * alu_shl - 2039 == 0
+dbg_rs1val + 1021 * alu_out_q - 1021 * cpuregs_rs2 + 1 == 0
+dbg_rs1val - 1021 * alu_shl + 2042 * cpuregs_rs2 - 2041 == 0
+7 * dbg_rs1val + 2042 * orig(count_cycle) - 11231 * orig(count_instr) - 8161 == 0
+3 * q_ascii_instr - 3.26788298E9 * alu_out_q + 1633941490 * alu_shl - 1634024791 == 0
+q_ascii_instr - 1633941490 * alu_out_q + 1633941490 * cpuregs_rs2 - 1633969257 == 0
+q_ascii_instr + 1633941490 * alu_shl - 3.26788298E9 * cpuregs_rs2 + 1633913723 == 0
+7 * q_ascii_instr - 3.26788298E9 * orig(count_cycle) + 1.797335639E10 * orig(count_instr) + 1633747121 == 0
+3 * q_insn_opcode - 2146336 * alu_out_q + 1073168 * alu_shl - 1196825 == 0
+q_insn_opcode - 1073168 * alu_out_q + 1073168 * cpuregs_rs2 - 1114387 == 0
+q_insn_opcode + 1073168 * alu_shl - 2146336 * cpuregs_rs2 + 1031949 == 0
+7 * q_insn_opcode - 2146336 * orig(count_cycle) + 11804848 * orig(count_instr) + 784635 == 0
+3 * q_insn_rs1 - 2 * alu_out_q + alu_shl - 4 == 0
+q_insn_rs1 - alu_out_q + cpuregs_rs2 - 2 == 0
+q_insn_rs1 + alu_shl - 2 * cpuregs_rs2 == 0
+7 * q_insn_rs1 - 2 * orig(count_cycle) + 11 * orig(count_instr) - 6 == 0
+3 * cpu_state - 62 * alu_out_q + 31 * alu_shl - 34 == 0
+cpu_state - 31 * alu_out_q + 31 * cpuregs_rs2 - 32 == 0
+cpu_state + 31 * alu_shl - 62 * cpuregs_rs2 + 30 == 0
+7 * cpu_state - 62 * orig(count_cycle) + 341 * orig(count_instr) + 24 == 0
+dbg_ascii_state - 7.9141875004376E13 * alu_out_q + 3.9570937502188E13 * alu_shl - 4.0036478861145E13 == 0
+dbg_ascii_state - 1.18712812506564E14 * alu_out_q + 1.18712812506564E14 * cpuregs_rs2 - 1.19178353865521E14 == 0
+dbg_ascii_state + 1.18712812506564E14 * alu_shl - 2.37425625013128E14 * cpuregs_rs2 + 1.18247271147607E14 == 0
+7 * dbg_ascii_state - 2.37425625013128E14 * orig(count_cycle) + 1.305840937572204E15 * orig(count_instr) + 1.15454022993865E14 == 0
+alu_out_q + alu_shl - 3 * cpuregs_rs2 + 2 == 0
+8 * alu_out_q - 4 * alu_shl - 3 * orig(dbg_insn_addr) + 28 == 0
+42 * alu_out_q - 21 * alu_shl - orig(cpu_state) + 22 == 0
+5.150513665E10 * alu_out_q - 2.5752568325E10 * alu_shl + 3 * orig(dbg_ascii_state) - 1.370871508546E12 == 0
+4 * alu_out_q - 4 * cpuregs_rs2 - orig(dbg_insn_addr) + 12 == 0
+63 * alu_out_q - 63 * cpuregs_rs2 - orig(cpu_state) + 64 == 0
+2.5752568325E10 * alu_out_q - 2.5752568325E10 * cpuregs_rs2 + orig(dbg_ascii_state) - 4.39788790632E11 == 0
+4 * alu_shl - 8 * cpuregs_rs2 + orig(dbg_insn_addr) - 4 == 0
+63 * alu_shl - 126 * cpuregs_rs2 + orig(cpu_state) + 62 == 0
+2.5752568325E10 * alu_shl - 5.150513665E10 * cpuregs_rs2 - orig(dbg_ascii_state) + 4.91293927282E11 == 0
+Exiting Daikon.

@@ -1,0 +1,530 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 3 dtrace files:
+
+===========================================================================
+..tick():::ENTER
+trap == mem_valid
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_state
+trap == mem_do_rinst
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == last_mem_valid
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_compare
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_store
+trap == latched_stalu
+trap == latched_branch
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+mem_instr == decoder_trigger_q
+mem_instr == is_jalr_addi_slti_sltiu_xori_ori_andi
+mem_instr == is_alu_reg_imm
+mem_instr == dbg_insn_rd
+mem_instr == dbg_next
+mem_instr == latched_rd
+mem_addr == cpuregs_rs1
+mem_wdata == mem_la_wdata
+mem_wdata == reg_op2
+mem_wdata == dbg_rs2val
+mem_wdata == q_insn_imm
+mem_wdata == q_insn_rs2
+mem_wdata == q_insn_rd
+mem_wdata == cached_insn_imm
+mem_wdata == cached_insn_rs2
+mem_wdata == alu_eq
+mem_wdata == alu_ltu
+mem_wdata == alu_lts
+mem_wdata == cpuregs_rs2
+pcpi_insn == trace_data
+pcpi_insn == reg_out
+pcpi_insn == reg_sh
+pcpi_insn == pcpi_int_rd
+pcpi_insn == mem_16bit_buffer
+pcpi_insn == current_pc
+pcpi_insn == pcpi_timeout_counter
+pcpi_insn == alu_out
+pcpi_insn == alu_out_q
+pcpi_insn == alu_out_0
+pcpi_insn == alu_out_0_q
+pcpi_insn == cpuregs_wrdata
+pcpi_insn == decoded_rs
+reg_op1 == dbg_rs1val
+reg_op1 == alu_add_sub
+reg_op1 == alu_shl
+reg_op1 == alu_shr
+next_insn_opcode == mem_rdata_word
+next_insn_opcode == mem_rdata_q
+irq_pending == next_irq_pending
+mem_wordsize == instr_lui
+mem_wordsize == instr_auipc
+mem_wordsize == instr_jal
+mem_wordsize == instr_jalr
+mem_wordsize == instr_lb
+mem_wordsize == instr_lh
+mem_wordsize == instr_lbu
+mem_wordsize == instr_lhu
+mem_wordsize == instr_sb
+mem_wordsize == instr_sh
+mem_wordsize == instr_sw
+mem_wordsize == instr_slli
+mem_wordsize == instr_srli
+mem_wordsize == instr_srai
+mem_wordsize == instr_rdcycle
+mem_wordsize == instr_rdcycleh
+mem_wordsize == instr_rdinstr
+mem_wordsize == instr_rdinstrh
+mem_wordsize == instr_ecall_ebreak
+mem_wordsize == instr_getq
+mem_wordsize == instr_setq
+mem_wordsize == instr_retirq
+mem_wordsize == instr_maskirq
+mem_wordsize == instr_waitirq
+mem_wordsize == instr_timer
+mem_wordsize == decoder_pseudo_trigger_q
+mem_wordsize == compressed_instr
+mem_wordsize == is_lui_auipc_jal
+mem_wordsize == is_slli_srli_srai
+mem_wordsize == is_sb_sh_sw
+mem_wordsize == is_sll_srl_sra
+mem_wordsize == is_lui_auipc_jal_jalr_addi_add_sub
+mem_wordsize == is_slti_blt_slt
+mem_wordsize == is_sltiu_bltu_sltu
+mem_wordsize == is_alu_reg_reg
+mem_wordsize == latched_compr
+mem_do_prefetch == instr_addi
+instr_lw == decoded_rs1
+instr_lw == is_lb_lh_lw_lbu_lhu
+instr_lw == dbg_insn_rs1
+instr_lw == dbg_rs1val_valid
+instr_lw == dbg_rs2val_valid
+decoded_rs2 == dbg_insn_rs2
+decoded_imm == dbg_insn_imm
+decoder_trigger == decoder_pseudo_trigger
+is_lbu_lhu_lw == q_insn_rs1
+is_lbu_lhu_lw == cached_insn_rs1
+trap == 0
+mem_instr one of { -1, 0, 1 }
+mem_addr one of { -1, 0, 1020 }
+mem_wdata one of { -1, 0 }
+mem_wstrb one of { -1, 0, 15 }
+mem_la_wstrb one of { -1, 15 }
+pcpi_insn == -1
+count_cycle one of { 0, 5, 15 }
+count_instr one of { 0, 1, 2 }
+reg_pc one of { 0, 4 }
+reg_next_pc one of { 0, 4, 8 }
+reg_op1 one of { -1, 1020 }
+next_insn_opcode one of { -1, 1069547667 }
+dbg_insn_opcode one of { -1, 40995, 1069547667 }
+dbg_insn_addr one of { -1, 0, 4 }
+irq_mask == 4294967295L
+irq_pending one of { -1, 0 }
+mem_wordsize one of { -1, 0 }
+mem_do_prefetch one of { 0, 1 }
+instr_lw one of { -1, 0, 1 }
+decoded_rd one of { -1, 1, 2 }
+decoded_rs2 one of { -1, 0, 28 }
+decoded_imm one of { -1, 0, 1020 }
+decoded_imm_j one of { -1, 1020, 40960 }
+decoder_trigger one of { 0, 1 }
+is_lbu_lhu_lw one of { -1, 1 }
+new_ascii_instr one of { 0, 27767, 1633969257 }
+dbg_ascii_instr one of { -1, 29559, 1633969257 }
+q_ascii_instr one of { -1, 29559 }
+q_insn_opcode one of { -1, 40995 }
+dbg_valid_insn one of { 0, 1 }
+cached_ascii_instr one of { -1, 27767 }
+cached_insn_opcode one of { -1, 41219 }
+cached_insn_rd one of { -1, 2 }
+cpu_state one of { 32, 64 }
+dbg_ascii_state one of { 439788790632L, 119178353865521L }
+===========================================================================
+..tick():::EXIT
+trap == pcpi_valid
+trap == eoi
+trap == trace_valid
+trap == irq_delay
+trap == irq_active
+trap == timer
+trap == pcpi_int_wr
+trap == pcpi_int_wait
+trap == pcpi_int_ready
+trap == mem_do_rdata
+trap == mem_do_wdata
+trap == mem_la_secondword
+trap == mem_la_firstword_reg
+trap == last_mem_valid
+trap == prefetched_high_word
+trap == clear_prefetched_high_word
+trap == instr_beq
+trap == instr_bne
+trap == instr_blt
+trap == instr_bge
+trap == instr_bltu
+trap == instr_bgeu
+trap == instr_slti
+trap == instr_sltiu
+trap == instr_xori
+trap == instr_ori
+trap == instr_andi
+trap == instr_add
+trap == instr_sub
+trap == instr_sll
+trap == instr_slt
+trap == instr_sltu
+trap == instr_xor
+trap == instr_srl
+trap == instr_sra
+trap == instr_or
+trap == instr_and
+trap == decoder_trigger
+trap == decoder_pseudo_trigger
+trap == is_beq_bne_blt_bge_bltu_bgeu
+trap == is_compare
+trap == irq_state
+trap == set_mem_do_rinst
+trap == set_mem_do_rdata
+trap == set_mem_do_wdata
+trap == latched_store
+trap == latched_stalu
+trap == latched_branch
+trap == latched_trace
+trap == latched_is_lu
+trap == latched_is_lh
+trap == latched_is_lb
+trap == pcpi_timeout
+trap == do_waitirq
+trap == alu_wait
+trap == alu_wait_2
+trap == clear_prefetched_high_word_q
+trap == cpuregs_write
+trap == orig(trap)
+trap == orig(mem_valid)
+trap == orig(pcpi_valid)
+trap == orig(eoi)
+trap == orig(trace_valid)
+trap == orig(irq_delay)
+trap == orig(irq_active)
+trap == orig(timer)
+trap == orig(pcpi_int_wr)
+trap == orig(pcpi_int_wait)
+trap == orig(pcpi_int_ready)
+trap == orig(mem_state)
+trap == orig(mem_do_rinst)
+trap == orig(mem_do_rdata)
+trap == orig(mem_do_wdata)
+trap == orig(mem_la_secondword)
+trap == orig(mem_la_firstword_reg)
+trap == orig(last_mem_valid)
+trap == orig(prefetched_high_word)
+trap == orig(clear_prefetched_high_word)
+trap == orig(instr_beq)
+trap == orig(instr_bne)
+trap == orig(instr_blt)
+trap == orig(instr_bge)
+trap == orig(instr_bltu)
+trap == orig(instr_bgeu)
+trap == orig(instr_slti)
+trap == orig(instr_sltiu)
+trap == orig(instr_xori)
+trap == orig(instr_ori)
+trap == orig(instr_andi)
+trap == orig(instr_add)
+trap == orig(instr_sub)
+trap == orig(instr_sll)
+trap == orig(instr_slt)
+trap == orig(instr_sltu)
+trap == orig(instr_xor)
+trap == orig(instr_srl)
+trap == orig(instr_sra)
+trap == orig(instr_or)
+trap == orig(instr_and)
+trap == orig(is_beq_bne_blt_bge_bltu_bgeu)
+trap == orig(is_compare)
+trap == orig(irq_state)
+trap == orig(set_mem_do_rinst)
+trap == orig(set_mem_do_rdata)
+trap == orig(set_mem_do_wdata)
+trap == orig(latched_store)
+trap == orig(latched_stalu)
+trap == orig(latched_branch)
+trap == orig(latched_trace)
+trap == orig(latched_is_lu)
+trap == orig(latched_is_lh)
+trap == orig(latched_is_lb)
+trap == orig(pcpi_timeout)
+trap == orig(do_waitirq)
+trap == orig(alu_wait)
+trap == orig(alu_wait_2)
+trap == orig(clear_prefetched_high_word_q)
+trap == orig(cpuregs_write)
+mem_valid == mem_state
+mem_valid == mem_do_rinst
+mem_valid == instr_addi
+mem_valid == orig(mem_do_prefetch)
+mem_valid == orig(instr_addi)
+mem_instr == is_jalr_addi_slti_sltiu_xori_ori_andi
+mem_instr == is_lui_auipc_jal_jalr_addi_add_sub
+mem_instr == is_alu_reg_imm
+mem_instr == dbg_rs1val_valid
+mem_instr == q_insn_rd
+mem_instr == alu_ltu
+mem_instr == alu_lts
+mem_instr == orig(mem_instr)
+mem_instr == orig(decoder_trigger_q)
+mem_instr == orig(is_jalr_addi_slti_sltiu_xori_ori_andi)
+mem_instr == orig(is_alu_reg_imm)
+mem_instr == orig(dbg_insn_rd)
+mem_instr == orig(dbg_next)
+mem_instr == orig(latched_rd)
+mem_wdata == cpuregs_rs2
+mem_wdata == orig(mem_wdata)
+mem_wdata == orig(mem_la_wdata)
+mem_wdata == orig(reg_op2)
+mem_wdata == orig(dbg_rs2val)
+mem_wdata == orig(q_insn_imm)
+mem_wdata == orig(q_insn_rs2)
+mem_wdata == orig(q_insn_rd)
+mem_wdata == orig(cached_insn_imm)
+mem_wdata == orig(cached_insn_rs2)
+mem_wdata == orig(alu_eq)
+mem_wdata == orig(alu_ltu)
+mem_wdata == orig(alu_lts)
+mem_wdata == orig(cpuregs_rs2)
+mem_wstrb == orig(mem_wstrb)
+mem_la_wdata == reg_op2
+mem_la_wdata == decoded_imm
+mem_la_wdata == dbg_insn_imm
+mem_la_wdata == q_insn_imm
+mem_la_wdata == cached_insn_imm
+mem_la_wdata == orig(decoded_imm)
+mem_la_wdata == orig(dbg_insn_imm)
+mem_la_wstrb == orig(mem_la_wstrb)
+pcpi_insn == trace_data
+pcpi_insn == reg_out
+pcpi_insn == reg_sh
+pcpi_insn == pcpi_int_rd
+pcpi_insn == mem_16bit_buffer
+pcpi_insn == dbg_rs2val
+pcpi_insn == current_pc
+pcpi_insn == pcpi_timeout_counter
+pcpi_insn == alu_out_q
+pcpi_insn == alu_out_0
+pcpi_insn == alu_out_0_q
+pcpi_insn == cpuregs_wrdata
+pcpi_insn == decoded_rs
+pcpi_insn == orig(pcpi_insn)
+pcpi_insn == orig(trace_data)
+pcpi_insn == orig(reg_out)
+pcpi_insn == orig(reg_sh)
+pcpi_insn == orig(pcpi_int_rd)
+pcpi_insn == orig(mem_16bit_buffer)
+pcpi_insn == orig(current_pc)
+pcpi_insn == orig(pcpi_timeout_counter)
+pcpi_insn == orig(alu_out)
+pcpi_insn == orig(alu_out_q)
+pcpi_insn == orig(alu_out_0)
+pcpi_insn == orig(alu_out_0_q)
+pcpi_insn == orig(cpuregs_wrdata)
+pcpi_insn == orig(decoded_rs)
+reg_op1 == alu_shl
+reg_op1 == alu_shr
+reg_op1 == cpuregs_rs1
+reg_op1 == orig(mem_addr)
+reg_op1 == orig(cpuregs_rs1)
+next_insn_opcode == mem_rdata_word
+next_insn_opcode == mem_rdata_q
+next_insn_opcode == orig(next_insn_opcode)
+next_insn_opcode == orig(mem_rdata_word)
+next_insn_opcode == orig(mem_rdata_q)
+dbg_insn_opcode == cached_insn_opcode
+irq_mask == orig(irq_mask)
+irq_pending == next_irq_pending
+irq_pending == orig(irq_pending)
+irq_pending == orig(next_irq_pending)
+mem_wordsize == instr_lui
+mem_wordsize == instr_auipc
+mem_wordsize == instr_jal
+mem_wordsize == instr_jalr
+mem_wordsize == instr_lb
+mem_wordsize == instr_lh
+mem_wordsize == instr_lbu
+mem_wordsize == instr_lhu
+mem_wordsize == instr_sb
+mem_wordsize == instr_sh
+mem_wordsize == instr_sw
+mem_wordsize == instr_slli
+mem_wordsize == instr_srli
+mem_wordsize == instr_srai
+mem_wordsize == instr_rdcycle
+mem_wordsize == instr_rdcycleh
+mem_wordsize == instr_rdinstr
+mem_wordsize == instr_rdinstrh
+mem_wordsize == instr_ecall_ebreak
+mem_wordsize == instr_getq
+mem_wordsize == instr_setq
+mem_wordsize == instr_retirq
+mem_wordsize == instr_maskirq
+mem_wordsize == instr_waitirq
+mem_wordsize == instr_timer
+mem_wordsize == compressed_instr
+mem_wordsize == is_lui_auipc_jal
+mem_wordsize == is_slli_srli_srai
+mem_wordsize == is_sb_sh_sw
+mem_wordsize == is_sll_srl_sra
+mem_wordsize == is_slti_blt_slt
+mem_wordsize == is_sltiu_bltu_sltu
+mem_wordsize == is_alu_reg_reg
+mem_wordsize == dbg_rs2val_valid
+mem_wordsize == latched_compr
+mem_wordsize == alu_eq
+mem_wordsize == orig(mem_wordsize)
+mem_wordsize == orig(instr_lui)
+mem_wordsize == orig(instr_auipc)
+mem_wordsize == orig(instr_jal)
+mem_wordsize == orig(instr_jalr)
+mem_wordsize == orig(instr_lb)
+mem_wordsize == orig(instr_lh)
+mem_wordsize == orig(instr_lbu)
+mem_wordsize == orig(instr_lhu)
+mem_wordsize == orig(instr_sb)
+mem_wordsize == orig(instr_sh)
+mem_wordsize == orig(instr_sw)
+mem_wordsize == orig(instr_slli)
+mem_wordsize == orig(instr_srli)
+mem_wordsize == orig(instr_srai)
+mem_wordsize == orig(instr_rdcycle)
+mem_wordsize == orig(instr_rdcycleh)
+mem_wordsize == orig(instr_rdinstr)
+mem_wordsize == orig(instr_rdinstrh)
+mem_wordsize == orig(instr_ecall_ebreak)
+mem_wordsize == orig(instr_getq)
+mem_wordsize == orig(instr_setq)
+mem_wordsize == orig(instr_retirq)
+mem_wordsize == orig(instr_maskirq)
+mem_wordsize == orig(instr_waitirq)
+mem_wordsize == orig(instr_timer)
+mem_wordsize == orig(decoder_pseudo_trigger_q)
+mem_wordsize == orig(compressed_instr)
+mem_wordsize == orig(is_lui_auipc_jal)
+mem_wordsize == orig(is_slli_srli_srai)
+mem_wordsize == orig(is_sb_sh_sw)
+mem_wordsize == orig(is_sll_srl_sra)
+mem_wordsize == orig(is_lui_auipc_jal_jalr_addi_add_sub)
+mem_wordsize == orig(is_slti_blt_slt)
+mem_wordsize == orig(is_sltiu_bltu_sltu)
+mem_wordsize == orig(is_alu_reg_reg)
+mem_wordsize == orig(latched_compr)
+mem_do_prefetch == dbg_valid_insn
+mem_do_prefetch == orig(dbg_valid_insn)
+instr_lw == decoded_rs1
+instr_lw == decoder_trigger_q
+instr_lw == decoder_pseudo_trigger_q
+instr_lw == is_lb_lh_lw_lbu_lhu
+instr_lw == is_lbu_lhu_lw
+instr_lw == dbg_insn_rs1
+instr_lw == q_insn_rs1
+instr_lw == dbg_next
+instr_lw == cached_insn_rs1
+instr_lw == orig(instr_lw)
+instr_lw == orig(decoded_rs1)
+instr_lw == orig(is_lb_lh_lw_lbu_lhu)
+instr_lw == orig(dbg_insn_rs1)
+instr_lw == orig(dbg_rs1val_valid)
+instr_lw == orig(dbg_rs2val_valid)
+decoded_rd == dbg_insn_rd
+decoded_rd == cached_insn_rd
+decoded_rd == latched_rd
+decoded_rd == orig(decoded_rd)
+decoded_rs2 == dbg_insn_rs2
+decoded_rs2 == q_insn_rs2
+decoded_rs2 == cached_insn_rs2
+decoded_rs2 == orig(decoded_rs2)
+decoded_rs2 == orig(dbg_insn_rs2)
+decoded_imm_j == orig(decoded_imm_j)
+new_ascii_instr == orig(new_ascii_instr)
+dbg_ascii_instr == cached_ascii_instr
+q_ascii_instr == orig(dbg_ascii_instr)
+q_insn_opcode == orig(dbg_insn_opcode)
+trap == 0
+mem_valid one of { 0, 1 }
+mem_instr one of { -1, 0, 1 }
+mem_addr one of { -1, 4, 1020 }
+mem_wdata one of { -1, 0 }
+mem_wstrb one of { -1, 0, 15 }
+mem_la_wdata one of { -1, 0, 1020 }
+mem_la_wstrb one of { -1, 15 }
+pcpi_insn == -1
+count_cycle one of { 0, 6, 16 }
+count_instr one of { 0, 1, 3 }
+reg_pc one of { 0, 8 }
+reg_next_pc one of { 0, 4, 12 }
+reg_op1 one of { -1, 0, 1020 }
+next_insn_opcode one of { -1, 1069547667 }
+dbg_insn_opcode one of { -1, 41219, 1069547667 }
+dbg_insn_addr one of { -1, 0, 8 }
+irq_mask == 4294967295L
+irq_pending one of { -1, 0 }
+mem_wordsize one of { -1, 0 }
+mem_do_prefetch one of { 0, 1 }
+instr_lw one of { -1, 0, 1 }
+decoded_rd one of { -1, 1, 2 }
+decoded_rs2 one of { -1, 0, 28 }
+decoded_imm_j one of { -1, 1020, 40960 }
+new_ascii_instr one of { 0, 27767, 1633969257 }
+dbg_ascii_instr one of { -1, 27767, 1633969257 }
+dbg_rs1val one of { -1, 0 }
+q_ascii_instr one of { -1, 29559, 1633969257 }
+q_insn_opcode one of { -1, 40995, 1069547667 }
+cpu_state one of { 8, 32, 64 }
+dbg_ascii_state one of { 1702389091, 439788790632L, 119178353865521L }
+alu_out one of { -1, 1020 }
+alu_add_sub one of { -1, 1020 }
+Exiting Daikon.

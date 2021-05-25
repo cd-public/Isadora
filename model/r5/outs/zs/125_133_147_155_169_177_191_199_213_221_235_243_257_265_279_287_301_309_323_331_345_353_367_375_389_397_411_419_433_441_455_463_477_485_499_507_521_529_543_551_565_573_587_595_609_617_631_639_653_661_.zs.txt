@@ -1,0 +1,2 @@
+0 == _r_ in {1021 * mem_rdata_word - 1021 * alu_out - 1020 * cpuregs_rs2 + 1041421}
+0 != _r_ in {dbg_rs1val_valid, dbg_valid_insn, is_lui_auipc_jal_jalr_addi_add_sub, mem_la_wstrb, mem_valid}

@@ -1,0 +1,2 @@
+0 == _r_ in {1021 * dbg_rs1val + cpuregs_rs1 - 1021 * cpuregs_rs2 + 1}
+0 != _r_ in {cpu_state}

@@ -1,0 +1,2 @@
+0 == _r_ in {1792 * decoder_trigger - dbg_ascii_instr + q_ascii_instr - 1792}
+0 != _r_ in {dbg_valid_insn, mem_la_wstrb}

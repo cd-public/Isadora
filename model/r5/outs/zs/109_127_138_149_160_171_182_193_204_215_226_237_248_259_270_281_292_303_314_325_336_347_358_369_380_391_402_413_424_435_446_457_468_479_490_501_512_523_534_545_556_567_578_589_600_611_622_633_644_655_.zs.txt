@@ -1,0 +1,2 @@
+0 == _r_ in {2139095334 * dbg_rs1val - 2 * cached_insn_opcode - 2139095333 * cpuregs_rs2 + 2139095334}
+0 != _r_ in {cpu_state, cpuregs_rs1, dbg_valid_insn, decoded_rs1, decoder_trigger, is_lui_auipc_jal_jalr_addi_add_sub, mem_instr, mem_la_wstrb}

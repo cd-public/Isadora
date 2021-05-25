@@ -1,0 +1,2 @@
+0 == _r_ in {2 * alu_shr - 1021 * alu_eq - cpuregs_rs2 + 1}
+0 != _r_ in {cached_ascii_instr, cached_insn_imm, cached_insn_rd, cached_insn_rs1, cached_insn_rs2, cpu_state, dbg_next, dbg_valid_insn, decoder_trigger_q, mem_do_prefetch, mem_la_wstrb, q_insn_rd}

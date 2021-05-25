@@ -1,0 +1,2 @@
+0 == _r_ in {4.385161595943E12 * dbg_rs1val_valid + 1021 * q_insn_imm - cpuregs_rs1 - 4.385161595944E12}
+0 != _r_ in {dbg_valid_insn, mem_la_wstrb}

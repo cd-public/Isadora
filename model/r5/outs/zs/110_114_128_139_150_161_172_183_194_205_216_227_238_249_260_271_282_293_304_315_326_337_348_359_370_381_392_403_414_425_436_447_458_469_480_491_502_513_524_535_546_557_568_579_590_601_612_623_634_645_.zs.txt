@@ -1,0 +1,2 @@
+0 == _r_ in {1021 * cpu_state - 30 * alu_out_q + 30 * alu_add_sub - 32672}
+0 != _r_ in {cpuregs_rs1, dbg_insn_rs1, dbg_valid_insn, decoded_rs1, decoder_trigger_q, mem_la_wstrb}

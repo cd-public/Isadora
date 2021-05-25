@@ -1,0 +1,2 @@
+0 == _r_ in {alu_out_q + alu_shl - 3 * cpuregs_rs2 + 2}
+0 != _r_ in {cached_insn_rd, cpuregs_rs1, dbg_insn_rs1, dbg_valid_insn, decoded_rs1, mem_do_prefetch, mem_instr, mem_la_wstrb, q_insn_rd}

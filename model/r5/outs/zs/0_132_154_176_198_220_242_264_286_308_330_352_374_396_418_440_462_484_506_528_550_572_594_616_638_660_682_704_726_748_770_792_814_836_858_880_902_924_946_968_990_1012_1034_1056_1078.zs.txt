@@ -1,0 +1,2 @@
+0 == _r_ in {5.6085774853E10 * count_instr + 4083 * dbg_ascii_state - 2.24343099412E11 * alu_add_sub - 1.795881975249868E15}
+0 != _r_ in {}

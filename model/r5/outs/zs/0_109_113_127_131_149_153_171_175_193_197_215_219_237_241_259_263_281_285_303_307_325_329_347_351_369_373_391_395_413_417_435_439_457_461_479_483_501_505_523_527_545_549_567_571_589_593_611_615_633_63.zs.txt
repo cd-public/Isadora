@@ -1,0 +1,2 @@
+0 == _r_ in {reg_next_pc - dbg_insn_addr - 3 * decoder_trigger - 1}
+0 != _r_ in {}

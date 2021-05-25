@@ -1,0 +1,2 @@
+0 == _r_ in {4.385119776804E12 * mem_do_prefetch + 1021 * decoded_imm_j + 39940 * cpuregs_wrdata - 4.385161557024E12}
+0 != _r_ in {dbg_valid_insn, last_mem_valid, mem_do_rinst, mem_instr, mem_la_wstrb, mem_state, mem_valid}

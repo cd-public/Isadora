@@ -1,0 +1,2 @@
+0 == _r_ in {5.6085774853E10 * mem_wdata + 1020 * dbg_ascii_state - 5.6085774853E10 * alu_add_sub - 4.4858456644464E14}
+0 != _r_ in {}
