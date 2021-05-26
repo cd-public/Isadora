@@ -4,12 +4,12 @@ README:
 
 Directories:
 
-breadth : Breadth first mining traversal, see breadth/readme
+model : Full design models
 
-depth : Depth first mining traversal, see depth/readme
-
-tortuga : utility scripts, notes, and functions to interface with the Tortuga tool
+tortuga : Scripts and notes to reproducibly use Radix-S
 
 notes : research related notes or log
 
-model : full design models and spec generation
+breadth : Depreciated breadth first mining traversal testing
+
+depth : Depreciated depth first mining traversal testing
