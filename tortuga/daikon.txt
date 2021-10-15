@@ -1,0 +1,8 @@
+export JAVA_HOME=${JAVA_HOME:-$(dirname $(dirname $(dirname $(readlink -f $(/usr/bin/which java)))))}
+export CLASSPATH="/data/cd/Daikon/daikon-5.8.8/daikon.jar"
+export DAIKONDIR="/data/cd/Daikon/daikon-5.8.8"
+
+
+can run as
+
+java daikon.Daikon
