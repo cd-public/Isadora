@@ -1,0 +1,175 @@
+
+$var reg        1 Ni*  intr_otp_operation_done_o $end
+$var reg        1 Oi*  intr_otp_error_o $end
+$var reg        8 Pi*  otp_obs_o [7:0] $end
+$var reg        4 Qi*  lc_creator_seed_sw_rw_en_i [3:0] $end
+$var reg        4 Ri*  lc_seed_hw_rd_en_i [3:0] $end
+$var reg        4 Si*  lc_dft_en_i [3:0] $end
+$var reg        4 Ti*  lc_escalate_en_i [3:0] $end
+$var reg        4 Ui*  lc_check_byp_en_i [3:0] $end
+$var reg        2 Wi*  intg_error [1:0] $end
+$var reg        4 Xi*  lc_creator_seed_sw_rw_en [3:0] $end
+$var reg        4 Yi*  lc_seed_hw_rd_en [3:0] $end
+$var reg        4 Zi*  lc_check_byp_en [3:0] $end
+$var reg       12 [i*  lc_dft_en [11:0] $end
+$var reg       52 \i*  lc_escalate_en_synced [51:0] $end
+$var reg        1 ]i*  tlul_req $end
+$var reg        9 ^i*  tlul_addr [8:0] $end
+$var reg        8 _i*  tlul_part_sel_oh [7:0] $end
+$var reg        8 `i*  part_tlul_gnt [7:0] $end
+$var reg        8 ai*  part_tlul_rvalid [7:0] $end
+$var reg       16 bi*  part_tlul_rerror [15:0] $end
+$var reg      256 ci*  part_tlul_rdata [255:0] $end
+$var reg      512 di*  part_digest [511:0] $end
+$var reg        1 ei*  dai_idle $end
+$var reg       64 fi*  dai_rdata [63:0] $end
+$var reg        1 gi*  dai_prog_idle $end
+$var reg        1 hi*  lci_prog_idle $end
+$var reg       30 ii*  part_error [29:0] $end
+$var reg       11 ji*  part_fsm_err [10:0] $end
+$var reg        1 ki*  otp_operation_done $end
+$var reg        1 li*  chk_pending $end
+$var reg        1 mi*  chk_timeout $end
+$var reg        1 ni*  lfsr_fsm_err $end
+$var reg        1 oi*  scrmbl_fsm_err $end
+$var reg        8 pi*  integ_chk_req [7:0] $end
+$var reg        8 qi*  integ_chk_ack [7:0] $end
+$var reg        8 ri*  cnsty_chk_req [7:0] $end
+$var reg        8 si*  cnsty_chk_ack [7:0] $end
+$var reg        1 ti*  lfsr_edn_req $end
+$var reg        1 ui*  lfsr_edn_ack $end
+$var reg       64 vi*  edn_data [63:0] $end
+$var reg        1 wi*  edn_req $end
+$var reg        1 xi*  edn_ack $end
+$var reg        1 yi*  key_edn_req $end
+$var reg        1 zi*  key_edn_ack $end
+$var reg       11 {i*  part_otp_arb_req [10:0] $end
+$var reg       11 |i*  part_otp_arb_gnt [10:0] $end
+$var reg        1 }i*  otp_arb_valid $end
+$var reg        1 ~i*  otp_prim_ready $end
+$var reg        1 !j*  otp_rsp_fifo_ready $end
+$var reg        4 "j*  otp_arb_idx [3:0] $end
+$var reg        3 #j*  part_otp_err [2:0] $end
+$var reg       64 $j*  part_otp_rdata [63:0] $end
+$var reg        1 %j*  otp_rvalid $end
+$var reg        8 &j*  otp_test_vect [7:0] $end
+$var reg        1 'j*  otp_fifo_valid $end
+$var reg        4 (j*  otp_part_idx [3:0] $end
+$var reg       11 )j*  part_scrmbl_mtx_req [10:0] $end
+$var reg        4 *j*  scrmbl_mtx_idx [3:0] $end
+$var reg        1 +j*  scrmbl_mtx_valid $end
+$var reg       64 ,j*  part_scrmbl_rsp_data [63:0] $end
+$var reg        1 -j*  scrmbl_arb_req_ready $end
+$var reg        1 .j*  scrmbl_arb_rsp_valid $end
+$var reg        1 /j*  part_init_req $end
+$var reg        8 0j*  part_init_done [7:0] $end
+$var reg        1 1j*  pwr_otp_req_synced $end
+$var reg        1 2j*  pwr_otp_rsp_d $end
+$var reg      16384 3j*  part_buf_data [16383:0] $end
+$var reg        1 5j*  clk_edn_i $end
+$var reg        1 6j*  rst_edn_ni $end
+$var reg        4 9j*  scanmode_i [3:0] $end
+$var reg        8 :j*  cio_test_o [7:0] $end
+$var reg        8 ;j*  cio_test_en_o [7:0] $end
+$var reg       52 <j*  lc_escalate_en [51:0] $end
+$var reg        1 =j*  lc_escalate_en_any $end
+$var reg        1 >j*  tlul_gnt $end
+$var reg        1 ?j*  tlul_rvalid $end
+$var reg        2 @j*  tlul_rerror [1:0] $end
+$var reg       32 Aj*  tlul_rdata [31:0] $end
+$var reg        3 Bj*  tlul_part_idx [2:0] $end
+$var reg        1 Cj*  tlul_oob_err_d $end
+$var reg        1 Dj*  tlul_oob_err_q $end
+$var reg        8 Ej*  part_tlul_req [7:0] $end
+$var reg        9 Fj*  part_tlul_addr [8:0] $end
+$var reg       64 Gj*  unused_digest [63:0] $end
+$var reg        1 Hj*  dai_req $end
+$var reg        3 Ij*  dai_cmd [2:0] $end
+$var reg       11 Jj*  dai_addr [10:0] $end
+$var reg       64 Kj*  dai_wdata [63:0] $end
+$var reg        1 Lj*  otp_idle_d $end
+$var reg        1 Mj*  otp_idle_q $end
+$var reg       10 Nj*  part_errors_reduced [9:0] $end
+$var reg        1 Oj*  otp_error $end
+$var reg        1 Pj*  fatal_macro_error_d $end
+$var reg        1 Qj*  fatal_macro_error_q $end
+$var reg        1 Rj*  fatal_check_error_d $end
+$var reg        1 Sj*  fatal_check_error_q $end
+$var reg        1 Tj*  fatal_bus_integ_error_d $end
+$var reg        1 Uj*  fatal_bus_integ_error_q $end
+$var reg       14 Vj*  interrupt_triggers_d [13:0] $end
+$var reg       14 Wj*  interrupt_triggers_q [13:0] $end
+$var reg        3 Xj*  alerts [2:0] $end
+$var reg        3 Yj*  alert_test [2:0] $end
+$var reg        1 Zj*  integ_chk_trig $end
+$var reg        1 [j*  cnsty_chk_trig $end
+$var reg        1 \j*  otp_arb_ready $end
+$var reg        1 ]j*  otp_prim_valid $end
+$var reg        1 ^j*  otp_rsp_fifo_valid $end
+$var reg       11 _j*  part_otp_rvalid [10:0] $end
+$var reg       11 `j*  part_scrmbl_mtx_gnt [10:0] $end
+$var reg       11 aj*  part_scrmbl_req_ready [10:0] $end
+$var reg       11 bj*  part_scrmbl_rsp_valid [10:0] $end
+$var reg        1 cj*  pwr_otp_rsp_q $end
+$var reg      704 dj*  lc_otp_program_data [703:0] $end
+$var reg        1 ej*  unused_lci_scrmbl_sigs $end
+$var reg        1 fj*  scrmbl_key_seed_valid $end
+$var reg      128 gj*  sram_data_key_seed [127:0] $end
+$var reg      256 hj*  flash_data_key_seed [255:0] $end
+$var reg      256 ij*  flash_addr_key_seed [255:0] $end
+$var reg        1 jj*  unused_kdi_otp_sigs $end
+$var reg        4 kj*  test_tokens_valid [3:0] $end
+$var reg        4 lj*  rma_token_valid [3:0] $end
+$var reg        4 mj*  secrets_valid [3:0] $end
+$var reg        1 nj*  unused_buf_data $end
+$var reg        1 oj*  gen_partitions[0].gen_unbuffered.unused_part_scrmbl_sigs $end
+$var reg        1 pj*  gen_partitions[1].gen_unbuffered.unused_part_scrmbl_sigs $end
+$var reg        1 qj*  gen_partitions[2].gen_unbuffered.unused_part_scrmbl_sigs $end
+$var reg        1 rj*  gen_partitions[3].gen_buffered.unused_part_tlul_sigs $end
+$var reg        1 sj*  gen_partitions[4].gen_buffered.unused_part_tlul_sigs $end
+$var reg        1 tj*  gen_partitions[5].gen_buffered.unused_part_tlul_sigs $end
+$var reg        1 uj*  gen_partitions[6].gen_buffered.unused_part_tlul_sigs $end
+$var reg        1 vj*  gen_partitions[7].gen_lifecycle.unused_part_tlul_sigs $end
+$var reg        1 wj*  gen_partitions[7].gen_lifecycle.unused_part_scrmbl_sigs $end
+$var reg        1 [k*  edn_o [0:0] $end
+$var reg       34 \k*  edn_i [33:0] $end
+$var reg      109 ]k*  core_tl_i [108:0] $end
+$var reg       66 ^k*  core_tl_o [65:0] $end
+$var reg      109 _k*  prim_tl_i [108:0] $end
+$var reg       66 `k*  prim_tl_o [65:0] $end
+$var reg       12 ak*  alert_rx_i [11:0] $end
+$var reg        6 bk*  alert_tx_o [5:0] $end
+$var reg        2 ck*  otp_ast_pwr_seq_o [1:0] $end
+$var reg        2 dk*  otp_ast_pwr_seq_h_i [1:0] $end
+$var reg        2 ek*  otp_alert_o [1:0] $end
+$var reg        1 fk*  pwr_otp_i [0:0] $end
+$var reg        2 gk*  pwr_otp_o [1:0] $end
+$var reg       32 hk*  lc_otp_vendor_test_i [31:0] $end
+$var reg       32 ik*  lc_otp_vendor_test_o [31:0] $end
+$var reg      705 jk*  lc_otp_program_i [704:0] $end
+$var reg        2 kk*  lc_otp_program_o [1:0] $end
+$var reg      1102 lk*  otp_lc_data_o [1101:0] $end
+$var reg      513 mk*  otp_keymgr_key_o [512:0] $end
+$var reg        2 nk*  flash_otp_key_i [1:0] $end
+$var reg      259 ok*  flash_otp_key_o [258:0] $end
+$var reg        3 pk*  sram_otp_key_i [2:0] $end
+$var reg      774 qk*  sram_otp_key_o [773:0] $end
+$var reg        1 rk*  otbn_otp_key_i [0:0] $end
+$var reg      194 sk*  otbn_otp_key_o [193:0] $end
+$var reg      644 tk*  otp_hw_cfg_o [643:0] $end
+$var reg      109 uk*  tl_win_h2d [108:0] $end
+$var reg       66 vk*  tl_win_d2h [65:0] $end
+$var reg      198 wk*  reg2hw [197:0] $end
+$var reg      564 xk*  hw2reg [563:0] $end
+$var reg      128 yk*  part_access [127:0] $end
+$var reg       78 'l*  otp_arb_bundle [77:0] $end
+$var reg      109 (l*  prim_tl_h2d_gated [108:0] $end
+$var reg       66 )l*  prim_tl_d2h_gated [65:0] $end
+$var reg       72 5l*  scrmbl_req_bundle [71:0] $end
+$var reg      128 6l*  part_access_dai [127:0] $end
+$var reg       12 7l*  obs_ctrl_i [11:0] $end
+$var reg      128 8l*  part_access_pre [127:0] $end
+$var reg      256 9l*  RndCnstScrmblKeyInit [255:0] $end
+$var reg      256 Bl*  RndCnstScrmblKeyInitDefault [255:0] $end
+$var reg        8 Q$   shadow_otp_obs_o [7:0] $end
+$var reg        4 \H   shadow_scanmode_i [3:0] $end
